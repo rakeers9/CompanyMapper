@@ -146,6 +146,8 @@ def extract_entities_and_relationships(chunk: Document):
         Return ONLY valid JSON:
         """
         
+        #TODO:Pandas db
+        
     prompt = ChatPromptTemplate.from_template(prompt_template)
     chain = prompt | llm
     
@@ -155,7 +157,7 @@ def extract_entities_and_relationships(chunk: Document):
     print(f"LLM output: {result}")
     
     try:
-        extracted_data = json.loads(result)
+        extracted_data = json.loads(result) #could add loop of try to try to do it multiple times
         
         if not isinstance(extracted_data, dict):
             print(f"Error: Expected a dictionary, got {type(extracted_data)}")
@@ -257,8 +259,8 @@ def process_all_chunks(chunks: List[Document]):
             relationship_type_counts[rel_type] = relationship_type_counts.get(rel_type, 0) + 1
         
         # TO STOP IT TAKING TOO LONG                    
-        if i >= 30:
-            print("Processed 30 chunks, stopping for now.")
+        if i >= 15:
+            print("Processed 15 chunks, stopping for now.")
             break
     
     entities_list = list(all_entities.values())
@@ -356,9 +358,48 @@ def validate_graph_relationships(G):
     
     
     
-# G = create_networkx_graph(knowledge_graph)
-# validate_graph_relationships(G)
+def save_networkx_graph(G: nx.DiGraph, output_file: str):
+    """Save the NetworkX graph to multiple formats"""
+    import os
+    import pickle
+    
+    # Save as pickle (for Streamlit app) - using pickle directly
+    with open(f"{output_file}.gpickle", 'wb') as f:
+        pickle.dump(G, f)
+    
+    # Save as GEXF (backup format)
+    nx.write_gexf(G, f"{output_file}.gexf")
+    
+    # Save as JSON for inspection
+    graph_data = {
+        "nodes": [{"id": node, **G.nodes[node]} for node in G.nodes()],
+        "links": [{"source": u, "target": v, **G[u][v]} for u, v in G.edges()]
+    }
+    with open(f"{output_file}.json", 'w') as f:
+        json.dump(graph_data, f, indent=2)
+    
+    print(f"Graph saved in multiple formats with base name: {output_file}")
 
-# print(f"Knowledge graph created with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges")
-
-# print(G.nodes(data=True))
+if __name__ == "__main__":
+    print("Starting Apple Knowledge Graph creation...")
+    
+    # Step 1: Load documents
+    documents = load_documents(file_paths)
+    print(f"Loaded {len(documents)} documents.")
+    
+    # Step 2: Split into chunks
+    chunks = split_documents(documents)
+    print(f"Split into {len(chunks)} chunks.")
+    
+    # Step 3: Extract entities and relationships
+    knowledge_graph = process_all_chunks(chunks)
+    
+    # Step 4: Create NetworkX graph
+    G = create_networkx_graph(knowledge_graph)
+    
+    # Step 5: Validate the graph
+    validate_graph_relationships(G)
+    
+    # Step 6: Save the graph
+    save_networkx_graph(G, "apple_knowledge_graph")
+    

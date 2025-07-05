@@ -1,0 +1,233 @@
+<?xml version='1.0' encoding='utf-8'?>
+<gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
+  <meta lastmodifieddate="2025-06-12">
+    <creator>NetworkX 3.4.2</creator>
+  </meta>
+  <graph defaultedgetype="directed" mode="static" name="">
+    <attributes mode="static" class="edge">
+      <attribute id="4" title="prop_details" type="string" />
+    </attributes>
+    <attributes mode="static" class="node">
+      <attribute id="0" title="type" type="string" />
+      <attribute id="1" title="name" type="string" />
+      <attribute id="2" title="prop_description" type="string" />
+      <attribute id="3" title="prop_headquarters" type="string" />
+    </attributes>
+    <nodes>
+      <node id="apple" label="apple">
+        <attvalues>
+          <attvalue for="0" value="Company" />
+          <attvalue for="1" value="Apple Inc." />
+          <attvalue for="2" value="Technology company" />
+          <attvalue for="3" value="Cupertino, California" />
+        </attvalues>
+      </node>
+      <node id="ipad" label="ipad">
+        <attvalues>
+          <attvalue for="0" value="Product" />
+          <attvalue for="1" value="iPad" />
+          <attvalue for="2" value="Line of multipurpose tablets" />
+        </attvalues>
+      </node>
+      <node id="wearables" label="wearables">
+        <attvalues>
+          <attvalue for="0" value="Product" />
+          <attvalue for="1" value="Wearables" />
+          <attvalue for="2" value="Market segment for wearable technology" />
+        </attvalues>
+      </node>
+      <node id="apple_watch" label="apple_watch">
+        <attvalues>
+          <attvalue for="0" value="Product" />
+          <attvalue for="1" value="Apple Watch" />
+          <attvalue for="2" value="Line of smartwatches" />
+        </attvalues>
+      </node>
+      <node id="airpods" label="airpods">
+        <attvalues>
+          <attvalue for="0" value="Product" />
+          <attvalue for="1" value="AirPods" />
+          <attvalue for="2" value="Line of wireless headphones" />
+        </attvalues>
+      </node>
+      <node id="apple_tv" label="apple_tv">
+        <attvalues>
+          <attvalue for="0" value="Product" />
+          <attvalue for="1" value="Apple TV" />
+          <attvalue for="2" value="Media streaming and gaming device" />
+        </attvalues>
+      </node>
+      <node id="homepod" label="homepod">
+        <attvalues>
+          <attvalue for="0" value="Product" />
+          <attvalue for="1" value="HomePod" />
+          <attvalue for="2" value="High-fidelity wireless smart speaker" />
+        </attvalues>
+      </node>
+      <node id="accessories" label="accessories">
+        <attvalues>
+          <attvalue for="0" value="Product" />
+          <attvalue for="1" value="Accessories" />
+          <attvalue for="2" value="Market segment for additional products" />
+        </attvalues>
+      </node>
+      <node id="aluminum" label="aluminum">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Aluminum" />
+          <attvalue for="2" value="Used in product casing" />
+        </attvalues>
+      </node>
+      <node id="rare_earth_elements" label="rare_earth_elements">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Rare Earth Elements" />
+          <attvalue for="2" value="Used in various components" />
+        </attvalues>
+      </node>
+      <node id="foxconn" label="foxconn">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Foxconn" />
+          <attvalue for="2" value="Manufacturing partner" />
+        </attvalues>
+      </node>
+      <node id="taiwan" label="taiwan">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Taiwan" />
+          <attvalue for="2" value="Operational center" />
+        </attvalues>
+      </node>
+      <node id="china" label="china">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="China" />
+          <attvalue for="2" value="Manufacturing hub" />
+        </attvalues>
+      </node>
+      <node id="us" label="us">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="United States" />
+          <attvalue for="2" value="Operational center" />
+        </attvalues>
+      </node>
+      <node id="smartphones" label="smartphones">
+        <attvalues>
+          <attvalue for="0" value="Product_Line" />
+          <attvalue for="1" value="Smartphones" />
+          <attvalue for="2" value="Market segment for mobile devices" />
+        </attvalues>
+      </node>
+      <node id="personal_computers" label="personal_computers">
+        <attvalues>
+          <attvalue for="0" value="Product_Line" />
+          <attvalue for="1" value="Personal Computers" />
+          <attvalue for="2" value="Market segment for computing devices" />
+        </attvalues>
+      </node>
+      <node id="tablets" label="tablets">
+        <attvalues>
+          <attvalue for="0" value="Product_Line" />
+          <attvalue for="1" value="Tablets" />
+          <attvalue for="2" value="Market segment for tablet devices" />
+        </attvalues>
+      </node>
+      <node id="services" label="services">
+        <attvalues>
+          <attvalue for="0" value="Product_Line" />
+          <attvalue for="1" value="Services" />
+        </attvalues>
+      </node>
+      <node id="components" label="components">
+        <attvalues>
+          <attvalue for="0" value="Component" />
+          <attvalue for="1" value="Components" />
+          <attvalue for="2" value="Essential parts for Apple products" />
+        </attvalues>
+      </node>
+      <node id="custom_components" label="custom_components">
+        <attvalues>
+          <attvalue for="0" value="Component" />
+          <attvalue for="1" value="Custom Components" />
+          <attvalue for="2" value="Unique components used by Apple" />
+        </attvalues>
+      </node>
+      <node id="intellectual_property" label="intellectual_property">
+        <attvalues>
+          <attvalue for="0" value="Intellectual_Property" />
+          <attvalue for="1" value="Intellectual Property" />
+          <attvalue for="2" value="Collection of rights relating to hardware, software, and services" />
+        </attvalues>
+      </node>
+    </nodes>
+    <edges>
+      <edge source="apple" target="aluminum" id="0" type="Uses_Material">
+        <attvalues>
+          <attvalue for="4" value="Used in product casing" />
+        </attvalues>
+      </edge>
+      <edge source="apple" target="rare_earth_elements" id="1" type="Uses_Material">
+        <attvalues>
+          <attvalue for="4" value="Used in various components" />
+        </attvalues>
+      </edge>
+      <edge source="apple" target="taiwan" id="2" type="Operates_In">
+        <attvalues>
+          <attvalue for="4" value="Operational center" />
+        </attvalues>
+      </edge>
+      <edge source="apple" target="china" id="3" type="Operates_In">
+        <attvalues>
+          <attvalue for="4" value="Manufacturing hub" />
+        </attvalues>
+      </edge>
+      <edge source="apple" target="us" id="4" type="Operates_In">
+        <attvalues>
+          <attvalue for="4" value="Operational center" />
+        </attvalues>
+      </edge>
+      <edge source="apple" target="components" id="5" type="Uses_Material">
+        <attvalues>
+          <attvalue for="4" value="Uses various components for products" />
+        </attvalues>
+      </edge>
+      <edge source="apple" target="smartphones" id="6" type="Operates_In">
+        <attvalues>
+          <attvalue for="4" value="Competes in the smartphone market" />
+        </attvalues>
+      </edge>
+      <edge source="apple" target="personal_computers" id="7" type="Operates_In">
+        <attvalues>
+          <attvalue for="4" value="Competes in the personal computer market" />
+        </attvalues>
+      </edge>
+      <edge source="apple" target="tablets" id="8" type="Operates_In">
+        <attvalues>
+          <attvalue for="4" value="Competes in the tablet market" />
+        </attvalues>
+      </edge>
+      <edge source="apple" target="wearables" id="9" type="Operates_In">
+        <attvalues>
+          <attvalue for="4" value="Competes in the wearables market" />
+        </attvalues>
+      </edge>
+      <edge source="apple" target="accessories" id="10" type="Operates_In">
+        <attvalues>
+          <attvalue for="4" value="Competes in the accessories market" />
+        </attvalues>
+      </edge>
+      <edge source="apple" target="custom_components" id="11" type="Uses_Material">
+        <attvalues>
+          <attvalue for="4" value="Utilizes custom components from limited sources" />
+        </attvalues>
+      </edge>
+      <edge source="foxconn" target="apple" id="12" type="Manufactures">
+        <attvalues>
+          <attvalue for="4" value="Assembles iPhones and other products" />
+        </attvalues>
+      </edge>
+    </edges>
+  </graph>
+</gexf>

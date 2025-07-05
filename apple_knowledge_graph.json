@@ -1,0 +1,210 @@
+{
+  "nodes": [
+    {
+      "id": "apple",
+      "type": "Company",
+      "name": "Apple Inc.",
+      "prop_description": "Technology company",
+      "prop_headquarters": "Cupertino, California"
+    },
+    {
+      "id": "ipad",
+      "type": "Product",
+      "name": "iPad",
+      "prop_description": "Line of multipurpose tablets"
+    },
+    {
+      "id": "wearables",
+      "type": "Product",
+      "name": "Wearables",
+      "prop_description": "Market segment for wearable technology"
+    },
+    {
+      "id": "apple_watch",
+      "type": "Product",
+      "name": "Apple Watch",
+      "prop_description": "Line of smartwatches"
+    },
+    {
+      "id": "airpods",
+      "type": "Product",
+      "name": "AirPods",
+      "prop_description": "Line of wireless headphones"
+    },
+    {
+      "id": "apple_tv",
+      "type": "Product",
+      "name": "Apple TV",
+      "prop_description": "Media streaming and gaming device"
+    },
+    {
+      "id": "homepod",
+      "type": "Product",
+      "name": "HomePod",
+      "prop_description": "High-fidelity wireless smart speaker"
+    },
+    {
+      "id": "accessories",
+      "type": "Product",
+      "name": "Accessories",
+      "prop_description": "Market segment for additional products"
+    },
+    {
+      "id": "aluminum",
+      "type": "Material",
+      "name": "Aluminum",
+      "prop_description": "Used in product casing"
+    },
+    {
+      "id": "rare_earth_elements",
+      "type": "Material",
+      "name": "Rare Earth Elements",
+      "prop_description": "Used in various components"
+    },
+    {
+      "id": "foxconn",
+      "type": "Supplier",
+      "name": "Foxconn",
+      "prop_description": "Manufacturing partner"
+    },
+    {
+      "id": "taiwan",
+      "type": "Location",
+      "name": "Taiwan",
+      "prop_description": "Operational center"
+    },
+    {
+      "id": "china",
+      "type": "Location",
+      "name": "China",
+      "prop_description": "Manufacturing hub"
+    },
+    {
+      "id": "us",
+      "type": "Location",
+      "name": "United States",
+      "prop_description": "Operational center"
+    },
+    {
+      "id": "smartphones",
+      "type": "Product_Line",
+      "name": "Smartphones",
+      "prop_description": "Market segment for mobile devices"
+    },
+    {
+      "id": "personal_computers",
+      "type": "Product_Line",
+      "name": "Personal Computers",
+      "prop_description": "Market segment for computing devices"
+    },
+    {
+      "id": "tablets",
+      "type": "Product_Line",
+      "name": "Tablets",
+      "prop_description": "Market segment for tablet devices"
+    },
+    {
+      "id": "services",
+      "type": "Product_Line",
+      "name": "Services"
+    },
+    {
+      "id": "components",
+      "type": "Component",
+      "name": "Components",
+      "prop_description": "Essential parts for Apple products"
+    },
+    {
+      "id": "custom_components",
+      "type": "Component",
+      "name": "Custom Components",
+      "prop_description": "Unique components used by Apple"
+    },
+    {
+      "id": "intellectual_property",
+      "type": "Intellectual_Property",
+      "name": "Intellectual Property",
+      "prop_description": "Collection of rights relating to hardware, software, and services"
+    }
+  ],
+  "links": [
+    {
+      "source": "apple",
+      "target": "aluminum",
+      "type": "Uses_Material",
+      "prop_details": "Used in product casing"
+    },
+    {
+      "source": "apple",
+      "target": "rare_earth_elements",
+      "type": "Uses_Material",
+      "prop_details": "Used in various components"
+    },
+    {
+      "source": "apple",
+      "target": "taiwan",
+      "type": "Operates_In",
+      "prop_details": "Operational center"
+    },
+    {
+      "source": "apple",
+      "target": "china",
+      "type": "Operates_In",
+      "prop_details": "Manufacturing hub"
+    },
+    {
+      "source": "apple",
+      "target": "us",
+      "type": "Operates_In",
+      "prop_details": "Operational center"
+    },
+    {
+      "source": "apple",
+      "target": "components",
+      "type": "Uses_Material",
+      "prop_details": "Uses various components for products"
+    },
+    {
+      "source": "apple",
+      "target": "smartphones",
+      "type": "Operates_In",
+      "prop_details": "Competes in the smartphone market"
+    },
+    {
+      "source": "apple",
+      "target": "personal_computers",
+      "type": "Operates_In",
+      "prop_details": "Competes in the personal computer market"
+    },
+    {
+      "source": "apple",
+      "target": "tablets",
+      "type": "Operates_In",
+      "prop_details": "Competes in the tablet market"
+    },
+    {
+      "source": "apple",
+      "target": "wearables",
+      "type": "Operates_In",
+      "prop_details": "Competes in the wearables market"
+    },
+    {
+      "source": "apple",
+      "target": "accessories",
+      "type": "Operates_In",
+      "prop_details": "Competes in the accessories market"
+    },
+    {
+      "source": "apple",
+      "target": "custom_components",
+      "type": "Uses_Material",
+      "prop_details": "Utilizes custom components from limited sources"
+    },
+    {
+      "source": "foxconn",
+      "target": "apple",
+      "type": "Manufactures",
+      "prop_details": "Assembles iPhones and other products"
+    }
+  ]
+}
