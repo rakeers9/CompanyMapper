@@ -1,3 +1,5 @@
+# knowledge_graph.py
+
 import os
 import json
 import networkx as nx
@@ -10,8 +12,34 @@ from langchain.prompts import ChatPromptTemplate
 from langchain.chains.llm import LLMChain
 from langchain.schema import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+from collections import defaultdict
 
 os.environ["OPENAI_API_KEY"] = "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"
+
+ROOT_ID  = "apple"
+CAT_REL = "Belongs_To"
+
+MACRO_CATEGORIES = {
+    "cat::Product"    : "Products",
+    "cat::Supplier"   : "Suppliers",
+    "cat::Component"  : "Components",
+    "cat::Material"   : "Materials",
+    "cat::Location"   : "Locations",
+    "cat::Employee"   : "Employees",
+    "cat::Service"    : "Services",
+    "cat::Initiative" : "Initiatives"
+}
+
+GROUP_KEYS = {
+    "Product":   ["family", "name"],
+    "Supplier":  ["country", "industry"],
+    "Component": ["component_type", "family"],
+    "Material":  ["material_class"],
+    "Employee":  ["department", "role"],
+    "Service":   ["service_class"],
+    "Initiative":["initiative_type"],
+    "Location":  [],
+}
 
 ALLOWED_RELATIONSHIP_TYPES = [
     "Supplies", "Manufactures", "Designs", "Distributes", "Operates_In", 
@@ -32,7 +60,7 @@ file_paths = [
 def load_documents(file_paths: List[str]):
     all_docs = []
     for file_path in file_paths:
-        doc_type = file_path.split("/")[-1].split(".")[-1]
+        #doc_type = file_path.split("/")[-1].split(".")[-1]
         loader = PyPDFLoader(file_path)
         docs = loader.load()
         
@@ -157,7 +185,7 @@ def extract_entities_and_relationships(chunk: Document):
     print(f"LLM output: {result}")
     
     try:
-        extracted_data = json.loads(result) #could add loop of try to try to do it multiple times
+        extracted_data = json.loads(result) #could add loop to try to do it multiple times
         
         if not isinstance(extracted_data, dict):
             print(f"Error: Expected a dictionary, got {type(extracted_data)}")
@@ -259,9 +287,9 @@ def process_all_chunks(chunks: List[Document]):
             relationship_type_counts[rel_type] = relationship_type_counts.get(rel_type, 0) + 1
         
         # TO STOP IT TAKING TOO LONG                    
-        if i >= 15:
-            print("Processed 15 chunks, stopping for now.")
-            break
+        # if i >= 15:
+        #     print("Processed 15 chunks, stopping for now.")
+        #     break
     
     entities_list = list(all_entities.values())
     
@@ -354,9 +382,7 @@ def validate_graph_relationships(G):
         print(f"\n✗ WARNING: Some relationships use disallowed types!")
     
     return all_allowed
-        
-    
-    
+           
     
 def save_networkx_graph(G: nx.DiGraph, output_file: str):
     """Save the NetworkX graph to multiple formats"""
@@ -380,6 +406,383 @@ def save_networkx_graph(G: nx.DiGraph, output_file: str):
     
     print(f"Graph saved in multiple formats with base name: {output_file}")
 
+# def ensure_hierarchy(G: nx.DiGraph) -> nx.DiGraph:
+#     # ---------- first ring ----------
+#     for cat_id, label in MACRO_CATEGORIES.items():
+#         if cat_id not in G:
+#             G.add_node(cat_id, type="Category", name=label)
+#         if not G.has_edge(ROOT_ID, cat_id):
+#             G.add_edge(ROOT_ID, cat_id, type=CAT_REL)
+
+#     # ---------- build buckets for potential sub-groups ----------
+#     buckets = defaultdict(list)
+
+#     for n, attrs in list(G.nodes(data=True)):
+#         node_type = attrs.get("type")           # may be None on old nodes
+#         if n == ROOT_ID or node_type == "Category":
+#             continue
+
+#         # fall-back to catch-all if type missing
+#         cat_id = f"cat::{node_type}" if node_type else "cat::Other"
+#         if cat_id not in MACRO_CATEGORIES:
+#             cat_id = "cat::Other"
+
+#         # choose first grouping key that exists
+#         group_name = None
+#         for key in GROUP_KEYS.get(node_type, []):
+#             val = attrs.get(key)
+#             if val:
+#                 group_name = val.split()[0] if key == "name" else val
+#                 break
+
+#         if group_name:
+#             buckets[(cat_id, group_name)].append(n)
+#         else:
+#             G.add_edge(cat_id, n, type=CAT_REL)
+
+#     # ---------- create sub-category nodes ----------
+#     for (cat_id, group), members in buckets.items():
+#         if len(members) == 1:
+#             G.add_edge(cat_id, members[0], type=CAT_REL)
+#             continue
+
+#         sub_id = f"{cat_id}::{group.lower().replace(' ', '_')}"
+#         if sub_id not in G:
+#             G.add_node(sub_id, name=group, type="Subcategory")
+#             G.add_edge(cat_id, sub_id, type=CAT_REL)
+#         for m in members:
+#             G.add_edge(sub_id, m, type=CAT_REL)
+
+#     return G
+
+
+
+# def ensure_hierarchy(G: nx.DiGraph) -> nx.DiGraph:
+#     """
+#     Ensure the graph has a proper hierarchy with categories and subcategories
+#     Fixed to handle nodes without 'type' attribute gracefully
+#     """
+#     # First, ensure ROOT_ID exists
+#     if ROOT_ID not in G:
+#         G.add_node(ROOT_ID, type="Company", name="Apple Inc.")
+    
+#     # Create category nodes and connect them to root
+#     for cat_id, label in MACRO_CATEGORIES.items():
+#         if cat_id not in G:
+#             G.add_node(cat_id, type="Category", name=label)
+#         if not G.has_edge(ROOT_ID, cat_id):
+#             G.add_edge(ROOT_ID, cat_id, type=CAT_REL)
+            
+#     buckets = defaultdict(list)
+    
+#     # Process all nodes to organize them into categories
+#     for n, attrs in list(G.nodes(data=True)):
+#         # Skip root and category nodes
+#         if n == ROOT_ID or n.startswith("cat::") or attrs.get("type") == "Category":
+#             continue
+        
+#         # Get node type, default to "Other" if missing
+#         node_type = attrs.get('type', 'Other')
+        
+#         # Find the appropriate category
+#         cat_id = f"cat::{node_type}"
+#         if cat_id not in MACRO_CATEGORIES:
+#             # If the node type doesn't have a predefined category, put it in "Other"
+#             cat_id = "cat::Other"
+#             # Also ensure the "Other" category exists
+#             if cat_id not in MACRO_CATEGORIES:
+#                 MACRO_CATEGORIES[cat_id] = "Other"
+#                 if cat_id not in G:
+#                     G.add_node(cat_id, type="Category", name="Other")
+#                 if not G.has_edge(ROOT_ID, cat_id):
+#                     G.add_edge(ROOT_ID, cat_id, type=CAT_REL)
+        
+#         # Try to find a grouping key for subcategories
+#         group_name = None
+#         group_keys = GROUP_KEYS.get(node_type, [])
+        
+#         for key in group_keys:
+#             val = attrs.get(key)
+#             if val:
+#                 group_name = val.split()[0] if key == "name" else val
+#                 break
+        
+#         # If we found a group name, add to buckets for subcategory creation
+#         if group_name:
+#             buckets[(cat_id, group_name)].append(n)
+#         else:
+#             # Direct connection to category
+#             if not G.has_edge(cat_id, n):
+#                 G.add_edge(cat_id, n, type=CAT_REL)
+    
+#     # Create subcategories for grouped items
+#     for (cat_id, group), members in buckets.items():
+#         if len(members) == 1:
+#             # If only one member, connect directly to category
+#             if not G.has_edge(cat_id, members[0]):
+#                 G.add_edge(cat_id, members[0], type=CAT_REL)
+#         else:
+#             # Create subcategory for multiple members
+#             sub_id = f"{cat_id}::{group.lower().replace(' ', '_')}"
+#             if sub_id not in G:
+#                 G.add_node(sub_id, name=group, type="Subcategory")
+#                 G.add_edge(cat_id, sub_id, type=CAT_REL)
+            
+#             # Connect all members to the subcategory
+#             for m in members:
+#                 if not G.has_edge(sub_id, m):
+#                     G.add_edge(sub_id, m, type=CAT_REL)
+    
+#     return G
+
+
+def validate_and_fix_graph(G: nx.DiGraph) -> nx.DiGraph:
+    """
+    Validate and fix common issues in the graph
+    """
+    print("Validating and fixing graph...")
+    
+    # Fix nodes without required attributes
+    nodes_fixed = 0
+    for node_id, attrs in list(G.nodes(data=True)):
+        if 'type' not in attrs:
+            # Try to infer type from node ID or set default
+            if node_id == ROOT_ID:
+                attrs['type'] = 'Company'
+            elif node_id.startswith('cat::'):
+                attrs['type'] = 'Category'
+            else:
+                attrs['type'] = 'Unknown'
+            nodes_fixed += 1
+            
+        if 'name' not in attrs:
+            attrs['name'] = node_id.replace('_', ' ').title()
+            nodes_fixed += 1
+    
+    if nodes_fixed > 0:
+        print(f"Fixed {nodes_fixed} node attributes")
+    
+    # Validate relationship types
+    edges_fixed = 0
+    for u, v, attrs in list(G.edges(data=True)):
+        if 'type' not in attrs:
+            attrs['type'] = 'Unknown'
+            edges_fixed += 1
+    
+    if edges_fixed > 0:
+        print(f"Fixed {edges_fixed} edge attributes")
+    
+    print("Graph validation complete")
+    return G
+
+
+def ensure_hierarchy(G: nx.DiGraph) -> nx.DiGraph:
+    """
+    Ensure the graph has a proper solar system hierarchy:
+    - Root (Apple Inc) at center
+    - Only category nodes connected to root
+    - All entities connected to their respective categories
+    """
+    print("Building solar system hierarchy...")
+    
+    # First, ensure ROOT_ID exists
+    if ROOT_ID not in G:
+        G.add_node(ROOT_ID, type="Company", name="Apple Inc.")
+    
+    # Create category nodes
+    for cat_id, label in MACRO_CATEGORIES.items():
+        if cat_id not in G:
+            G.add_node(cat_id, type="Category", name=label)
+    
+    # STEP 1: Remove ALL edges from root node (we'll rebuild them properly)
+    edges_to_remove = []
+    for successor in list(G.successors(ROOT_ID)):
+        edges_to_remove.append((ROOT_ID, successor))
+    for predecessor in list(G.predecessors(ROOT_ID)):
+        edges_to_remove.append((predecessor, ROOT_ID))
+    
+    for edge in edges_to_remove:
+        if G.has_edge(edge[0], edge[1]):
+            G.remove_edge(edge[0], edge[1])
+    
+    print(f"Removed {len(edges_to_remove)} edges from root node")
+    
+    # STEP 2: Connect root ONLY to category nodes
+    for cat_id in MACRO_CATEGORIES.keys():
+        if not G.has_edge(ROOT_ID, cat_id):
+            G.add_edge(ROOT_ID, cat_id, type=CAT_REL)
+    
+    # STEP 3: Organize all non-category, non-root nodes into buckets
+    buckets = defaultdict(list)
+    direct_category_assignments = defaultdict(list)
+    
+    for n, attrs in list(G.nodes(data=True)):
+        # Skip root, category nodes, and subcategory nodes
+        if (n == ROOT_ID or 
+            n.startswith("cat::") or 
+            attrs.get("type") == "Category" or 
+            attrs.get("type") == "Subcategory"):
+            continue
+        
+        # Get node type, default to "Other" if missing
+        node_type = attrs.get('type', 'Other')
+        
+        # Map node type to category
+        cat_id = f"cat::{node_type}"
+        if cat_id not in MACRO_CATEGORIES:
+            cat_id = "cat::Other"
+            # Ensure "Other" category exists
+            if cat_id not in MACRO_CATEGORIES:
+                MACRO_CATEGORIES[cat_id] = "Other"
+                if cat_id not in G:
+                    G.add_node(cat_id, type="Category", name="Other")
+                if not G.has_edge(ROOT_ID, cat_id):
+                    G.add_edge(ROOT_ID, cat_id, type=CAT_REL)
+        
+        # Try to find a grouping key for subcategories
+        group_name = None
+        group_keys = GROUP_KEYS.get(node_type, [])
+        
+        for key in group_keys:
+            val = attrs.get(key)
+            if val:
+                group_name = val.split()[0] if key == "name" else val
+                break
+        
+        # If we found a group name, add to buckets for subcategory creation
+        if group_name:
+            buckets[(cat_id, group_name)].append(n)
+        else:
+            # Direct assignment to category
+            direct_category_assignments[cat_id].append(n)
+    
+    # STEP 4: Remove any existing edges between entities and root/categories
+    # (clean slate for proper hierarchy)
+    entities_to_clean = []
+    for bucket_list in buckets.values():
+        entities_to_clean.extend(bucket_list)
+    for direct_list in direct_category_assignments.values():
+        entities_to_clean.extend(direct_list)
+    
+    edges_cleaned = 0
+    for entity in entities_to_clean:
+        # Remove any edges TO categories or root (except the ones we'll create)
+        for cat_id in list(MACRO_CATEGORIES.keys()) + [ROOT_ID]:
+            if G.has_edge(entity, cat_id):
+                G.remove_edge(entity, cat_id)
+                edges_cleaned += 1
+            if G.has_edge(cat_id, entity):
+                G.remove_edge(cat_id, entity)
+                edges_cleaned += 1
+    
+    print(f"Cleaned {edges_cleaned} inappropriate category/root connections")
+    
+    # STEP 5: Connect entities directly to categories
+    for cat_id, entities in direct_category_assignments.items():
+        for entity in entities:
+            if not G.has_edge(cat_id, entity):
+                G.add_edge(cat_id, entity, type=CAT_REL)
+    
+    # STEP 6: Create subcategories for grouped items
+    subcategories_created = 0
+    for (cat_id, group), members in buckets.items():
+        if len(members) == 1:
+            # If only one member, connect directly to category
+            if not G.has_edge(cat_id, members[0]):
+                G.add_edge(cat_id, members[0], type=CAT_REL)
+        else:
+            # Create subcategory for multiple members
+            sub_id = f"{cat_id}::{group.lower().replace(' ', '_')}"
+            if sub_id not in G:
+                G.add_node(sub_id, name=group, type="Subcategory")
+                subcategories_created += 1
+            
+            # Connect subcategory to main category
+            if not G.has_edge(cat_id, sub_id):
+                G.add_edge(cat_id, sub_id, type=CAT_REL)
+            
+            # Connect all members to the subcategory
+            for m in members:
+                if not G.has_edge(sub_id, m):
+                    G.add_edge(sub_id, m, type=CAT_REL)
+    
+    print(f"Created {subcategories_created} subcategories")
+    
+    # STEP 7: Validation - ensure root is only connected to categories
+    root_connections = list(G.successors(ROOT_ID))
+    non_category_connections = [
+        conn for conn in root_connections 
+        if not conn.startswith("cat::") and G.nodes[conn].get("type") != "Category"
+    ]
+    
+    if non_category_connections:
+        print(f"WARNING: Found {len(non_category_connections)} non-category connections to root: {non_category_connections}")
+        # Remove these inappropriate connections
+        for conn in non_category_connections:
+            G.remove_edge(ROOT_ID, conn)
+        print("Removed inappropriate root connections")
+    
+    print(f"Hierarchy complete: Root -> {len(list(G.successors(ROOT_ID)))} categories -> entities")
+    return G
+
+
+def validate_hierarchy_structure(G: nx.DiGraph) -> bool:
+    """
+    Validate that the graph has the correct solar system structure
+    """
+    print("\n=== HIERARCHY VALIDATION ===")
+    
+    # Check 1: Root exists
+    if ROOT_ID not in G:
+        print("❌ Root node missing")
+        return False
+    
+    # Check 2: Root only connected to categories
+    root_successors = list(G.successors(ROOT_ID))
+    non_category_successors = [
+        s for s in root_successors 
+        if not s.startswith("cat::") and G.nodes[s].get("type") != "Category"
+    ]
+    
+    if non_category_successors:
+        print(f"❌ Root connected to non-categories: {non_category_successors}")
+        return False
+    else:
+        print(f"✅ Root connected only to {len(root_successors)} categories")
+    
+    # Check 3: All categories connected to root
+    category_nodes = [n for n in G.nodes() if n.startswith("cat::") or G.nodes[n].get("type") == "Category"]
+    unconnected_categories = [cat for cat in category_nodes if not G.has_edge(ROOT_ID, cat)]
+    
+    if unconnected_categories:
+        print(f"❌ Categories not connected to root: {unconnected_categories}")
+        return False
+    else:
+        print(f"✅ All {len(category_nodes)} categories connected to root")
+    
+    # Check 4: No entities directly connected to root
+    all_entities = [
+        n for n in G.nodes() 
+        if (n != ROOT_ID and 
+            not n.startswith("cat::") and 
+            G.nodes[n].get("type") not in ["Category", "Subcategory"])
+    ]
+    
+    entities_connected_to_root = [
+        e for e in all_entities 
+        if G.has_edge(ROOT_ID, e) or G.has_edge(e, ROOT_ID)
+    ]
+    
+    if entities_connected_to_root:
+        print(f"❌ Entities directly connected to root: {entities_connected_to_root}")
+        return False
+    else:
+        print(f"✅ No entities directly connected to root (found {len(all_entities)} entities)")
+    
+    print("✅ Hierarchy structure is valid!")
+    return True
+
+
 if __name__ == "__main__":
     print("Starting Apple Knowledge Graph creation...")
     
@@ -396,6 +799,9 @@ if __name__ == "__main__":
     
     # Step 4: Create NetworkX graph
     G = create_networkx_graph(knowledge_graph)
+
+    # Ensure hierarchy
+    G = ensure_hierarchy(G)
     
     # Step 5: Validate the graph
     validate_graph_relationships(G)
