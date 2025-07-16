@@ -4,68 +4,121 @@
       "id": "apple",
       "type": "Company",
       "name": "Apple Inc.",
-      "prop_description": "Technology company",
-      "prop_headquarters": "Cupertino, California"
+      "prop_description": "Technology company"
     },
     {
-      "id": "ipad",
-      "type": "Product",
-      "name": "iPad",
-      "prop_description": "Line of multipurpose tablets"
+      "id": "third_party_carriers",
+      "type": "Supplier",
+      "name": "Third-party cellular network carriers",
+      "prop_description": "Cellular network service providers"
+    },
+    {
+      "id": "wholesalers",
+      "type": "Supplier",
+      "name": "Wholesalers",
+      "prop_description": "Distributors of Apple products"
+    },
+    {
+      "id": "retailers",
+      "type": "Supplier",
+      "name": "Retailers",
+      "prop_description": "Distributors of Apple products"
+    },
+    {
+      "id": "resellers",
+      "type": "Supplier",
+      "name": "Resellers",
+      "prop_description": "Distributors of Apple products"
+    },
+    {
+      "id": "smartphones",
+      "type": "Product_Line",
+      "name": "Smartphones",
+      "prop_description": "Market for mobile devices"
+    },
+    {
+      "id": "personal_computers",
+      "type": "Product_Line",
+      "name": "Personal Computers",
+      "prop_description": "Market for computing devices"
+    },
+    {
+      "id": "tablets",
+      "type": "Product_Line",
+      "name": "Tablets",
+      "prop_description": "Market for tablet devices"
     },
     {
       "id": "wearables",
-      "type": "Product",
+      "type": "Product_Line",
       "name": "Wearables",
-      "prop_description": "Market segment for wearable technology"
-    },
-    {
-      "id": "apple_watch",
-      "type": "Product",
-      "name": "Apple Watch",
-      "prop_description": "Line of smartwatches"
-    },
-    {
-      "id": "airpods",
-      "type": "Product",
-      "name": "AirPods",
-      "prop_description": "Line of wireless headphones"
-    },
-    {
-      "id": "apple_tv",
-      "type": "Product",
-      "name": "Apple TV",
-      "prop_description": "Media streaming and gaming device"
-    },
-    {
-      "id": "homepod",
-      "type": "Product",
-      "name": "HomePod",
-      "prop_description": "High-fidelity wireless smart speaker"
+      "prop_description": "Market for wearable technology"
     },
     {
       "id": "accessories",
-      "type": "Product",
+      "type": "Product_Line",
       "name": "Accessories",
-      "prop_description": "Market segment for additional products"
+      "prop_description": "Market for additional device components"
     },
     {
-      "id": "aluminum",
-      "type": "Material",
-      "name": "Aluminum",
-      "prop_description": "Used in product casing"
+      "id": "services",
+      "type": "Product_Line",
+      "name": "Services",
+      "prop_description": "Includes App Store and other services"
     },
     {
-      "id": "rare_earth_elements",
-      "type": "Material",
-      "name": "Rare Earth Elements",
-      "prop_description": "Used in various components"
+      "id": "components",
+      "type": "Component",
+      "name": "Components",
+      "prop_description": "Essential parts for products"
     },
     {
-      "id": "foxconn",
-      "type": "Supplier",
-      "name": "Foxconn",
-      "prop_description": "Manufacturing partner"
+      "id": "intellectual_property",
+      "type": "Intellectual_Property",
+      "name": "Intellectual Property",
+      "prop_description": "Collection of rights relating to hardware, software, and services"
+    },
+    {
+      "id": "employees",
+      "type": "Human Capital",
+      "name": "Employees",
+      "prop_count": 164000
+    },
+    {
+      "id": "us",
+      "type": "Geographic_Location",
+      "name": "United States",
+      "prop_description": "Key operational location"
+    },
+    {
+      "id": "international_operations",
+      "type": "Geographic_Location",
+      "name": "International Operations",
+      "prop_description": "Sales outside the U.S."
+    },
+    {
+      "id": "china",
+      "type": "Location",
+      "name": "China",
+      "prop_description": "Major manufacturing hub"
+    },
+    {
+      "id": "india",
+      "type": "Location",
+      "name": "India",
+      "prop_description": "Component manufacturing location"
+    },
+    {
+      "id": "japan",
+      "type": "Location",
+      "name": "Japan",
+      "prop_description": "Manufacturing location"
+    },
+    {
+      "id": "south_korea",
+      "type": "Location",
+      "name": "South Korea",
+      "prop_description": "Manufacturing location"
     },
     {
       "id": "taiwan",
@@ -74,137 +127,2972 @@
       "prop_description": "Operational center"
     },
     {
-      "id": "china",
+      "id": "vietnam",
       "type": "Location",
-      "name": "China",
-      "prop_description": "Manufacturing hub"
+      "name": "Vietnam",
+      "prop_description": "Country in Southeast Asia"
     },
     {
-      "id": "us",
+      "id": "suppliers",
+      "type": "Supplier",
+      "name": "Various Suppliers",
+      "prop_description": "Various suppliers providing components and services"
+    },
+    {
+      "id": "covid19",
+      "type": "Health_Issue",
+      "name": "COVID-19",
+      "prop_description": "Pandemic affecting global economy"
+    },
+    {
+      "id": "supplier_a",
+      "type": "Supplier",
+      "name": "Supplier A",
+      "prop_description": "Supplies components"
+    },
+    {
+      "id": "supplier_b",
+      "type": "Supplier",
+      "name": "Supplier B",
+      "prop_description": "Outsourcing partner"
+    },
+    {
+      "id": "iphone",
+      "type": "Product",
+      "name": "iPhone",
+      "prop_description": "Smartphone line"
+    },
+    {
+      "id": "ipad",
+      "type": "Product",
+      "name": "iPad",
+      "prop_description": "Tablet line"
+    },
+    {
+      "id": "mac",
+      "type": "Product",
+      "name": "Mac",
+      "prop_description": "Personal computer line"
+    },
+    {
+      "id": "location_a",
       "type": "Location",
-      "name": "United States",
+      "name": "Location A",
       "prop_description": "Operational center"
     },
     {
-      "id": "smartphones",
-      "type": "Product_Line",
-      "name": "Smartphones",
-      "prop_description": "Market segment for mobile devices"
+      "id": "location_b",
+      "type": "Location",
+      "name": "Location B",
+      "prop_description": "Manufacturing hub"
     },
     {
-      "id": "personal_computers",
-      "type": "Product_Line",
-      "name": "Personal Computers",
-      "prop_description": "Market segment for computing devices"
+      "id": "aluminum",
+      "type": "Material",
+      "name": "Aluminum",
+      "prop_description": "Material used in products"
     },
     {
-      "id": "tablets",
-      "type": "Product_Line",
-      "name": "Tablets",
-      "prop_description": "Market segment for tablet devices"
+      "id": "rare_earth_elements",
+      "type": "Material",
+      "name": "Rare Earth Elements",
+      "prop_description": "Material used in products"
     },
     {
-      "id": "services",
-      "type": "Product_Line",
+      "id": "app_store",
+      "type": "Platform",
+      "name": "App Store",
+      "prop_description": "Distribution platform for third-party applications"
+    },
+    {
+      "id": "eu",
+      "type": "Geographic_Location",
+      "name": "European Union",
+      "prop_description": "Regulatory region for compliance"
+    },
+    {
+      "id": "digital_markets_act",
+      "type": "Regulation",
+      "name": "Digital Markets Act",
+      "prop_description": "Regulation Apple complies with in the EU"
+    },
+    {
+      "id": "digital_content",
+      "type": "Business_Unit",
+      "name": "Digital Content",
+      "prop_description": "Produces digital content"
+    },
+    {
+      "id": "silicon_valley",
+      "type": "Location",
+      "name": "Silicon Valley",
+      "prop_description": "Key operational location for talent"
+    },
+    {
+      "id": "carriers",
+      "type": "Business_Unit",
+      "name": "Carriers",
+      "prop_description": "Provides cellular network service for Apple products"
+    },
+    {
+      "id": "consumers",
+      "type": "Customer Segment",
+      "name": "Consumers",
+      "prop_description": "Direct customers of Apple products"
+    },
+    {
+      "id": "businesses",
+      "type": "Customer Segment",
+      "name": "Small and Mid-Sized Businesses",
+      "prop_description": "Direct customers of Apple products"
+    },
+    {
+      "id": "education",
+      "type": "Customer Segment",
+      "name": "Education Sector",
+      "prop_description": "Direct customers of Apple"
+    },
+    {
+      "id": "enterprise",
+      "type": "Customer Segment",
+      "name": "Enterprise Customers",
+      "prop_description": "Direct customers of Apple"
+    },
+    {
+      "id": "government",
+      "type": "Customer Segment",
+      "name": "Government Customers",
+      "prop_description": "Direct customers of Apple"
+    },
+    {
+      "id": "supply_chain",
+      "type": "Business Unit",
+      "name": "Global Supply Chain",
+      "prop_description": "Complex network of suppliers and manufacturers"
+    },
+    {
+      "id": "retail_stores",
+      "type": "Business_Unit",
+      "name": "Retail Stores",
+      "prop_description": "Sales locations for Apple products"
+    },
+    {
+      "id": "regulations",
+      "type": "Regulation",
+      "name": "Regulatory Changes",
+      "prop_description": "Changing regulations relating to export and import of products"
+    },
+    {
+      "id": "environmental_initiatives",
+      "type": "Initiative",
+      "name": "Environmental, Social and Governance Considerations",
+      "prop_description": "Focus on climate change and greenhouse gas emissions"
+    },
+    {
+      "id": "emissions",
+      "type": "Environmental_Issue",
+      "name": "Emissions",
+      "prop_description": "Environmental impact related to production"
+    },
+    {
+      "id": "human_rights",
+      "type": "Social_Issue",
+      "name": "Human Rights",
+      "prop_description": "Social responsibility concern"
+    },
+    {
+      "id": "diversity_inclusion",
+      "type": "Social_Issue",
+      "name": "Diversity, Equity and Inclusion",
+      "prop_description": "Social responsibility initiative"
+    },
+    {
+      "id": "google",
+      "type": "Company",
+      "name": "Google LLC",
+      "prop_description": "Search services provider"
+    },
+    {
+      "id": "geographic_segments",
+      "type": "Geographic_Segment",
+      "name": "Geographic Segments",
+      "prop_description": "Various geographic segments of operation"
+    },
+    {
+      "id": "distribution_channels",
+      "type": "Distribution_Channel",
+      "name": "Distribution Channels",
+      "prop_description": "Various distribution channels used by Apple"
+    },
+    {
+      "id": "manufacturing_partners",
+      "type": "Supplier",
+      "name": "Manufacturing Partners",
+      "prop_description": "Logistics and manufacturing partners"
+    },
+    {
+      "id": "cellular_network_carriers",
+      "type": "Supplier",
+      "name": "Cellular Network Carriers",
+      "prop_description": "Distributors of Apple products"
+    },
+    {
+      "id": "small_mid_sized_businesses",
+      "type": "Customer",
+      "name": "Small and Mid-Sized Businesses",
+      "prop_description": "Direct customers of Apple"
+    },
+    {
+      "id": "ireland",
+      "type": "Location",
+      "name": "Ireland",
+      "prop_description": "iMac assembly location"
+    },
+    {
+      "id": "singapore",
+      "type": "Location",
+      "name": "Singapore",
+      "prop_description": "Country with Apple subsidiaries"
+    },
+    {
+      "id": "asia",
+      "type": "Location",
+      "name": "Asia",
+      "prop_description": "Region where suppliers are concentrated"
+    },
+    {
+      "id": "cupertino",
+      "type": "Location",
+      "name": "Cupertino, California",
+      "prop_description": "Headquarters of Apple Inc."
+    },
+    {
+      "id": "dma",
+      "type": "Regulation",
+      "name": "Digital Markets Act",
+      "prop_description": "Regulation under investigation for compliance issues"
+    },
+    {
+      "id": "nasdaq",
+      "type": "Stock Exchange",
+      "name": "The Nasdaq Stock Market LLC",
+      "prop_symbol": "AAPL",
+      "prop_description": "Stock exchange where Apple is listed"
+    },
+    {
+      "id": "shareholders",
+      "type": "Stakeholders",
+      "name": "Shareholders",
+      "prop_count": 23301
+    },
+    {
+      "id": "share_repurchase_program",
+      "type": "Program",
+      "name": "Share Repurchase Program",
+      "prop_authorized_amount": "$110 billion",
+      "prop_utilized_amount": "$20.9 billion",
+      "prop_announcement_date": "May 2, 2024"
+    },
+    {
+      "id": "sp500",
+      "type": "Index",
+      "name": "S&P 500 Index",
+      "prop_description": "Stock market index"
+    },
+    {
+      "id": "dow_jones",
+      "type": "Index",
+      "name": "Dow Jones U.S. Technology Supersector Index",
+      "prop_description": "Stock market index"
+    },
+    {
+      "id": "products",
+      "type": "Business_Unit",
+      "name": "Products",
+      "prop_description": "Various product lines including iPhone, iPad, Mac"
+    },
+    {
+      "id": "us_dollar",
+      "type": "Currency",
+      "name": "U.S. Dollar",
+      "prop_description": "Currency impacting gross margins"
+    },
+    {
+      "id": "r_and_d",
+      "type": "Business_Unit",
+      "name": "Research and Development",
+      "prop_description": "Focuses on innovation and product development"
+    },
+    {
+      "id": "sga",
+      "type": "Business_Unit",
+      "name": "Selling, General and Administrative",
+      "prop_description": "Handles sales and administrative functions"
+    },
+    {
+      "id": "state_aid_decision",
+      "type": "Regulation",
+      "name": "State Aid Decision",
+      "prop_description": "One-time income tax charge related to state aid"
+    },
+    {
+      "id": "outsourcing_partners",
+      "type": "Supplier",
+      "name": "Outsourcing Partners",
+      "prop_description": "Manufacturing partners for subassemblies and final assembly"
+    },
+    {
+      "id": "financial_statements",
+      "type": "Document",
+      "name": "Consolidated Financial Statements",
+      "prop_description": "Financial reporting for Apple Inc."
+    },
+    {
+      "id": "foxconn",
+      "type": "Supplier",
+      "name": "Foxconn",
+      "prop_description": "Manufacturing partner"
+    },
+    {
+      "id": "tsmc",
+      "type": "Supplier",
+      "name": "TSMC",
+      "prop_description": "Chip manufacturer"
+    },
+    {
+      "id": "usa",
+      "type": "Location",
+      "name": "USA",
+      "prop_description": "Headquarters and operational center"
+    },
+    {
+      "id": "shareholders_equity",
+      "type": "Financial Metric",
+      "name": "Total Shareholders' Equity",
+      "prop_description": "Financial performance measure"
+    },
+    {
+      "id": "gaap",
+      "type": "Regulation",
+      "name": "GAAP",
+      "prop_description": "Accounting standards used by Apple"
+    },
+    {
+      "id": "icloud",
+      "type": "Service",
+      "name": "iCloud",
+      "prop_description": "Cloud storage service"
+    },
+    {
+      "id": "siri",
+      "type": "Service",
+      "name": "Siri",
+      "prop_description": "Voice assistant service"
+    },
+    {
+      "id": "maps",
+      "type": "Service",
+      "name": "Maps",
+      "prop_description": "Mapping service"
+    },
+    {
+      "id": "wearables_home_accessories",
+      "type": "Product",
+      "name": "Wearables, Home and Accessories",
+      "prop_description": "Product line including wearables and home devices"
+    },
+    {
+      "id": "greater_china",
+      "type": "Geographic_Location",
+      "name": "Greater China"
+    },
+    {
+      "id": "manufacturing_vendors",
+      "type": "Supplier",
+      "name": "Manufacturing vendors",
+      "prop_description": "Vendors that manufacture subassemblies or final products"
+    },
+    {
+      "id": "subassemblies",
+      "type": "Component",
+      "name": "Subassemblies",
+      "prop_description": "Intermediate products assembled from components"
+    },
+    {
+      "id": "land_buildings",
+      "type": "Asset",
+      "name": "Land and buildings",
+      "prop_value_2024": 24690,
+      "prop_value_2023": 23446
+    },
+    {
+      "id": "machinery_equipment",
+      "type": "Asset",
+      "name": "Machinery, equipment and internal-use software",
+      "prop_value_2024": 80205,
+      "prop_value_2023": 78314
+    },
+    {
+      "id": "leasehold_improvements",
+      "type": "Asset",
+      "name": "Leasehold improvements",
+      "prop_value_2024": 14233,
+      "prop_value_2023": 12839
+    },
+    {
+      "id": "property_plant_equipment",
+      "type": "Asset",
+      "name": "Gross property, plant and equipment",
+      "prop_value_2024": 119128,
+      "prop_value_2023": 114599
+    },
+    {
+      "id": "accumulated_depreciation",
+      "type": "Asset",
+      "name": "Accumulated depreciation",
+      "prop_value_2024": 73448,
+      "prop_value_2023": 70884
+    },
+    {
+      "id": "total_property_plant_equipment",
+      "type": "Asset",
+      "name": "Total property, plant and equipment, net",
+      "prop_value_2024": 45680,
+      "prop_value_2023": 43715
+    },
+    {
+      "id": "depreciation_expense",
+      "type": "Financial Metric",
+      "name": "Depreciation expense",
+      "prop_2024": 8200,
+      "prop_2023": 8500,
+      "prop_2022": 8700
+    },
+    {
+      "id": "deferred_tax_assets",
+      "type": "Financial Asset",
+      "name": "Deferred tax assets",
+      "prop_value_2024": 19499,
+      "prop_value_2023": 17852
+    },
+    {
+      "id": "other_non_current_assets",
+      "type": "Financial Asset",
+      "name": "Other non-current assets",
+      "prop_value_2024": 55335,
+      "prop_value_2023": 46906
+    },
+    {
+      "id": "total_other_non_current_assets",
+      "type": "Financial Asset",
+      "name": "Total other non-current assets",
+      "prop_value_2024": 74834,
+      "prop_value_2023": 64758
+    },
+    {
+      "id": "income_taxes_payable_current",
+      "type": "Financial Liability",
+      "name": "Income taxes payable (current)",
+      "prop_value_2024": 26601,
+      "prop_value_2023": 8819
+    },
+    {
+      "id": "other_current_liabilities",
+      "type": "Financial Liability",
+      "name": "Other current liabilities",
+      "prop_value_2024": 51703,
+      "prop_value_2023": 50010
+    },
+    {
+      "id": "total_other_current_liabilities",
+      "type": "Financial Liability",
+      "name": "Total other current liabilities",
+      "prop_value_2024": 78304,
+      "prop_value_2023": 58829
+    },
+    {
+      "id": "income_taxes_payable_non_current",
+      "type": "Financial Liability",
+      "name": "Income taxes payable (non-current)",
+      "prop_value_2024": 9254,
+      "prop_value_2023": 15457
+    },
+    {
+      "id": "other_non_current_liabilities",
+      "type": "Financial Liability",
+      "name": "Other non-current liabilities",
+      "prop_value_2024": 36634,
+      "prop_value_2023": 34391
+    },
+    {
+      "id": "total_other_non_current_liabilities",
+      "type": "Financial Liability",
+      "name": "Total other non-current liabilities",
+      "prop_value_2024": 45888,
+      "prop_value_2023": 49848
+    },
+    {
+      "id": "european_commission",
+      "type": "Regulatory Body",
+      "name": "European Commission",
+      "prop_description": "Regulatory body involved in state aid decisions"
+    },
+    {
+      "id": "foreign_subsidiaries",
+      "type": "Business_Unit",
+      "name": "Foreign Subsidiaries",
+      "prop_description": "Apple's international operations"
+    },
+    {
+      "id": "2022_plan",
+      "type": "Program",
+      "name": "2022 Employee Stock Plan",
+      "prop_description": "Shareholder-approved plan for equity grants to employees"
+    },
+    {
+      "id": "employee_stock_plan_2022",
+      "type": "Plan",
+      "name": "2022 Employee Stock Plan",
+      "prop_description": "Shareholder-approved plan for equity grants"
+    },
+    {
+      "id": "employee_stock_plan_2014",
+      "type": "Plan",
+      "name": "2014 Employee Stock Plan",
+      "prop_description": "Shareholder-approved plan for equity grants, now terminated"
+    },
+    {
+      "id": "other_countries",
+      "type": "Location",
+      "name": "Other Countries",
+      "prop_description": "Includes various international operations"
+    },
+    {
+      "id": "pcaob",
+      "type": "Regulatory_Body",
+      "name": "Public Company Accounting Oversight Board",
+      "prop_description": "Public Company Accounting Oversight Board standards"
+    },
+    {
+      "id": "foreign_jurisdictions",
+      "type": "Geographic_Location",
+      "name": "Numerous Foreign Jurisdictions",
+      "prop_description": "Various countries where Apple operates"
+    },
+    {
+      "id": "tax_laws",
+      "type": "Regulation",
+      "name": "Domestic and International Tax Laws",
+      "prop_description": "Tax regulations Apple complies with"
+    },
+    {
+      "id": "ernst_young",
+      "type": "Company",
+      "name": "Ernst & Young LLP",
+      "prop_description": "Independent Registered Public Accounting Firm"
+    },
+    {
+      "id": "san_jose",
+      "type": "Location",
+      "name": "San Jose, California",
+      "prop_description": "Operational location of Apple Inc."
+    },
+    {
+      "id": "coso",
+      "type": "Regulation",
+      "name": "COSO criteria",
+      "prop_description": "Internal control framework"
+    },
+    {
+      "id": "luca_maestri",
+      "type": "Person",
+      "name": "Luca Maestri",
+      "prop_title": "Senior Vice President, Chief Financial Officer"
+    },
+    {
+      "id": "chris_kondo",
+      "type": "Person",
+      "name": "Chris Kondo",
+      "prop_title": "Senior Director of Corporate Accounting"
+    },
+    {
+      "id": "wanda_austin",
+      "type": "Person",
+      "name": "Wanda Austin",
+      "prop_title": "Director"
+    },
+    {
+      "id": "alex_gorsky",
+      "type": "Person",
+      "name": "Alex Gorsky",
+      "prop_title": "Director"
+    },
+    {
+      "id": "andrea_jung",
+      "type": "Person",
+      "name": "Andrea Jung",
+      "prop_title": "Director"
+    },
+    {
+      "id": "arthur_levinson",
+      "type": "Person",
+      "name": "Arthur D. Levinson",
+      "prop_title": "Director and Chair of the Board"
+    },
+    {
+      "id": "monica_lozano",
+      "type": "Person",
+      "name": "Monica Lozano",
+      "prop_title": "Director"
+    },
+    {
+      "id": "ronald_sugar",
+      "type": "Person",
+      "name": "Ronald D. Sugar",
+      "prop_title": "Director"
+    },
+    {
+      "id": "susan_wagner",
+      "type": "Person",
+      "name": "Susan L. Wagner",
+      "prop_title": "Director"
+    },
+    {
+      "id": "bank_of_new_york",
+      "type": "Company",
+      "name": "The Bank of New York Mellon Trust Company, N.A.",
+      "prop_description": "Trustee for debt securities"
+    },
+    {
+      "id": "employee_stock_plan",
+      "type": "Program",
+      "name": "2022 Employee Stock Plan",
+      "prop_description": "Stock plan for employees"
+    },
+    {
+      "id": "stock_plan",
+      "type": "Program",
+      "name": "2022 Employee Stock Plan",
+      "prop_description": "Employee stock incentive program"
+    },
+    {
+      "id": "tim_cook",
+      "type": "Person",
+      "name": "Timothy D. Cook",
+      "prop_description": "CEO of Apple Inc."
+    },
+    {
+      "id": "supplier_employee_development_fund",
+      "type": "Program",
+      "name": "Supplier Employee Development Fund",
+      "prop_description": "Investment program for supplier employee development"
+    },
+    {
+      "id": "recycled_materials",
+      "type": "Material",
+      "name": "Recycled Materials",
+      "prop_description": "Materials sourced from recycling processes"
+    },
+    {
+      "id": "batteries",
+      "type": "Component",
+      "name": "Batteries",
+      "prop_description": "Component used in Apple products"
+    },
+    {
+      "id": "magnets",
+      "type": "Component",
+      "name": "Magnets",
+      "prop_description": "Component used in Apple products"
+    },
+    {
+      "id": "circuit_boards",
+      "type": "Component",
+      "name": "Circuit Boards",
+      "prop_description": "Component used in Apple products"
+    },
+    {
+      "id": "cobalt",
+      "type": "Material",
+      "name": "Cobalt",
+      "prop_description": "Material used in batteries."
+    },
+    {
+      "id": "tin",
+      "type": "Material",
+      "name": "Tin",
+      "prop_description": "Recycled material used in soldering"
+    },
+    {
+      "id": "gold",
+      "type": "Material",
+      "name": "Gold",
+      "prop_description": "Precious metal used in products"
+    },
+    {
+      "id": "printed_circuit_boards",
+      "type": "Component",
+      "name": "Printed Circuit Boards",
+      "prop_description": "Components used in Apple products"
+    },
+    {
+      "id": "united_states",
+      "type": "Location",
+      "name": "United States",
+      "prop_description": "Logistics and repair location"
+    },
+    {
+      "id": "renewable_materials",
+      "type": "Material",
+      "name": "Renewable Materials",
+      "prop_description": "Sustainable materials that can be replenished naturally"
+    },
+    {
+      "id": "carbon_neutrality",
+      "type": "Environmental_Initiative",
+      "name": "Apple 2030",
+      "prop_description": "Commitment to carbon neutrality across supply chain by 2030."
+    },
+    {
+      "id": "supplier_clean_energy_program",
+      "type": "Program",
+      "name": "Supplier Clean Energy Program",
+      "prop_description": "Program aimed at reducing supplier emissions."
+    },
+    {
+      "id": "supplier_energy_efficiency_program",
+      "type": "Program",
+      "name": "Supplier Energy Efficiency Program",
+      "prop_description": "Program focused on improving energy efficiency at supplier sites."
+    },
+    {
+      "id": "recycled_cobalt",
+      "type": "Material",
+      "name": "Recycled Cobalt",
+      "prop_description": "Material used in Apple-designed batteries."
+    },
+    {
+      "id": "recycled_rare_earth_elements",
+      "type": "Material",
+      "name": "Recycled Rare Earth Elements",
+      "prop_description": "Used in magnets in Apple devices"
+    },
+    {
+      "id": "energy_efficiency_program",
+      "type": "Environmental_Initiative",
+      "name": "Energy Efficiency Program",
+      "prop_description": "Program focused on decarbonizing electricity usage at supplier sites."
+    },
+    {
+      "id": "supplier_code_of_conduct",
+      "type": "Regulation",
+      "name": "Apple Supplier Code of Conduct",
+      "prop_description": "Standards outlining requirements for suppliers"
+    },
+    {
+      "id": "recycled_tin",
+      "type": "Material",
+      "name": "Recycled Tin",
+      "prop_description": "Used in soldering for circuit boards"
+    },
+    {
+      "id": "recycled_gold",
+      "type": "Material",
+      "name": "Recycled Gold",
+      "prop_description": "Used in plating"
+    },
+    {
+      "id": "austin_texas",
+      "type": "Location",
+      "name": "Austin, Texas",
+      "prop_description": "Home to Apple's Material Recovery Lab and advanced recovery center"
+    },
+    {
+      "id": "ul_solutions",
+      "type": "Company",
+      "name": "UL Solutions",
+      "prop_description": "Certifying body for Zero Waste certification"
+    },
+    {
+      "id": "santa_clara_valley",
+      "type": "Location",
+      "name": "Santa Clara Valley, California",
+      "prop_description": "Asset recovery center location"
+    },
+    {
+      "id": "fair_wage_network",
+      "type": "Organization",
+      "name": "Fair Wage Network",
+      "prop_description": "Collaborates with Apple to collect and map wage data"
+    },
+    {
+      "id": "american_india_foundation",
+      "type": "Organization",
+      "name": "American India Foundation",
+      "prop_description": "Supports empowerment of underserved communities in India"
+    },
+    {
+      "id": "green_america",
+      "type": "Organization",
+      "name": "Green America",
+      "prop_description": "Founding member of Clean Electronics Production Network"
+    },
+    {
+      "id": "clean_electronics_production_network",
+      "type": "Organization",
+      "name": "Clean Electronics Production Network",
+      "prop_description": "Focuses on sustainable electronics production"
+    },
+    {
+      "id": "council_for_adult_and_experiential_learning",
+      "type": "Organization",
+      "name": "Council for Adult and Experiential Learning",
+      "prop_description": "Supports English language trainings and skills development"
+    },
+    {
+      "id": "pact",
+      "type": "Organization",
+      "name": "Pact",
+      "prop_description": "Non-profit organization focused on rights awareness training"
+    },
+    {
+      "id": "hhi",
+      "type": "Organization",
+      "name": "Harvard Humanitarian Initiative",
+      "prop_description": "Research initiative on humanitarian issues"
+    },
+    {
+      "id": "ppa",
+      "type": "Organization",
+      "name": "Public-Private Alliance for Responsible Minerals Trade",
+      "prop_description": "Partnership for renewable energy initiatives"
+    },
+    {
+      "id": "oecd",
+      "type": "Organization",
+      "name": "Organization for Economic Co-operation and Development",
+      "prop_description": "International organization for economic cooperation"
+    },
+    {
+      "id": "drc",
+      "type": "Location",
+      "name": "Democratic Republic of the Congo",
+      "prop_description": "Region from which Apple has ceased sourcing 3TG."
+    },
+    {
+      "id": "working_capital_innovation_fund",
+      "type": "Investment Fund",
+      "name": "Working Capital Innovation Fund",
+      "prop_description": "Early-stage venture fund for supply chain tools"
+    },
+    {
+      "id": "quizrr",
+      "type": "Company",
+      "name": "Quizrr",
+      "prop_description": "Provider of training content for suppliers"
+    },
+    {
+      "id": "daisy",
+      "type": "Product",
+      "name": "Daisy",
+      "prop_description": "iPhone disassembly robot"
+    },
+    {
+      "id": "brazil",
+      "type": "Location",
+      "name": "Brazil",
+      "prop_description": "Customer support call center"
+    },
+    {
+      "id": "supplier_responsibility_standards",
+      "type": "Document",
+      "name": "Supplier Responsibility Standards",
+      "prop_description": "Standards for labor and human rights, health and safety, environment, ethics, and management systems"
+    },
+    {
+      "id": "retail_fixture_manufacturing",
+      "type": "Business_Unit",
+      "name": "Retail Fixture Manufacturing",
+      "prop_location": "United States"
+    },
+    {
+      "id": "apple_watch_assembly",
+      "type": "Business_Unit",
+      "name": "Apple Watch Assembly",
+      "prop_location": "Vietnam"
+    },
+    {
+      "id": "airpods_pro_assembly",
+      "type": "Business_Unit",
+      "name": "AirPods Pro Assembly",
+      "prop_location": "Vietnam"
+    },
+    {
+      "id": "component_manufacturing",
+      "type": "Business_Unit",
+      "name": "Component Manufacturing",
+      "prop_location": "China mainland"
+    },
+    {
+      "id": "imac_assembly",
+      "type": "Business_Unit",
+      "name": "iMac Assembly",
+      "prop_location": "Ireland"
+    },
+    {
+      "id": "us_federal_acquisition_regulations",
+      "type": "Regulation",
+      "name": "U.S. Federal Acquisition Regulations",
+      "prop_description": "Regulations applicable to federal acquisitions"
+    },
+    {
+      "id": "esci",
+      "type": "BusinessUnit",
+      "name": "ESCI",
+      "prop_description": "Part of Apple\u2019s Worldwide Operations organization, coordinates compliance actions related to human rights"
+    },
+    {
+      "id": "compliance_and_business_conduct",
+      "type": "BusinessUnit",
+      "name": "Compliance and Business Conduct",
+      "prop_description": "Monitors suppliers for human rights and environmental concerns"
+    },
+    {
+      "id": "audit_and_finance_committee",
+      "type": "Committee",
+      "name": "Audit and Finance Committee",
+      "prop_description": "Receives regular updates from the Chief Compliance Officer"
+    },
+    {
+      "id": "people_and_compensation_committee",
+      "type": "Committee",
+      "name": "People and Compensation Committee",
+      "prop_description": "Includes modifiers based on Apple\u2019s values in executive incentive programs"
+    },
+    {
+      "id": "supplier_employees",
+      "type": "Group",
+      "name": "Supplier Employees",
+      "prop_description": "Employees working for Apple suppliers",
+      "prop_count": 1400000
+    },
+    {
+      "id": "rights_holders",
+      "type": "Group",
+      "name": "Rights Holders",
+      "prop_description": "Stakeholders engaged in supply chain rights"
+    },
+    {
+      "id": "28_countries",
+      "type": "Geographic_Location",
+      "name": "28 Countries and Regions",
+      "prop_description": "Locations where training tools have reached people"
+    },
+    {
+      "id": "remedy_project",
+      "type": "Organization",
+      "name": "The Remedy Project",
+      "prop_description": "Third-party organization conducting human rights impact assessments."
+    },
+    {
+      "id": "japan_solar",
+      "type": "Supplier",
+      "name": "Supplier solar array installation",
+      "prop_description": "Solar energy supplier"
+    },
+    {
+      "id": "us_silicon",
+      "type": "Supplier",
+      "name": "Silicon manufacturing",
+      "prop_description": "Silicon supplier"
+    },
+    {
+      "id": "austria_hydroelectric",
+      "type": "Supplier",
+      "name": "Supplier hydroelectric facility",
+      "prop_description": "Hydroelectric energy supplier"
+    },
+    {
+      "id": "vietnam_health",
+      "type": "Supplier",
+      "name": "Health education training",
+      "prop_description": "Health education training provider"
+    },
+    {
+      "id": "supplier_engagement",
+      "type": "Business_Unit",
+      "name": "Supplier Engagement",
+      "prop_description": "Engagement and assessment of suppliers"
+    },
+    {
+      "id": "worker_voice_dashboard",
+      "type": "Tool",
+      "name": "Worker Voice Dashboard",
+      "prop_description": "Tool for visualizing supplier employee feedback"
+    },
+    {
+      "id": "supplier",
+      "type": "Supplier",
+      "name": "Unnamed Supplier",
+      "prop_description": "Supplier involved in worker accommodations"
+    },
+    {
+      "id": "students",
+      "type": "Group",
+      "name": "Students",
+      "prop_description": "Group of supplier employees potentially at risk"
+    },
+    {
+      "id": "rba",
+      "type": "Organization",
+      "name": "Responsible Business Alliance",
+      "prop_description": "Industry-wide standards organization"
+    },
+    {
+      "id": "ilo",
+      "type": "Organization",
+      "name": "International Labour Organization",
+      "prop_description": "International organization promoting labor rights"
+    },
+    {
+      "id": "zero_waste",
+      "type": "Environmental_Initiative",
+      "name": "Zero Waste certification",
+      "prop_description": "Certification for waste management standards"
+    },
+    {
+      "id": "countries",
+      "type": "Geographic_Location",
+      "name": "12 countries and regions",
+      "prop_description": "Locations of audits conducted"
+    },
+    {
+      "id": "labor_agents",
+      "type": "Entity",
+      "name": "Labor Agents",
+      "prop_description": "Recruitment agents for labor"
+    },
+    {
+      "id": "labor_agencies",
+      "type": "Entity",
+      "name": "Labor Agencies",
+      "prop_description": "Recruitment agencies for Apple suppliers"
+    },
+    {
+      "id": "workers",
+      "type": "Entity",
+      "name": "Workers",
+      "prop_description": "Individuals employed in facilities globally"
+    },
+    {
+      "id": "supplier_program",
+      "type": "Program",
+      "name": "Employment and Professional Development Program",
+      "prop_description": "Program for persons with disabilities in supply chain"
+    },
+    {
+      "id": "metal",
+      "type": "Material",
+      "name": "Metal",
+      "prop_description": "Material related to security policy in supplier facilities"
+    },
+    {
+      "id": "anodizing",
+      "type": "Process",
+      "name": "Anodizing",
+      "prop_description": "Coating and coloring metal surfaces"
+    },
+    {
+      "id": "supplier_facilities",
+      "type": "Facility",
+      "name": "Supplier Facilities",
+      "prop_description": "Facilities of suppliers monitored by Apple",
+      "prop_count": 50
+    },
+    {
+      "id": "fire_safety_training",
+      "type": "Program",
+      "name": "Fire Safety Training",
+      "prop_description": "Training program for suppliers on fire safety risks"
+    },
+    {
+      "id": "chemforward",
+      "type": "Organization",
+      "name": "ChemFORWARD",
+      "prop_description": "Supply chain collaboration for safer chemistry"
+    },
+    {
+      "id": "cepn",
+      "type": "Organization",
+      "name": "Clean Electronics Production Network",
+      "prop_description": "Multistakeholder initiative for chemical safety"
+    },
+    {
+      "id": "epa",
+      "type": "Organization",
+      "name": "U.S. Environmental Protection Agency",
+      "prop_description": "Regulatory body for environmental protection"
+    },
+    {
+      "id": "iom",
+      "type": "Organization",
+      "name": "International Organization for Migration",
+      "prop_description": "Intergovernmental organization focused on migration issues"
+    },
+    {
+      "id": "gravity_water",
+      "type": "NGO",
+      "name": "Gravity Water",
+      "prop_description": "Non-governmental organization focused on water access"
+    },
+    {
+      "id": "philippines",
+      "type": "Location",
+      "name": "Philippines",
+      "prop_description": "Country in Southeast Asia"
+    },
+    {
+      "id": "congo_power",
+      "type": "Initiative",
+      "name": "Congo Power",
+      "prop_description": "Renewable electricity initiative"
+    },
+    {
+      "id": "oecd_guidance",
+      "type": "Regulation",
+      "name": "OECD Due Diligence Guidance",
+      "prop_description": "Guidance for responsible sourcing of minerals"
+    },
+    {
+      "id": "ungps",
+      "type": "Regulation",
+      "name": "UNGPs",
+      "prop_description": "United Nations Guiding Principles on Business and Human Rights"
+    },
+    {
+      "id": "3tg",
+      "type": "Material",
+      "name": "3TG",
+      "prop_description": "Tin, Tantalum, Tungsten, and Gold used in electronics."
+    },
+    {
+      "id": "rwanda",
+      "type": "Location",
+      "name": "Rwanda",
+      "prop_description": "Region from which Apple has ceased sourcing 3TG."
+    },
+    {
+      "id": "lithium",
+      "type": "Material",
+      "name": "Lithium",
+      "prop_description": "Material used in batteries."
+    },
+    {
+      "id": "mica",
+      "type": "Material",
+      "name": "Mica",
+      "prop_description": "Material used in products"
+    },
+    {
+      "id": "copper",
+      "type": "Material",
+      "name": "Copper",
+      "prop_description": "Material used in products"
+    },
+    {
+      "id": "graphite",
+      "type": "Material",
+      "name": "Graphite",
+      "prop_description": "Material used in products"
+    },
+    {
+      "id": "nickel",
+      "type": "Material",
+      "name": "Nickel",
+      "prop_description": "Material used in products"
+    },
+    {
+      "id": "3TG",
+      "type": "Material",
+      "name": "3TG",
+      "prop_description": "Tin, Tantalum, Tungsten, and Gold used in electronics."
+    },
+    {
+      "id": "RMI",
+      "type": "Organization",
+      "name": "Responsible Minerals Initiative",
+      "prop_description": "Third-party audit program"
+    },
+    {
+      "id": "LBMA",
+      "type": "Organization",
+      "name": "London Bullion Market Association",
+      "prop_description": "Third-party audit program"
+    },
+    {
+      "id": "glass",
+      "type": "Material",
+      "name": "Glass"
+    },
+    {
+      "id": "paper",
+      "type": "Material",
+      "name": "Paper"
+    },
+    {
+      "id": "plastics",
+      "type": "Material",
+      "name": "Plastics"
+    },
+    {
+      "id": "steel",
+      "type": "Material",
+      "name": "Steel"
+    },
+    {
+      "id": "tantalum",
+      "type": "Material",
+      "name": "Tantalum"
+    },
+    {
+      "id": "titanium",
+      "type": "Material",
+      "name": "Titanium"
+    },
+    {
+      "id": "tungsten",
+      "type": "Material",
+      "name": "Tungsten"
+    },
+    {
+      "id": "zinc",
+      "type": "Material",
+      "name": "Zinc"
+    },
+    {
+      "id": "rmi",
+      "type": "Organization",
+      "name": "Responsible Minerals Initiative",
+      "prop_description": "Third-party audit program."
+    },
+    {
+      "id": "lbma",
+      "type": "Organization",
+      "name": "London Bullion Market Association",
+      "prop_description": "Third-party audit program."
+    },
+    {
+      "id": "impact",
+      "type": "Organization",
+      "name": "IMPACT",
+      "prop_description": "NGO focused on supply chain activities"
+    },
+    {
+      "id": "resolve",
+      "type": "Nonprofit",
+      "name": "RESOLVE",
+      "prop_description": "Sustainability nonprofit"
+    },
+    {
+      "id": "salmon_gold",
+      "type": "Project",
+      "name": "Salmon Gold",
+      "prop_description": "Project focused on sustainable mining practices"
+    },
+    {
+      "id": "great_lakes_region",
+      "type": "Geographic_Location",
+      "name": "Great Lakes Region of Africa",
+      "prop_description": "Region affected by mining"
+    },
+    {
+      "id": "yukon",
+      "type": "Geographic_Location",
+      "name": "Yukon",
+      "prop_description": "Region in Canada"
+    },
+    {
+      "id": "alaska",
+      "type": "Geographic_Location",
+      "name": "Alaska",
+      "prop_description": "U.S. state"
+    },
+    {
+      "id": "british_columbia",
+      "type": "Geographic_Location",
+      "name": "British Columbia",
+      "prop_description": "Province in Canada"
+    },
+    {
+      "id": "czech_republic",
+      "type": "Location",
+      "name": "Czech Republic",
+      "prop_description": "Logistics operations"
+    },
+    {
+      "id": "managers",
+      "type": "Supplier",
+      "name": "Managers",
+      "prop_description": "Supervisors in supplier sites"
+    },
+    {
+      "id": "line_workers",
+      "type": "Supplier",
+      "name": "Line Workers",
+      "prop_description": "Workers on production lines"
+    },
+    {
+      "id": "specialized_audits",
+      "type": "Group",
+      "name": "Specialized Audits",
+      "prop_description": "Audits conducted by Apple",
+      "prop_count": 137
+    },
+    {
+      "id": "worker_interviews",
+      "type": "Group",
+      "name": "Worker Interviews",
+      "prop_description": "Interviews conducted with workers",
+      "prop_count": 74000
+    },
+    {
+      "id": "apple_one",
+      "type": "Service",
+      "name": "Apple One",
+      "prop_description": "Subscription service"
+    },
+    {
+      "id": "applecare",
+      "type": "Service",
+      "name": "AppleCare",
+      "prop_description": "Support service"
+    },
+    {
+      "id": "apple_tv_plus",
+      "type": "Service",
+      "name": "Apple TV+",
+      "prop_description": "Streaming service"
+    },
+    {
+      "id": "apple_fitness_plus",
+      "type": "Service",
+      "name": "Apple Fitness+",
+      "prop_description": "Fitness service"
+    },
+    {
+      "id": "recycling",
+      "type": "Initiative",
+      "name": "Recycling Program",
+      "prop_description": "Program for recycling devices at end of life"
+    },
+    {
+      "id": "logistics_suppliers",
+      "type": "Supplier",
+      "name": "Logistics Suppliers",
+      "prop_description": "Suppliers that handle distribution of products"
+    },
+    {
+      "id": "human_rights_policy",
+      "type": "Policy",
+      "name": "Apple Human Rights Policy",
+      "prop_description": "Policy governing human rights in supply chain"
+    },
+    {
+      "id": "supplier_code",
+      "type": "Policy",
+      "name": "Apple Supplier Code of Conduct",
+      "prop_description": "Code of conduct for suppliers"
+    },
+    {
+      "id": "supplier_standards",
+      "type": "Policy",
+      "name": "Supplier Responsibility Standards",
+      "prop_description": "Standards for supplier responsibility"
+    },
+    {
+      "id": "un_guiding_principles",
+      "type": "Organization",
+      "name": "United Nations Guiding Principles on Business and Human Rights",
+      "prop_description": "Framework for business and human rights"
+    },
+    {
+      "id": "responsible_business_alliance",
+      "type": "Organization",
+      "name": "Responsible Business Alliance",
+      "prop_description": "Standards organization for responsible business practices"
+    },
+    {
+      "id": "auditing_firms",
+      "type": "Entity",
+      "name": "Independent Auditing Firms",
+      "prop_description": "Third-party firms conducting assessments"
+    },
+    {
+      "id": "austria",
+      "type": "Location",
+      "name": "Austria"
+    },
+    {
+      "id": "china_mainland",
+      "type": "Location",
+      "name": "China mainland"
+    },
+    {
+      "id": "silicon",
+      "type": "Material",
+      "name": "Silicon"
+    },
+    {
+      "id": "fiber_based_packaging",
+      "type": "Material",
+      "name": "Fiber-based packaging"
+    },
+    {
+      "id": "3tg_smelters",
+      "type": "Material",
+      "name": "3TG Smelters and Refiners",
+      "prop_description": "Materials sourced for products"
+    },
+    {
+      "id": "iso_14021",
+      "type": "Standard",
+      "name": "ISO 14021",
+      "prop_description": "Standard for recycled content reporting"
+    },
+    {
+      "id": "gold_plating",
+      "type": "Material",
+      "name": "Gold Plating",
+      "prop_description": "Used in circuit boards"
+    },
+    {
+      "id": "sbt_initiative",
+      "type": "Environmental_Initiative",
+      "name": "Science Based Targets initiative",
+      "prop_description": "Emissions reduction target validation"
+    },
+    {
+      "id": "emissions_target",
+      "type": "Regulation",
+      "name": "Emissions Reduction Target",
+      "prop_description": "61.7% reduction by FY2030 relative to FY2019 emissions"
+    },
+    {
+      "id": "environmental_initiative",
+      "type": "Environmental Initiative",
+      "name": "Carbon Neutrality by 2030",
+      "prop_description": "Apple's commitment to environmental sustainability"
+    },
+    {
+      "id": "cat::Product",
+      "type": "Category",
+      "name": "Products"
+    },
+    {
+      "id": "cat::Supplier",
+      "type": "Category",
+      "name": "Suppliers"
+    },
+    {
+      "id": "cat::Component",
+      "type": "Category",
+      "name": "Components"
+    },
+    {
+      "id": "cat::Material",
+      "type": "Category",
+      "name": "Materials"
+    },
+    {
+      "id": "cat::Location",
+      "type": "Category",
+      "name": "Locations"
+    },
+    {
+      "id": "cat::Employee",
+      "type": "Category",
+      "name": "Employees"
+    },
+    {
+      "id": "cat::Service",
+      "type": "Category",
       "name": "Services"
     },
     {
-      "id": "components",
-      "type": "Component",
-      "name": "Components",
-      "prop_description": "Essential parts for Apple products"
+      "id": "cat::Initiative",
+      "type": "Category",
+      "name": "Initiatives"
     },
     {
-      "id": "custom_components",
-      "type": "Component",
-      "name": "Custom Components",
-      "prop_description": "Unique components used by Apple"
-    },
-    {
-      "id": "intellectual_property",
-      "type": "Intellectual_Property",
-      "name": "Intellectual Property",
-      "prop_description": "Collection of rights relating to hardware, software, and services"
+      "id": "cat::Other",
+      "type": "Category",
+      "name": "Other"
     }
   ],
   "links": [
     {
       "source": "apple",
-      "target": "aluminum",
-      "type": "Uses_Material",
-      "prop_details": "Used in product casing"
+      "target": "cat::Product",
+      "type": "Belongs_To"
     },
     {
       "source": "apple",
-      "target": "rare_earth_elements",
-      "type": "Uses_Material",
-      "prop_details": "Used in various components"
+      "target": "cat::Supplier",
+      "type": "Belongs_To"
     },
     {
       "source": "apple",
-      "target": "taiwan",
+      "target": "cat::Component",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "apple",
+      "target": "cat::Material",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "apple",
+      "target": "cat::Location",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "apple",
+      "target": "cat::Employee",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "apple",
+      "target": "cat::Service",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "apple",
+      "target": "cat::Initiative",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "apple",
+      "target": "cat::Other",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "components",
+      "target": "manufacturing_vendors",
+      "type": "Supplies",
+      "prop_details": "Components sold to manufacturing vendors"
+    },
+    {
+      "source": "manufacturing_vendors",
+      "target": "subassemblies",
+      "type": "Manufactures",
+      "prop_details": "Assemble final products for Apple"
+    },
+    {
+      "source": "recycled_materials",
+      "target": "batteries",
+      "type": "Uses_Material",
+      "prop_description": "Recycled materials used in batteries"
+    },
+    {
+      "source": "recycled_materials",
+      "target": "magnets",
+      "type": "Uses_Material",
+      "prop_description": "Recycled materials used in magnets"
+    },
+    {
+      "source": "recycled_materials",
+      "target": "circuit_boards",
+      "type": "Uses_Material",
+      "prop_description": "Recycled materials used in circuit boards"
+    },
+    {
+      "source": "supplier_employees",
+      "target": "28_countries",
       "type": "Operates_In",
-      "prop_details": "Operational center"
+      "prop_details": "Training tools have reached more than 1.5 million people"
     },
     {
-      "source": "apple",
+      "source": "worker_voice_dashboard",
+      "target": "supplier_engagement",
+      "type": "Uses_Material",
+      "prop_details": "Tool used for monitoring supplier performance"
+    },
+    {
+      "source": "supplier",
+      "target": "students",
+      "type": "Operates_In",
+      "prop_details": "Employs students under approved conditions"
+    },
+    {
+      "source": "labor_agents",
+      "target": "labor_agencies",
+      "type": "Operates_In",
+      "prop_details": "Trained agents working for labor agencies in six countries"
+    },
+    {
+      "source": "workers",
+      "target": "labor_agencies",
+      "type": "Operates_In",
+      "prop_details": "Workers employed in facilities globally"
+    },
+    {
+      "source": "supplier_program",
       "target": "china",
       "type": "Operates_In",
-      "prop_details": "Manufacturing hub"
+      "prop_details": "Launched in 2022"
     },
     {
-      "source": "apple",
+      "source": "supplier_program",
+      "target": "india",
+      "type": "Operates_In",
+      "prop_details": "Recently expanded to a key supplier"
+    },
+    {
+      "source": "supplier_program",
       "target": "us",
       "type": "Operates_In",
-      "prop_details": "Operational center"
+      "prop_details": "Will expand to the U.S. in 2025"
     },
     {
-      "source": "apple",
+      "source": "supplier_facilities",
+      "target": "anodizing",
+      "type": "Uses_Material",
+      "prop_details": "Utilizes anodizing process for metal surfaces"
+    },
+    {
+      "source": "fire_safety_training",
+      "target": "supplier_facilities",
+      "type": "Provides_Service",
+      "prop_details": "Training on fire safety risks associated with anodizing and other processes"
+    },
+    {
+      "source": "congo_power",
+      "target": "great_lakes_region",
+      "type": "Operates_In",
+      "prop_details": "Deploys renewable electricity systems in the region"
+    },
+    {
+      "source": "salmon_gold",
+      "target": "yukon",
+      "type": "Operates_In",
+      "prop_details": "Focuses on mining practices in the region"
+    },
+    {
+      "source": "salmon_gold",
+      "target": "alaska",
+      "type": "Operates_In",
+      "prop_details": "Focuses on mining practices in the region"
+    },
+    {
+      "source": "salmon_gold",
+      "target": "british_columbia",
+      "type": "Operates_In",
+      "prop_details": "Focuses on mining practices in the region"
+    },
+    {
+      "source": "cat::Product",
+      "target": "iphone",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Product",
+      "target": "ipad",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Product",
+      "target": "mac",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Product",
+      "target": "wearables_home_accessories",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Product",
+      "target": "daisy",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "third_party_carriers",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "wholesalers",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "retailers",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "resellers",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "suppliers",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "supplier_a",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "supplier_b",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "manufacturing_partners",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "cellular_network_carriers",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "outsourcing_partners",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "foxconn",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "tsmc",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "manufacturing_vendors",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "japan_solar",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "us_silicon",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "austria_hydroelectric",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "vietnam_health",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "supplier",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "managers",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "line_workers",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Supplier",
+      "target": "logistics_suppliers",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Component",
       "target": "components",
-      "type": "Uses_Material",
-      "prop_details": "Uses various components for products"
+      "type": "Belongs_To"
     },
     {
-      "source": "apple",
+      "source": "cat::Component",
+      "target": "subassemblies",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Component",
+      "target": "batteries",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Component",
+      "target": "magnets",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Component",
+      "target": "circuit_boards",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Component",
+      "target": "printed_circuit_boards",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "aluminum",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "rare_earth_elements",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "recycled_materials",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "cobalt",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "tin",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "gold",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "renewable_materials",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "recycled_cobalt",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "recycled_rare_earth_elements",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "recycled_tin",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "recycled_gold",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "metal",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "3tg",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "lithium",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "mica",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "copper",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "graphite",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "nickel",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "3TG",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "glass",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "paper",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "plastics",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "steel",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "tantalum",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "titanium",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "tungsten",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "zinc",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "silicon",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "fiber_based_packaging",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "3tg_smelters",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Material",
+      "target": "gold_plating",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "china",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "india",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "japan",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "south_korea",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "taiwan",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "vietnam",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "location_a",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "location_b",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "silicon_valley",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "ireland",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "singapore",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "asia",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "cupertino",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "usa",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "other_countries",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "san_jose",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "united_states",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "austin_texas",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "santa_clara_valley",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "drc",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "brazil",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "philippines",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "rwanda",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "czech_republic",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "austria",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Location",
+      "target": "china_mainland",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Service",
+      "target": "icloud",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Service",
+      "target": "siri",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Service",
+      "target": "maps",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Service",
+      "target": "apple_one",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Service",
+      "target": "applecare",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Service",
+      "target": "apple_tv_plus",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Service",
+      "target": "apple_fitness_plus",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Initiative",
+      "target": "environmental_initiatives",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Initiative",
+      "target": "congo_power",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Initiative",
+      "target": "recycling",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
       "target": "smartphones",
-      "type": "Operates_In",
-      "prop_details": "Competes in the smartphone market"
+      "type": "Belongs_To"
     },
     {
-      "source": "apple",
+      "source": "cat::Other",
       "target": "personal_computers",
-      "type": "Operates_In",
-      "prop_details": "Competes in the personal computer market"
+      "type": "Belongs_To"
     },
     {
-      "source": "apple",
+      "source": "cat::Other",
       "target": "tablets",
-      "type": "Operates_In",
-      "prop_details": "Competes in the tablet market"
+      "type": "Belongs_To"
     },
     {
-      "source": "apple",
+      "source": "cat::Other",
       "target": "wearables",
-      "type": "Operates_In",
-      "prop_details": "Competes in the wearables market"
+      "type": "Belongs_To"
     },
     {
-      "source": "apple",
+      "source": "cat::Other",
       "target": "accessories",
-      "type": "Operates_In",
-      "prop_details": "Competes in the accessories market"
+      "type": "Belongs_To"
     },
     {
-      "source": "apple",
-      "target": "custom_components",
-      "type": "Uses_Material",
-      "prop_details": "Utilizes custom components from limited sources"
+      "source": "cat::Other",
+      "target": "services",
+      "type": "Belongs_To"
     },
     {
-      "source": "foxconn",
-      "target": "apple",
-      "type": "Manufactures",
-      "prop_details": "Assembles iPhones and other products"
+      "source": "cat::Other",
+      "target": "intellectual_property",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "employees",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "us",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "international_operations",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "covid19",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "app_store",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "eu",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "digital_markets_act",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "digital_content",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "carriers",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "consumers",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "businesses",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "education",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "enterprise",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "government",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "supply_chain",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "retail_stores",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "regulations",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "emissions",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "human_rights",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "diversity_inclusion",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "google",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "geographic_segments",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "distribution_channels",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "small_mid_sized_businesses",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "dma",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "nasdaq",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "shareholders",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "share_repurchase_program",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "sp500",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "dow_jones",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "products",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "us_dollar",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "r_and_d",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "sga",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "state_aid_decision",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "financial_statements",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "shareholders_equity",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "gaap",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "greater_china",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "land_buildings",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "machinery_equipment",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "leasehold_improvements",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "property_plant_equipment",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "accumulated_depreciation",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "total_property_plant_equipment",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "depreciation_expense",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "deferred_tax_assets",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "other_non_current_assets",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "total_other_non_current_assets",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "income_taxes_payable_current",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "other_current_liabilities",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "total_other_current_liabilities",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "income_taxes_payable_non_current",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "other_non_current_liabilities",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "total_other_non_current_liabilities",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "european_commission",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "foreign_subsidiaries",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "2022_plan",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "employee_stock_plan_2022",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "employee_stock_plan_2014",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "pcaob",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "foreign_jurisdictions",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "tax_laws",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "ernst_young",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "coso",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "luca_maestri",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "chris_kondo",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "wanda_austin",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "alex_gorsky",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "andrea_jung",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "arthur_levinson",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "monica_lozano",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "ronald_sugar",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "susan_wagner",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "bank_of_new_york",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "employee_stock_plan",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "stock_plan",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "tim_cook",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "supplier_employee_development_fund",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "carbon_neutrality",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "supplier_clean_energy_program",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "supplier_energy_efficiency_program",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "energy_efficiency_program",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "supplier_code_of_conduct",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "ul_solutions",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "fair_wage_network",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "american_india_foundation",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "green_america",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "clean_electronics_production_network",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "council_for_adult_and_experiential_learning",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "pact",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "hhi",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "ppa",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "oecd",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "working_capital_innovation_fund",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "quizrr",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "supplier_responsibility_standards",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "retail_fixture_manufacturing",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "apple_watch_assembly",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "airpods_pro_assembly",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "component_manufacturing",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "imac_assembly",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "us_federal_acquisition_regulations",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "esci",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "compliance_and_business_conduct",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "audit_and_finance_committee",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "people_and_compensation_committee",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "supplier_employees",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "rights_holders",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "28_countries",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "remedy_project",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "supplier_engagement",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "worker_voice_dashboard",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "students",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "rba",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "ilo",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "zero_waste",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "countries",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "labor_agents",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "labor_agencies",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "workers",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "supplier_program",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "anodizing",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "supplier_facilities",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "fire_safety_training",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "chemforward",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "cepn",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "epa",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "iom",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "gravity_water",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "oecd_guidance",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "ungps",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "RMI",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "LBMA",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "rmi",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "lbma",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "impact",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "resolve",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "salmon_gold",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "great_lakes_region",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "yukon",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "alaska",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "british_columbia",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "specialized_audits",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "worker_interviews",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "human_rights_policy",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "supplier_code",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "supplier_standards",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "un_guiding_principles",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "responsible_business_alliance",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "auditing_firms",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "iso_14021",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "sbt_initiative",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "emissions_target",
+      "type": "Belongs_To"
+    },
+    {
+      "source": "cat::Other",
+      "target": "environmental_initiative",
+      "type": "Belongs_To"
     }
   ]
 }

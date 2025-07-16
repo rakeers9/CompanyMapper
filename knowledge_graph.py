@@ -2,6 +2,7 @@
 
 import os
 import json
+from dotenv import load_dotenv
 import networkx as nx
 import matplotlib.pyplot as plt
 from typing import List, Dict, Any
@@ -14,7 +15,9 @@ from langchain.schema import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from collections import defaultdict
 
-os.environ["OPENAI_API_KEY"] = "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"
+load_dotenv()
+
+os.environ["OPENAI_API_KEY"] = os.getenv("OPENAI_API_KEY")
 
 ROOT_ID  = "apple"
 CAT_REL = "Belongs_To"

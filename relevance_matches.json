@@ -1,0 +1,6278 @@
+[
+  {
+    "news_article_id": "0d1a12b20681fe4d44018d1215c06195",
+    "news_title": "Electric vehicles to be discounted in government scheme",
+    "news_url": "https://www.bbc.com/news/articles/cn5kpkypxp6o",
+    "news_content_preview": "Electric vehicles to be discounted in government scheme. Prices of greener vehicles to be cut up to 3,750 to encourage a shift away from petrol and diesel.",
+    "matched_entities": [],
+    "graph_entities": [
+      "Green America",
+      "Government Customers"
+    ],
+    "relevance_score": 2.4826667139270997,
+    "relevance_category": "MEDIUM",
+    "entity_matches": [
+      {
+        "entity_id": "green_america",
+        "entity_name": "Green America",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.768733559336702,
+        "keyword_matches": [
+          "green"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8687335593367019,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "government",
+        "entity_name": "Government Customers",
+        "entity_type": "Customer Segment",
+        "semantic_similarity": 0.7553405475571177,
+        "keyword_matches": [
+          "government"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8553405475571176,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7620370534469099,
+    "keyword_matches": [
+      "green",
+      "government"
+    ],
+    "created_at": "2025-07-15T02:57:03.590676",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "0a568c1710b1ef11c0df431659148b53",
+    "news_title": "Trump threatens Russia with tariffs while unveiling Ukraine weapons plan",
+    "news_url": "https://www.bbc.com/news/articles/czdv20v9lp1o",
+    "news_content_preview": "Trump threatens Russia with tariffs while unveiling Ukraine weapons plan. Under the new plan, the US will sell weapons to Nato countries who will send them to Ukraine.",
+    "matched_entities": [
+      {
+        "text": "Trump",
+        "label": "ORG",
+        "start": 0,
+        "end": 5,
+        "confidence": 1.0
+      },
+      {
+        "text": "Russia",
+        "label": "GPE",
+        "start": 16,
+        "end": 22,
+        "confidence": 1.0
+      },
+      {
+        "text": "Ukraine",
+        "label": "GPE",
+        "start": 52,
+        "end": 59,
+        "confidence": 1.0
+      },
+      {
+        "text": "US",
+        "label": "GPE",
+        "start": 98,
+        "end": 100,
+        "confidence": 1.0
+      },
+      {
+        "text": "Nato",
+        "label": "ORG",
+        "start": 122,
+        "end": 126,
+        "confidence": 1.0
+      },
+      {
+        "text": "Ukraine",
+        "label": "GPE",
+        "start": 159,
+        "end": 166,
+        "confidence": 1.0
+      }
+    ],
+    "graph_entities": [
+      "Other Countries",
+      "28 Countries and Regions",
+      "12 countries and regions"
+    ],
+    "relevance_score": 5.35542614182661,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "other_countries",
+        "entity_name": "Other Countries",
+        "entity_type": "Location",
+        "semantic_similarity": 0.7538400149038409,
+        "keyword_matches": [
+          "countries"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8538400149038409,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "28_countries",
+        "entity_name": "28 Countries and Regions",
+        "entity_type": "Geographic_Location",
+        "semantic_similarity": 0.7306765800478183,
+        "keyword_matches": [
+          "countries"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8306765800478183,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "countries",
+        "entity_name": "12 countries and regions",
+        "entity_type": "Geographic_Location",
+        "semantic_similarity": 0.694847359597697,
+        "keyword_matches": [
+          "countries"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.7948473595976969,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7264546515164522,
+    "keyword_matches": [
+      "countries",
+      "countries",
+      "countries"
+    ],
+    "created_at": "2025-07-15T02:57:10.578417",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "29692ea7434ef75e9cdbd6b411fd41dd",
+    "news_title": "Post Office could be owned by its postmasters, government says",
+    "news_url": "https://www.bbc.com/news/articles/czjk2eynz1lo",
+    "news_content_preview": "Post Office could be owned by its postmasters, government says. The service could be turned into an employee-owned business, under options set out by the government.",
+    "matched_entities": [
+      {
+        "text": "Post Office",
+        "label": "ORG",
+        "start": 0,
+        "end": 11,
+        "confidence": 1.0
+      }
+    ],
+    "graph_entities": [
+      "2022 Employee Stock Plan",
+      "2022 Employee Stock Plan",
+      "Government Customers",
+      "2022 Employee Stock Plan",
+      "2022 Employee Stock Plan"
+    ],
+    "relevance_score": 6.236127033839294,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "employee_stock_plan",
+        "entity_name": "2022 Employee Stock Plan",
+        "entity_type": "Program",
+        "semantic_similarity": 0.7731009641593126,
+        "keyword_matches": [
+          "employee"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8731009641593126,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "stock_plan",
+        "entity_name": "2022 Employee Stock Plan",
+        "entity_type": "Program",
+        "semantic_similarity": 0.7676461743947643,
+        "keyword_matches": [
+          "employee"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8676461743947643,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "government",
+        "entity_name": "Government Customers",
+        "entity_type": "Customer Segment",
+        "semantic_similarity": 0.7656773150292083,
+        "keyword_matches": [
+          "government"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8656773150292083,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "2022_plan",
+        "entity_name": "2022 Employee Stock Plan",
+        "entity_type": "Program",
+        "semantic_similarity": 0.7647860070038056,
+        "keyword_matches": [
+          "employee"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8647860070038056,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "employee_stock_plan_2022",
+        "entity_name": "2022 Employee Stock Plan",
+        "entity_type": "Plan",
+        "semantic_similarity": 0.7594333129124191,
+        "keyword_matches": [
+          "employee"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8594333129124191,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.766128754699902,
+    "keyword_matches": [
+      "employee",
+      "employee",
+      "government",
+      "employee",
+      "employee"
+    ],
+    "created_at": "2025-07-15T02:57:17.265536",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "1cf6faba8ddb05883375940b3130cbe4",
+    "news_title": "The deepening water shortage row between the US and Mexico",
+    "news_url": "https://www.bbc.com/news/articles/c0epzp21z47o",
+    "news_content_preview": "The deepening water shortage row between the US and Mexico. The US is accusing its southern neighbour of breaking a long-held water sharing agreement.",
+    "matched_entities": [
+      {
+        "text": "US",
+        "label": "GPE",
+        "start": 45,
+        "end": 47,
+        "confidence": 1.0
+      },
+      {
+        "text": "Mexico",
+        "label": "GPE",
+        "start": 52,
+        "end": 58,
+        "confidence": 1.0
+      },
+      {
+        "text": "US",
+        "label": "GPE",
+        "start": 64,
+        "end": 66,
+        "confidence": 1.0
+      }
+    ],
+    "graph_entities": [
+      "Gravity Water",
+      "South Korea"
+    ],
+    "relevance_score": 2.5529358950505574,
+    "relevance_category": "MEDIUM",
+    "entity_matches": [
+      {
+        "entity_id": "gravity_water",
+        "entity_name": "Gravity Water",
+        "entity_type": "NGO",
+        "semantic_similarity": 0.808147926260587,
+        "keyword_matches": [
+          "water"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.9081479262605869,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "south_korea",
+        "entity_name": "South Korea",
+        "entity_type": "Location",
+        "semantic_similarity": 0.7128657686321406,
+        "keyword_matches": [
+          "south"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8128657686321406,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7605068474463638,
+    "keyword_matches": [
+      "water",
+      "south"
+    ],
+    "created_at": "2025-07-15T02:57:20.713471",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "a867a13a4844f01f9d9f01d500fe428b",
+    "news_title": "Boeing fuel switches safe, regulator says after Air India crash",
+    "news_url": "https://www.bbc.com/news/articles/ce9xpgnx3vdo",
+    "news_content_preview": "Boeing fuel switches safe, regulator says after Air India crash. A preliminary investigation found the switches had been turned off in June's fatal Air India crash.",
+    "matched_entities": [
+      {
+        "text": "Boeing",
+        "label": "ORG",
+        "start": 0,
+        "end": 6,
+        "confidence": 1.0
+      },
+      {
+        "text": "Air India",
+        "label": "ORG",
+        "start": 48,
+        "end": 57,
+        "confidence": 1.0
+      },
+      {
+        "text": "Air India",
+        "label": "ORG",
+        "start": 148,
+        "end": 157,
+        "confidence": 1.0
+      }
+    ],
+    "graph_entities": [
+      "India",
+      "American India Foundation"
+    ],
+    "relevance_score": 3.6012751998420613,
+    "relevance_category": "MEDIUM",
+    "entity_matches": [
+      {
+        "entity_id": "india",
+        "entity_name": "India",
+        "entity_type": "Location",
+        "semantic_similarity": 0.7334200120967815,
+        "keyword_matches": [
+          "India",
+          "india"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1334200120967814,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "american_india_foundation",
+        "entity_name": "American India Foundation",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.7281087696139648,
+        "keyword_matches": [
+          "india"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0281087696139648,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7307643908553731,
+    "keyword_matches": [
+      "India",
+      "india",
+      "india"
+    ],
+    "created_at": "2025-07-15T02:57:23.993360",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "66b23b6978c45a165fd3bcacd851decf",
+    "news_title": "Bank boss ready to cut rates if job market slows",
+    "news_url": "https://www.bbc.com/news/articles/cqx2pj42395o",
+    "news_content_preview": "Bank boss ready to cut rates if job market slows. Andrew Bailey tells the Times he believes \"the path is downward\" on interest rates.",
+    "matched_entities": [
+      {
+        "text": "Andrew Bailey",
+        "label": "PERSON",
+        "start": 50,
+        "end": 63,
+        "confidence": 1.0
+      },
+      {
+        "text": "Times",
+        "label": "ORG",
+        "start": 74,
+        "end": 79,
+        "confidence": 1.0
+      }
+    ],
+    "graph_entities": [
+      "London Bullion Market Association",
+      "London Bullion Market Association",
+      "The Nasdaq Stock Market LLC"
+    ],
+    "relevance_score": 3.28583508311546,
+    "relevance_category": "MEDIUM",
+    "entity_matches": [
+      {
+        "entity_id": "lbma",
+        "entity_name": "London Bullion Market Association",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.7454446949791105,
+        "keyword_matches": [
+          "market"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8454446949791105,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "LBMA",
+        "entity_name": "London Bullion Market Association",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.7403785802915199,
+        "keyword_matches": [
+          "market"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8403785802915199,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "nasdaq",
+        "entity_name": "The Nasdaq Stock Market LLC",
+        "entity_type": "Stock Exchange",
+        "semantic_similarity": 0.7034457270895663,
+        "keyword_matches": [
+          "market"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8034457270895663,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7297563341200656,
+    "keyword_matches": [
+      "market",
+      "market",
+      "market"
+    ],
+    "created_at": "2025-07-15T02:57:28.368637",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "85ac7580249fde701f2b57fd682618c6",
+    "news_title": "Dubious sales tactics at two leading estate agencies uncovered",
+    "news_url": "https://www.bbc.com/news/articles/cvg81l57x53o",
+    "news_content_preview": "Dubious sales tactics at two leading estate agencies uncovered. Undercover filming and whistleblower testimony reveals how commission is put ahead of customers.",
+    "matched_entities": [],
+    "graph_entities": [
+      "Enterprise Customers",
+      "Government Customers",
+      "Labor Agencies",
+      "European Commission",
+      "State Aid Decision"
+    ],
+    "relevance_score": 5.666933212260939,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "enterprise",
+        "entity_name": "Enterprise Customers",
+        "entity_type": "Customer Segment",
+        "semantic_similarity": 0.7716694424040383,
+        "keyword_matches": [
+          "customers"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8716694424040383,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "government",
+        "entity_name": "Government Customers",
+        "entity_type": "Customer Segment",
+        "semantic_similarity": 0.765817901255387,
+        "keyword_matches": [
+          "customers"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8658179012553869,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "labor_agencies",
+        "entity_name": "Labor Agencies",
+        "entity_type": "Entity",
+        "semantic_similarity": 0.7598315263017955,
+        "keyword_matches": [
+          "agencies"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8598315263017955,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "european_commission",
+        "entity_name": "European Commission",
+        "entity_type": "Regulatory Body",
+        "semantic_similarity": 0.7570352481198553,
+        "keyword_matches": [
+          "commission"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8570352481198553,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "state_aid_decision",
+        "entity_name": "State Aid Decision",
+        "entity_type": "Regulation",
+        "semantic_similarity": 0.7387771033287265,
+        "keyword_matches": [
+          "state"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8387771033287265,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7586262442819607,
+    "keyword_matches": [
+      "customers",
+      "customers",
+      "agencies",
+      "commission",
+      "state"
+    ],
+    "created_at": "2025-07-15T02:57:32.083316",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "842409c5f0d150d12349accff489ed38",
+    "news_title": "Tata promises electric arc by 2027 as work begins",
+    "news_url": "https://www.bbc.com/news/articles/crl0176kz6po",
+    "news_content_preview": "Tata promises electric arc by 2027 as work begins. A union says the construction is \"bittersweet\" but the UK government describes it as a \"major win\".",
+    "matched_entities": [
+      {
+        "text": "Tata",
+        "label": "COMPANY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "UK",
+        "label": "LOCATION",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "electric arc",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "UK government",
+        "label": "PERSON",
+        "relevance": "LOW",
+        "confidence": 0.8
+      },
+      {
+        "text": "construction",
+        "label": "EVENT",
+        "relevance": "LOW",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Government Customers",
+      "European Union"
+    ],
+    "relevance_score": 3.007862193953801,
+    "relevance_category": "MEDIUM",
+    "entity_matches": [
+      {
+        "entity_id": "government",
+        "entity_name": "Government Customers",
+        "entity_type": "Customer Segment",
+        "semantic_similarity": 0.718874322183196,
+        "keyword_matches": [
+          "government"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.018874322183196,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "eu",
+        "entity_name": "European Union",
+        "entity_type": "Geographic_Location",
+        "semantic_similarity": 0.7398727720565565,
+        "keyword_matches": [
+          "union"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8398727720565565,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7293735471198763,
+    "keyword_matches": [
+      "government",
+      "union"
+    ],
+    "created_at": "2025-07-15T02:57:34.846876",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "b8b0eb7cce092f68306db500c7918d5b",
+    "news_title": "Trump's tariffs are looming large over the UK\u2019s last surviving steel towns",
+    "news_url": "https://www.bbc.com/news/articles/c5yp5qzeer6o",
+    "news_content_preview": "Trump's tariffs are looming large over the UKs last surviving steel towns. The future of industrial towns like Scunthorpe and Port Talbot may rest on the wider fate of the UK's steel industry.",
+    "matched_entities": [
+      {
+        "text": "Trump",
+        "label": "ORG",
+        "start": 0,
+        "end": 5,
+        "confidence": 1.0
+      },
+      {
+        "text": "Port Talbot",
+        "label": "GPE",
+        "start": 126,
+        "end": 137,
+        "confidence": 1.0
+      },
+      {
+        "text": "UK",
+        "label": "GPE",
+        "start": 172,
+        "end": 174,
+        "confidence": 1.0
+      }
+    ],
+    "graph_entities": [
+      "Steel"
+    ],
+    "relevance_score": 1.8124990951081907,
+    "relevance_category": "LOW",
+    "entity_matches": [
+      {
+        "entity_id": "steel",
+        "entity_name": "Steel",
+        "entity_type": "Material",
+        "semantic_similarity": 0.8069439417267728,
+        "keyword_matches": [
+          "Steel",
+          "steel"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 1.0069439417267727,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.8069439417267728,
+    "keyword_matches": [
+      "Steel",
+      "steel"
+    ],
+    "created_at": "2025-07-15T02:57:39.264427",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "e2030cf35a7c907573701daf340b6d03",
+    "news_title": "EU and Mexico criticise Trump's proposed 30% tariff",
+    "news_url": "https://www.bbc.com/news/articles/cyvj13d9ylpo",
+    "news_content_preview": "EU and Mexico criticise Trump's proposed 30 tariff. The US president warned both trading partners would face additional tariffs if they retaliated.",
+    "matched_entities": [
+      {
+        "text": "EU",
+        "label": "LOCATION",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Mexico",
+        "label": "LOCATION",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Trump",
+        "label": "PERSON",
+        "relevance": "LOW",
+        "confidence": 0.8
+      },
+      {
+        "text": "US",
+        "label": "LOCATION",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "tariff",
+        "label": "EVENT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Manufacturing Partners",
+      "Outsourcing Partners"
+    ],
+    "relevance_score": 3.924011654526978,
+    "relevance_category": "MEDIUM",
+    "entity_matches": [
+      {
+        "entity_id": "manufacturing_partners",
+        "entity_name": "Manufacturing Partners",
+        "entity_type": "Supplier",
+        "semantic_similarity": 0.7210067736729848,
+        "keyword_matches": [
+          "partners"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8210067736729848,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "outsourcing_partners",
+        "entity_name": "Outsourcing Partners",
+        "entity_type": "Supplier",
+        "semantic_similarity": 0.7139980823799228,
+        "keyword_matches": [
+          "partners"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8139980823799228,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7175024280264538,
+    "keyword_matches": [
+      "partners",
+      "partners"
+    ],
+    "created_at": "2025-07-15T02:57:44.229104",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "4b0f49442012c252c9dd816815ca301b",
+    "news_title": "When to book and where to stay: Six ways to save money on your summer holiday",
+    "news_url": "https://www.bbc.com/news/articles/cq6mvn699v9o",
+    "news_content_preview": "When to book and where to stay: Six ways to save money on your summer holiday. Package holidays from the UK to popular destinations are more expensive but there are ways to cut costs.",
+    "matched_entities": [
+      {
+        "text": "UK",
+        "label": "GPE",
+        "start": 105,
+        "end": 107,
+        "confidence": 1.0
+      }
+    ],
+    "graph_entities": [
+      "United Nations Guiding Principles on Business and Human Rights",
+      "Tin"
+    ],
+    "relevance_score": 2.381405588955597,
+    "relevance_category": "MEDIUM",
+    "entity_matches": [
+      {
+        "entity_id": "un_guiding_principles",
+        "entity_name": "United Nations Guiding Principles on Business and Human Rights",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.7120378015197211,
+        "keyword_matches": [
+          "nations"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.812037801519721,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "tin",
+        "entity_name": "Tin",
+        "entity_type": "Material",
+        "semantic_similarity": 0.681644570628851,
+        "keyword_matches": [
+          "Tin"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.781644570628851,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.696841186074286,
+    "keyword_matches": [
+      "nations",
+      "Tin"
+    ],
+    "created_at": "2025-07-15T02:57:51.026868",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "390bb6825e37ef5f539f6dca66244f89",
+    "news_title": "Trump threatens 35% tariffs on Canadian goods",
+    "news_url": "https://www.bbc.com/news/articles/cvg819n954mo",
+    "news_content_preview": "Trump threatens 35 tariffs on Canadian goods. Trump has threatened blanket levies of 15 or 20 on most trade partners, and says he will soon announce new tariffs on the EU.",
+    "matched_entities": [
+      {
+        "text": "Trump",
+        "label": "ORG",
+        "start": 0,
+        "end": 5,
+        "confidence": 1.0
+      },
+      {
+        "text": "Trump",
+        "label": "ORG",
+        "start": 46,
+        "end": 51,
+        "confidence": 1.0
+      },
+      {
+        "text": "EU",
+        "label": "ORG",
+        "start": 168,
+        "end": 170,
+        "confidence": 1.0
+      }
+    ],
+    "graph_entities": [
+      "Manufacturing Partners",
+      "Public-Private Alliance for Responsible Minerals Trade",
+      "Outsourcing Partners"
+    ],
+    "relevance_score": 4.920648704921323,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "manufacturing_partners",
+        "entity_name": "Manufacturing Partners",
+        "entity_type": "Supplier",
+        "semantic_similarity": 0.7291025504602064,
+        "keyword_matches": [
+          "partners"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8291025504602064,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "ppa",
+        "entity_name": "Public-Private Alliance for Responsible Minerals Trade",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.7200302338613002,
+        "keyword_matches": [
+          "trade"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8200302338613001,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "outsourcing_partners",
+        "entity_name": "Outsourcing Partners",
+        "entity_type": "Supplier",
+        "semantic_similarity": 0.7111526263263614,
+        "keyword_matches": [
+          "partners"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8111526263263614,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7200951368826226,
+    "keyword_matches": [
+      "partners",
+      "trade",
+      "partners"
+    ],
+    "created_at": "2025-07-15T02:57:53.179789",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "cc8f4125851a337599acb9e194b11972",
+    "news_title": "Government code aims to stop unfair parking charges",
+    "news_url": "https://www.bbc.com/news/articles/c4g2ej63dv1o",
+    "news_content_preview": "Government code aims to stop unfair parking charges. The government wants to stop people being \"unfairly penalised\" by private car park operators.",
+    "matched_entities": [],
+    "graph_entities": [
+      "Government Customers",
+      "People and Compensation Committee"
+    ],
+    "relevance_score": 2.3294736618615497,
+    "relevance_category": "MEDIUM",
+    "entity_matches": [
+      {
+        "entity_id": "government",
+        "entity_name": "Government Customers",
+        "entity_type": "Customer Segment",
+        "semantic_similarity": 0.7476734632903765,
+        "keyword_matches": [
+          "government"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8476734632903765,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "people_and_compensation_committee",
+        "entity_name": "People and Compensation Committee",
+        "entity_type": "Committee",
+        "semantic_similarity": 0.7403509293629205,
+        "keyword_matches": [
+          "people"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8403509293629204,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7440121963266485,
+    "keyword_matches": [
+      "government",
+      "people"
+    ],
+    "created_at": "2025-07-15T02:57:55.429646",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "fbeb765cef1e3cc250cbf117e38421c0",
+    "news_title": "Asia is reeling from Trump's tariff salvo \u2013 is anyone winning?",
+    "news_url": "https://www.bbc.com/news/articles/ckg5l2yy42eo",
+    "news_content_preview": "Asia is reeling from Trump's tariff salvo  is anyone winning?. The US president has reset the tariffs clock again, leaving Asia's export-driven economies in limbo.",
+    "matched_entities": [
+      {
+        "text": "Trump",
+        "label": "PERSON",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Asia",
+        "label": "LOCATION",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "US",
+        "label": "LOCATION",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "tariffs",
+        "label": "EVENT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Asia"
+    ],
+    "relevance_score": 1.9778851947629992,
+    "relevance_category": "LOW",
+    "entity_matches": [
+      {
+        "entity_id": "asia",
+        "entity_name": "Asia",
+        "entity_type": "Location",
+        "semantic_similarity": 0.7988251082016662,
+        "keyword_matches": [
+          "Asia"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0988251082016662,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7988251082016662,
+    "keyword_matches": [
+      "Asia"
+    ],
+    "created_at": "2025-07-15T02:57:56.454750",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "a04d6c5a486dddcca9a963cc1ac3fd7a",
+    "news_title": "Four arrested in connection with M&S and Co-op cyber-attacks",
+    "news_url": "https://www.bbc.com/news/articles/cwykgrv374eo",
+    "news_content_preview": "Four arrested in connection with MS and Co-op cyber-attacks. Three men and one woman - aged between 17 and 20 - have been arrested in London and the Midlands.",
+    "matched_entities": [
+      {
+        "text": "MS",
+        "label": "COMPANY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Co-op",
+        "label": "COMPANY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "London",
+        "label": "LOCATION",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Midlands",
+        "label": "LOCATION",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "London Bullion Market Association",
+      "London Bullion Market Association"
+    ],
+    "relevance_score": 2.515669598474763,
+    "relevance_category": "MEDIUM",
+    "entity_matches": [
+      {
+        "entity_id": "lbma",
+        "entity_name": "London Bullion Market Association",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.7489580138488798,
+        "keyword_matches": [
+          "london"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0489580138488799,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "LBMA",
+        "entity_name": "London Bullion Market Association",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.747433318213423,
+        "keyword_matches": [
+          "london"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.047433318213423,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7481956660311514,
+    "keyword_matches": [
+      "london",
+      "london"
+    ],
+    "created_at": "2025-07-15T02:57:58.842165",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "e09f5338fd6ab39fcdd2b1afd6e5fa2f",
+    "news_title": "'I can't drink the water' - life next to a US data centre",
+    "news_url": "https://www.bbc.com/news/articles/cy8gy7lv448o",
+    "news_content_preview": "'I can't drink the water' - life next to a US data centre. Residents in rural Georgia say the data centre next door has disrupted their water supply.",
+    "matched_entities": [
+      {
+        "text": "Georgia",
+        "label": "LOCATION",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "US data centre",
+        "label": "EVENT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Gravity Water",
+      "Global Supply Chain"
+    ],
+    "relevance_score": 2.1356247598827394,
+    "relevance_category": "MEDIUM",
+    "entity_matches": [
+      {
+        "entity_id": "gravity_water",
+        "entity_name": "Gravity Water",
+        "entity_type": "NGO",
+        "semantic_similarity": 0.8271285152686692,
+        "keyword_matches": [
+          "water"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.9271285152686691,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "supply_chain",
+        "entity_name": "Global Supply Chain",
+        "entity_type": "Business Unit",
+        "semantic_similarity": 0.7525587846336139,
+        "keyword_matches": [
+          "supply"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8525587846336139,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7898436499511415,
+    "keyword_matches": [
+      "water",
+      "supply"
+    ],
+    "created_at": "2025-07-15T02:58:02.188606",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "f7f68c3f94d2a691c5031a3d0743d9c6",
+    "news_title": "Public transport 'too costly' for young people",
+    "news_url": "https://www.bbc.com/news/articles/cyvj5jj9v16o",
+    "news_content_preview": "Public transport 'too costly' for young people. Young people put off using public transport over concerns about cost, accessibility and safety.",
+    "matched_entities": [],
+    "graph_entities": [
+      "Ernst & Young LLP",
+      "Fire Safety Training",
+      "Public Company Accounting Oversight Board",
+      "People and Compensation Committee"
+    ],
+    "relevance_score": 4.3919967753041504,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "ernst_young",
+        "entity_name": "Ernst & Young LLP",
+        "entity_type": "Company",
+        "semantic_similarity": 0.7054783867658397,
+        "keyword_matches": [
+          "public",
+          "young"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.9054783867658398,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "fire_safety_training",
+        "entity_name": "Fire Safety Training",
+        "entity_type": "Program",
+        "semantic_similarity": 0.7306062999009855,
+        "keyword_matches": [
+          "safety"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8306062999009854,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "pcaob",
+        "entity_name": "Public Company Accounting Oversight Board",
+        "entity_type": "Regulatory_Body",
+        "semantic_similarity": 0.6975839420119663,
+        "keyword_matches": [
+          "public"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.7975839420119663,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "people_and_compensation_committee",
+        "entity_name": "People and Compensation Committee",
+        "entity_type": "Committee",
+        "semantic_similarity": 0.6936016556425347,
+        "keyword_matches": [
+          "people"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.7936016556425347,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7068175710803316,
+    "keyword_matches": [
+      "public",
+      "young",
+      "safety",
+      "public",
+      "people"
+    ],
+    "created_at": "2025-07-15T02:58:04.951331",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "2dbdca0e864c3954e6d83cd6b68658f0",
+    "news_title": "Martin Lewis' trick for haggling with a call centre",
+    "news_url": "https://www.bbc.com/news/videos/cn7d11z53jxo",
+    "news_content_preview": "Martin Lewis' trick for haggling with a call centre. Contract ending or ended? Try this if you're renewing your broadbandTV, mobile, carhome insurance or breakdown cover.",
+    "matched_entities": [
+      {
+        "text": "Martin Lewis'",
+        "label": "PERSON",
+        "start": 0,
+        "end": 13,
+        "confidence": 1.0
+      },
+      {
+        "text": "broadbandTV",
+        "label": "GPE",
+        "start": 112,
+        "end": 123,
+        "confidence": 1.0
+      }
+    ],
+    "graph_entities": [
+      "Tin"
+    ],
+    "relevance_score": 1.8418689799404855,
+    "relevance_category": "LOW",
+    "entity_matches": [
+      {
+        "entity_id": "tin",
+        "entity_name": "Tin",
+        "entity_type": "Material",
+        "semantic_similarity": 0.723260544411381,
+        "keyword_matches": [
+          "Tin"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.023260544411381,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.723260544411381,
+    "keyword_matches": [
+      "Tin"
+    ],
+    "created_at": "2025-07-15T02:58:06.894591",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "f83051db90d3b9b1aad479ae54fcbdc5",
+    "news_title": "How the rising cost of shoes could hit Trump",
+    "news_url": "https://www.bbc.com/news/videos/cwyx21d95kxo",
+    "news_content_preview": "How the rising cost of shoes could hit Trump. In this Americast episode, Anthony Zurcher, BBC's North America correspondent, discusses how Trump may start to feel pressure from his own supporters if p...",
+    "matched_entities": [
+      {
+        "text": "Trump",
+        "label": "ORG",
+        "start": 39,
+        "end": 44,
+        "confidence": 1.0
+      },
+      {
+        "text": "Anthony Zurcher",
+        "label": "PERSON",
+        "start": 73,
+        "end": 88,
+        "confidence": 1.0
+      },
+      {
+        "text": "BBC",
+        "label": "ORG",
+        "start": 90,
+        "end": 93,
+        "confidence": 1.0
+      },
+      {
+        "text": "Trump",
+        "label": "ORG",
+        "start": 139,
+        "end": 144,
+        "confidence": 1.0
+      }
+    ],
+    "graph_entities": [
+      "Green America",
+      "Tin"
+    ],
+    "relevance_score": 2.651394979501418,
+    "relevance_category": "MEDIUM",
+    "entity_matches": [
+      {
+        "entity_id": "green_america",
+        "entity_name": "Green America",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.7137472725338598,
+        "keyword_matches": [
+          "america"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8137472725338598,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "tin",
+        "entity_name": "Tin",
+        "entity_type": "Material",
+        "semantic_similarity": 0.6965901917963246,
+        "keyword_matches": [
+          "Tin"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.7965901917963246,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7051687321650922,
+    "keyword_matches": [
+      "america",
+      "Tin"
+    ],
+    "created_at": "2025-07-15T02:58:10.278472",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "f6af72f9b780cb3f4c8786961c8c0c68",
+    "news_title": "The Briefing Room",
+    "news_url": "https://www.bbc.co.uk/sounds/play/m002fljj",
+    "news_content_preview": "The Briefing Room. As President Trump raises tariffs again, what does this mean for world trade?",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "President Trump",
+        "label": "PERSON",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "tariffs",
+        "label": "EVENT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "world trade",
+        "label": "EVENT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Public-Private Alliance for Responsible Minerals Trade"
+    ],
+    "relevance_score": 1.631829641895353,
+    "relevance_category": "LOW",
+    "entity_matches": [
+      {
+        "entity_id": "ppa",
+        "entity_name": "Public-Private Alliance for Responsible Minerals Trade",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.7460446422406108,
+        "keyword_matches": [
+          "trade"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.046044642240611,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7460446422406108,
+    "keyword_matches": [
+      "trade"
+    ],
+    "created_at": "2025-07-15T02:58:11.082542",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "3c68398d023a75836195af73f20277e7",
+    "news_title": "The Bottom Line",
+    "news_url": "https://www.bbc.co.uk/sounds/play/m002flj2",
+    "news_content_preview": "The Bottom Line. What does it take to grow a new enterprise into a multi million-pound business?",
+    "matched_entities": [],
+    "graph_entities": [
+      "United Nations Guiding Principles on Business and Human Rights",
+      "Enterprise Customers",
+      "Responsible Business Alliance",
+      "Responsible Business Alliance",
+      "Compliance and Business Conduct"
+    ],
+    "relevance_score": 5.092206363707231,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "un_guiding_principles",
+        "entity_name": "United Nations Guiding Principles on Business and Human Rights",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.765902146932123,
+        "keyword_matches": [
+          "business"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.865902146932123,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "enterprise",
+        "entity_name": "Enterprise Customers",
+        "entity_type": "Customer Segment",
+        "semantic_similarity": 0.7651526951474578,
+        "keyword_matches": [
+          "enterprise"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8651526951474577,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "rba",
+        "entity_name": "Responsible Business Alliance",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.7391358124251197,
+        "keyword_matches": [
+          "business"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8391358124251197,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "responsible_business_alliance",
+        "entity_name": "Responsible Business Alliance",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.7368749501652851,
+        "keyword_matches": [
+          "business"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8368749501652851,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "compliance_and_business_conduct",
+        "entity_name": "Compliance and Business Conduct",
+        "entity_type": "BusinessUnit",
+        "semantic_similarity": 0.7364396984193736,
+        "keyword_matches": [
+          "business"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8364396984193736,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7487010606178719,
+    "keyword_matches": [
+      "business",
+      "enterprise",
+      "business",
+      "business",
+      "business"
+    ],
+    "created_at": "2025-07-15T02:58:12.869521",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "f03c0380efa8d8867734d22ab72d25e0",
+    "news_title": "Paddy Power and Betfair users warned of 'email danger' after breach",
+    "news_url": "https://www.bbc.com/news/articles/cz7l29zved9o",
+    "news_content_preview": "Paddy Power and Betfair users warned of 'email danger' after breach. Hackers have accessed personal information of potentially 800,000 customers of Flutter Entertainment.",
+    "matched_entities": [
+      {
+        "text": "Flutter Entertainment",
+        "label": "COMPANY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Paddy Power",
+        "label": "COMPANY",
+        "relevance": "LOW",
+        "confidence": 0.8
+      },
+      {
+        "text": "Betfair",
+        "label": "COMPANY",
+        "relevance": "LOW",
+        "confidence": 0.8
+      },
+      {
+        "text": "800,000",
+        "label": "EVENT",
+        "relevance": "LOW",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Congo Power",
+      "Enterprise Customers",
+      "Government Customers",
+      "Personal Computers"
+    ],
+    "relevance_score": 5.836474915034634,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "congo_power",
+        "entity_name": "Congo Power",
+        "entity_type": "Initiative",
+        "semantic_similarity": 0.7140541347702191,
+        "keyword_matches": [
+          "power"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.014054134770219,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "enterprise",
+        "entity_name": "Enterprise Customers",
+        "entity_type": "Customer Segment",
+        "semantic_similarity": 0.7671741087223272,
+        "keyword_matches": [
+          "customers"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8671741087223271,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "government",
+        "entity_name": "Government Customers",
+        "entity_type": "Customer Segment",
+        "semantic_similarity": 0.7540811137486692,
+        "keyword_matches": [
+          "customers"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8540811137486691,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "personal_computers",
+        "entity_name": "Personal Computers",
+        "entity_type": "Product_Line",
+        "semantic_similarity": 0.7431312740440261,
+        "keyword_matches": [
+          "personal"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8431312740440261,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7446101578213103,
+    "keyword_matches": [
+      "power",
+      "customers",
+      "customers",
+      "personal"
+    ],
+    "created_at": "2025-07-15T02:58:16.729237",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "d19fe1f7465af50055dd690f2da02e84",
+    "news_title": "From Bitcoin to XRP: Key cryptocurrency terms and what they mean",
+    "news_url": "https://www.bbc.com/news/articles/cy5w2k5k5ylo",
+    "news_content_preview": "From Bitcoin to XRP: Key cryptocurrency terms and what they mean. As Bitcoin's price goes up once again, here's a guide to some of the crypto market's trickiest terms.",
+    "matched_entities": [
+      {
+        "text": "Bitcoin",
+        "label": "PERSON",
+        "start": 69,
+        "end": 76,
+        "confidence": 1.0
+      }
+    ],
+    "graph_entities": [
+      "London Bullion Market Association",
+      "The Nasdaq Stock Market LLC",
+      "London Bullion Market Association"
+    ],
+    "relevance_score": 3.742688477839513,
+    "relevance_category": "MEDIUM",
+    "entity_matches": [
+      {
+        "entity_id": "lbma",
+        "entity_name": "London Bullion Market Association",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.7252220467105145,
+        "keyword_matches": [
+          "market"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8252220467105145,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "nasdaq",
+        "entity_name": "The Nasdaq Stock Market LLC",
+        "entity_type": "Stock Exchange",
+        "semantic_similarity": 0.7225149051150617,
+        "keyword_matches": [
+          "market"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8225149051150616,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "LBMA",
+        "entity_name": "London Bullion Market Association",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.7178022298868829,
+        "keyword_matches": [
+          "market"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8178022298868829,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7218463939041531,
+    "keyword_matches": [
+      "market",
+      "market",
+      "market"
+    ],
+    "created_at": "2025-07-15T02:58:18.979906",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "4a6ef9724a841320b52ea79390ab039d",
+    "news_title": "Apple announces chief operating officer transition",
+    "news_url": "https://www.apple.com/newsroom/2025/07/apple-announces-chief-operating-officer-transition/",
+    "news_content_preview": "Apple announces chief operating officer transition. Apple today announced Jeff Williams will transition his role as chief operating officer later this month to Sabih Khan.",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Jeff Williams",
+        "label": "PERSON",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Sabih Khan",
+        "label": "PERSON",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Apple Supplier Code of Conduct",
+      "Apple Supplier Code of Conduct",
+      "Apple 2030",
+      "Apple One",
+      "Apple Human Rights Policy"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "supplier_code",
+        "entity_name": "Apple Supplier Code of Conduct",
+        "entity_type": "Policy",
+        "semantic_similarity": 0.7978893607314033,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0978893607314033,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "supplier_code_of_conduct",
+        "entity_name": "Apple Supplier Code of Conduct",
+        "entity_type": "Regulation",
+        "semantic_similarity": 0.7917391939508037,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0917391939508037,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7863051343858062,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0863051343858061,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.783847637434866,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.083847637434866,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "human_rights_policy",
+        "entity_name": "Apple Human Rights Policy",
+        "entity_type": "Policy",
+        "semantic_similarity": 0.764347793214457,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.064347793214457,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7848258239434672,
+    "keyword_matches": [
+      "apple",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:04:57.909453",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "38f96f71b788c3a47d376e77ff212ec1",
+    "news_title": "Apple Arcade launches four new games in August",
+    "news_url": "https://www.apple.com/newsroom/2025/07/apple-arcade-launches-four-new-games-in-august/",
+    "news_content_preview": "Apple Arcade launches four new games in August. Apple Arcade is adding four exclusive games and rolling out fun updates to fan-favorite hits on the service.",
+    "matched_entities": [
+      {
+        "text": "Apple Arcade",
+        "label": "SERVICE",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "August",
+        "label": "LOCATION",
+        "relevance": "LOW",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Apple One",
+      "Apple TV+",
+      "Apple Fitness+",
+      "Apple 2030",
+      "Apple Supplier Code of Conduct"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8248725206681399,
+        "keyword_matches": [
+          "service",
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.22487252066814,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8151902262160208,
+        "keyword_matches": [
+          "service",
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.2151902262160208,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8132568054173631,
+        "keyword_matches": [
+          "service",
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.2132568054173631,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7573016664572345,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0573016664572346,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "supplier_code_of_conduct",
+        "entity_name": "Apple Supplier Code of Conduct",
+        "entity_type": "Regulation",
+        "semantic_similarity": 0.749194766442322,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.049194766442322,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7919631970402161,
+    "keyword_matches": [
+      "service",
+      "apple",
+      "service",
+      "apple",
+      "service",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:00.792751",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "6f537f5d63e70f8b60bf80cf0d055b74",
+    "news_title": "Apple and Major League Baseball announce August \u201cFriday\u00a0Night\u00a0Baseball\u201d schedule",
+    "news_url": "https://www.apple.com/newsroom/2025/07/apple-and-major-league-baseball-announce-august-friday-night-baseball-schedule/",
+    "news_content_preview": "Apple and Major League Baseball announce August Friday Night Baseball schedule. Apple and Major League Baseball (MLB) today unveiled the August schedule for Friday Night Baseball.",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Major League Baseball",
+        "label": "COMPANY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Apple One",
+      "Apple Fitness+",
+      "Apple TV+",
+      "Apple 2030",
+      "Apple Supplier Code of Conduct"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7741509968148169,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0741509968148168,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.756188588093136,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.056188588093136,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.755813076596922,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.055813076596922,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7332905695050209,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.033290569505021,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "supplier_code_of_conduct",
+        "entity_name": "Apple Supplier Code of Conduct",
+        "entity_type": "Regulation",
+        "semantic_similarity": 0.7303362162897162,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0303362162897163,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7499558894599223,
+    "keyword_matches": [
+      "apple",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:03.156396",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "117a2c2631f8593919f9bfee5ca7aea7",
+    "news_title": "Apple Music celebrates 10 years with the launch of a new global hub for artists",
+    "news_url": "https://www.apple.com/newsroom/2025/06/apple-music-celebrates-10-years-with-the-launch-of-a-new-global-hub-for-artists/",
+    "news_content_preview": "Apple Music celebrates 10 years with the launch of a new global hub for artists. As Apple Music marks 10 years, Apple unveils a brand-new state-of-the-art space in Los Angeles dedicated to artist-driv...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Apple Music",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Los Angeles",
+        "label": "LOCATION",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Apple TV+",
+      "Apple One",
+      "Apple Fitness+",
+      "Apple 2030",
+      "Apple Supplier Code of Conduct"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8053448227687499,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.10534482276875,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8017175002895849,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.101717500289585,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.778711346143201,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.078711346143201,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7712968997744855,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0712968997744854,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "supplier_code_of_conduct",
+        "entity_name": "Apple Supplier Code of Conduct",
+        "entity_type": "Regulation",
+        "semantic_similarity": 0.7502589472417763,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0502589472417763,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7814659032435596,
+    "keyword_matches": [
+      "apple",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:07.041874",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "ddb9ef1800a1d08abcaf555597b463b9",
+    "news_title": "Apple Sports serves up tennis, just in time for Wimbledon",
+    "news_url": "https://www.apple.com/newsroom/2025/06/apple-sports-serves-up-tennis-just-in-time-for-wimbledon/",
+    "news_content_preview": "Apple Sports serves up tennis, just in time for Wimbledon. Apple Sports today added tennis to its growing list of supported sports.",
+    "matched_entities": [
+      {
+        "text": "Apple Sports",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Wimbledon",
+        "label": "LOCATION",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Apple Fitness+",
+      "Apple One",
+      "Apple TV+",
+      "Apple Watch Assembly",
+      "Apple 2030"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8340769306798448,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1340769306798448,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8248870267741895,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1248870267741895,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8208652866105037,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1208652866105038,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.7816012053070243,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0816012053070243,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7711923380659578,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0711923380659578,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.806524557487504,
+    "keyword_matches": [
+      "apple",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:09.396829",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "3b0d1cd27625e09aabd04e6f79b4fb45",
+    "news_title": "Apple expands tools to help parents protect kids and teens online",
+    "news_url": "https://www.apple.com/newsroom/2025/06/apple-expands-tools-to-help-parents-protect-kids-and-teens-online/",
+    "news_content_preview": "Apple expands tools to help parents protect kids and teens online. Apple today shared an update on new ways to help parents protect kids and teens online when using Apple products.",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Apple products",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "parents",
+        "label": "PERSON",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "kids",
+        "label": "PERSON",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "teens",
+        "label": "PERSON",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Products",
+      "Apple One",
+      "Apple Fitness+",
+      "Apple TV+",
+      "Apple Supplier Code of Conduct"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "products",
+        "entity_name": "Products",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.8124789961634822,
+        "keyword_matches": [
+          "product",
+          "Products",
+          "products"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.3124789961634822,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8196233443083856,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1196233443083856,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8055605564042476,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1055605564042477,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8050644972673899,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.10506449726739,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "supplier_code_of_conduct",
+        "entity_name": "Apple Supplier Code of Conduct",
+        "entity_type": "Regulation",
+        "semantic_similarity": 0.7955870581987553,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0955870581987552,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.8076628904684521,
+    "keyword_matches": [
+      "product",
+      "Products",
+      "products",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:13.420433",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "f4ac65e9e45a4b3da22479b6e3fa7177",
+    "news_title": "Apple services deliver powerful features and intelligent updates to users this fall",
+    "news_url": "https://www.apple.com/newsroom/2025/06/apple-services-deliver-powerful-features-and-intelligent-updates-to-users-this-fall/",
+    "news_content_preview": "Apple services deliver powerful features and intelligent updates to users this fall. With the release of iOS 26, iPadOS 26, macOS Tahoe 26, tvOS 26, visionOS 26, and watchOS 26, Apple is enhancing its...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iOS 26",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPadOS 26",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "macOS Tahoe 26",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "tvOS 26",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "visionOS 26",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "watchOS 26",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Apple One",
+      "Apple TV+",
+      "Apple Fitness+",
+      "Apple Watch Assembly",
+      "iPad"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8266486952597045,
+        "keyword_matches": [
+          "service",
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.2266486952597044,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8262123555583938,
+        "keyword_matches": [
+          "service",
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.2262123555583937,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8177690331212091,
+        "keyword_matches": [
+          "service",
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.217769033121209,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.7751290308351251,
+        "keyword_matches": [
+          "watch",
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.175129030835125,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "ipad",
+        "entity_name": "iPad",
+        "entity_type": "Product",
+        "semantic_similarity": 0.8251500562762623,
+        "keyword_matches": [
+          "iPad"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1251500562762622,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.814181834210139,
+    "keyword_matches": [
+      "service",
+      "apple",
+      "service",
+      "apple",
+      "service",
+      "apple",
+      "watch",
+      "apple",
+      "iPad"
+    ],
+    "created_at": "2025-07-15T03:05:17.186468",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "92a3ed0195fac2196bdc0d5ef15a6b61",
+    "news_title": "Introducing the Apple Games app: A personalized home for games",
+    "news_url": "https://www.apple.com/newsroom/2025/06/introducing-the-apple-games-app-a-personalized-home-for-games/",
+    "news_content_preview": "Introducing the Apple Games app: A personalized home for games. At WWDC25, Apple unveiled Apple Games, an all-new destination for players to jump back into the games they love and have more fun with f...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Apple Games",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "WWDC25",
+        "label": "EVENT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Apple One",
+      "Apple Fitness+",
+      "Apple TV+",
+      "Apple 2030",
+      "Apple Supplier Code of Conduct"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8107442156949506,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1107442156949505,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8028920780111533,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1028920780111533,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8021746297578595,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1021746297578594,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7673332615564147,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0673332615564146,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "supplier_code",
+        "entity_name": "Apple Supplier Code of Conduct",
+        "entity_type": "Policy",
+        "semantic_similarity": 0.7617806185804101,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0617806185804102,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7889849607201576,
+    "keyword_matches": [
+      "apple",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:20.277170",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "4721d10194aa568098cca3858ec2fcb1",
+    "news_title": "Apple elevates the iPhone experience with iOS 26",
+    "news_url": "https://www.apple.com/newsroom/2025/06/apple-elevates-the-iphone-experience-with-ios-26/",
+    "news_content_preview": "Apple elevates the iPhone experience with iOS 26. Apple today previewed iOS 26, a major update that brings a beautiful new design, intelligent experiences, and improvements to the apps users rely on e...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPhone",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iOS 26",
+        "label": "TECHNOLOGY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "iPhone",
+      "Apple One",
+      "Apple Fitness+",
+      "Apple TV+",
+      "Apple Watch Assembly"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "iphone",
+        "entity_name": "iPhone",
+        "entity_type": "Product",
+        "semantic_similarity": 0.8210294420925108,
+        "keyword_matches": [
+          "iphone",
+          "iPhone"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.2210294420925107,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8086259794598524,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1086259794598523,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7986063008800772,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0986063008800773,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7811121608046366,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0811121608046366,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.7721624843485733,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0721624843485733,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.79630727351713,
+    "keyword_matches": [
+      "iphone",
+      "iPhone",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:23.865154",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "cb9b1bbc4ee9257595ce76ea2df3cff0",
+    "news_title": "watchOS 26 delivers more personalized ways to stay active and connected",
+    "news_url": "https://www.apple.com/newsroom/2025/06/watchos-26-delivers-more-personalized-ways-to-stay-active-and-connected/",
+    "news_content_preview": "watchOS 26 delivers more personalized ways to stay active and connected. Apple today previewed watchOS 26, offering a beautiful new look and even more intelligence for a more personalized experience.",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "watchOS 26",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Apple Watch Assembly",
+      "Apple Fitness+",
+      "Apple TV+",
+      "Apple One",
+      "Apple 2030"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.8175606733241603,
+        "keyword_matches": [
+          "watch",
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.2175606733241602,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8277443789124249,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1277443789124248,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7976754894103826,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0976754894103826,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.79297453359608,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0929745335960799,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7544566865853617,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0544566865853617,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7980823523656818,
+    "keyword_matches": [
+      "watch",
+      "apple",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:25.632379",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "23e66e2cc90a2e71767efb42e9db18e6",
+    "news_title": "Apple TV brings a beautiful redesign and enhanced home entertainment experience",
+    "news_url": "https://www.apple.com/newsroom/2025/06/apple-tv-brings-a-beautiful-redesign-and-enhanced-home-entertainment-experience/",
+    "news_content_preview": "Apple TV brings a beautiful redesign and enhanced home entertainment experience. Apple today previewed tvOS 26, making Apple TV even more immersive, enjoyable, and convenient.",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Apple TV",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "tvOS 26",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Apple TV+",
+      "Apple One",
+      "Apple Fitness+",
+      "Apple Watch Assembly",
+      "Apple 2030"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8634966780078546,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1634966780078546,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.819676774296835,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.119676774296835,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8027591559449081,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1027591559449081,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.7829647885063649,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.082964788506365,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7676127939107532,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0676127939107531,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.8073020381333432,
+    "keyword_matches": [
+      "apple",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:27.692528",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "9c18120fbc2ec95b57cfc2e233442088",
+    "news_title": "macOS Tahoe 26 makes the Mac more capable, productive, and intelligent than ever",
+    "news_url": "https://www.apple.com/newsroom/2025/06/macos-tahoe-26-makes-the-mac-more-capable-productive-and-intelligent-than-ever/",
+    "news_content_preview": "macOS Tahoe 26 makes the Mac more capable, productive, and intelligent than ever. Apple today previewed macOS Tahoe 26, which introduces a stunning new design and powerful capabilities that enable use...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "macOS Tahoe 26",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Mac",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Mac",
+      "Apple 2030",
+      "Apple TV+",
+      "Apple One",
+      "Apple Fitness+"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "mac",
+        "entity_name": "Mac",
+        "entity_type": "Product",
+        "semantic_similarity": 0.8139898920298032,
+        "keyword_matches": [
+          "Mac"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1139898920298033,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7776878514084854,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0776878514084853,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7704151955279028,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0704151955279029,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.769251527821025,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.069251527821025,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7667611256169027,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0667611256169027,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7796211184808237,
+    "keyword_matches": [
+      "Mac",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:30.647313",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "c27b82b591ca3d0a3ec4d975e7e02e2b",
+    "news_title": "Apple introduces a delightful and elegant new software design",
+    "news_url": "https://www.apple.com/newsroom/2025/06/apple-introduces-a-delightful-and-elegant-new-software-design/",
+    "news_content_preview": "Apple introduces a delightful and elegant new software design. Apple previewed a new software design, crafted with Liquid Glass, that makes apps and system experiences more expressive and delightful.",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Liquid Glass",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Glass",
+      "Apple One",
+      "Apple TV+",
+      "Apple Watch Assembly",
+      "Apple Supplier Code of Conduct"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "glass",
+        "entity_name": "Glass",
+        "entity_type": "Material",
+        "semantic_similarity": 0.8116958895023765,
+        "keyword_matches": [
+          "Glass",
+          "glass"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.2116958895023764,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8140573358105532,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1140573358105532,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7995118697586525,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0995118697586526,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.7937468518928675,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0937468518928675,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "supplier_code",
+        "entity_name": "Apple Supplier Code of Conduct",
+        "entity_type": "Policy",
+        "semantic_similarity": 0.7889534049535043,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0889534049535043,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.8015930703835907,
+    "keyword_matches": [
+      "Glass",
+      "glass",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:34.087849",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "f38c7bf200a8ec9588f009b00216ad41",
+    "news_title": "visionOS 26 introduces powerful new spatial experiences for Apple Vision Pro",
+    "news_url": "https://www.apple.com/newsroom/2025/06/visionos-26-introduces-powerful-new-spatial-experiences-for-apple-vision-pro/",
+    "news_content_preview": "visionOS 26 introduces powerful new spatial experiences for Apple Vision Pro. Apple today previewed visionOS 26, an expansive update packed with groundbreaking spatial experiences and new features for...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Apple Vision Pro",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "visionOS 26",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Apple One",
+      "Apple TV+",
+      "Apple Fitness+",
+      "Apple 2030",
+      "Apple Watch Assembly"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.78261141639512,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.08261141639512,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7754104659302898,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0754104659302899,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.772010108396097,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.072010108396097,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7678738833757749,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0678738833757748,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.7600200081441861,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0600200081441862,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7715851764482935,
+    "keyword_matches": [
+      "apple",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:36.197088",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "6f9693fb0ca3dd83ebe173017dad0384",
+    "news_title": "Apple Intelligence gets even more powerful with new capabilities across Apple devices",
+    "news_url": "https://www.apple.com/newsroom/2025/06/apple-intelligence-gets-even-more-powerful-with-new-capabilities-across-apple-devices/",
+    "news_content_preview": "Apple Intelligence gets even more powerful with new capabilities across Apple devices. Apple today announced new Apple Intelligence features that elevate the user experience across iPhone, iPad, Mac, ...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPhone",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPad",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Mac",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Apple Watch",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Apple Vision Pro",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Apple Intelligence",
+        "label": "TECHNOLOGY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "iPhone",
+      "Apple 2030",
+      "Apple Watch Assembly",
+      "iPad",
+      "Apple Fitness+"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "iphone",
+        "entity_name": "iPhone",
+        "entity_type": "Product",
+        "semantic_similarity": 0.8194316672058136,
+        "keyword_matches": [
+          "iphone",
+          "iPhone"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.2194316672058136,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7922575920740853,
+        "keyword_matches": [
+          "across",
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1922575920740852,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.7894233702790281,
+        "keyword_matches": [
+          "watch",
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.189423370279028,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "ipad",
+        "entity_name": "iPad",
+        "entity_type": "Product",
+        "semantic_similarity": 0.8218621567121173,
+        "keyword_matches": [
+          "iPad"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1218621567121172,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8163989497894104,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1163989497894105,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.807874747212091,
+    "keyword_matches": [
+      "iphone",
+      "iPhone",
+      "across",
+      "apple",
+      "watch",
+      "apple",
+      "iPad",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:38.568662",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "40197a163794b615d3b3307bf356dfd8",
+    "news_title": "iPadOS 26 introduces powerful new features that push iPad even further",
+    "news_url": "https://www.apple.com/newsroom/2025/06/ipados-26-introduces-powerful-new-features-that-push-ipad-even-further/",
+    "news_content_preview": "iPadOS 26 introduces powerful new features that push iPad even further. Apple today previewed iPadOS 26, the biggest iPadOS release ever, taking a huge leap forward and pushing the unique capabilities...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPadOS 26",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPad",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "iPad",
+      "Apple One",
+      "Apple Fitness+",
+      "Apple TV+",
+      "Apple 2030"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "ipad",
+        "entity_name": "iPad",
+        "entity_type": "Product",
+        "semantic_similarity": 0.8444453026833227,
+        "keyword_matches": [
+          "iPad"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1444453026833228,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7836054766181416,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0836054766181415,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7805007107643778,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0805007107643778,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7728258834111484,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0728258834111484,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7546803841488321,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0546803841488321,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7872115515251645,
+    "keyword_matches": [
+      "iPad",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:41.143027",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "6b880467be2fa3fa16f24b07f8160572",
+    "news_title": "AirPods now more versatile with studio-quality audio recording and camera remote",
+    "news_url": "https://www.apple.com/newsroom/2025/06/airpods-now-more-versatile-with-studio-quality-audio-recording-and-camera-remote/",
+    "news_content_preview": "AirPods now more versatile with studio-quality audio recording and camera remote. Apple today previewed software updates for AirPods that improve how users communicate and add new ways to capture cont...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "AirPods",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "studio-quality audio recording",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "camera remote",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "AirPods Pro Assembly",
+      "Apple TV+",
+      "Apple One",
+      "Apple Fitness+",
+      "Apple Watch Assembly"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "airpods_pro_assembly",
+        "entity_name": "AirPods Pro Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.8229370651876211,
+        "keyword_matches": [
+          "airpods"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1229370651876212,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7958271094205583,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0958271094205583,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7952848258764389,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.095284825876439,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7929437408622988,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0929437408622988,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.7716278381483549,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0716278381483548,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7957241158990545,
+    "keyword_matches": [
+      "airpods",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:44.220137",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "d68659164aa34d154804d3761eb49dea",
+    "news_title": "Apple supercharges its tools and technologies for developers",
+    "news_url": "https://www.apple.com/newsroom/2025/06/apple-supercharges-its-tools-and-technologies-for-developers/",
+    "news_content_preview": "Apple supercharges its tools and technologies for developers. Apple announced new technologies and enhancements to its developer tools to help developers create more beautiful, intelligent, and engagi...",
+    "matched_entities": [
+      {
+        "text": "Apple",
+        "label": "ORG",
+        "start": 0,
+        "end": 5,
+        "confidence": 1.0
+      },
+      {
+        "text": "Apple",
+        "label": "ORG",
+        "start": 62,
+        "end": 67,
+        "confidence": 1.0
+      }
+    ],
+    "graph_entities": [
+      "Apple One",
+      "Apple Supplier Code of Conduct",
+      "Apple Supplier Code of Conduct",
+      "Apple Fitness+",
+      "Apple 2030"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.819726735673983,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.119726735673983,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "supplier_code_of_conduct",
+        "entity_name": "Apple Supplier Code of Conduct",
+        "entity_type": "Regulation",
+        "semantic_similarity": 0.8154094432751369,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.115409443275137,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "supplier_code",
+        "entity_name": "Apple Supplier Code of Conduct",
+        "entity_type": "Policy",
+        "semantic_similarity": 0.8109764185509597,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1109764185509596,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.810307001412348,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.110307001412348,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.8062848781180255,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1062848781180254,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.8125408954060905,
+    "keyword_matches": [
+      "apple",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:45.810041",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "6ff1e4e190be0e141da3c979962cfffd",
+    "news_title": "Apple and Major League Baseball announce July \u201cFriday Night Baseball\u201d schedule",
+    "news_url": "https://www.apple.com/newsroom/2025/06/apple-and-major-league-baseball-announce-july-friday-night-baseball-schedule/",
+    "news_content_preview": "Apple and Major League Baseball announce July Friday Night Baseball schedule. Apple and Major League Baseball today unveiled the July schedule for Friday Night Baseball.",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Major League Baseball",
+        "label": "COMPANY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Apple One",
+      "Apple Fitness+",
+      "Apple TV+",
+      "Apple 2030",
+      "Apple Supplier Code of Conduct"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.772481608073639,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.072481608073639,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7574106170941668,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0574106170941668,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7573948330615515,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0573948330615515,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7348456095435242,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0348456095435241,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "supplier_code_of_conduct",
+        "entity_name": "Apple Supplier Code of Conduct",
+        "entity_type": "Regulation",
+        "semantic_similarity": 0.7310949061293253,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0310949061293253,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7506455147804413,
+    "keyword_matches": [
+      "apple",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:48.584236",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "8b59b0556f6886eecaf048d764e771e1",
+    "news_title": "Apple Arcade welcomes nine new games",
+    "news_url": "https://www.apple.com/newsroom/2025/06/apple-arcade-welcomes-nine-new-games/",
+    "news_content_preview": "Apple Arcade welcomes nine new games. Apple Arcade welcomes nine new games, expanding its dynamic catalog of more than 200 games, all without ads or in-app purchases.",
+    "matched_entities": [
+      {
+        "text": "Apple Arcade",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Apple One",
+      "Apple TV+",
+      "Apple Fitness+",
+      "Apple 2030",
+      "Apple Supplier Code of Conduct"
+    ],
+    "relevance_score": 6.0,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8146202625216941,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.114620262521694,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.80164054540888,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.10164054540888,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7932300682044051,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0932300682044052,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7737741424103413,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0737741424103413,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "supplier_code_of_conduct",
+        "entity_name": "Apple Supplier Code of Conduct",
+        "entity_type": "Regulation",
+        "semantic_similarity": 0.7579705567800014,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0579705567800013,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7882471150650644,
+    "keyword_matches": [
+      "apple",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:05:51.821064",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "f86ffb089c042ed266bd78196949207a",
+    "news_title": "Native Union Launches Find My-Compatible Tag and Card",
+    "news_url": "https://www.macrumors.com/2025/07/14/native-union-find-my-tag-and-card/",
+    "news_content_preview": "Native Union Launches Find My-Compatible Tag and Card. Native Union today debuted the Find It Card and the Find It Tag, two new products that work with Apple's Find My functionality. Priced at 36;40, ...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Find My",
+        "label": "SERVICE",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPhone",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Find It Card",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Find It Tag",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "AirTag",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "MagSafe",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Qi-based charger",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Bluetooth",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Find My Network",
+        "label": "SERVICE",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Native Union",
+        "label": "COMPANY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "iPhone",
+      "Cellular Network Carriers",
+      "Apple Watch Assembly",
+      "Apple Fitness+",
+      "Apple One"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "iphone",
+        "entity_name": "iPhone",
+        "entity_type": "Product",
+        "semantic_similarity": 0.7555712846639431,
+        "keyword_matches": [
+          "iphone",
+          "iPhone"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.155571284663943,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "cellular_network_carriers",
+        "entity_name": "Cellular Network Carriers",
+        "entity_type": "Supplier",
+        "semantic_similarity": 0.7361531457146636,
+        "keyword_matches": [
+          "network",
+          "products"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1361531457146636,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.7668744136703516,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0668744136703516,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7646085919265908,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0646085919265909,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7569763503059268,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0569763503059268,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7560367572562952,
+    "keyword_matches": [
+      "iphone",
+      "iPhone",
+      "network",
+      "products",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:06:03.455548",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "81fd1c812b01a88f28b76ed680876a9c",
+    "news_title": "Transcend Launches SSD With MagSafe Compatibility",
+    "news_url": "https://www.macrumors.com/2025/07/14/transcend-ssd-magsafe-compatibility/",
+    "news_content_preview": "Transcend Launches SSD With MagSafe Compatibility. Transcend today announced the launch of the ESD420, a portable SSD that includes a magnetic attachment designed to work with MagSafe iPhones. The ESD...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPhone",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "MagSafe",
+        "label": "TECHNOLOGY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Transcend",
+        "label": "COMPANY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "ESD420",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "USB-C",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "4K ProRes",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "exFAT",
+        "label": "TECHNOLOGY",
+        "relevance": "LOW",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "iPhone",
+      "Other Countries",
+      "Daisy",
+      "Mac",
+      "Magnets"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "iphone",
+        "entity_name": "iPhone",
+        "entity_type": "Product",
+        "semantic_similarity": 0.7737054653877379,
+        "keyword_matches": [
+          "iphone",
+          "iPhone"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.173705465387738,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "other_countries",
+        "entity_name": "Other Countries",
+        "entity_type": "Location",
+        "semantic_similarity": 0.6915019391956598,
+        "keyword_matches": [
+          "includes",
+          "other"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8915019391956598,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "daisy",
+        "entity_name": "Daisy",
+        "entity_type": "Product",
+        "semantic_similarity": 0.7611585628371196,
+        "keyword_matches": [
+          "iphone"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8611585628371196,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "mac",
+        "entity_name": "Mac",
+        "entity_type": "Product",
+        "semantic_similarity": 0.7566209475390029,
+        "keyword_matches": [
+          "Mac"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8566209475390029,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "magnets",
+        "entity_name": "Magnets",
+        "entity_type": "Component",
+        "semantic_similarity": 0.8086238416966501,
+        "keyword_matches": [],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8086238416966501,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.758322151331234,
+    "keyword_matches": [
+      "iphone",
+      "iPhone",
+      "includes",
+      "other",
+      "iphone",
+      "Mac"
+    ],
+    "created_at": "2025-07-15T03:06:07.047358",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "12f13e19ca6a9acfb7b5eb625a10d144",
+    "news_title": "HomePod Mini 2 Expected Later This Year With These New Features",
+    "news_url": "https://www.macrumors.com/2025/07/14/homepod-mini-2-expected-later-this-year/",
+    "news_content_preview": "HomePod Mini 2 Expected Later This Year With These New Features. Apple released the HomePod mini nearly five years ago, so you may be wondering when a new version of the speaker will finally arrive. B...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "HomePod mini",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "HomePod mini 2",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPhone 12",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Apple Watch Series 5",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Wi-Fi 6E",
+        "label": "TECHNOLOGY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Wi-Fi 4",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Ultra Wideband chip",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Mark Gurman",
+        "label": "PERSON",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Bloomberg",
+        "label": "COMPANY",
+        "relevance": "LOW",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "iPhone",
+      "Apple Watch Assembly",
+      "Apple One",
+      "Apple 2030",
+      "Apple TV+"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "iphone",
+        "entity_name": "iPhone",
+        "entity_type": "Product",
+        "semantic_similarity": 0.7762429929436016,
+        "keyword_matches": [
+          "iphone",
+          "iPhone"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1762429929436016,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.761827576214716,
+        "keyword_matches": [
+          "watch",
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1618275762147159,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7640006687188943,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0640006687188943,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7540811673989206,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0540811673989205,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7539788964785081,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0539788964785082,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7620262603509282,
+    "keyword_matches": [
+      "iphone",
+      "iPhone",
+      "watch",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:06:09.999592",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "3c0c42d964d73bc22d02a23aac96d178",
+    "news_title": "Apple Seeds Third Betas of visionOS 2.6, tvOS 18.6, and watchOS 11.6",
+    "news_url": "https://www.macrumors.com/2025/07/14/apple-seeds-visionos-2-6-beta-3/",
+    "news_content_preview": "Apple Seeds Third Betas of visionOS 2.6, tvOS 18.6, and watchOS 11.6. Apple today provided developers with the third betas of upcoming visionOS 2.6, tvOS 18.6, and watchOS 11.6 updates for testing pur...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "visionOS 2.6",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "tvOS 18.6",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "watchOS 11.6",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Apple Watch Assembly",
+      "Apple One",
+      "Apple TV+",
+      "Apple Fitness+",
+      "Apple 2030"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.7945393244536271,
+        "keyword_matches": [
+          "watch",
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.194539324453627,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7918596004254093,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0918596004254093,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.79024161777767,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.09024161777767,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7787003059327712,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.078700305932771,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7551131882658707,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0551131882658706,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7820908073710696,
+    "keyword_matches": [
+      "watch",
+      "apple",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:06:11.921046",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "c6e781949ec281e5b96c8f5e8417473f",
+    "news_title": "Apple Seeds Third Beta of macOS Sequoia 15.6",
+    "news_url": "https://www.macrumors.com/2025/07/14/apple-seeds-macos-sequoia-15-6-beta-3/",
+    "news_content_preview": "Apple Seeds Third Beta of macOS Sequoia 15.6. Apple today seeded the third beta of an upcoming macOS Sequoia 15.6 update to developers for testing purposes, with the software coming a week after Apple...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "macOS Sequoia 15.6",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "macOS Tahoe",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Apple Developer account",
+        "label": "SERVICE",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "System Settings app",
+        "label": "TECHNOLOGY",
+        "relevance": "LOW",
+        "confidence": 0.8
+      },
+      {
+        "text": "MacRumors.com",
+        "label": "COMPANY",
+        "relevance": "LOW",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Mac",
+      "Apple One",
+      "Apple 2030",
+      "Apple TV+",
+      "Apple Fitness+"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "mac",
+        "entity_name": "Mac",
+        "entity_type": "Product",
+        "semantic_similarity": 0.7731191191778017,
+        "keyword_matches": [
+          "Mac"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0731191191778018,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7683775032337651,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.068377503233765,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7540614560964564,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0540614560964563,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7537128648110418,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0537128648110419,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7497398122176835,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0497398122176835,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7598021511073496,
+    "keyword_matches": [
+      "Mac",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:06:14.650437",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "169e4a35c32a46725be85849423c7a47",
+    "news_title": "Apple Seeds Third Beta of iOS 18.6 to Developers",
+    "news_url": "https://www.macrumors.com/2025/07/14/apple-seeds-ios-18-6-beta-3/",
+    "news_content_preview": "Apple Seeds Third Beta of iOS 18.6 to Developers. Apple today seeded the third betas of upcoming iOS 18.6 and iPadOS 18.6 updates to developers for testing purposes, with the updates coming two weeks ...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iOS 18.6",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPadOS 18.6",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "App Store",
+        "label": "SERVICE",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "EU",
+        "label": "LOCATION",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Apple Intelligence",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "China",
+        "label": "LOCATION",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "iOS 26",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPhone 17",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "DMA",
+        "label": "REGULATORY BODY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "App Store",
+      "iPhone",
+      "China",
+      "iPad",
+      "Apple One"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "app_store",
+        "entity_name": "App Store",
+        "entity_type": "Platform",
+        "semantic_similarity": 0.7905670415079504,
+        "keyword_matches": [
+          "store",
+          "App Store"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1905670415079503,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "iphone",
+        "entity_name": "iPhone",
+        "entity_type": "Product",
+        "semantic_similarity": 0.7648534632706823,
+        "keyword_matches": [
+          "iphone",
+          "iPhone"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1648534632706822,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "china",
+        "entity_name": "China",
+        "entity_type": "Location",
+        "semantic_similarity": 0.7044952995955811,
+        "keyword_matches": [
+          "China",
+          "china"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.104495299595581,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "ipad",
+        "entity_name": "iPad",
+        "entity_type": "Product",
+        "semantic_similarity": 0.7889023302503654,
+        "keyword_matches": [
+          "iPad"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0889023302503653,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7712637147273778,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0712637147273778,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7640163698703913,
+    "keyword_matches": [
+      "store",
+      "App Store",
+      "iphone",
+      "iPhone",
+      "China",
+      "china",
+      "iPad",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:06:20.165165",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "b071f4009dcbadb9e758dcaaab3c0dfa",
+    "news_title": "iPhone 17 Pro Models Rumored to Have All-New Unique Color Option",
+    "news_url": "https://www.macrumors.com/2025/07/14/iphone-17-pro-all-new-color-rumored/",
+    "news_content_preview": "iPhone 17 Pro Models Rumored to Have All-New Unique Color Option. Apple's upcoming iPhone 17 Pro models may have a new copper-like orange color option, according to Sonny Dickson. iPhone 17 Pro in blu...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPhone 17 Pro",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPhone 17 Pro Max",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Sonny Dickson",
+        "label": "PERSON",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPhone 16 Pro",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPhone 15 Pro",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "MacRumors.com",
+        "label": "COMPANY",
+        "relevance": "LOW",
+        "confidence": 0.8
+      },
+      {
+        "text": "September",
+        "label": "LOCATION",
+        "relevance": "LOW",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "iPhone",
+      "Apple One",
+      "Mac",
+      "Apple Watch Assembly",
+      "Apple 2030"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "iphone",
+        "entity_name": "iPhone",
+        "entity_type": "Product",
+        "semantic_similarity": 0.8170374952124283,
+        "keyword_matches": [
+          "iphone",
+          "iPhone"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.2170374952124283,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7744167660671433,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0744167660671433,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "mac",
+        "entity_name": "Mac",
+        "entity_type": "Product",
+        "semantic_similarity": 0.7690931267502582,
+        "keyword_matches": [
+          "Mac"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0690931267502581,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.7650481575852888,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0650481575852888,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7620924197451466,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0620924197451467,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.777537593072053,
+    "keyword_matches": [
+      "iphone",
+      "iPhone",
+      "apple",
+      "Mac",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:06:25.019368",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "6e1e2e5a92023b87c0744814816a8f00",
+    "news_title": "Apple Expected to Win Rights to Formula 1 With $150M Bid",
+    "news_url": "https://www.macrumors.com/2025/07/14/apple-expected-to-win-rights-to-f1/",
+    "news_content_preview": "Apple Expected to Win Rights to Formula 1 With 150M Bid. Apple is expected to win the rights to stream Formula 1 races on Apple TV in the United States thanks to a 36;150 million bid, Business Insider...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Apple TV",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Formula 1",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Disney",
+        "label": "COMPANY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "ESPN",
+        "label": "COMPANY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Netflix",
+        "label": "COMPANY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Major League Baseball",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Major League Soccer",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "F1: The Movie",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "United States",
+        "label": "LOCATION",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Apple TV Plus",
+        "label": "SERVICE",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "United Nations Guiding Principles on Business and Human Rights",
+      "United States",
+      "United States",
+      "Apple Human Rights Policy",
+      "Apple One"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "un_guiding_principles",
+        "entity_name": "United Nations Guiding Principles on Business and Human Rights",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.7131466139352274,
+        "keyword_matches": [
+          "rights",
+          "united",
+          "business"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.2131466139352274,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "united_states",
+        "entity_name": "United States",
+        "entity_type": "Location",
+        "semantic_similarity": 0.694987433739945,
+        "keyword_matches": [
+          "united",
+          "states",
+          "United States"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.194987433739945,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "us",
+        "entity_name": "United States",
+        "entity_type": "Geographic_Location",
+        "semantic_similarity": 0.6933458547502196,
+        "keyword_matches": [
+          "united",
+          "states",
+          "United States"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1933458547502196,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "human_rights_policy",
+        "entity_name": "Apple Human Rights Policy",
+        "entity_type": "Policy",
+        "semantic_similarity": 0.7468693098645202,
+        "keyword_matches": [
+          "rights",
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1468693098645202,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.814097114339587,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.114097114339587,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7324892653258998,
+    "keyword_matches": [
+      "rights",
+      "united",
+      "business",
+      "united",
+      "states",
+      "United States",
+      "united",
+      "states",
+      "United States",
+      "rights",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:06:32.137484",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "7939d88a36c702d8ea752cc0c39d997a",
+    "news_title": "iPhone 17 May See 'Significant' Dynamic Island Changes",
+    "news_url": "https://www.macrumors.com/2025/07/14/iphone-17-dynamic-island-changes/",
+    "news_content_preview": "iPhone 17 May See 'Significant' Dynamic Island Changes. The iPhone's Dynamic Island experience is set to undergo \"significant evolution\" over the next few years, according to a new rumor. Earlier this...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPhone 17",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Dynamic Island",
+        "label": "TECHNOLOGY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPhone 14 Pro",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Majin Bu",
+        "label": "PERSON",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "MacRumors.com",
+        "label": "COMPANY",
+        "relevance": "LOW",
+        "confidence": 0.8
+      },
+      {
+        "text": "September 8, 2025",
+        "label": "LOCATION",
+        "relevance": "LOW",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "iPhone",
+      "Apple One",
+      "Mac",
+      "Apple 2030",
+      "Apple Watch Assembly"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "iphone",
+        "entity_name": "iPhone",
+        "entity_type": "Product",
+        "semantic_similarity": 0.8253669037685802,
+        "keyword_matches": [
+          "iphone",
+          "iPhone"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.2253669037685802,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7764104350813708,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0764104350813708,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "mac",
+        "entity_name": "Mac",
+        "entity_type": "Product",
+        "semantic_similarity": 0.7685904520153586,
+        "keyword_matches": [
+          "Mac"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0685904520153586,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7611019342130332,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0611019342130332,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.7590914281284019,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0590914281284018,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7781122306413489,
+    "keyword_matches": [
+      "iphone",
+      "iPhone",
+      "apple",
+      "Mac",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:06:36.155279",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "93f26cd93ee91e21698fa269973617eb",
+    "news_title": "It\u2019s not just you: a Cloudflare issue is breaking websites for some users",
+    "news_url": "https://9to5mac.com/2025/07/14/its-not-just-you-a-cloudflare-issue-is-breaking-websites-for-some-users/",
+    "news_content_preview": "Its not just you: a Cloudflare issue is breaking websites for some users. If youve noticed some internet slowdowns or trouble reaching websites tonight, youre not alone. Cloudflare has confirmed an is...",
+    "matched_entities": [
+      {
+        "text": "Cloudflare",
+        "label": "ORG",
+        "start": 20,
+        "end": 30,
+        "confidence": 1.0
+      },
+      {
+        "text": "Cloudflare",
+        "label": "ORG",
+        "start": 170,
+        "end": 180,
+        "confidence": 1.0
+      },
+      {
+        "text": "DNS",
+        "label": "ORG",
+        "start": 241,
+        "end": 244,
+        "confidence": 1.0
+      }
+    ],
+    "graph_entities": [
+      "RESOLVE",
+      "Public Company Accounting Oversight Board",
+      "Tin",
+      "People and Compensation Committee"
+    ],
+    "relevance_score": 5.232860729590889,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "resolve",
+        "entity_name": "RESOLVE",
+        "entity_type": "Nonprofit",
+        "semantic_similarity": 0.7349235944673428,
+        "keyword_matches": [
+          "RESOLVE",
+          "resolve"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.9349235944673429,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "pcaob",
+        "entity_name": "Public Company Accounting Oversight Board",
+        "entity_type": "Regulatory_Body",
+        "semantic_similarity": 0.6782680519689139,
+        "keyword_matches": [
+          "public"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.7782680519689139,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "tin",
+        "entity_name": "Tin",
+        "entity_type": "Material",
+        "semantic_similarity": 0.673563514664849,
+        "keyword_matches": [
+          "Tin"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.773563514664849,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "people_and_compensation_committee",
+        "entity_name": "People and Compensation Committee",
+        "entity_type": "Committee",
+        "semantic_similarity": 0.6603941437823654,
+        "keyword_matches": [
+          "people"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.7603941437823654,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.6867873262208678,
+    "keyword_matches": [
+      "RESOLVE",
+      "resolve",
+      "public",
+      "Tin",
+      "people"
+    ],
+    "created_at": "2025-07-15T03:06:39.429698",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "bc9ebd45dea858bc7e1f4b1c9a84f34d",
+    "news_title": "EU likely to shelve digital tax plan that would target Apple and other Big Tech companies",
+    "news_url": "https://9to5mac.com/2025/07/14/eu-likely-to-shelve-digital-tax-plan-that-would-target-apple-and-other-big-tech-companies/",
+    "news_content_preview": "EU likely to shelve digital tax plan that would target Apple and other Big Tech companies. Just ahead of its next multi-year budget proposal, the European Commission is walking back plans to impose a ...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "European Commission",
+        "label": "REGULATORY BODY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Big Tech",
+        "label": "COMPANY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Meta",
+        "label": "COMPANY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "President Trump",
+        "label": "PERSON",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "European Commission",
+      "European Union",
+      "Apple 2030",
+      "Apple TV+",
+      "Apple One"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "european_commission",
+        "entity_name": "European Commission",
+        "entity_type": "Regulatory Body",
+        "semantic_similarity": 0.7739288311835248,
+        "keyword_matches": [
+          "commission",
+          "European Commission",
+          "european"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.2739288311835248,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "eu",
+        "entity_name": "European Union",
+        "entity_type": "Geographic_Location",
+        "semantic_similarity": 0.7768374611345408,
+        "keyword_matches": [
+          "european"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0768374611345408,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7694385780841967,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0694385780841966,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7646845054321,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0646845054321,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7627632840114558,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0627632840114558,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7695305319691637,
+    "keyword_matches": [
+      "commission",
+      "European Commission",
+      "european",
+      "european",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:06:43.688361",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "c662a8692a04b14ea0271b30bd6c59e2",
+    "news_title": "IDC: Emerging markets helped Apple offset iPhone slowdown in China during Q2",
+    "news_url": "https://9to5mac.com/2025/07/14/idc-emerging-markets-help-offset-china-slowdown-in-iphone-sales/",
+    "news_content_preview": "IDC: Emerging markets helped Apple offset iPhone slowdown in China during Q2. During the second quarter of 2025, Apple saw a modest gain in iPhone shipments, holding its worldwide ground amid slowing ...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPhone",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "China",
+        "label": "LOCATION",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "IDC",
+        "label": "COMPANY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "iPhone",
+      "China",
+      "Apple 2030",
+      "China mainland",
+      "Apple One"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "iphone",
+        "entity_name": "iPhone",
+        "entity_type": "Product",
+        "semantic_similarity": 0.8171098256525945,
+        "keyword_matches": [
+          "iphone",
+          "iPhone"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.2171098256525945,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "china",
+        "entity_name": "China",
+        "entity_type": "Location",
+        "semantic_similarity": 0.7946697206494706,
+        "keyword_matches": [
+          "China",
+          "china"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1946697206494705,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7960571312544497,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0960571312544496,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "china_mainland",
+        "entity_name": "China mainland",
+        "entity_type": "Location",
+        "semantic_similarity": 0.7875060811837188,
+        "keyword_matches": [
+          "china"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0875060811837187,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7727028135673923,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0727028135673924,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7936091144615253,
+    "keyword_matches": [
+      "iphone",
+      "iPhone",
+      "China",
+      "china",
+      "apple",
+      "china",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:06:47.531352",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "3964906d882a8192a8bf993d78a649ab",
+    "news_title": "Apple\u2019s new C1 brings two killer features, and it\u2019s just the start",
+    "news_url": "https://9to5mac.com/2025/07/14/apples-new-c1-brings-two-killer-features-and-its-just-the-start/",
+    "news_content_preview": "Apples new C1 brings two killer features, and its just the start. Apples forthcoming iPhone 17 Air will come with a key component many years in the making: the C1 modem, which debuted in the iPhone 16...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPhone 17 Air",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "C1 modem",
+        "label": "TECHNOLOGY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPhone 16e",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Qualcomm",
+        "label": "COMPANY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "iPhone",
+      "Apple One",
+      "Apple 2030",
+      "Apple Fitness+",
+      "Apple Watch Assembly"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "iphone",
+        "entity_name": "iPhone",
+        "entity_type": "Product",
+        "semantic_similarity": 0.8205864529964215,
+        "keyword_matches": [
+          "iphone",
+          "iPhone"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.2205864529964214,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8014499338475951,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1014499338475952,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7814554402958711,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0814554402958712,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7661228542953125,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0661228542953125,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.7651056233417792,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0651056233417793,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7869440609553959,
+    "keyword_matches": [
+      "iphone",
+      "iPhone",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:06:49.638178",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "f97b17992d77df4960a3708677d2890e",
+    "news_title": "M5 iPad Pro could finally deliver something we\u2019ve all been asking for",
+    "news_url": "https://9to5mac.com/2025/07/14/m5-ipad-pro-could-finally-deliver-something-weve-all-been-asking-for/",
+    "news_content_preview": "M5 iPad Pro could finally deliver something weve all been asking for. Apples M5 iPad Pro is launching this fall, and thanks to the huge upgrades coming in iPadOS 26, its set to deliver something users...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "M5 iPad Pro",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPadOS 26",
+        "label": "TECHNOLOGY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "iPad",
+      "Apple One",
+      "Apple Fitness+",
+      "Apple TV+",
+      "Apple 2030"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "ipad",
+        "entity_name": "iPad",
+        "entity_type": "Product",
+        "semantic_similarity": 0.8518739850115989,
+        "keyword_matches": [
+          "iPad"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1518739850115989,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7894724374408743,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0894724374408742,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7828630294089455,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0828630294089454,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7809102191778043,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0809102191778044,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7710753134216445,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0710753134216444,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7952389968921735,
+    "keyword_matches": [
+      "iPad",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:06:52.232615",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "2bfb95694db230f10c2e40411e03e20d",
+    "news_title": "9to5Mac Daily: July 14, 2025 \u2013 Apple and F1, more",
+    "news_url": "https://9to5mac.com/2025/07/14/daily-july-14-2025/",
+    "news_content_preview": "9to5Mac Daily: July 14, 2025  Apple and F1, more. Listen to a recap of the top stories of the day from 9to5Mac. 9to5Mac Daily is available on iTunes and Apples Podcasts app, Stitcher, TuneIn, Google P...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iTunes",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "Apple Podcasts",
+        "label": "PRODUCT",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "1Password",
+        "label": "COMPANY",
+        "relevance": "MEDIUM",
+        "confidence": 0.8
+      },
+      {
+        "text": "passkey feature",
+        "label": "TECHNOLOGY",
+        "relevance": "LOW",
+        "confidence": 0.8
+      },
+      {
+        "text": "Overcast",
+        "label": "PRODUCT",
+        "relevance": "LOW",
+        "confidence": 0.8
+      },
+      {
+        "text": "Google Play",
+        "label": "PRODUCT",
+        "relevance": "LOW",
+        "confidence": 0.8
+      },
+      {
+        "text": "Stitcher",
+        "label": "PRODUCT",
+        "relevance": "LOW",
+        "confidence": 0.8
+      },
+      {
+        "text": "TuneIn",
+        "label": "PRODUCT",
+        "relevance": "LOW",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Apple One",
+      "Apple Fitness+",
+      "Apple 2030",
+      "Apple TV+",
+      "Apple Watch Assembly"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8226957702466063,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1226957702466063,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.8068924761349907,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1068924761349908,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7960479305830264,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0960479305830264,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.791621389603097,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.091621389603097,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.7693999984207374,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0693999984207374,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7973315129976916,
+    "keyword_matches": [
+      "apple",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:06:54.166600",
+    "processed_by_agent": false,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "3771a8a873a12fd42a9b57925248b48a",
+    "news_title": "Resident Evil: Survival Unit for iOS now up for pre-order, if you don\u2019t mind waiting",
+    "news_url": "https://9to5mac.com/2025/07/14/resident-evil-survival-unit-ios-pre-order/",
+    "news_content_preview": "Resident Evil: Survival Unit for iOS now up for pre-order, if you dont mind waiting. Sonys subsidiary Aniplex Inc. has made Resident Evil: Survival Unit available for pre-order on the App Store, ahead...",
+    "matched_entities": [
+      {
+        "text": "Aniplex Inc.",
+        "label": "ORG",
+        "start": 102,
+        "end": 114,
+        "confidence": 1.0
+      },
+      {
+        "text": "the App Store",
+        "label": "PERSON",
+        "start": 180,
+        "end": 193,
+        "confidence": 1.0
+      }
+    ],
+    "graph_entities": [
+      "App Store",
+      "Tin",
+      "iPhone",
+      "iPad",
+      "Resellers"
+    ],
+    "relevance_score": 8.28,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "app_store",
+        "entity_name": "App Store",
+        "entity_type": "Platform",
+        "semantic_similarity": 0.7832465576834683,
+        "keyword_matches": [
+          "store",
+          "App Store"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.1832465576834683,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "tin",
+        "entity_name": "Tin",
+        "entity_type": "Material",
+        "semantic_similarity": 0.6823221993879183,
+        "keyword_matches": [
+          "Tin"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.7823221993879182,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "iphone",
+        "entity_name": "iPhone",
+        "entity_type": "Product",
+        "semantic_similarity": 0.7821060690149655,
+        "keyword_matches": [],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.7821060690149655,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "ipad",
+        "entity_name": "iPad",
+        "entity_type": "Product",
+        "semantic_similarity": 0.7776218747209506,
+        "keyword_matches": [],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.7776218747209506,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "resellers",
+        "entity_name": "Resellers",
+        "entity_type": "Supplier",
+        "semantic_similarity": 0.7688144365842096,
+        "keyword_matches": [],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.7688144365842096,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7588222274783025,
+    "keyword_matches": [
+      "store",
+      "App Store",
+      "Tin"
+    ],
+    "created_at": "2025-07-15T03:06:56.972823",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "0d2ac9ec92d90ee354fe9ad28de084e5",
+    "news_title": "iPhone Fold is coming: Five new features for next year\u2019s launch",
+    "news_url": "https://9to5mac.com/2025/07/14/iphone-fold-five-new-features-are-coming-next-year/",
+    "news_content_preview": "iPhone Fold is coming: Five new features for next years launch. Following years in development and countless rumors, Apples first foldable iPhone looks to finally be coming next year. Here are five ne...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "iPhone Fold",
+        "label": "PRODUCT",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "iPhone",
+      "Apple One",
+      "Apple Fitness+",
+      "Apple Watch Assembly",
+      "Apple 2030"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "iphone",
+        "entity_name": "iPhone",
+        "entity_type": "Product",
+        "semantic_similarity": 0.8202000729170891,
+        "keyword_matches": [
+          "iphone",
+          "iPhone"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.220200072917089,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7849693798532774,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0849693798532773,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_fitness_plus",
+        "entity_name": "Apple Fitness+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7762861528798155,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0762861528798155,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_watch_assembly",
+        "entity_name": "Apple Watch Assembly",
+        "entity_type": "Business_Unit",
+        "semantic_similarity": 0.7731040781635827,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0731040781635828,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7725486729308998,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0725486729308997,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.785421671348933,
+    "keyword_matches": [
+      "iphone",
+      "iPhone",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:06:59.608346",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "e80a59361edffbb0753d4564045d7fa1",
+    "news_title": "Tim Cook\u2019s run as Apple CEO could be much longer than you think",
+    "news_url": "https://9to5mac.com/2025/07/14/tim-cooks-run-as-apple-ceo-could-be-much-longer-than-you-think/",
+    "news_content_preview": "Tim Cooks run as Apple CEO could be much longer than you think. How long will Tim Cook stay Apples CEO? The question has come up often, but a new report indicates any big leadership transition is like...",
+    "matched_entities": [
+      {
+        "text": "Apple Inc.",
+        "label": "COMPANY",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      },
+      {
+        "text": "Tim Cook",
+        "label": "PERSON",
+        "relevance": "HIGH",
+        "confidence": 0.8
+      }
+    ],
+    "graph_entities": [
+      "Apple 2030",
+      "Apple One",
+      "Apple Supplier Code of Conduct",
+      "Apple Supplier Code of Conduct",
+      "Apple TV+"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "carbon_neutrality",
+        "entity_name": "Apple 2030",
+        "entity_type": "Environmental_Initiative",
+        "semantic_similarity": 0.7776387685066333,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0776387685066333,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_one",
+        "entity_name": "Apple One",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7676468557760112,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0676468557760113,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "supplier_code",
+        "entity_name": "Apple Supplier Code of Conduct",
+        "entity_type": "Policy",
+        "semantic_similarity": 0.7568825883626111,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0568825883626112,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "supplier_code_of_conduct",
+        "entity_name": "Apple Supplier Code of Conduct",
+        "entity_type": "Regulation",
+        "semantic_similarity": 0.7562009744821682,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.056200974482168,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "apple_tv_plus",
+        "entity_name": "Apple TV+",
+        "entity_type": "Service",
+        "semantic_similarity": 0.7459075536670435,
+        "keyword_matches": [
+          "apple"
+        ],
+        "entity_mention_bonus": 0.2,
+        "combined_score": 1.0459075536670435,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7608553481588934,
+    "keyword_matches": [
+      "apple",
+      "apple",
+      "apple",
+      "apple",
+      "apple"
+    ],
+    "created_at": "2025-07-15T03:07:02.461945",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  },
+  {
+    "news_article_id": "92d3a528e736c67699d4264254748170",
+    "news_title": "MagSafe Monday: Heading off to college in the fall? Here\u2019s your best MagSafe gear",
+    "news_url": "https://9to5mac.com/2025/07/14/heading-off-to-college-in-the-fall-heres-your-best-magsafe-gear/",
+    "news_content_preview": "MagSafe Monday: Heading off to college in the fall? Heres your best MagSafe gear. I went off to college with a giant desktop computer, so Im a little envious of the gear students have today. I still r...",
+    "matched_entities": [
+      {
+        "text": "MB USB",
+        "label": "ORG",
+        "start": 231,
+        "end": 237,
+        "confidence": 1.0
+      }
+    ],
+    "graph_entities": [
+      "Paper",
+      "Students",
+      "Personal Computers",
+      "Clean Electronics Production Network",
+      "Clean Electronics Production Network"
+    ],
+    "relevance_score": 7.199999999999999,
+    "relevance_category": "HIGH",
+    "entity_matches": [
+      {
+        "entity_id": "paper",
+        "entity_name": "Paper",
+        "entity_type": "Material",
+        "semantic_similarity": 0.7597269849480752,
+        "keyword_matches": [
+          "paper",
+          "Paper"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.9597269849480752,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "students",
+        "entity_name": "Students",
+        "entity_type": "Group",
+        "semantic_similarity": 0.751306460708284,
+        "keyword_matches": [
+          "Students",
+          "students"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.951306460708284,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "personal_computers",
+        "entity_name": "Personal Computers",
+        "entity_type": "Product_Line",
+        "semantic_similarity": 0.7715453270346572,
+        "keyword_matches": [
+          "computers"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.8715453270346571,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "clean_electronics_production_network",
+        "entity_name": "Clean Electronics Production Network",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.722288011457768,
+        "keyword_matches": [
+          "clean"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.822288011457768,
+        "risk_level": "Unknown"
+      },
+      {
+        "entity_id": "cepn",
+        "entity_name": "Clean Electronics Production Network",
+        "entity_type": "Organization",
+        "semantic_similarity": 0.710531889275987,
+        "keyword_matches": [
+          "clean"
+        ],
+        "entity_mention_bonus": 0.0,
+        "combined_score": 0.810531889275987,
+        "risk_level": "Unknown"
+      }
+    ],
+    "semantic_similarity": 0.7430797346849543,
+    "keyword_matches": [
+      "paper",
+      "Paper",
+      "Students",
+      "students",
+      "computers",
+      "clean",
+      "clean"
+    ],
+    "created_at": "2025-07-15T03:07:06.873267",
+    "processed_by_agent": true,
+    "agent_analysis": null
+  }
+]

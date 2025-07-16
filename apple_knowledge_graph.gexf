@@ -1,17 +1,29 @@
 <?xml version='1.0' encoding='utf-8'?>
 <gexf xmlns="http://www.gexf.net/1.2draft" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gexf.net/1.2draft http://www.gexf.net/1.2draft/gexf.xsd" version="1.2">
-  <meta lastmodifieddate="2025-06-12">
+  <meta lastmodifieddate="2025-07-14">
     <creator>NetworkX 3.4.2</creator>
   </meta>
   <graph defaultedgetype="directed" mode="static" name="">
     <attributes mode="static" class="edge">
-      <attribute id="4" title="prop_details" type="string" />
+      <attribute id="15" title="prop_details" type="string" />
+      <attribute id="16" title="prop_description" type="string" />
     </attributes>
     <attributes mode="static" class="node">
       <attribute id="0" title="type" type="string" />
       <attribute id="1" title="name" type="string" />
       <attribute id="2" title="prop_description" type="string" />
-      <attribute id="3" title="prop_headquarters" type="string" />
+      <attribute id="3" title="prop_count" type="long" />
+      <attribute id="4" title="prop_symbol" type="string" />
+      <attribute id="5" title="prop_authorized_amount" type="string" />
+      <attribute id="6" title="prop_utilized_amount" type="string" />
+      <attribute id="7" title="prop_announcement_date" type="string" />
+      <attribute id="8" title="prop_value_2024" type="long" />
+      <attribute id="9" title="prop_value_2023" type="long" />
+      <attribute id="10" title="prop_2024" type="long" />
+      <attribute id="11" title="prop_2023" type="long" />
+      <attribute id="12" title="prop_2022" type="long" />
+      <attribute id="13" title="prop_title" type="string" />
+      <attribute id="14" title="prop_location" type="string" />
     </attributes>
     <nodes>
       <node id="apple" label="apple">
@@ -19,139 +31,83 @@
           <attvalue for="0" value="Company" />
           <attvalue for="1" value="Apple Inc." />
           <attvalue for="2" value="Technology company" />
-          <attvalue for="3" value="Cupertino, California" />
         </attvalues>
       </node>
-      <node id="ipad" label="ipad">
-        <attvalues>
-          <attvalue for="0" value="Product" />
-          <attvalue for="1" value="iPad" />
-          <attvalue for="2" value="Line of multipurpose tablets" />
-        </attvalues>
-      </node>
-      <node id="wearables" label="wearables">
-        <attvalues>
-          <attvalue for="0" value="Product" />
-          <attvalue for="1" value="Wearables" />
-          <attvalue for="2" value="Market segment for wearable technology" />
-        </attvalues>
-      </node>
-      <node id="apple_watch" label="apple_watch">
-        <attvalues>
-          <attvalue for="0" value="Product" />
-          <attvalue for="1" value="Apple Watch" />
-          <attvalue for="2" value="Line of smartwatches" />
-        </attvalues>
-      </node>
-      <node id="airpods" label="airpods">
-        <attvalues>
-          <attvalue for="0" value="Product" />
-          <attvalue for="1" value="AirPods" />
-          <attvalue for="2" value="Line of wireless headphones" />
-        </attvalues>
-      </node>
-      <node id="apple_tv" label="apple_tv">
-        <attvalues>
-          <attvalue for="0" value="Product" />
-          <attvalue for="1" value="Apple TV" />
-          <attvalue for="2" value="Media streaming and gaming device" />
-        </attvalues>
-      </node>
-      <node id="homepod" label="homepod">
-        <attvalues>
-          <attvalue for="0" value="Product" />
-          <attvalue for="1" value="HomePod" />
-          <attvalue for="2" value="High-fidelity wireless smart speaker" />
-        </attvalues>
-      </node>
-      <node id="accessories" label="accessories">
-        <attvalues>
-          <attvalue for="0" value="Product" />
-          <attvalue for="1" value="Accessories" />
-          <attvalue for="2" value="Market segment for additional products" />
-        </attvalues>
-      </node>
-      <node id="aluminum" label="aluminum">
-        <attvalues>
-          <attvalue for="0" value="Material" />
-          <attvalue for="1" value="Aluminum" />
-          <attvalue for="2" value="Used in product casing" />
-        </attvalues>
-      </node>
-      <node id="rare_earth_elements" label="rare_earth_elements">
-        <attvalues>
-          <attvalue for="0" value="Material" />
-          <attvalue for="1" value="Rare Earth Elements" />
-          <attvalue for="2" value="Used in various components" />
-        </attvalues>
-      </node>
-      <node id="foxconn" label="foxconn">
+      <node id="third_party_carriers" label="third_party_carriers">
         <attvalues>
           <attvalue for="0" value="Supplier" />
-          <attvalue for="1" value="Foxconn" />
-          <attvalue for="2" value="Manufacturing partner" />
+          <attvalue for="1" value="Third-party cellular network carriers" />
+          <attvalue for="2" value="Cellular network service providers" />
         </attvalues>
       </node>
-      <node id="taiwan" label="taiwan">
+      <node id="wholesalers" label="wholesalers">
         <attvalues>
-          <attvalue for="0" value="Location" />
-          <attvalue for="1" value="Taiwan" />
-          <attvalue for="2" value="Operational center" />
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Wholesalers" />
+          <attvalue for="2" value="Distributors of Apple products" />
         </attvalues>
       </node>
-      <node id="china" label="china">
+      <node id="retailers" label="retailers">
         <attvalues>
-          <attvalue for="0" value="Location" />
-          <attvalue for="1" value="China" />
-          <attvalue for="2" value="Manufacturing hub" />
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Retailers" />
+          <attvalue for="2" value="Distributors of Apple products" />
         </attvalues>
       </node>
-      <node id="us" label="us">
+      <node id="resellers" label="resellers">
         <attvalues>
-          <attvalue for="0" value="Location" />
-          <attvalue for="1" value="United States" />
-          <attvalue for="2" value="Operational center" />
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Resellers" />
+          <attvalue for="2" value="Distributors of Apple products" />
         </attvalues>
       </node>
       <node id="smartphones" label="smartphones">
         <attvalues>
           <attvalue for="0" value="Product_Line" />
           <attvalue for="1" value="Smartphones" />
-          <attvalue for="2" value="Market segment for mobile devices" />
+          <attvalue for="2" value="Market for mobile devices" />
         </attvalues>
       </node>
       <node id="personal_computers" label="personal_computers">
         <attvalues>
           <attvalue for="0" value="Product_Line" />
           <attvalue for="1" value="Personal Computers" />
-          <attvalue for="2" value="Market segment for computing devices" />
+          <attvalue for="2" value="Market for computing devices" />
         </attvalues>
       </node>
       <node id="tablets" label="tablets">
         <attvalues>
           <attvalue for="0" value="Product_Line" />
           <attvalue for="1" value="Tablets" />
-          <attvalue for="2" value="Market segment for tablet devices" />
+          <attvalue for="2" value="Market for tablet devices" />
+        </attvalues>
+      </node>
+      <node id="wearables" label="wearables">
+        <attvalues>
+          <attvalue for="0" value="Product_Line" />
+          <attvalue for="1" value="Wearables" />
+          <attvalue for="2" value="Market for wearable technology" />
+        </attvalues>
+      </node>
+      <node id="accessories" label="accessories">
+        <attvalues>
+          <attvalue for="0" value="Product_Line" />
+          <attvalue for="1" value="Accessories" />
+          <attvalue for="2" value="Market for additional device components" />
         </attvalues>
       </node>
       <node id="services" label="services">
         <attvalues>
           <attvalue for="0" value="Product_Line" />
           <attvalue for="1" value="Services" />
+          <attvalue for="2" value="Includes App Store and other services" />
         </attvalues>
       </node>
       <node id="components" label="components">
         <attvalues>
           <attvalue for="0" value="Component" />
           <attvalue for="1" value="Components" />
-          <attvalue for="2" value="Essential parts for Apple products" />
-        </attvalues>
-      </node>
-      <node id="custom_components" label="custom_components">
-        <attvalues>
-          <attvalue for="0" value="Component" />
-          <attvalue for="1" value="Custom Components" />
-          <attvalue for="2" value="Unique components used by Apple" />
+          <attvalue for="2" value="Essential parts for products" />
         </attvalues>
       </node>
       <node id="intellectual_property" label="intellectual_property">
@@ -161,73 +117,2181 @@
           <attvalue for="2" value="Collection of rights relating to hardware, software, and services" />
         </attvalues>
       </node>
+      <node id="employees" label="employees">
+        <attvalues>
+          <attvalue for="0" value="Human Capital" />
+          <attvalue for="1" value="Employees" />
+          <attvalue for="3" value="164000" />
+        </attvalues>
+      </node>
+      <node id="us" label="us">
+        <attvalues>
+          <attvalue for="0" value="Geographic_Location" />
+          <attvalue for="1" value="United States" />
+          <attvalue for="2" value="Key operational location" />
+        </attvalues>
+      </node>
+      <node id="international_operations" label="international_operations">
+        <attvalues>
+          <attvalue for="0" value="Geographic_Location" />
+          <attvalue for="1" value="International Operations" />
+          <attvalue for="2" value="Sales outside the U.S." />
+        </attvalues>
+      </node>
+      <node id="china" label="china">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="China" />
+          <attvalue for="2" value="Major manufacturing hub" />
+        </attvalues>
+      </node>
+      <node id="india" label="india">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="India" />
+          <attvalue for="2" value="Component manufacturing location" />
+        </attvalues>
+      </node>
+      <node id="japan" label="japan">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Japan" />
+          <attvalue for="2" value="Manufacturing location" />
+        </attvalues>
+      </node>
+      <node id="south_korea" label="south_korea">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="South Korea" />
+          <attvalue for="2" value="Manufacturing location" />
+        </attvalues>
+      </node>
+      <node id="taiwan" label="taiwan">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Taiwan" />
+          <attvalue for="2" value="Operational center" />
+        </attvalues>
+      </node>
+      <node id="vietnam" label="vietnam">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Vietnam" />
+          <attvalue for="2" value="Country in Southeast Asia" />
+        </attvalues>
+      </node>
+      <node id="suppliers" label="suppliers">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Various Suppliers" />
+          <attvalue for="2" value="Various suppliers providing components and services" />
+        </attvalues>
+      </node>
+      <node id="covid19" label="covid19">
+        <attvalues>
+          <attvalue for="0" value="Health_Issue" />
+          <attvalue for="1" value="COVID-19" />
+          <attvalue for="2" value="Pandemic affecting global economy" />
+        </attvalues>
+      </node>
+      <node id="supplier_a" label="supplier_a">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Supplier A" />
+          <attvalue for="2" value="Supplies components" />
+        </attvalues>
+      </node>
+      <node id="supplier_b" label="supplier_b">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Supplier B" />
+          <attvalue for="2" value="Outsourcing partner" />
+        </attvalues>
+      </node>
+      <node id="iphone" label="iphone">
+        <attvalues>
+          <attvalue for="0" value="Product" />
+          <attvalue for="1" value="iPhone" />
+          <attvalue for="2" value="Smartphone line" />
+        </attvalues>
+      </node>
+      <node id="ipad" label="ipad">
+        <attvalues>
+          <attvalue for="0" value="Product" />
+          <attvalue for="1" value="iPad" />
+          <attvalue for="2" value="Tablet line" />
+        </attvalues>
+      </node>
+      <node id="mac" label="mac">
+        <attvalues>
+          <attvalue for="0" value="Product" />
+          <attvalue for="1" value="Mac" />
+          <attvalue for="2" value="Personal computer line" />
+        </attvalues>
+      </node>
+      <node id="location_a" label="location_a">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Location A" />
+          <attvalue for="2" value="Operational center" />
+        </attvalues>
+      </node>
+      <node id="location_b" label="location_b">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Location B" />
+          <attvalue for="2" value="Manufacturing hub" />
+        </attvalues>
+      </node>
+      <node id="aluminum" label="aluminum">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Aluminum" />
+          <attvalue for="2" value="Material used in products" />
+        </attvalues>
+      </node>
+      <node id="rare_earth_elements" label="rare_earth_elements">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Rare Earth Elements" />
+          <attvalue for="2" value="Material used in products" />
+        </attvalues>
+      </node>
+      <node id="app_store" label="app_store">
+        <attvalues>
+          <attvalue for="0" value="Platform" />
+          <attvalue for="1" value="App Store" />
+          <attvalue for="2" value="Distribution platform for third-party applications" />
+        </attvalues>
+      </node>
+      <node id="eu" label="eu">
+        <attvalues>
+          <attvalue for="0" value="Geographic_Location" />
+          <attvalue for="1" value="European Union" />
+          <attvalue for="2" value="Regulatory region for compliance" />
+        </attvalues>
+      </node>
+      <node id="digital_markets_act" label="digital_markets_act">
+        <attvalues>
+          <attvalue for="0" value="Regulation" />
+          <attvalue for="1" value="Digital Markets Act" />
+          <attvalue for="2" value="Regulation Apple complies with in the EU" />
+        </attvalues>
+      </node>
+      <node id="digital_content" label="digital_content">
+        <attvalues>
+          <attvalue for="0" value="Business_Unit" />
+          <attvalue for="1" value="Digital Content" />
+          <attvalue for="2" value="Produces digital content" />
+        </attvalues>
+      </node>
+      <node id="silicon_valley" label="silicon_valley">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Silicon Valley" />
+          <attvalue for="2" value="Key operational location for talent" />
+        </attvalues>
+      </node>
+      <node id="carriers" label="carriers">
+        <attvalues>
+          <attvalue for="0" value="Business_Unit" />
+          <attvalue for="1" value="Carriers" />
+          <attvalue for="2" value="Provides cellular network service for Apple products" />
+        </attvalues>
+      </node>
+      <node id="consumers" label="consumers">
+        <attvalues>
+          <attvalue for="0" value="Customer Segment" />
+          <attvalue for="1" value="Consumers" />
+          <attvalue for="2" value="Direct customers of Apple products" />
+        </attvalues>
+      </node>
+      <node id="businesses" label="businesses">
+        <attvalues>
+          <attvalue for="0" value="Customer Segment" />
+          <attvalue for="1" value="Small and Mid-Sized Businesses" />
+          <attvalue for="2" value="Direct customers of Apple products" />
+        </attvalues>
+      </node>
+      <node id="education" label="education">
+        <attvalues>
+          <attvalue for="0" value="Customer Segment" />
+          <attvalue for="1" value="Education Sector" />
+          <attvalue for="2" value="Direct customers of Apple" />
+        </attvalues>
+      </node>
+      <node id="enterprise" label="enterprise">
+        <attvalues>
+          <attvalue for="0" value="Customer Segment" />
+          <attvalue for="1" value="Enterprise Customers" />
+          <attvalue for="2" value="Direct customers of Apple" />
+        </attvalues>
+      </node>
+      <node id="government" label="government">
+        <attvalues>
+          <attvalue for="0" value="Customer Segment" />
+          <attvalue for="1" value="Government Customers" />
+          <attvalue for="2" value="Direct customers of Apple" />
+        </attvalues>
+      </node>
+      <node id="supply_chain" label="supply_chain">
+        <attvalues>
+          <attvalue for="0" value="Business Unit" />
+          <attvalue for="1" value="Global Supply Chain" />
+          <attvalue for="2" value="Complex network of suppliers and manufacturers" />
+        </attvalues>
+      </node>
+      <node id="retail_stores" label="retail_stores">
+        <attvalues>
+          <attvalue for="0" value="Business_Unit" />
+          <attvalue for="1" value="Retail Stores" />
+          <attvalue for="2" value="Sales locations for Apple products" />
+        </attvalues>
+      </node>
+      <node id="regulations" label="regulations">
+        <attvalues>
+          <attvalue for="0" value="Regulation" />
+          <attvalue for="1" value="Regulatory Changes" />
+          <attvalue for="2" value="Changing regulations relating to export and import of products" />
+        </attvalues>
+      </node>
+      <node id="environmental_initiatives" label="environmental_initiatives">
+        <attvalues>
+          <attvalue for="0" value="Initiative" />
+          <attvalue for="1" value="Environmental, Social and Governance Considerations" />
+          <attvalue for="2" value="Focus on climate change and greenhouse gas emissions" />
+        </attvalues>
+      </node>
+      <node id="emissions" label="emissions">
+        <attvalues>
+          <attvalue for="0" value="Environmental_Issue" />
+          <attvalue for="1" value="Emissions" />
+          <attvalue for="2" value="Environmental impact related to production" />
+        </attvalues>
+      </node>
+      <node id="human_rights" label="human_rights">
+        <attvalues>
+          <attvalue for="0" value="Social_Issue" />
+          <attvalue for="1" value="Human Rights" />
+          <attvalue for="2" value="Social responsibility concern" />
+        </attvalues>
+      </node>
+      <node id="diversity_inclusion" label="diversity_inclusion">
+        <attvalues>
+          <attvalue for="0" value="Social_Issue" />
+          <attvalue for="1" value="Diversity, Equity and Inclusion" />
+          <attvalue for="2" value="Social responsibility initiative" />
+        </attvalues>
+      </node>
+      <node id="google" label="google">
+        <attvalues>
+          <attvalue for="0" value="Company" />
+          <attvalue for="1" value="Google LLC" />
+          <attvalue for="2" value="Search services provider" />
+        </attvalues>
+      </node>
+      <node id="geographic_segments" label="geographic_segments">
+        <attvalues>
+          <attvalue for="0" value="Geographic_Segment" />
+          <attvalue for="1" value="Geographic Segments" />
+          <attvalue for="2" value="Various geographic segments of operation" />
+        </attvalues>
+      </node>
+      <node id="distribution_channels" label="distribution_channels">
+        <attvalues>
+          <attvalue for="0" value="Distribution_Channel" />
+          <attvalue for="1" value="Distribution Channels" />
+          <attvalue for="2" value="Various distribution channels used by Apple" />
+        </attvalues>
+      </node>
+      <node id="manufacturing_partners" label="manufacturing_partners">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Manufacturing Partners" />
+          <attvalue for="2" value="Logistics and manufacturing partners" />
+        </attvalues>
+      </node>
+      <node id="cellular_network_carriers" label="cellular_network_carriers">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Cellular Network Carriers" />
+          <attvalue for="2" value="Distributors of Apple products" />
+        </attvalues>
+      </node>
+      <node id="small_mid_sized_businesses" label="small_mid_sized_businesses">
+        <attvalues>
+          <attvalue for="0" value="Customer" />
+          <attvalue for="1" value="Small and Mid-Sized Businesses" />
+          <attvalue for="2" value="Direct customers of Apple" />
+        </attvalues>
+      </node>
+      <node id="ireland" label="ireland">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Ireland" />
+          <attvalue for="2" value="iMac assembly location" />
+        </attvalues>
+      </node>
+      <node id="singapore" label="singapore">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Singapore" />
+          <attvalue for="2" value="Country with Apple subsidiaries" />
+        </attvalues>
+      </node>
+      <node id="asia" label="asia">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Asia" />
+          <attvalue for="2" value="Region where suppliers are concentrated" />
+        </attvalues>
+      </node>
+      <node id="cupertino" label="cupertino">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Cupertino, California" />
+          <attvalue for="2" value="Headquarters of Apple Inc." />
+        </attvalues>
+      </node>
+      <node id="dma" label="dma">
+        <attvalues>
+          <attvalue for="0" value="Regulation" />
+          <attvalue for="1" value="Digital Markets Act" />
+          <attvalue for="2" value="Regulation under investigation for compliance issues" />
+        </attvalues>
+      </node>
+      <node id="nasdaq" label="nasdaq">
+        <attvalues>
+          <attvalue for="0" value="Stock Exchange" />
+          <attvalue for="1" value="The Nasdaq Stock Market LLC" />
+          <attvalue for="4" value="AAPL" />
+          <attvalue for="2" value="Stock exchange where Apple is listed" />
+        </attvalues>
+      </node>
+      <node id="shareholders" label="shareholders">
+        <attvalues>
+          <attvalue for="0" value="Stakeholders" />
+          <attvalue for="1" value="Shareholders" />
+          <attvalue for="3" value="23301" />
+        </attvalues>
+      </node>
+      <node id="share_repurchase_program" label="share_repurchase_program">
+        <attvalues>
+          <attvalue for="0" value="Program" />
+          <attvalue for="1" value="Share Repurchase Program" />
+          <attvalue for="5" value="$110 billion" />
+          <attvalue for="6" value="$20.9 billion" />
+          <attvalue for="7" value="May 2, 2024" />
+        </attvalues>
+      </node>
+      <node id="sp500" label="sp500">
+        <attvalues>
+          <attvalue for="0" value="Index" />
+          <attvalue for="1" value="S&amp;P 500 Index" />
+          <attvalue for="2" value="Stock market index" />
+        </attvalues>
+      </node>
+      <node id="dow_jones" label="dow_jones">
+        <attvalues>
+          <attvalue for="0" value="Index" />
+          <attvalue for="1" value="Dow Jones U.S. Technology Supersector Index" />
+          <attvalue for="2" value="Stock market index" />
+        </attvalues>
+      </node>
+      <node id="products" label="products">
+        <attvalues>
+          <attvalue for="0" value="Business_Unit" />
+          <attvalue for="1" value="Products" />
+          <attvalue for="2" value="Various product lines including iPhone, iPad, Mac" />
+        </attvalues>
+      </node>
+      <node id="us_dollar" label="us_dollar">
+        <attvalues>
+          <attvalue for="0" value="Currency" />
+          <attvalue for="1" value="U.S. Dollar" />
+          <attvalue for="2" value="Currency impacting gross margins" />
+        </attvalues>
+      </node>
+      <node id="r_and_d" label="r_and_d">
+        <attvalues>
+          <attvalue for="0" value="Business_Unit" />
+          <attvalue for="1" value="Research and Development" />
+          <attvalue for="2" value="Focuses on innovation and product development" />
+        </attvalues>
+      </node>
+      <node id="sga" label="sga">
+        <attvalues>
+          <attvalue for="0" value="Business_Unit" />
+          <attvalue for="1" value="Selling, General and Administrative" />
+          <attvalue for="2" value="Handles sales and administrative functions" />
+        </attvalues>
+      </node>
+      <node id="state_aid_decision" label="state_aid_decision">
+        <attvalues>
+          <attvalue for="0" value="Regulation" />
+          <attvalue for="1" value="State Aid Decision" />
+          <attvalue for="2" value="One-time income tax charge related to state aid" />
+        </attvalues>
+      </node>
+      <node id="outsourcing_partners" label="outsourcing_partners">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Outsourcing Partners" />
+          <attvalue for="2" value="Manufacturing partners for subassemblies and final assembly" />
+        </attvalues>
+      </node>
+      <node id="financial_statements" label="financial_statements">
+        <attvalues>
+          <attvalue for="0" value="Document" />
+          <attvalue for="1" value="Consolidated Financial Statements" />
+          <attvalue for="2" value="Financial reporting for Apple Inc." />
+        </attvalues>
+      </node>
+      <node id="foxconn" label="foxconn">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Foxconn" />
+          <attvalue for="2" value="Manufacturing partner" />
+        </attvalues>
+      </node>
+      <node id="tsmc" label="tsmc">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="TSMC" />
+          <attvalue for="2" value="Chip manufacturer" />
+        </attvalues>
+      </node>
+      <node id="usa" label="usa">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="USA" />
+          <attvalue for="2" value="Headquarters and operational center" />
+        </attvalues>
+      </node>
+      <node id="shareholders_equity" label="shareholders_equity">
+        <attvalues>
+          <attvalue for="0" value="Financial Metric" />
+          <attvalue for="1" value="Total Shareholders' Equity" />
+          <attvalue for="2" value="Financial performance measure" />
+        </attvalues>
+      </node>
+      <node id="gaap" label="gaap">
+        <attvalues>
+          <attvalue for="0" value="Regulation" />
+          <attvalue for="1" value="GAAP" />
+          <attvalue for="2" value="Accounting standards used by Apple" />
+        </attvalues>
+      </node>
+      <node id="icloud" label="icloud">
+        <attvalues>
+          <attvalue for="0" value="Service" />
+          <attvalue for="1" value="iCloud" />
+          <attvalue for="2" value="Cloud storage service" />
+        </attvalues>
+      </node>
+      <node id="siri" label="siri">
+        <attvalues>
+          <attvalue for="0" value="Service" />
+          <attvalue for="1" value="Siri" />
+          <attvalue for="2" value="Voice assistant service" />
+        </attvalues>
+      </node>
+      <node id="maps" label="maps">
+        <attvalues>
+          <attvalue for="0" value="Service" />
+          <attvalue for="1" value="Maps" />
+          <attvalue for="2" value="Mapping service" />
+        </attvalues>
+      </node>
+      <node id="wearables_home_accessories" label="wearables_home_accessories">
+        <attvalues>
+          <attvalue for="0" value="Product" />
+          <attvalue for="1" value="Wearables, Home and Accessories" />
+          <attvalue for="2" value="Product line including wearables and home devices" />
+        </attvalues>
+      </node>
+      <node id="greater_china" label="greater_china">
+        <attvalues>
+          <attvalue for="0" value="Geographic_Location" />
+          <attvalue for="1" value="Greater China" />
+        </attvalues>
+      </node>
+      <node id="manufacturing_vendors" label="manufacturing_vendors">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Manufacturing vendors" />
+          <attvalue for="2" value="Vendors that manufacture subassemblies or final products" />
+        </attvalues>
+      </node>
+      <node id="subassemblies" label="subassemblies">
+        <attvalues>
+          <attvalue for="0" value="Component" />
+          <attvalue for="1" value="Subassemblies" />
+          <attvalue for="2" value="Intermediate products assembled from components" />
+        </attvalues>
+      </node>
+      <node id="land_buildings" label="land_buildings">
+        <attvalues>
+          <attvalue for="0" value="Asset" />
+          <attvalue for="1" value="Land and buildings" />
+          <attvalue for="8" value="24690" />
+          <attvalue for="9" value="23446" />
+        </attvalues>
+      </node>
+      <node id="machinery_equipment" label="machinery_equipment">
+        <attvalues>
+          <attvalue for="0" value="Asset" />
+          <attvalue for="1" value="Machinery, equipment and internal-use software" />
+          <attvalue for="8" value="80205" />
+          <attvalue for="9" value="78314" />
+        </attvalues>
+      </node>
+      <node id="leasehold_improvements" label="leasehold_improvements">
+        <attvalues>
+          <attvalue for="0" value="Asset" />
+          <attvalue for="1" value="Leasehold improvements" />
+          <attvalue for="8" value="14233" />
+          <attvalue for="9" value="12839" />
+        </attvalues>
+      </node>
+      <node id="property_plant_equipment" label="property_plant_equipment">
+        <attvalues>
+          <attvalue for="0" value="Asset" />
+          <attvalue for="1" value="Gross property, plant and equipment" />
+          <attvalue for="8" value="119128" />
+          <attvalue for="9" value="114599" />
+        </attvalues>
+      </node>
+      <node id="accumulated_depreciation" label="accumulated_depreciation">
+        <attvalues>
+          <attvalue for="0" value="Asset" />
+          <attvalue for="1" value="Accumulated depreciation" />
+          <attvalue for="8" value="73448" />
+          <attvalue for="9" value="70884" />
+        </attvalues>
+      </node>
+      <node id="total_property_plant_equipment" label="total_property_plant_equipment">
+        <attvalues>
+          <attvalue for="0" value="Asset" />
+          <attvalue for="1" value="Total property, plant and equipment, net" />
+          <attvalue for="8" value="45680" />
+          <attvalue for="9" value="43715" />
+        </attvalues>
+      </node>
+      <node id="depreciation_expense" label="depreciation_expense">
+        <attvalues>
+          <attvalue for="0" value="Financial Metric" />
+          <attvalue for="1" value="Depreciation expense" />
+          <attvalue for="10" value="8200" />
+          <attvalue for="11" value="8500" />
+          <attvalue for="12" value="8700" />
+        </attvalues>
+      </node>
+      <node id="deferred_tax_assets" label="deferred_tax_assets">
+        <attvalues>
+          <attvalue for="0" value="Financial Asset" />
+          <attvalue for="1" value="Deferred tax assets" />
+          <attvalue for="8" value="19499" />
+          <attvalue for="9" value="17852" />
+        </attvalues>
+      </node>
+      <node id="other_non_current_assets" label="other_non_current_assets">
+        <attvalues>
+          <attvalue for="0" value="Financial Asset" />
+          <attvalue for="1" value="Other non-current assets" />
+          <attvalue for="8" value="55335" />
+          <attvalue for="9" value="46906" />
+        </attvalues>
+      </node>
+      <node id="total_other_non_current_assets" label="total_other_non_current_assets">
+        <attvalues>
+          <attvalue for="0" value="Financial Asset" />
+          <attvalue for="1" value="Total other non-current assets" />
+          <attvalue for="8" value="74834" />
+          <attvalue for="9" value="64758" />
+        </attvalues>
+      </node>
+      <node id="income_taxes_payable_current" label="income_taxes_payable_current">
+        <attvalues>
+          <attvalue for="0" value="Financial Liability" />
+          <attvalue for="1" value="Income taxes payable (current)" />
+          <attvalue for="8" value="26601" />
+          <attvalue for="9" value="8819" />
+        </attvalues>
+      </node>
+      <node id="other_current_liabilities" label="other_current_liabilities">
+        <attvalues>
+          <attvalue for="0" value="Financial Liability" />
+          <attvalue for="1" value="Other current liabilities" />
+          <attvalue for="8" value="51703" />
+          <attvalue for="9" value="50010" />
+        </attvalues>
+      </node>
+      <node id="total_other_current_liabilities" label="total_other_current_liabilities">
+        <attvalues>
+          <attvalue for="0" value="Financial Liability" />
+          <attvalue for="1" value="Total other current liabilities" />
+          <attvalue for="8" value="78304" />
+          <attvalue for="9" value="58829" />
+        </attvalues>
+      </node>
+      <node id="income_taxes_payable_non_current" label="income_taxes_payable_non_current">
+        <attvalues>
+          <attvalue for="0" value="Financial Liability" />
+          <attvalue for="1" value="Income taxes payable (non-current)" />
+          <attvalue for="8" value="9254" />
+          <attvalue for="9" value="15457" />
+        </attvalues>
+      </node>
+      <node id="other_non_current_liabilities" label="other_non_current_liabilities">
+        <attvalues>
+          <attvalue for="0" value="Financial Liability" />
+          <attvalue for="1" value="Other non-current liabilities" />
+          <attvalue for="8" value="36634" />
+          <attvalue for="9" value="34391" />
+        </attvalues>
+      </node>
+      <node id="total_other_non_current_liabilities" label="total_other_non_current_liabilities">
+        <attvalues>
+          <attvalue for="0" value="Financial Liability" />
+          <attvalue for="1" value="Total other non-current liabilities" />
+          <attvalue for="8" value="45888" />
+          <attvalue for="9" value="49848" />
+        </attvalues>
+      </node>
+      <node id="european_commission" label="european_commission">
+        <attvalues>
+          <attvalue for="0" value="Regulatory Body" />
+          <attvalue for="1" value="European Commission" />
+          <attvalue for="2" value="Regulatory body involved in state aid decisions" />
+        </attvalues>
+      </node>
+      <node id="foreign_subsidiaries" label="foreign_subsidiaries">
+        <attvalues>
+          <attvalue for="0" value="Business_Unit" />
+          <attvalue for="1" value="Foreign Subsidiaries" />
+          <attvalue for="2" value="Apple's international operations" />
+        </attvalues>
+      </node>
+      <node id="2022_plan" label="2022_plan">
+        <attvalues>
+          <attvalue for="0" value="Program" />
+          <attvalue for="1" value="2022 Employee Stock Plan" />
+          <attvalue for="2" value="Shareholder-approved plan for equity grants to employees" />
+        </attvalues>
+      </node>
+      <node id="employee_stock_plan_2022" label="employee_stock_plan_2022">
+        <attvalues>
+          <attvalue for="0" value="Plan" />
+          <attvalue for="1" value="2022 Employee Stock Plan" />
+          <attvalue for="2" value="Shareholder-approved plan for equity grants" />
+        </attvalues>
+      </node>
+      <node id="employee_stock_plan_2014" label="employee_stock_plan_2014">
+        <attvalues>
+          <attvalue for="0" value="Plan" />
+          <attvalue for="1" value="2014 Employee Stock Plan" />
+          <attvalue for="2" value="Shareholder-approved plan for equity grants, now terminated" />
+        </attvalues>
+      </node>
+      <node id="other_countries" label="other_countries">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Other Countries" />
+          <attvalue for="2" value="Includes various international operations" />
+        </attvalues>
+      </node>
+      <node id="pcaob" label="pcaob">
+        <attvalues>
+          <attvalue for="0" value="Regulatory_Body" />
+          <attvalue for="1" value="Public Company Accounting Oversight Board" />
+          <attvalue for="2" value="Public Company Accounting Oversight Board standards" />
+        </attvalues>
+      </node>
+      <node id="foreign_jurisdictions" label="foreign_jurisdictions">
+        <attvalues>
+          <attvalue for="0" value="Geographic_Location" />
+          <attvalue for="1" value="Numerous Foreign Jurisdictions" />
+          <attvalue for="2" value="Various countries where Apple operates" />
+        </attvalues>
+      </node>
+      <node id="tax_laws" label="tax_laws">
+        <attvalues>
+          <attvalue for="0" value="Regulation" />
+          <attvalue for="1" value="Domestic and International Tax Laws" />
+          <attvalue for="2" value="Tax regulations Apple complies with" />
+        </attvalues>
+      </node>
+      <node id="ernst_young" label="ernst_young">
+        <attvalues>
+          <attvalue for="0" value="Company" />
+          <attvalue for="1" value="Ernst &amp; Young LLP" />
+          <attvalue for="2" value="Independent Registered Public Accounting Firm" />
+        </attvalues>
+      </node>
+      <node id="san_jose" label="san_jose">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="San Jose, California" />
+          <attvalue for="2" value="Operational location of Apple Inc." />
+        </attvalues>
+      </node>
+      <node id="coso" label="coso">
+        <attvalues>
+          <attvalue for="0" value="Regulation" />
+          <attvalue for="1" value="COSO criteria" />
+          <attvalue for="2" value="Internal control framework" />
+        </attvalues>
+      </node>
+      <node id="luca_maestri" label="luca_maestri">
+        <attvalues>
+          <attvalue for="0" value="Person" />
+          <attvalue for="1" value="Luca Maestri" />
+          <attvalue for="13" value="Senior Vice President, Chief Financial Officer" />
+        </attvalues>
+      </node>
+      <node id="chris_kondo" label="chris_kondo">
+        <attvalues>
+          <attvalue for="0" value="Person" />
+          <attvalue for="1" value="Chris Kondo" />
+          <attvalue for="13" value="Senior Director of Corporate Accounting" />
+        </attvalues>
+      </node>
+      <node id="wanda_austin" label="wanda_austin">
+        <attvalues>
+          <attvalue for="0" value="Person" />
+          <attvalue for="1" value="Wanda Austin" />
+          <attvalue for="13" value="Director" />
+        </attvalues>
+      </node>
+      <node id="alex_gorsky" label="alex_gorsky">
+        <attvalues>
+          <attvalue for="0" value="Person" />
+          <attvalue for="1" value="Alex Gorsky" />
+          <attvalue for="13" value="Director" />
+        </attvalues>
+      </node>
+      <node id="andrea_jung" label="andrea_jung">
+        <attvalues>
+          <attvalue for="0" value="Person" />
+          <attvalue for="1" value="Andrea Jung" />
+          <attvalue for="13" value="Director" />
+        </attvalues>
+      </node>
+      <node id="arthur_levinson" label="arthur_levinson">
+        <attvalues>
+          <attvalue for="0" value="Person" />
+          <attvalue for="1" value="Arthur D. Levinson" />
+          <attvalue for="13" value="Director and Chair of the Board" />
+        </attvalues>
+      </node>
+      <node id="monica_lozano" label="monica_lozano">
+        <attvalues>
+          <attvalue for="0" value="Person" />
+          <attvalue for="1" value="Monica Lozano" />
+          <attvalue for="13" value="Director" />
+        </attvalues>
+      </node>
+      <node id="ronald_sugar" label="ronald_sugar">
+        <attvalues>
+          <attvalue for="0" value="Person" />
+          <attvalue for="1" value="Ronald D. Sugar" />
+          <attvalue for="13" value="Director" />
+        </attvalues>
+      </node>
+      <node id="susan_wagner" label="susan_wagner">
+        <attvalues>
+          <attvalue for="0" value="Person" />
+          <attvalue for="1" value="Susan L. Wagner" />
+          <attvalue for="13" value="Director" />
+        </attvalues>
+      </node>
+      <node id="bank_of_new_york" label="bank_of_new_york">
+        <attvalues>
+          <attvalue for="0" value="Company" />
+          <attvalue for="1" value="The Bank of New York Mellon Trust Company, N.A." />
+          <attvalue for="2" value="Trustee for debt securities" />
+        </attvalues>
+      </node>
+      <node id="employee_stock_plan" label="employee_stock_plan">
+        <attvalues>
+          <attvalue for="0" value="Program" />
+          <attvalue for="1" value="2022 Employee Stock Plan" />
+          <attvalue for="2" value="Stock plan for employees" />
+        </attvalues>
+      </node>
+      <node id="stock_plan" label="stock_plan">
+        <attvalues>
+          <attvalue for="0" value="Program" />
+          <attvalue for="1" value="2022 Employee Stock Plan" />
+          <attvalue for="2" value="Employee stock incentive program" />
+        </attvalues>
+      </node>
+      <node id="tim_cook" label="tim_cook">
+        <attvalues>
+          <attvalue for="0" value="Person" />
+          <attvalue for="1" value="Timothy D. Cook" />
+          <attvalue for="2" value="CEO of Apple Inc." />
+        </attvalues>
+      </node>
+      <node id="supplier_employee_development_fund" label="supplier_employee_development_fund">
+        <attvalues>
+          <attvalue for="0" value="Program" />
+          <attvalue for="1" value="Supplier Employee Development Fund" />
+          <attvalue for="2" value="Investment program for supplier employee development" />
+        </attvalues>
+      </node>
+      <node id="recycled_materials" label="recycled_materials">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Recycled Materials" />
+          <attvalue for="2" value="Materials sourced from recycling processes" />
+        </attvalues>
+      </node>
+      <node id="batteries" label="batteries">
+        <attvalues>
+          <attvalue for="0" value="Component" />
+          <attvalue for="1" value="Batteries" />
+          <attvalue for="2" value="Component used in Apple products" />
+        </attvalues>
+      </node>
+      <node id="magnets" label="magnets">
+        <attvalues>
+          <attvalue for="0" value="Component" />
+          <attvalue for="1" value="Magnets" />
+          <attvalue for="2" value="Component used in Apple products" />
+        </attvalues>
+      </node>
+      <node id="circuit_boards" label="circuit_boards">
+        <attvalues>
+          <attvalue for="0" value="Component" />
+          <attvalue for="1" value="Circuit Boards" />
+          <attvalue for="2" value="Component used in Apple products" />
+        </attvalues>
+      </node>
+      <node id="cobalt" label="cobalt">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Cobalt" />
+          <attvalue for="2" value="Material used in batteries." />
+        </attvalues>
+      </node>
+      <node id="tin" label="tin">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Tin" />
+          <attvalue for="2" value="Recycled material used in soldering" />
+        </attvalues>
+      </node>
+      <node id="gold" label="gold">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Gold" />
+          <attvalue for="2" value="Precious metal used in products" />
+        </attvalues>
+      </node>
+      <node id="printed_circuit_boards" label="printed_circuit_boards">
+        <attvalues>
+          <attvalue for="0" value="Component" />
+          <attvalue for="1" value="Printed Circuit Boards" />
+          <attvalue for="2" value="Components used in Apple products" />
+        </attvalues>
+      </node>
+      <node id="united_states" label="united_states">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="United States" />
+          <attvalue for="2" value="Logistics and repair location" />
+        </attvalues>
+      </node>
+      <node id="renewable_materials" label="renewable_materials">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Renewable Materials" />
+          <attvalue for="2" value="Sustainable materials that can be replenished naturally" />
+        </attvalues>
+      </node>
+      <node id="carbon_neutrality" label="carbon_neutrality">
+        <attvalues>
+          <attvalue for="0" value="Environmental_Initiative" />
+          <attvalue for="1" value="Apple 2030" />
+          <attvalue for="2" value="Commitment to carbon neutrality across supply chain by 2030." />
+        </attvalues>
+      </node>
+      <node id="supplier_clean_energy_program" label="supplier_clean_energy_program">
+        <attvalues>
+          <attvalue for="0" value="Program" />
+          <attvalue for="1" value="Supplier Clean Energy Program" />
+          <attvalue for="2" value="Program aimed at reducing supplier emissions." />
+        </attvalues>
+      </node>
+      <node id="supplier_energy_efficiency_program" label="supplier_energy_efficiency_program">
+        <attvalues>
+          <attvalue for="0" value="Program" />
+          <attvalue for="1" value="Supplier Energy Efficiency Program" />
+          <attvalue for="2" value="Program focused on improving energy efficiency at supplier sites." />
+        </attvalues>
+      </node>
+      <node id="recycled_cobalt" label="recycled_cobalt">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Recycled Cobalt" />
+          <attvalue for="2" value="Material used in Apple-designed batteries." />
+        </attvalues>
+      </node>
+      <node id="recycled_rare_earth_elements" label="recycled_rare_earth_elements">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Recycled Rare Earth Elements" />
+          <attvalue for="2" value="Used in magnets in Apple devices" />
+        </attvalues>
+      </node>
+      <node id="energy_efficiency_program" label="energy_efficiency_program">
+        <attvalues>
+          <attvalue for="0" value="Environmental_Initiative" />
+          <attvalue for="1" value="Energy Efficiency Program" />
+          <attvalue for="2" value="Program focused on decarbonizing electricity usage at supplier sites." />
+        </attvalues>
+      </node>
+      <node id="supplier_code_of_conduct" label="supplier_code_of_conduct">
+        <attvalues>
+          <attvalue for="0" value="Regulation" />
+          <attvalue for="1" value="Apple Supplier Code of Conduct" />
+          <attvalue for="2" value="Standards outlining requirements for suppliers" />
+        </attvalues>
+      </node>
+      <node id="recycled_tin" label="recycled_tin">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Recycled Tin" />
+          <attvalue for="2" value="Used in soldering for circuit boards" />
+        </attvalues>
+      </node>
+      <node id="recycled_gold" label="recycled_gold">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Recycled Gold" />
+          <attvalue for="2" value="Used in plating" />
+        </attvalues>
+      </node>
+      <node id="austin_texas" label="austin_texas">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Austin, Texas" />
+          <attvalue for="2" value="Home to Apple's Material Recovery Lab and advanced recovery center" />
+        </attvalues>
+      </node>
+      <node id="ul_solutions" label="ul_solutions">
+        <attvalues>
+          <attvalue for="0" value="Company" />
+          <attvalue for="1" value="UL Solutions" />
+          <attvalue for="2" value="Certifying body for Zero Waste certification" />
+        </attvalues>
+      </node>
+      <node id="santa_clara_valley" label="santa_clara_valley">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Santa Clara Valley, California" />
+          <attvalue for="2" value="Asset recovery center location" />
+        </attvalues>
+      </node>
+      <node id="fair_wage_network" label="fair_wage_network">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="Fair Wage Network" />
+          <attvalue for="2" value="Collaborates with Apple to collect and map wage data" />
+        </attvalues>
+      </node>
+      <node id="american_india_foundation" label="american_india_foundation">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="American India Foundation" />
+          <attvalue for="2" value="Supports empowerment of underserved communities in India" />
+        </attvalues>
+      </node>
+      <node id="green_america" label="green_america">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="Green America" />
+          <attvalue for="2" value="Founding member of Clean Electronics Production Network" />
+        </attvalues>
+      </node>
+      <node id="clean_electronics_production_network" label="clean_electronics_production_network">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="Clean Electronics Production Network" />
+          <attvalue for="2" value="Focuses on sustainable electronics production" />
+        </attvalues>
+      </node>
+      <node id="council_for_adult_and_experiential_learning" label="council_for_adult_and_experiential_learning">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="Council for Adult and Experiential Learning" />
+          <attvalue for="2" value="Supports English language trainings and skills development" />
+        </attvalues>
+      </node>
+      <node id="pact" label="pact">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="Pact" />
+          <attvalue for="2" value="Non-profit organization focused on rights awareness training" />
+        </attvalues>
+      </node>
+      <node id="hhi" label="hhi">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="Harvard Humanitarian Initiative" />
+          <attvalue for="2" value="Research initiative on humanitarian issues" />
+        </attvalues>
+      </node>
+      <node id="ppa" label="ppa">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="Public-Private Alliance for Responsible Minerals Trade" />
+          <attvalue for="2" value="Partnership for renewable energy initiatives" />
+        </attvalues>
+      </node>
+      <node id="oecd" label="oecd">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="Organization for Economic Co-operation and Development" />
+          <attvalue for="2" value="International organization for economic cooperation" />
+        </attvalues>
+      </node>
+      <node id="drc" label="drc">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Democratic Republic of the Congo" />
+          <attvalue for="2" value="Region from which Apple has ceased sourcing 3TG." />
+        </attvalues>
+      </node>
+      <node id="working_capital_innovation_fund" label="working_capital_innovation_fund">
+        <attvalues>
+          <attvalue for="0" value="Investment Fund" />
+          <attvalue for="1" value="Working Capital Innovation Fund" />
+          <attvalue for="2" value="Early-stage venture fund for supply chain tools" />
+        </attvalues>
+      </node>
+      <node id="quizrr" label="quizrr">
+        <attvalues>
+          <attvalue for="0" value="Company" />
+          <attvalue for="1" value="Quizrr" />
+          <attvalue for="2" value="Provider of training content for suppliers" />
+        </attvalues>
+      </node>
+      <node id="daisy" label="daisy">
+        <attvalues>
+          <attvalue for="0" value="Product" />
+          <attvalue for="1" value="Daisy" />
+          <attvalue for="2" value="iPhone disassembly robot" />
+        </attvalues>
+      </node>
+      <node id="brazil" label="brazil">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Brazil" />
+          <attvalue for="2" value="Customer support call center" />
+        </attvalues>
+      </node>
+      <node id="supplier_responsibility_standards" label="supplier_responsibility_standards">
+        <attvalues>
+          <attvalue for="0" value="Document" />
+          <attvalue for="1" value="Supplier Responsibility Standards" />
+          <attvalue for="2" value="Standards for labor and human rights, health and safety, environment, ethics, and management systems" />
+        </attvalues>
+      </node>
+      <node id="retail_fixture_manufacturing" label="retail_fixture_manufacturing">
+        <attvalues>
+          <attvalue for="0" value="Business_Unit" />
+          <attvalue for="1" value="Retail Fixture Manufacturing" />
+          <attvalue for="14" value="United States" />
+        </attvalues>
+      </node>
+      <node id="apple_watch_assembly" label="apple_watch_assembly">
+        <attvalues>
+          <attvalue for="0" value="Business_Unit" />
+          <attvalue for="1" value="Apple Watch Assembly" />
+          <attvalue for="14" value="Vietnam" />
+        </attvalues>
+      </node>
+      <node id="airpods_pro_assembly" label="airpods_pro_assembly">
+        <attvalues>
+          <attvalue for="0" value="Business_Unit" />
+          <attvalue for="1" value="AirPods Pro Assembly" />
+          <attvalue for="14" value="Vietnam" />
+        </attvalues>
+      </node>
+      <node id="component_manufacturing" label="component_manufacturing">
+        <attvalues>
+          <attvalue for="0" value="Business_Unit" />
+          <attvalue for="1" value="Component Manufacturing" />
+          <attvalue for="14" value="China mainland" />
+        </attvalues>
+      </node>
+      <node id="imac_assembly" label="imac_assembly">
+        <attvalues>
+          <attvalue for="0" value="Business_Unit" />
+          <attvalue for="1" value="iMac Assembly" />
+          <attvalue for="14" value="Ireland" />
+        </attvalues>
+      </node>
+      <node id="us_federal_acquisition_regulations" label="us_federal_acquisition_regulations">
+        <attvalues>
+          <attvalue for="0" value="Regulation" />
+          <attvalue for="1" value="U.S. Federal Acquisition Regulations" />
+          <attvalue for="2" value="Regulations applicable to federal acquisitions" />
+        </attvalues>
+      </node>
+      <node id="esci" label="esci">
+        <attvalues>
+          <attvalue for="0" value="BusinessUnit" />
+          <attvalue for="1" value="ESCI" />
+          <attvalue for="2" value="Part of Apple’s Worldwide Operations organization, coordinates compliance actions related to human rights" />
+        </attvalues>
+      </node>
+      <node id="compliance_and_business_conduct" label="compliance_and_business_conduct">
+        <attvalues>
+          <attvalue for="0" value="BusinessUnit" />
+          <attvalue for="1" value="Compliance and Business Conduct" />
+          <attvalue for="2" value="Monitors suppliers for human rights and environmental concerns" />
+        </attvalues>
+      </node>
+      <node id="audit_and_finance_committee" label="audit_and_finance_committee">
+        <attvalues>
+          <attvalue for="0" value="Committee" />
+          <attvalue for="1" value="Audit and Finance Committee" />
+          <attvalue for="2" value="Receives regular updates from the Chief Compliance Officer" />
+        </attvalues>
+      </node>
+      <node id="people_and_compensation_committee" label="people_and_compensation_committee">
+        <attvalues>
+          <attvalue for="0" value="Committee" />
+          <attvalue for="1" value="People and Compensation Committee" />
+          <attvalue for="2" value="Includes modifiers based on Apple’s values in executive incentive programs" />
+        </attvalues>
+      </node>
+      <node id="supplier_employees" label="supplier_employees">
+        <attvalues>
+          <attvalue for="0" value="Group" />
+          <attvalue for="1" value="Supplier Employees" />
+          <attvalue for="2" value="Employees working for Apple suppliers" />
+          <attvalue for="3" value="1400000" />
+        </attvalues>
+      </node>
+      <node id="rights_holders" label="rights_holders">
+        <attvalues>
+          <attvalue for="0" value="Group" />
+          <attvalue for="1" value="Rights Holders" />
+          <attvalue for="2" value="Stakeholders engaged in supply chain rights" />
+        </attvalues>
+      </node>
+      <node id="28_countries" label="28_countries">
+        <attvalues>
+          <attvalue for="0" value="Geographic_Location" />
+          <attvalue for="1" value="28 Countries and Regions" />
+          <attvalue for="2" value="Locations where training tools have reached people" />
+        </attvalues>
+      </node>
+      <node id="remedy_project" label="remedy_project">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="The Remedy Project" />
+          <attvalue for="2" value="Third-party organization conducting human rights impact assessments." />
+        </attvalues>
+      </node>
+      <node id="japan_solar" label="japan_solar">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Supplier solar array installation" />
+          <attvalue for="2" value="Solar energy supplier" />
+        </attvalues>
+      </node>
+      <node id="us_silicon" label="us_silicon">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Silicon manufacturing" />
+          <attvalue for="2" value="Silicon supplier" />
+        </attvalues>
+      </node>
+      <node id="austria_hydroelectric" label="austria_hydroelectric">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Supplier hydroelectric facility" />
+          <attvalue for="2" value="Hydroelectric energy supplier" />
+        </attvalues>
+      </node>
+      <node id="vietnam_health" label="vietnam_health">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Health education training" />
+          <attvalue for="2" value="Health education training provider" />
+        </attvalues>
+      </node>
+      <node id="supplier_engagement" label="supplier_engagement">
+        <attvalues>
+          <attvalue for="0" value="Business_Unit" />
+          <attvalue for="1" value="Supplier Engagement" />
+          <attvalue for="2" value="Engagement and assessment of suppliers" />
+        </attvalues>
+      </node>
+      <node id="worker_voice_dashboard" label="worker_voice_dashboard">
+        <attvalues>
+          <attvalue for="0" value="Tool" />
+          <attvalue for="1" value="Worker Voice Dashboard" />
+          <attvalue for="2" value="Tool for visualizing supplier employee feedback" />
+        </attvalues>
+      </node>
+      <node id="supplier" label="supplier">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Unnamed Supplier" />
+          <attvalue for="2" value="Supplier involved in worker accommodations" />
+        </attvalues>
+      </node>
+      <node id="students" label="students">
+        <attvalues>
+          <attvalue for="0" value="Group" />
+          <attvalue for="1" value="Students" />
+          <attvalue for="2" value="Group of supplier employees potentially at risk" />
+        </attvalues>
+      </node>
+      <node id="rba" label="rba">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="Responsible Business Alliance" />
+          <attvalue for="2" value="Industry-wide standards organization" />
+        </attvalues>
+      </node>
+      <node id="ilo" label="ilo">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="International Labour Organization" />
+          <attvalue for="2" value="International organization promoting labor rights" />
+        </attvalues>
+      </node>
+      <node id="zero_waste" label="zero_waste">
+        <attvalues>
+          <attvalue for="0" value="Environmental_Initiative" />
+          <attvalue for="1" value="Zero Waste certification" />
+          <attvalue for="2" value="Certification for waste management standards" />
+        </attvalues>
+      </node>
+      <node id="countries" label="countries">
+        <attvalues>
+          <attvalue for="0" value="Geographic_Location" />
+          <attvalue for="1" value="12 countries and regions" />
+          <attvalue for="2" value="Locations of audits conducted" />
+        </attvalues>
+      </node>
+      <node id="labor_agents" label="labor_agents">
+        <attvalues>
+          <attvalue for="0" value="Entity" />
+          <attvalue for="1" value="Labor Agents" />
+          <attvalue for="2" value="Recruitment agents for labor" />
+        </attvalues>
+      </node>
+      <node id="labor_agencies" label="labor_agencies">
+        <attvalues>
+          <attvalue for="0" value="Entity" />
+          <attvalue for="1" value="Labor Agencies" />
+          <attvalue for="2" value="Recruitment agencies for Apple suppliers" />
+        </attvalues>
+      </node>
+      <node id="workers" label="workers">
+        <attvalues>
+          <attvalue for="0" value="Entity" />
+          <attvalue for="1" value="Workers" />
+          <attvalue for="2" value="Individuals employed in facilities globally" />
+        </attvalues>
+      </node>
+      <node id="supplier_program" label="supplier_program">
+        <attvalues>
+          <attvalue for="0" value="Program" />
+          <attvalue for="1" value="Employment and Professional Development Program" />
+          <attvalue for="2" value="Program for persons with disabilities in supply chain" />
+        </attvalues>
+      </node>
+      <node id="metal" label="metal">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Metal" />
+          <attvalue for="2" value="Material related to security policy in supplier facilities" />
+        </attvalues>
+      </node>
+      <node id="anodizing" label="anodizing">
+        <attvalues>
+          <attvalue for="0" value="Process" />
+          <attvalue for="1" value="Anodizing" />
+          <attvalue for="2" value="Coating and coloring metal surfaces" />
+        </attvalues>
+      </node>
+      <node id="supplier_facilities" label="supplier_facilities">
+        <attvalues>
+          <attvalue for="0" value="Facility" />
+          <attvalue for="1" value="Supplier Facilities" />
+          <attvalue for="2" value="Facilities of suppliers monitored by Apple" />
+          <attvalue for="3" value="50" />
+        </attvalues>
+      </node>
+      <node id="fire_safety_training" label="fire_safety_training">
+        <attvalues>
+          <attvalue for="0" value="Program" />
+          <attvalue for="1" value="Fire Safety Training" />
+          <attvalue for="2" value="Training program for suppliers on fire safety risks" />
+        </attvalues>
+      </node>
+      <node id="chemforward" label="chemforward">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="ChemFORWARD" />
+          <attvalue for="2" value="Supply chain collaboration for safer chemistry" />
+        </attvalues>
+      </node>
+      <node id="cepn" label="cepn">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="Clean Electronics Production Network" />
+          <attvalue for="2" value="Multistakeholder initiative for chemical safety" />
+        </attvalues>
+      </node>
+      <node id="epa" label="epa">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="U.S. Environmental Protection Agency" />
+          <attvalue for="2" value="Regulatory body for environmental protection" />
+        </attvalues>
+      </node>
+      <node id="iom" label="iom">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="International Organization for Migration" />
+          <attvalue for="2" value="Intergovernmental organization focused on migration issues" />
+        </attvalues>
+      </node>
+      <node id="gravity_water" label="gravity_water">
+        <attvalues>
+          <attvalue for="0" value="NGO" />
+          <attvalue for="1" value="Gravity Water" />
+          <attvalue for="2" value="Non-governmental organization focused on water access" />
+        </attvalues>
+      </node>
+      <node id="philippines" label="philippines">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Philippines" />
+          <attvalue for="2" value="Country in Southeast Asia" />
+        </attvalues>
+      </node>
+      <node id="congo_power" label="congo_power">
+        <attvalues>
+          <attvalue for="0" value="Initiative" />
+          <attvalue for="1" value="Congo Power" />
+          <attvalue for="2" value="Renewable electricity initiative" />
+        </attvalues>
+      </node>
+      <node id="oecd_guidance" label="oecd_guidance">
+        <attvalues>
+          <attvalue for="0" value="Regulation" />
+          <attvalue for="1" value="OECD Due Diligence Guidance" />
+          <attvalue for="2" value="Guidance for responsible sourcing of minerals" />
+        </attvalues>
+      </node>
+      <node id="ungps" label="ungps">
+        <attvalues>
+          <attvalue for="0" value="Regulation" />
+          <attvalue for="1" value="UNGPs" />
+          <attvalue for="2" value="United Nations Guiding Principles on Business and Human Rights" />
+        </attvalues>
+      </node>
+      <node id="3tg" label="3tg">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="3TG" />
+          <attvalue for="2" value="Tin, Tantalum, Tungsten, and Gold used in electronics." />
+        </attvalues>
+      </node>
+      <node id="rwanda" label="rwanda">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Rwanda" />
+          <attvalue for="2" value="Region from which Apple has ceased sourcing 3TG." />
+        </attvalues>
+      </node>
+      <node id="lithium" label="lithium">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Lithium" />
+          <attvalue for="2" value="Material used in batteries." />
+        </attvalues>
+      </node>
+      <node id="mica" label="mica">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Mica" />
+          <attvalue for="2" value="Material used in products" />
+        </attvalues>
+      </node>
+      <node id="copper" label="copper">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Copper" />
+          <attvalue for="2" value="Material used in products" />
+        </attvalues>
+      </node>
+      <node id="graphite" label="graphite">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Graphite" />
+          <attvalue for="2" value="Material used in products" />
+        </attvalues>
+      </node>
+      <node id="nickel" label="nickel">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Nickel" />
+          <attvalue for="2" value="Material used in products" />
+        </attvalues>
+      </node>
+      <node id="3TG" label="3TG">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="3TG" />
+          <attvalue for="2" value="Tin, Tantalum, Tungsten, and Gold used in electronics." />
+        </attvalues>
+      </node>
+      <node id="RMI" label="RMI">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="Responsible Minerals Initiative" />
+          <attvalue for="2" value="Third-party audit program" />
+        </attvalues>
+      </node>
+      <node id="LBMA" label="LBMA">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="London Bullion Market Association" />
+          <attvalue for="2" value="Third-party audit program" />
+        </attvalues>
+      </node>
+      <node id="glass" label="glass">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Glass" />
+        </attvalues>
+      </node>
+      <node id="paper" label="paper">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Paper" />
+        </attvalues>
+      </node>
+      <node id="plastics" label="plastics">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Plastics" />
+        </attvalues>
+      </node>
+      <node id="steel" label="steel">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Steel" />
+        </attvalues>
+      </node>
+      <node id="tantalum" label="tantalum">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Tantalum" />
+        </attvalues>
+      </node>
+      <node id="titanium" label="titanium">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Titanium" />
+        </attvalues>
+      </node>
+      <node id="tungsten" label="tungsten">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Tungsten" />
+        </attvalues>
+      </node>
+      <node id="zinc" label="zinc">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Zinc" />
+        </attvalues>
+      </node>
+      <node id="rmi" label="rmi">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="Responsible Minerals Initiative" />
+          <attvalue for="2" value="Third-party audit program." />
+        </attvalues>
+      </node>
+      <node id="lbma" label="lbma">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="London Bullion Market Association" />
+          <attvalue for="2" value="Third-party audit program." />
+        </attvalues>
+      </node>
+      <node id="impact" label="impact">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="IMPACT" />
+          <attvalue for="2" value="NGO focused on supply chain activities" />
+        </attvalues>
+      </node>
+      <node id="resolve" label="resolve">
+        <attvalues>
+          <attvalue for="0" value="Nonprofit" />
+          <attvalue for="1" value="RESOLVE" />
+          <attvalue for="2" value="Sustainability nonprofit" />
+        </attvalues>
+      </node>
+      <node id="salmon_gold" label="salmon_gold">
+        <attvalues>
+          <attvalue for="0" value="Project" />
+          <attvalue for="1" value="Salmon Gold" />
+          <attvalue for="2" value="Project focused on sustainable mining practices" />
+        </attvalues>
+      </node>
+      <node id="great_lakes_region" label="great_lakes_region">
+        <attvalues>
+          <attvalue for="0" value="Geographic_Location" />
+          <attvalue for="1" value="Great Lakes Region of Africa" />
+          <attvalue for="2" value="Region affected by mining" />
+        </attvalues>
+      </node>
+      <node id="yukon" label="yukon">
+        <attvalues>
+          <attvalue for="0" value="Geographic_Location" />
+          <attvalue for="1" value="Yukon" />
+          <attvalue for="2" value="Region in Canada" />
+        </attvalues>
+      </node>
+      <node id="alaska" label="alaska">
+        <attvalues>
+          <attvalue for="0" value="Geographic_Location" />
+          <attvalue for="1" value="Alaska" />
+          <attvalue for="2" value="U.S. state" />
+        </attvalues>
+      </node>
+      <node id="british_columbia" label="british_columbia">
+        <attvalues>
+          <attvalue for="0" value="Geographic_Location" />
+          <attvalue for="1" value="British Columbia" />
+          <attvalue for="2" value="Province in Canada" />
+        </attvalues>
+      </node>
+      <node id="czech_republic" label="czech_republic">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Czech Republic" />
+          <attvalue for="2" value="Logistics operations" />
+        </attvalues>
+      </node>
+      <node id="managers" label="managers">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Managers" />
+          <attvalue for="2" value="Supervisors in supplier sites" />
+        </attvalues>
+      </node>
+      <node id="line_workers" label="line_workers">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Line Workers" />
+          <attvalue for="2" value="Workers on production lines" />
+        </attvalues>
+      </node>
+      <node id="specialized_audits" label="specialized_audits">
+        <attvalues>
+          <attvalue for="0" value="Group" />
+          <attvalue for="1" value="Specialized Audits" />
+          <attvalue for="2" value="Audits conducted by Apple" />
+          <attvalue for="3" value="137" />
+        </attvalues>
+      </node>
+      <node id="worker_interviews" label="worker_interviews">
+        <attvalues>
+          <attvalue for="0" value="Group" />
+          <attvalue for="1" value="Worker Interviews" />
+          <attvalue for="2" value="Interviews conducted with workers" />
+          <attvalue for="3" value="74000" />
+        </attvalues>
+      </node>
+      <node id="apple_one" label="apple_one">
+        <attvalues>
+          <attvalue for="0" value="Service" />
+          <attvalue for="1" value="Apple One" />
+          <attvalue for="2" value="Subscription service" />
+        </attvalues>
+      </node>
+      <node id="applecare" label="applecare">
+        <attvalues>
+          <attvalue for="0" value="Service" />
+          <attvalue for="1" value="AppleCare" />
+          <attvalue for="2" value="Support service" />
+        </attvalues>
+      </node>
+      <node id="apple_tv_plus" label="apple_tv_plus">
+        <attvalues>
+          <attvalue for="0" value="Service" />
+          <attvalue for="1" value="Apple TV+" />
+          <attvalue for="2" value="Streaming service" />
+        </attvalues>
+      </node>
+      <node id="apple_fitness_plus" label="apple_fitness_plus">
+        <attvalues>
+          <attvalue for="0" value="Service" />
+          <attvalue for="1" value="Apple Fitness+" />
+          <attvalue for="2" value="Fitness service" />
+        </attvalues>
+      </node>
+      <node id="recycling" label="recycling">
+        <attvalues>
+          <attvalue for="0" value="Initiative" />
+          <attvalue for="1" value="Recycling Program" />
+          <attvalue for="2" value="Program for recycling devices at end of life" />
+        </attvalues>
+      </node>
+      <node id="logistics_suppliers" label="logistics_suppliers">
+        <attvalues>
+          <attvalue for="0" value="Supplier" />
+          <attvalue for="1" value="Logistics Suppliers" />
+          <attvalue for="2" value="Suppliers that handle distribution of products" />
+        </attvalues>
+      </node>
+      <node id="human_rights_policy" label="human_rights_policy">
+        <attvalues>
+          <attvalue for="0" value="Policy" />
+          <attvalue for="1" value="Apple Human Rights Policy" />
+          <attvalue for="2" value="Policy governing human rights in supply chain" />
+        </attvalues>
+      </node>
+      <node id="supplier_code" label="supplier_code">
+        <attvalues>
+          <attvalue for="0" value="Policy" />
+          <attvalue for="1" value="Apple Supplier Code of Conduct" />
+          <attvalue for="2" value="Code of conduct for suppliers" />
+        </attvalues>
+      </node>
+      <node id="supplier_standards" label="supplier_standards">
+        <attvalues>
+          <attvalue for="0" value="Policy" />
+          <attvalue for="1" value="Supplier Responsibility Standards" />
+          <attvalue for="2" value="Standards for supplier responsibility" />
+        </attvalues>
+      </node>
+      <node id="un_guiding_principles" label="un_guiding_principles">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="United Nations Guiding Principles on Business and Human Rights" />
+          <attvalue for="2" value="Framework for business and human rights" />
+        </attvalues>
+      </node>
+      <node id="responsible_business_alliance" label="responsible_business_alliance">
+        <attvalues>
+          <attvalue for="0" value="Organization" />
+          <attvalue for="1" value="Responsible Business Alliance" />
+          <attvalue for="2" value="Standards organization for responsible business practices" />
+        </attvalues>
+      </node>
+      <node id="auditing_firms" label="auditing_firms">
+        <attvalues>
+          <attvalue for="0" value="Entity" />
+          <attvalue for="1" value="Independent Auditing Firms" />
+          <attvalue for="2" value="Third-party firms conducting assessments" />
+        </attvalues>
+      </node>
+      <node id="austria" label="austria">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="Austria" />
+        </attvalues>
+      </node>
+      <node id="china_mainland" label="china_mainland">
+        <attvalues>
+          <attvalue for="0" value="Location" />
+          <attvalue for="1" value="China mainland" />
+        </attvalues>
+      </node>
+      <node id="silicon" label="silicon">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Silicon" />
+        </attvalues>
+      </node>
+      <node id="fiber_based_packaging" label="fiber_based_packaging">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Fiber-based packaging" />
+        </attvalues>
+      </node>
+      <node id="3tg_smelters" label="3tg_smelters">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="3TG Smelters and Refiners" />
+          <attvalue for="2" value="Materials sourced for products" />
+        </attvalues>
+      </node>
+      <node id="iso_14021" label="iso_14021">
+        <attvalues>
+          <attvalue for="0" value="Standard" />
+          <attvalue for="1" value="ISO 14021" />
+          <attvalue for="2" value="Standard for recycled content reporting" />
+        </attvalues>
+      </node>
+      <node id="gold_plating" label="gold_plating">
+        <attvalues>
+          <attvalue for="0" value="Material" />
+          <attvalue for="1" value="Gold Plating" />
+          <attvalue for="2" value="Used in circuit boards" />
+        </attvalues>
+      </node>
+      <node id="sbt_initiative" label="sbt_initiative">
+        <attvalues>
+          <attvalue for="0" value="Environmental_Initiative" />
+          <attvalue for="1" value="Science Based Targets initiative" />
+          <attvalue for="2" value="Emissions reduction target validation" />
+        </attvalues>
+      </node>
+      <node id="emissions_target" label="emissions_target">
+        <attvalues>
+          <attvalue for="0" value="Regulation" />
+          <attvalue for="1" value="Emissions Reduction Target" />
+          <attvalue for="2" value="61.7% reduction by FY2030 relative to FY2019 emissions" />
+        </attvalues>
+      </node>
+      <node id="environmental_initiative" label="environmental_initiative">
+        <attvalues>
+          <attvalue for="0" value="Environmental Initiative" />
+          <attvalue for="1" value="Carbon Neutrality by 2030" />
+          <attvalue for="2" value="Apple's commitment to environmental sustainability" />
+        </attvalues>
+      </node>
+      <node id="cat::Product" label="cat::Product">
+        <attvalues>
+          <attvalue for="0" value="Category" />
+          <attvalue for="1" value="Products" />
+        </attvalues>
+      </node>
+      <node id="cat::Supplier" label="cat::Supplier">
+        <attvalues>
+          <attvalue for="0" value="Category" />
+          <attvalue for="1" value="Suppliers" />
+        </attvalues>
+      </node>
+      <node id="cat::Component" label="cat::Component">
+        <attvalues>
+          <attvalue for="0" value="Category" />
+          <attvalue for="1" value="Components" />
+        </attvalues>
+      </node>
+      <node id="cat::Material" label="cat::Material">
+        <attvalues>
+          <attvalue for="0" value="Category" />
+          <attvalue for="1" value="Materials" />
+        </attvalues>
+      </node>
+      <node id="cat::Location" label="cat::Location">
+        <attvalues>
+          <attvalue for="0" value="Category" />
+          <attvalue for="1" value="Locations" />
+        </attvalues>
+      </node>
+      <node id="cat::Employee" label="cat::Employee">
+        <attvalues>
+          <attvalue for="0" value="Category" />
+          <attvalue for="1" value="Employees" />
+        </attvalues>
+      </node>
+      <node id="cat::Service" label="cat::Service">
+        <attvalues>
+          <attvalue for="0" value="Category" />
+          <attvalue for="1" value="Services" />
+        </attvalues>
+      </node>
+      <node id="cat::Initiative" label="cat::Initiative">
+        <attvalues>
+          <attvalue for="0" value="Category" />
+          <attvalue for="1" value="Initiatives" />
+        </attvalues>
+      </node>
+      <node id="cat::Other" label="cat::Other">
+        <attvalues>
+          <attvalue for="0" value="Category" />
+          <attvalue for="1" value="Other" />
+        </attvalues>
+      </node>
     </nodes>
     <edges>
-      <edge source="apple" target="aluminum" id="0" type="Uses_Material">
+      <edge source="apple" target="cat::Product" id="0" type="Belongs_To" />
+      <edge source="apple" target="cat::Supplier" id="1" type="Belongs_To" />
+      <edge source="apple" target="cat::Component" id="2" type="Belongs_To" />
+      <edge source="apple" target="cat::Material" id="3" type="Belongs_To" />
+      <edge source="apple" target="cat::Location" id="4" type="Belongs_To" />
+      <edge source="apple" target="cat::Employee" id="5" type="Belongs_To" />
+      <edge source="apple" target="cat::Service" id="6" type="Belongs_To" />
+      <edge source="apple" target="cat::Initiative" id="7" type="Belongs_To" />
+      <edge source="apple" target="cat::Other" id="8" type="Belongs_To" />
+      <edge source="components" target="manufacturing_vendors" id="9" type="Supplies">
         <attvalues>
-          <attvalue for="4" value="Used in product casing" />
+          <attvalue for="15" value="Components sold to manufacturing vendors" />
         </attvalues>
       </edge>
-      <edge source="apple" target="rare_earth_elements" id="1" type="Uses_Material">
+      <edge source="manufacturing_vendors" target="subassemblies" id="10" type="Manufactures">
         <attvalues>
-          <attvalue for="4" value="Used in various components" />
+          <attvalue for="15" value="Assemble final products for Apple" />
         </attvalues>
       </edge>
-      <edge source="apple" target="taiwan" id="2" type="Operates_In">
+      <edge source="recycled_materials" target="batteries" id="11" type="Uses_Material">
         <attvalues>
-          <attvalue for="4" value="Operational center" />
+          <attvalue for="16" value="Recycled materials used in batteries" />
         </attvalues>
       </edge>
-      <edge source="apple" target="china" id="3" type="Operates_In">
+      <edge source="recycled_materials" target="magnets" id="12" type="Uses_Material">
         <attvalues>
-          <attvalue for="4" value="Manufacturing hub" />
+          <attvalue for="16" value="Recycled materials used in magnets" />
         </attvalues>
       </edge>
-      <edge source="apple" target="us" id="4" type="Operates_In">
+      <edge source="recycled_materials" target="circuit_boards" id="13" type="Uses_Material">
         <attvalues>
-          <attvalue for="4" value="Operational center" />
+          <attvalue for="16" value="Recycled materials used in circuit boards" />
         </attvalues>
       </edge>
-      <edge source="apple" target="components" id="5" type="Uses_Material">
+      <edge source="supplier_employees" target="28_countries" id="14" type="Operates_In">
         <attvalues>
-          <attvalue for="4" value="Uses various components for products" />
+          <attvalue for="15" value="Training tools have reached more than 1.5 million people" />
         </attvalues>
       </edge>
-      <edge source="apple" target="smartphones" id="6" type="Operates_In">
+      <edge source="worker_voice_dashboard" target="supplier_engagement" id="15" type="Uses_Material">
         <attvalues>
-          <attvalue for="4" value="Competes in the smartphone market" />
+          <attvalue for="15" value="Tool used for monitoring supplier performance" />
         </attvalues>
       </edge>
-      <edge source="apple" target="personal_computers" id="7" type="Operates_In">
+      <edge source="supplier" target="students" id="16" type="Operates_In">
         <attvalues>
-          <attvalue for="4" value="Competes in the personal computer market" />
+          <attvalue for="15" value="Employs students under approved conditions" />
         </attvalues>
       </edge>
-      <edge source="apple" target="tablets" id="8" type="Operates_In">
+      <edge source="labor_agents" target="labor_agencies" id="17" type="Operates_In">
         <attvalues>
-          <attvalue for="4" value="Competes in the tablet market" />
+          <attvalue for="15" value="Trained agents working for labor agencies in six countries" />
         </attvalues>
       </edge>
-      <edge source="apple" target="wearables" id="9" type="Operates_In">
+      <edge source="workers" target="labor_agencies" id="18" type="Operates_In">
         <attvalues>
-          <attvalue for="4" value="Competes in the wearables market" />
+          <attvalue for="15" value="Workers employed in facilities globally" />
         </attvalues>
       </edge>
-      <edge source="apple" target="accessories" id="10" type="Operates_In">
+      <edge source="supplier_program" target="china" id="19" type="Operates_In">
         <attvalues>
-          <attvalue for="4" value="Competes in the accessories market" />
+          <attvalue for="15" value="Launched in 2022" />
         </attvalues>
       </edge>
-      <edge source="apple" target="custom_components" id="11" type="Uses_Material">
+      <edge source="supplier_program" target="india" id="20" type="Operates_In">
         <attvalues>
-          <attvalue for="4" value="Utilizes custom components from limited sources" />
+          <attvalue for="15" value="Recently expanded to a key supplier" />
         </attvalues>
       </edge>
-      <edge source="foxconn" target="apple" id="12" type="Manufactures">
+      <edge source="supplier_program" target="us" id="21" type="Operates_In">
         <attvalues>
-          <attvalue for="4" value="Assembles iPhones and other products" />
+          <attvalue for="15" value="Will expand to the U.S. in 2025" />
         </attvalues>
       </edge>
+      <edge source="supplier_facilities" target="anodizing" id="22" type="Uses_Material">
+        <attvalues>
+          <attvalue for="15" value="Utilizes anodizing process for metal surfaces" />
+        </attvalues>
+      </edge>
+      <edge source="fire_safety_training" target="supplier_facilities" id="23" type="Provides_Service">
+        <attvalues>
+          <attvalue for="15" value="Training on fire safety risks associated with anodizing and other processes" />
+        </attvalues>
+      </edge>
+      <edge source="congo_power" target="great_lakes_region" id="24" type="Operates_In">
+        <attvalues>
+          <attvalue for="15" value="Deploys renewable electricity systems in the region" />
+        </attvalues>
+      </edge>
+      <edge source="salmon_gold" target="yukon" id="25" type="Operates_In">
+        <attvalues>
+          <attvalue for="15" value="Focuses on mining practices in the region" />
+        </attvalues>
+      </edge>
+      <edge source="salmon_gold" target="alaska" id="26" type="Operates_In">
+        <attvalues>
+          <attvalue for="15" value="Focuses on mining practices in the region" />
+        </attvalues>
+      </edge>
+      <edge source="salmon_gold" target="british_columbia" id="27" type="Operates_In">
+        <attvalues>
+          <attvalue for="15" value="Focuses on mining practices in the region" />
+        </attvalues>
+      </edge>
+      <edge source="cat::Product" target="iphone" id="28" type="Belongs_To" />
+      <edge source="cat::Product" target="ipad" id="29" type="Belongs_To" />
+      <edge source="cat::Product" target="mac" id="30" type="Belongs_To" />
+      <edge source="cat::Product" target="wearables_home_accessories" id="31" type="Belongs_To" />
+      <edge source="cat::Product" target="daisy" id="32" type="Belongs_To" />
+      <edge source="cat::Supplier" target="third_party_carriers" id="33" type="Belongs_To" />
+      <edge source="cat::Supplier" target="wholesalers" id="34" type="Belongs_To" />
+      <edge source="cat::Supplier" target="retailers" id="35" type="Belongs_To" />
+      <edge source="cat::Supplier" target="resellers" id="36" type="Belongs_To" />
+      <edge source="cat::Supplier" target="suppliers" id="37" type="Belongs_To" />
+      <edge source="cat::Supplier" target="supplier_a" id="38" type="Belongs_To" />
+      <edge source="cat::Supplier" target="supplier_b" id="39" type="Belongs_To" />
+      <edge source="cat::Supplier" target="manufacturing_partners" id="40" type="Belongs_To" />
+      <edge source="cat::Supplier" target="cellular_network_carriers" id="41" type="Belongs_To" />
+      <edge source="cat::Supplier" target="outsourcing_partners" id="42" type="Belongs_To" />
+      <edge source="cat::Supplier" target="foxconn" id="43" type="Belongs_To" />
+      <edge source="cat::Supplier" target="tsmc" id="44" type="Belongs_To" />
+      <edge source="cat::Supplier" target="manufacturing_vendors" id="45" type="Belongs_To" />
+      <edge source="cat::Supplier" target="japan_solar" id="46" type="Belongs_To" />
+      <edge source="cat::Supplier" target="us_silicon" id="47" type="Belongs_To" />
+      <edge source="cat::Supplier" target="austria_hydroelectric" id="48" type="Belongs_To" />
+      <edge source="cat::Supplier" target="vietnam_health" id="49" type="Belongs_To" />
+      <edge source="cat::Supplier" target="supplier" id="50" type="Belongs_To" />
+      <edge source="cat::Supplier" target="managers" id="51" type="Belongs_To" />
+      <edge source="cat::Supplier" target="line_workers" id="52" type="Belongs_To" />
+      <edge source="cat::Supplier" target="logistics_suppliers" id="53" type="Belongs_To" />
+      <edge source="cat::Component" target="components" id="54" type="Belongs_To" />
+      <edge source="cat::Component" target="subassemblies" id="55" type="Belongs_To" />
+      <edge source="cat::Component" target="batteries" id="56" type="Belongs_To" />
+      <edge source="cat::Component" target="magnets" id="57" type="Belongs_To" />
+      <edge source="cat::Component" target="circuit_boards" id="58" type="Belongs_To" />
+      <edge source="cat::Component" target="printed_circuit_boards" id="59" type="Belongs_To" />
+      <edge source="cat::Material" target="aluminum" id="60" type="Belongs_To" />
+      <edge source="cat::Material" target="rare_earth_elements" id="61" type="Belongs_To" />
+      <edge source="cat::Material" target="recycled_materials" id="62" type="Belongs_To" />
+      <edge source="cat::Material" target="cobalt" id="63" type="Belongs_To" />
+      <edge source="cat::Material" target="tin" id="64" type="Belongs_To" />
+      <edge source="cat::Material" target="gold" id="65" type="Belongs_To" />
+      <edge source="cat::Material" target="renewable_materials" id="66" type="Belongs_To" />
+      <edge source="cat::Material" target="recycled_cobalt" id="67" type="Belongs_To" />
+      <edge source="cat::Material" target="recycled_rare_earth_elements" id="68" type="Belongs_To" />
+      <edge source="cat::Material" target="recycled_tin" id="69" type="Belongs_To" />
+      <edge source="cat::Material" target="recycled_gold" id="70" type="Belongs_To" />
+      <edge source="cat::Material" target="metal" id="71" type="Belongs_To" />
+      <edge source="cat::Material" target="3tg" id="72" type="Belongs_To" />
+      <edge source="cat::Material" target="lithium" id="73" type="Belongs_To" />
+      <edge source="cat::Material" target="mica" id="74" type="Belongs_To" />
+      <edge source="cat::Material" target="copper" id="75" type="Belongs_To" />
+      <edge source="cat::Material" target="graphite" id="76" type="Belongs_To" />
+      <edge source="cat::Material" target="nickel" id="77" type="Belongs_To" />
+      <edge source="cat::Material" target="3TG" id="78" type="Belongs_To" />
+      <edge source="cat::Material" target="glass" id="79" type="Belongs_To" />
+      <edge source="cat::Material" target="paper" id="80" type="Belongs_To" />
+      <edge source="cat::Material" target="plastics" id="81" type="Belongs_To" />
+      <edge source="cat::Material" target="steel" id="82" type="Belongs_To" />
+      <edge source="cat::Material" target="tantalum" id="83" type="Belongs_To" />
+      <edge source="cat::Material" target="titanium" id="84" type="Belongs_To" />
+      <edge source="cat::Material" target="tungsten" id="85" type="Belongs_To" />
+      <edge source="cat::Material" target="zinc" id="86" type="Belongs_To" />
+      <edge source="cat::Material" target="silicon" id="87" type="Belongs_To" />
+      <edge source="cat::Material" target="fiber_based_packaging" id="88" type="Belongs_To" />
+      <edge source="cat::Material" target="3tg_smelters" id="89" type="Belongs_To" />
+      <edge source="cat::Material" target="gold_plating" id="90" type="Belongs_To" />
+      <edge source="cat::Location" target="china" id="91" type="Belongs_To" />
+      <edge source="cat::Location" target="india" id="92" type="Belongs_To" />
+      <edge source="cat::Location" target="japan" id="93" type="Belongs_To" />
+      <edge source="cat::Location" target="south_korea" id="94" type="Belongs_To" />
+      <edge source="cat::Location" target="taiwan" id="95" type="Belongs_To" />
+      <edge source="cat::Location" target="vietnam" id="96" type="Belongs_To" />
+      <edge source="cat::Location" target="location_a" id="97" type="Belongs_To" />
+      <edge source="cat::Location" target="location_b" id="98" type="Belongs_To" />
+      <edge source="cat::Location" target="silicon_valley" id="99" type="Belongs_To" />
+      <edge source="cat::Location" target="ireland" id="100" type="Belongs_To" />
+      <edge source="cat::Location" target="singapore" id="101" type="Belongs_To" />
+      <edge source="cat::Location" target="asia" id="102" type="Belongs_To" />
+      <edge source="cat::Location" target="cupertino" id="103" type="Belongs_To" />
+      <edge source="cat::Location" target="usa" id="104" type="Belongs_To" />
+      <edge source="cat::Location" target="other_countries" id="105" type="Belongs_To" />
+      <edge source="cat::Location" target="san_jose" id="106" type="Belongs_To" />
+      <edge source="cat::Location" target="united_states" id="107" type="Belongs_To" />
+      <edge source="cat::Location" target="austin_texas" id="108" type="Belongs_To" />
+      <edge source="cat::Location" target="santa_clara_valley" id="109" type="Belongs_To" />
+      <edge source="cat::Location" target="drc" id="110" type="Belongs_To" />
+      <edge source="cat::Location" target="brazil" id="111" type="Belongs_To" />
+      <edge source="cat::Location" target="philippines" id="112" type="Belongs_To" />
+      <edge source="cat::Location" target="rwanda" id="113" type="Belongs_To" />
+      <edge source="cat::Location" target="czech_republic" id="114" type="Belongs_To" />
+      <edge source="cat::Location" target="austria" id="115" type="Belongs_To" />
+      <edge source="cat::Location" target="china_mainland" id="116" type="Belongs_To" />
+      <edge source="cat::Service" target="icloud" id="117" type="Belongs_To" />
+      <edge source="cat::Service" target="siri" id="118" type="Belongs_To" />
+      <edge source="cat::Service" target="maps" id="119" type="Belongs_To" />
+      <edge source="cat::Service" target="apple_one" id="120" type="Belongs_To" />
+      <edge source="cat::Service" target="applecare" id="121" type="Belongs_To" />
+      <edge source="cat::Service" target="apple_tv_plus" id="122" type="Belongs_To" />
+      <edge source="cat::Service" target="apple_fitness_plus" id="123" type="Belongs_To" />
+      <edge source="cat::Initiative" target="environmental_initiatives" id="124" type="Belongs_To" />
+      <edge source="cat::Initiative" target="congo_power" id="125" type="Belongs_To" />
+      <edge source="cat::Initiative" target="recycling" id="126" type="Belongs_To" />
+      <edge source="cat::Other" target="smartphones" id="127" type="Belongs_To" />
+      <edge source="cat::Other" target="personal_computers" id="128" type="Belongs_To" />
+      <edge source="cat::Other" target="tablets" id="129" type="Belongs_To" />
+      <edge source="cat::Other" target="wearables" id="130" type="Belongs_To" />
+      <edge source="cat::Other" target="accessories" id="131" type="Belongs_To" />
+      <edge source="cat::Other" target="services" id="132" type="Belongs_To" />
+      <edge source="cat::Other" target="intellectual_property" id="133" type="Belongs_To" />
+      <edge source="cat::Other" target="employees" id="134" type="Belongs_To" />
+      <edge source="cat::Other" target="us" id="135" type="Belongs_To" />
+      <edge source="cat::Other" target="international_operations" id="136" type="Belongs_To" />
+      <edge source="cat::Other" target="covid19" id="137" type="Belongs_To" />
+      <edge source="cat::Other" target="app_store" id="138" type="Belongs_To" />
+      <edge source="cat::Other" target="eu" id="139" type="Belongs_To" />
+      <edge source="cat::Other" target="digital_markets_act" id="140" type="Belongs_To" />
+      <edge source="cat::Other" target="digital_content" id="141" type="Belongs_To" />
+      <edge source="cat::Other" target="carriers" id="142" type="Belongs_To" />
+      <edge source="cat::Other" target="consumers" id="143" type="Belongs_To" />
+      <edge source="cat::Other" target="businesses" id="144" type="Belongs_To" />
+      <edge source="cat::Other" target="education" id="145" type="Belongs_To" />
+      <edge source="cat::Other" target="enterprise" id="146" type="Belongs_To" />
+      <edge source="cat::Other" target="government" id="147" type="Belongs_To" />
+      <edge source="cat::Other" target="supply_chain" id="148" type="Belongs_To" />
+      <edge source="cat::Other" target="retail_stores" id="149" type="Belongs_To" />
+      <edge source="cat::Other" target="regulations" id="150" type="Belongs_To" />
+      <edge source="cat::Other" target="emissions" id="151" type="Belongs_To" />
+      <edge source="cat::Other" target="human_rights" id="152" type="Belongs_To" />
+      <edge source="cat::Other" target="diversity_inclusion" id="153" type="Belongs_To" />
+      <edge source="cat::Other" target="google" id="154" type="Belongs_To" />
+      <edge source="cat::Other" target="geographic_segments" id="155" type="Belongs_To" />
+      <edge source="cat::Other" target="distribution_channels" id="156" type="Belongs_To" />
+      <edge source="cat::Other" target="small_mid_sized_businesses" id="157" type="Belongs_To" />
+      <edge source="cat::Other" target="dma" id="158" type="Belongs_To" />
+      <edge source="cat::Other" target="nasdaq" id="159" type="Belongs_To" />
+      <edge source="cat::Other" target="shareholders" id="160" type="Belongs_To" />
+      <edge source="cat::Other" target="share_repurchase_program" id="161" type="Belongs_To" />
+      <edge source="cat::Other" target="sp500" id="162" type="Belongs_To" />
+      <edge source="cat::Other" target="dow_jones" id="163" type="Belongs_To" />
+      <edge source="cat::Other" target="products" id="164" type="Belongs_To" />
+      <edge source="cat::Other" target="us_dollar" id="165" type="Belongs_To" />
+      <edge source="cat::Other" target="r_and_d" id="166" type="Belongs_To" />
+      <edge source="cat::Other" target="sga" id="167" type="Belongs_To" />
+      <edge source="cat::Other" target="state_aid_decision" id="168" type="Belongs_To" />
+      <edge source="cat::Other" target="financial_statements" id="169" type="Belongs_To" />
+      <edge source="cat::Other" target="shareholders_equity" id="170" type="Belongs_To" />
+      <edge source="cat::Other" target="gaap" id="171" type="Belongs_To" />
+      <edge source="cat::Other" target="greater_china" id="172" type="Belongs_To" />
+      <edge source="cat::Other" target="land_buildings" id="173" type="Belongs_To" />
+      <edge source="cat::Other" target="machinery_equipment" id="174" type="Belongs_To" />
+      <edge source="cat::Other" target="leasehold_improvements" id="175" type="Belongs_To" />
+      <edge source="cat::Other" target="property_plant_equipment" id="176" type="Belongs_To" />
+      <edge source="cat::Other" target="accumulated_depreciation" id="177" type="Belongs_To" />
+      <edge source="cat::Other" target="total_property_plant_equipment" id="178" type="Belongs_To" />
+      <edge source="cat::Other" target="depreciation_expense" id="179" type="Belongs_To" />
+      <edge source="cat::Other" target="deferred_tax_assets" id="180" type="Belongs_To" />
+      <edge source="cat::Other" target="other_non_current_assets" id="181" type="Belongs_To" />
+      <edge source="cat::Other" target="total_other_non_current_assets" id="182" type="Belongs_To" />
+      <edge source="cat::Other" target="income_taxes_payable_current" id="183" type="Belongs_To" />
+      <edge source="cat::Other" target="other_current_liabilities" id="184" type="Belongs_To" />
+      <edge source="cat::Other" target="total_other_current_liabilities" id="185" type="Belongs_To" />
+      <edge source="cat::Other" target="income_taxes_payable_non_current" id="186" type="Belongs_To" />
+      <edge source="cat::Other" target="other_non_current_liabilities" id="187" type="Belongs_To" />
+      <edge source="cat::Other" target="total_other_non_current_liabilities" id="188" type="Belongs_To" />
+      <edge source="cat::Other" target="european_commission" id="189" type="Belongs_To" />
+      <edge source="cat::Other" target="foreign_subsidiaries" id="190" type="Belongs_To" />
+      <edge source="cat::Other" target="2022_plan" id="191" type="Belongs_To" />
+      <edge source="cat::Other" target="employee_stock_plan_2022" id="192" type="Belongs_To" />
+      <edge source="cat::Other" target="employee_stock_plan_2014" id="193" type="Belongs_To" />
+      <edge source="cat::Other" target="pcaob" id="194" type="Belongs_To" />
+      <edge source="cat::Other" target="foreign_jurisdictions" id="195" type="Belongs_To" />
+      <edge source="cat::Other" target="tax_laws" id="196" type="Belongs_To" />
+      <edge source="cat::Other" target="ernst_young" id="197" type="Belongs_To" />
+      <edge source="cat::Other" target="coso" id="198" type="Belongs_To" />
+      <edge source="cat::Other" target="luca_maestri" id="199" type="Belongs_To" />
+      <edge source="cat::Other" target="chris_kondo" id="200" type="Belongs_To" />
+      <edge source="cat::Other" target="wanda_austin" id="201" type="Belongs_To" />
+      <edge source="cat::Other" target="alex_gorsky" id="202" type="Belongs_To" />
+      <edge source="cat::Other" target="andrea_jung" id="203" type="Belongs_To" />
+      <edge source="cat::Other" target="arthur_levinson" id="204" type="Belongs_To" />
+      <edge source="cat::Other" target="monica_lozano" id="205" type="Belongs_To" />
+      <edge source="cat::Other" target="ronald_sugar" id="206" type="Belongs_To" />
+      <edge source="cat::Other" target="susan_wagner" id="207" type="Belongs_To" />
+      <edge source="cat::Other" target="bank_of_new_york" id="208" type="Belongs_To" />
+      <edge source="cat::Other" target="employee_stock_plan" id="209" type="Belongs_To" />
+      <edge source="cat::Other" target="stock_plan" id="210" type="Belongs_To" />
+      <edge source="cat::Other" target="tim_cook" id="211" type="Belongs_To" />
+      <edge source="cat::Other" target="supplier_employee_development_fund" id="212" type="Belongs_To" />
+      <edge source="cat::Other" target="carbon_neutrality" id="213" type="Belongs_To" />
+      <edge source="cat::Other" target="supplier_clean_energy_program" id="214" type="Belongs_To" />
+      <edge source="cat::Other" target="supplier_energy_efficiency_program" id="215" type="Belongs_To" />
+      <edge source="cat::Other" target="energy_efficiency_program" id="216" type="Belongs_To" />
+      <edge source="cat::Other" target="supplier_code_of_conduct" id="217" type="Belongs_To" />
+      <edge source="cat::Other" target="ul_solutions" id="218" type="Belongs_To" />
+      <edge source="cat::Other" target="fair_wage_network" id="219" type="Belongs_To" />
+      <edge source="cat::Other" target="american_india_foundation" id="220" type="Belongs_To" />
+      <edge source="cat::Other" target="green_america" id="221" type="Belongs_To" />
+      <edge source="cat::Other" target="clean_electronics_production_network" id="222" type="Belongs_To" />
+      <edge source="cat::Other" target="council_for_adult_and_experiential_learning" id="223" type="Belongs_To" />
+      <edge source="cat::Other" target="pact" id="224" type="Belongs_To" />
+      <edge source="cat::Other" target="hhi" id="225" type="Belongs_To" />
+      <edge source="cat::Other" target="ppa" id="226" type="Belongs_To" />
+      <edge source="cat::Other" target="oecd" id="227" type="Belongs_To" />
+      <edge source="cat::Other" target="working_capital_innovation_fund" id="228" type="Belongs_To" />
+      <edge source="cat::Other" target="quizrr" id="229" type="Belongs_To" />
+      <edge source="cat::Other" target="supplier_responsibility_standards" id="230" type="Belongs_To" />
+      <edge source="cat::Other" target="retail_fixture_manufacturing" id="231" type="Belongs_To" />
+      <edge source="cat::Other" target="apple_watch_assembly" id="232" type="Belongs_To" />
+      <edge source="cat::Other" target="airpods_pro_assembly" id="233" type="Belongs_To" />
+      <edge source="cat::Other" target="component_manufacturing" id="234" type="Belongs_To" />
+      <edge source="cat::Other" target="imac_assembly" id="235" type="Belongs_To" />
+      <edge source="cat::Other" target="us_federal_acquisition_regulations" id="236" type="Belongs_To" />
+      <edge source="cat::Other" target="esci" id="237" type="Belongs_To" />
+      <edge source="cat::Other" target="compliance_and_business_conduct" id="238" type="Belongs_To" />
+      <edge source="cat::Other" target="audit_and_finance_committee" id="239" type="Belongs_To" />
+      <edge source="cat::Other" target="people_and_compensation_committee" id="240" type="Belongs_To" />
+      <edge source="cat::Other" target="supplier_employees" id="241" type="Belongs_To" />
+      <edge source="cat::Other" target="rights_holders" id="242" type="Belongs_To" />
+      <edge source="cat::Other" target="28_countries" id="243" type="Belongs_To" />
+      <edge source="cat::Other" target="remedy_project" id="244" type="Belongs_To" />
+      <edge source="cat::Other" target="supplier_engagement" id="245" type="Belongs_To" />
+      <edge source="cat::Other" target="worker_voice_dashboard" id="246" type="Belongs_To" />
+      <edge source="cat::Other" target="students" id="247" type="Belongs_To" />
+      <edge source="cat::Other" target="rba" id="248" type="Belongs_To" />
+      <edge source="cat::Other" target="ilo" id="249" type="Belongs_To" />
+      <edge source="cat::Other" target="zero_waste" id="250" type="Belongs_To" />
+      <edge source="cat::Other" target="countries" id="251" type="Belongs_To" />
+      <edge source="cat::Other" target="labor_agents" id="252" type="Belongs_To" />
+      <edge source="cat::Other" target="labor_agencies" id="253" type="Belongs_To" />
+      <edge source="cat::Other" target="workers" id="254" type="Belongs_To" />
+      <edge source="cat::Other" target="supplier_program" id="255" type="Belongs_To" />
+      <edge source="cat::Other" target="anodizing" id="256" type="Belongs_To" />
+      <edge source="cat::Other" target="supplier_facilities" id="257" type="Belongs_To" />
+      <edge source="cat::Other" target="fire_safety_training" id="258" type="Belongs_To" />
+      <edge source="cat::Other" target="chemforward" id="259" type="Belongs_To" />
+      <edge source="cat::Other" target="cepn" id="260" type="Belongs_To" />
+      <edge source="cat::Other" target="epa" id="261" type="Belongs_To" />
+      <edge source="cat::Other" target="iom" id="262" type="Belongs_To" />
+      <edge source="cat::Other" target="gravity_water" id="263" type="Belongs_To" />
+      <edge source="cat::Other" target="oecd_guidance" id="264" type="Belongs_To" />
+      <edge source="cat::Other" target="ungps" id="265" type="Belongs_To" />
+      <edge source="cat::Other" target="RMI" id="266" type="Belongs_To" />
+      <edge source="cat::Other" target="LBMA" id="267" type="Belongs_To" />
+      <edge source="cat::Other" target="rmi" id="268" type="Belongs_To" />
+      <edge source="cat::Other" target="lbma" id="269" type="Belongs_To" />
+      <edge source="cat::Other" target="impact" id="270" type="Belongs_To" />
+      <edge source="cat::Other" target="resolve" id="271" type="Belongs_To" />
+      <edge source="cat::Other" target="salmon_gold" id="272" type="Belongs_To" />
+      <edge source="cat::Other" target="great_lakes_region" id="273" type="Belongs_To" />
+      <edge source="cat::Other" target="yukon" id="274" type="Belongs_To" />
+      <edge source="cat::Other" target="alaska" id="275" type="Belongs_To" />
+      <edge source="cat::Other" target="british_columbia" id="276" type="Belongs_To" />
+      <edge source="cat::Other" target="specialized_audits" id="277" type="Belongs_To" />
+      <edge source="cat::Other" target="worker_interviews" id="278" type="Belongs_To" />
+      <edge source="cat::Other" target="human_rights_policy" id="279" type="Belongs_To" />
+      <edge source="cat::Other" target="supplier_code" id="280" type="Belongs_To" />
+      <edge source="cat::Other" target="supplier_standards" id="281" type="Belongs_To" />
+      <edge source="cat::Other" target="un_guiding_principles" id="282" type="Belongs_To" />
+      <edge source="cat::Other" target="responsible_business_alliance" id="283" type="Belongs_To" />
+      <edge source="cat::Other" target="auditing_firms" id="284" type="Belongs_To" />
+      <edge source="cat::Other" target="iso_14021" id="285" type="Belongs_To" />
+      <edge source="cat::Other" target="sbt_initiative" id="286" type="Belongs_To" />
+      <edge source="cat::Other" target="emissions_target" id="287" type="Belongs_To" />
+      <edge source="cat::Other" target="environmental_initiative" id="288" type="Belongs_To" />
     </edges>
   </graph>
 </gexf>
