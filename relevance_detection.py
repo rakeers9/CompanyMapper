@@ -673,12 +673,24 @@ class RelevanceMonitor:
         self.relevance_matches = self._load_relevance_matches()
     
     def _load_relevance_matches(self) -> List[RelevanceMatch]:
-        """Load existing relevance matches from disk"""
+        """Load existing relevance matches from disk - FIXED datetime handling"""
         try:
             if os.path.exists(self.relevance_db_path):
                 with open(self.relevance_db_path, 'r') as f:
                     data = json.load(f)
-                    return [RelevanceMatch(**item) for item in data]
+                    
+                    matches = []
+                    for item in data:
+                        # Fix datetime field if it's a string
+                        if isinstance(item.get('created_at'), str):
+                            try:
+                                item['created_at'] = datetime.fromisoformat(item['created_at'].replace('Z', '+00:00'))
+                            except:
+                                item['created_at'] = datetime.now()
+                        
+                        matches.append(RelevanceMatch(**item))
+                    
+                    return matches
         except Exception as e:
             print(f"Error loading relevance matches: {e}")
         return []

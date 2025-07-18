@@ -688,7 +688,7 @@ def display_news_dashboard(G, openai_api_key: str):
         display_news_analytics()
 
 def display_news_overview():
-    """Display news system overview and status"""
+    """Display news system overview and status - FIXED datetime handling"""
     st.subheader("📊 System Overview")
     
     # System status
@@ -734,7 +734,7 @@ def display_news_overview():
             last_update = last_update.strftime("%H:%M")
         elif isinstance(last_update, str) and last_update != 'Never':
             try:
-                # Parse string back to datetime
+                # Try to parse string back to datetime
                 dt = datetime.fromisoformat(last_update.replace('Z', '+00:00'))
                 last_update = dt.strftime("%H:%M")
             except:
@@ -748,7 +748,7 @@ def display_news_overview():
         try:
             recent_matches = sorted(
                 st.session_state.relevance_monitor.relevance_matches,
-                key=lambda x: x.created_at,
+                key=lambda x: x.created_at if isinstance(x.created_at, datetime) else datetime.fromisoformat(x.created_at),
                 reverse=True
             )[:5]
             
@@ -764,15 +764,32 @@ def display_news_overview():
                             
                         with col2:
                             st.write(f"**Category:** {match.relevance_category}")
-                            st.write(f"**Time:** {match.created_at.strftime('%H:%M')}")
+                            
+                            # Handle datetime/string conversion safely
+                            try:
+                                if isinstance(match.created_at, datetime):
+                                    time_str = match.created_at.strftime('%H:%M')
+                                elif isinstance(match.created_at, str):
+                                    # Try to parse string back to datetime
+                                    dt = datetime.fromisoformat(match.created_at.replace('Z', '+00:00'))
+                                    time_str = dt.strftime('%H:%M')
+                                else:
+                                    time_str = "Unknown"
+                            except:
+                                time_str = "Unknown"
+                            
+                            st.write(f"**Time:** {time_str}")
+                            
                             if st.button("🔗 View Article", key=f"view_{match.news_article_id}"):
                                 st.markdown(f"[Open Article]({match.news_url})")
             else:
                 st.info("No recent activity. Run the news pipeline to see updates here.")
         except Exception as e:
             st.error(f"Error loading recent activity: {e}")
+            st.info("This might be due to data format issues. Try reinitializing the news system.")
     else:
         st.info("Initialize the news system to see recent activity.")
+
 
 def display_pipeline_control(G, openai_api_key: str):
     """Display pipeline control interface"""
@@ -898,7 +915,7 @@ def analyze_relevance(G, days_back: int, min_relevance: float, openai_api_key: s
             st.error(f"Error analyzing relevance: {e}")
 
 def display_relevance_matches(G):
-    """Display relevance matches interface"""
+    """Display relevance matches interface - FIXED datetime handling"""
     st.subheader("🎯 Relevance Matches")
     
     if not st.session_state.relevance_monitor:
@@ -939,11 +956,22 @@ def display_relevance_matches(G):
                 if entity_filter.lower() in " ".join(m.graph_entities).lower()
             ]
         
-        # Sort matches
+        # Sort matches with datetime handling
         if sort_by == "Relevance Score":
             filtered_matches.sort(key=lambda x: x.relevance_score, reverse=True)
         elif sort_by == "Date":
-            filtered_matches.sort(key=lambda x: x.created_at, reverse=True)
+            def get_datetime(match):
+                if isinstance(match.created_at, datetime):
+                    return match.created_at
+                elif isinstance(match.created_at, str):
+                    try:
+                        return datetime.fromisoformat(match.created_at.replace('Z', '+00:00'))
+                    except:
+                        return datetime.now()
+                else:
+                    return datetime.now()
+            
+            filtered_matches.sort(key=get_datetime, reverse=True)
         else:  # Title
             filtered_matches.sort(key=lambda x: x.news_title)
         
@@ -979,7 +1007,20 @@ def display_relevance_matches(G):
                 with col2:
                     st.write(f"**Category:** {match.relevance_category}")
                     st.write(f"**Score:** {match.relevance_score:.2f}")
-                    st.write(f"**Date:** {match.created_at.strftime('%Y-%m-%d %H:%M')}")
+                    
+                    # Handle datetime display safely
+                    try:
+                        if isinstance(match.created_at, datetime):
+                            date_str = match.created_at.strftime('%Y-%m-%d %H:%M')
+                        elif isinstance(match.created_at, str):
+                            dt = datetime.fromisoformat(match.created_at.replace('Z', '+00:00'))
+                            date_str = dt.strftime('%Y-%m-%d %H:%M')
+                        else:
+                            date_str = "Unknown"
+                    except:
+                        date_str = "Unknown"
+                    
+                    st.write(f"**Date:** {date_str}")
                     st.write(f"**Research:** {'Yes' if match.processed_by_agent else 'No'}")
                     
                     if st.button("🔗 Open Article", key=f"open_{match.news_article_id}"):
@@ -991,9 +1032,11 @@ def display_relevance_matches(G):
     
     except Exception as e:
         st.error(f"Error displaying matches: {e}")
+        st.info("Try reinitializing the news system if this error persists.")
+
 
 def display_news_analytics():
-    """Display news analytics and insights"""
+    """Display news analytics and insights - FIXED datetime handling"""
     st.subheader("📈 News Analytics")
     
     if not st.session_state.relevance_monitor:
@@ -1007,16 +1050,27 @@ def display_news_analytics():
             st.info("No data available. Run the news pipeline first.")
             return
         
-        # Convert to DataFrame for analysis
+        # Convert to DataFrame for analysis with datetime handling
         match_data = []
         for match in matches:
+            # Handle datetime conversion
+            try:
+                if isinstance(match.created_at, datetime):
+                    date_obj = match.created_at
+                elif isinstance(match.created_at, str):
+                    date_obj = datetime.fromisoformat(match.created_at.replace('Z', '+00:00'))
+                else:
+                    date_obj = datetime.now()
+            except:
+                date_obj = datetime.now()
+            
             match_data.append({
                 'title': match.news_title,
                 'relevance_score': match.relevance_score,
                 'category': match.relevance_category,
                 'entity_count': len(match.graph_entities),
                 'semantic_similarity': match.semantic_similarity,
-                'date': match.created_at,
+                'date': date_obj,
                 'research_triggered': match.processed_by_agent
             })
         
@@ -1046,7 +1100,6 @@ def display_news_analytics():
         
         with col2:
             # Time series of articles
-            df['date'] = pd.to_datetime(df['date'])
             daily_counts = df.groupby(df['date'].dt.date).size().reset_index()
             daily_counts.columns = ['date', 'count']
             
@@ -1092,6 +1145,7 @@ def display_news_analytics():
     
     except Exception as e:
         st.error(f"Error generating analytics: {e}")
+        st.info("Try reinitializing the news system if this error persists.")
 
 def main():
     """Main Streamlit application"""
