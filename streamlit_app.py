@@ -26,6 +26,7 @@ from knowledge_graph import (
 try:
     from news_pipeline import NewsPipeline, NewsDatabase
     from relevance_detection import RelevanceMonitor, EntityMatcher
+    from research_agent import ResearchAgent, ResearchDatabase, ResearchResult
     from langchain_openai import OpenAIEmbeddings
     NEWS_MODULES_AVAILABLE = True
 except ImportError:
@@ -59,6 +60,13 @@ if 'relevance_monitor' not in st.session_state:
     st.session_state.relevance_monitor = None
 if 'last_news_update' not in st.session_state:
     st.session_state.last_news_update = None
+    
+if 'research_agent' not in st.session_state:
+    st.session_state.research_agent = None
+if 'research_database' not in st.session_state:
+    st.session_state.research_database = None
+if 'research_results' not in st.session_state:
+    st.session_state.research_results = []
 
 class GraphManager:
     """Manages graph operations with persistence and real-time updates"""

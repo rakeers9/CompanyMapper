@@ -720,3 +720,60 @@ class ResearchDatabase:
             reverse=True
         )
         return sorted_results[:limit]
+
+
+
+# Example usage
+if __name__ == "__main__":
+    # Test the research agent
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+    ALPHA_VANTAGE_KEY = os.getenv("ALPHA_VANTAGE_KEY")  # Optional
+    
+    if not OPENAI_API_KEY:
+        print("Please set OPENAI_API_KEY environment variable")
+        exit(1)
+    
+    # Initialize research agent
+    agent = ResearchAgent(
+        openai_api_key=OPENAI_API_KEY,
+        alpha_vantage_key=ALPHA_VANTAGE_KEY
+    )
+    
+    # Create a mock article and relevance match for testing
+    from news_pipeline import NewsArticle
+    from relevance_detection import RelevanceMatch
+    
+    test_article = NewsArticle(
+        id="test123",
+        title="Apple Supplier Foxconn Reports Supply Chain Disruption",
+        content="Foxconn, Apple's major manufacturing partner, reported significant supply chain disruptions affecting iPhone production...",
+        url="https://example.com/test",
+        source="Test News",
+        published_date=datetime.now()
+    )
+    
+    test_match = RelevanceMatch(
+        news_article_id="test123",
+        news_title=test_article.title,
+        news_url=test_article.url,
+        news_content_preview=test_article.content[:200],
+        matched_entities=[],
+        graph_entities=["Foxconn", "iPhone", "Supply Chain"],
+        relevance_score=8.5,
+        relevance_category="HIGH",
+        entity_matches=[],
+        semantic_similarity=0.85,
+        keyword_matches=["Apple", "Foxconn", "iPhone"],
+        created_at=datetime.now()
+    )
+    
+    # Run research
+    result = agent.research_article(test_article, test_match)
+    
+    print("\n=== RESEARCH RESULT ===")
+    print(f"Title: {result.article_title}")
+    print(f"Urgency: {result.urgency_level}")
+    print(f"Duration: {result.research_duration_seconds:.1f}s")
+    print(f"\nExecutive Summary:\n{result.executive_summary}")
+    print(f"\nKey Takeaways: {result.key_takeaways}")
+    print(f"Recommended Actions: {result.recommended_actions}")
