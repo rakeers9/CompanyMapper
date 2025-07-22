@@ -1,4 +1,12 @@
-# streamlit_app.py
+# streamlit_app.py - Complete Enhanced Streamlit App with Research Agent
+"""
+Complete Apple Knowledge Graph System with AI Research Agent
+- Solar system knowledge graph visualization
+- Real-time news monitoring and processing
+- AI-powered relevance detection with LangGraph
+- Automatic research agent for high-priority articles
+- Executive impact summaries and recommendations
+"""
 
 import streamlit as st
 import networkx as nx
@@ -60,7 +68,8 @@ if 'relevance_monitor' not in st.session_state:
     st.session_state.relevance_monitor = None
 if 'last_news_update' not in st.session_state:
     st.session_state.last_news_update = None
-    
+
+# Initialize session state for research agent
 if 'research_agent' not in st.session_state:
     st.session_state.research_agent = None
 if 'research_database' not in st.session_state:
@@ -131,7 +140,7 @@ class GraphManager:
             }),
             ("china", {
                 "name": "China", 
-                "type": "GeographicLocation", 
+                "type": "Location", 
                 "prop_description": "Manufacturing location",
                 "created": datetime.now().isoformat()
             }),
@@ -201,7 +210,7 @@ class GraphManager:
         G.remove_edge(source, target)
         return True, f"Removed edge: {source} → {target}"
 
-# Allowed relationship types (from your Milestone 2)
+# Allowed relationship types
 ALLOWED_RELATIONSHIP_TYPES = [
     "Supplies", "Manufactures", "Designs", "Distributes", "Operates_In", 
     "Owns", "Acquires", "Partners_With", "Licenses_From", "Regulated_By", 
@@ -490,7 +499,7 @@ def display_graph_editor(G, graph_manager):
             new_node_id = st.text_input("Node ID (unique identifier):", key="new_node_id")
             new_node_name = st.text_input("Display Name:", key="new_node_name")
             new_node_type = st.selectbox("Node Type:", 
-                options=["Company", "Product", "Supplier", "GeographicLocation", "Component", "Service", "Other"],
+                options=["Company", "Product", "Supplier", "Location", "Component", "Service", "Other"],
                 key="new_node_type")
         
         with col2:
@@ -634,360 +643,7 @@ def display_graph_editor(G, graph_manager):
             except:
                 st.error("Invalid JSON file")
 
-# News Pipeline Integration Functions
-def display_news_dashboard(G, openai_api_key: str):
-    """Display the news monitoring dashboard with streaming support"""
-    st.header("📰 News Monitoring Dashboard")
-    
-    if not NEWS_MODULES_AVAILABLE:
-        st.error("News pipeline modules are not available. Please install the required dependencies and ensure news_pipeline.py and relevance_detection.py are in your project directory.")
-        return
-    
-    # API Key configuration
-    col1, col2 = st.columns([2, 1])
-    
-    with col1:
-        newsapi_key = st.text_input(
-            "NewsAPI Key (optional - get free key at newsapi.org):",
-            type="password",
-            help="Optional: Provides access to more news sources"
-        )
-    
-    with col2:
-        st.markdown("### 🔧 Quick Setup")
-        if st.button("Initialize News System"):
-            with st.spinner("Initializing news pipeline..."):
-                try:
-                    # Initialize pipeline
-                    st.session_state.news_pipeline = NewsPipeline(
-                        openai_api_key=openai_api_key,
-                        newsapi_key=newsapi_key if newsapi_key else None,
-                        db_path="./apple_news_db"
-                    )
-                    
-                    # Initialize relevance monitor
-                    st.session_state.relevance_monitor = RelevanceMonitor(
-                        openai_api_key=openai_api_key,
-                        news_db_path="./apple_news_db"
-                    )
-                    
-                    st.success("✅ News system initialized!")
-                    
-                except Exception as e:
-                    st.error(f"Error initializing news system: {e}")
-    
-    # Main news dashboard tabs
-    tab1, tab2, tab3, tab4 = st.tabs([
-        "📊 Overview", 
-        "🌊 Pipeline & Streaming", 
-        "🎯 Relevance Matches", 
-        "📈 Analytics"
-    ])
-    
-    with tab1:
-        display_news_overview()
-    
-    with tab2:
-        display_pipeline_control(G, openai_api_key)
-    
-    with tab3:
-        display_relevance_matches(G)
-    
-    with tab4:
-        display_news_analytics()
-
-def display_news_overview():
-    """Display news system overview and status - FIXED datetime handling"""
-    st.subheader("📊 System Overview")
-    
-    # System status
-    col1, col2, col3, col4 = st.columns(4)
-    
-    # Get database stats
-    try:
-        if st.session_state.news_pipeline:
-            total_articles = st.session_state.news_pipeline.database.get_article_count()
-        else:
-            # Try to get count directly
-            if NEWS_MODULES_AVAILABLE:
-                db = NewsDatabase("./apple_news_db")
-                total_articles = db.get_article_count()
-            else:
-                total_articles = 0
-    except:
-        total_articles = 0
-    
-    try:
-        if st.session_state.relevance_monitor:
-            total_matches = len(st.session_state.relevance_monitor.relevance_matches)
-            high_relevance = len(st.session_state.relevance_monitor.get_matches_by_category("HIGH"))
-        else:
-            total_matches = 0
-            high_relevance = 0
-    except:
-        total_matches = 0
-        high_relevance = 0
-    
-    with col1:
-        st.metric("📰 Total Articles", total_articles)
-    
-    with col2:
-        st.metric("🎯 Relevance Matches", total_matches)
-    
-    with col3:
-        st.metric("🔥 High Priority", high_relevance)
-    
-    with col4:
-        last_update = st.session_state.get('last_news_update', 'Never')
-        if isinstance(last_update, datetime):
-            last_update = last_update.strftime("%H:%M")
-        elif isinstance(last_update, str) and last_update != 'Never':
-            try:
-                # Try to parse string back to datetime
-                dt = datetime.fromisoformat(last_update.replace('Z', '+00:00'))
-                last_update = dt.strftime("%H:%M")
-            except:
-                last_update = "Recent"
-        st.metric("🕐 Last Update", last_update)
-    
-    # Recent activity
-    st.subheader("🕐 Recent Activity")
-    
-    if st.session_state.relevance_monitor:
-        try:
-            recent_matches = sorted(
-                st.session_state.relevance_monitor.relevance_matches,
-                key=lambda x: x.created_at if isinstance(x.created_at, datetime) else datetime.fromisoformat(x.created_at),
-                reverse=True
-            )[:5]
-            
-            if recent_matches:
-                for match in recent_matches:
-                    with st.expander(f"🎯 {match.news_title[:80]}... ({match.relevance_category})"):
-                        col1, col2 = st.columns([3, 1])
-                        
-                        with col1:
-                            st.write(f"**Score:** {match.relevance_score:.2f}")
-                            st.write(f"**Entities:** {', '.join(match.graph_entities[:3])}")
-                            st.write(f"**Preview:** {match.news_content_preview}")
-                            
-                        with col2:
-                            st.write(f"**Category:** {match.relevance_category}")
-                            
-                            # Handle datetime/string conversion safely
-                            try:
-                                if isinstance(match.created_at, datetime):
-                                    time_str = match.created_at.strftime('%H:%M')
-                                elif isinstance(match.created_at, str):
-                                    # Try to parse string back to datetime
-                                    dt = datetime.fromisoformat(match.created_at.replace('Z', '+00:00'))
-                                    time_str = dt.strftime('%H:%M')
-                                else:
-                                    time_str = "Unknown"
-                            except:
-                                time_str = "Unknown"
-                            
-                            st.write(f"**Time:** {time_str}")
-                            
-                            if st.button("🔗 View Article", key=f"view_{match.news_article_id}"):
-                                st.markdown(f"[Open Article]({match.news_url})")
-            else:
-                st.info("No recent activity. Run the news pipeline to see updates here.")
-        except Exception as e:
-            st.error(f"Error loading recent activity: {e}")
-            st.info("This might be due to data format issues. Try reinitializing the news system.")
-    else:
-        st.info("Initialize the news system to see recent activity.")
-
-
-def display_pipeline_control(G, openai_api_key: str):
-    """Display pipeline control interface with streaming support"""
-    st.subheader("🔄 News Pipeline Control")
-    
-    # Pipeline configuration
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.write("**Pipeline Settings**")
-        max_articles = st.slider("Max articles to process:", 10, 200, 50)
-        min_relevance = st.slider("Minimum relevance score:", 0.0, 10.0, 2.0, 0.5)
-        days_back = st.selectbox("Look back (days):", [1, 3, 7, 14], index=2)
-    
-    with col2:
-        st.write("**Streaming Options**")
-        show_low_relevance = st.checkbox("Show low relevance articles", value=True)
-        auto_scroll = st.checkbox("Auto-scroll to latest", value=True)
-        stream_delay = st.slider("Processing delay (seconds):", 0.1, 2.0, 0.5, 0.1)
-    
-    # Pipeline actions
-    st.write("**Actions**")
-    
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        if st.button("🔄 Run News Pipeline", type="primary"):
-            run_news_pipeline(max_articles, openai_api_key)
-    
-    with col2:
-        if st.button("🎯 Analyze Relevance"):
-            if G is not None:
-                analyze_relevance(G, days_back, min_relevance, openai_api_key)
-            else:
-                st.error("Knowledge graph not available")
-    
-    with col3:
-        if st.button("🌊 Run Full Stream", type="primary"):
-            if G is not None:
-                run_streaming_pipeline(G, max_articles, days_back, min_relevance, openai_api_key, 
-                                     show_low_relevance, auto_scroll, stream_delay)
-            else:
-                st.error("Knowledge graph and news system must be initialized")
-                
-                
-def run_streaming_pipeline(G, max_articles: int, days_back: int, min_relevance: float, 
-                         openai_api_key: str, show_low_relevance: bool, auto_scroll: bool, 
-                         stream_delay: float):
-    """Run the streaming news pipeline with real-time display"""
-    
-    # Initialize systems if needed
-    if not st.session_state.news_pipeline:
-        st.session_state.news_pipeline = NewsPipeline(
-            openai_api_key=openai_api_key,
-            db_path="./apple_news_db"
-        )
-    
-    if not st.session_state.relevance_monitor:
-        st.session_state.relevance_monitor = RelevanceMonitor(
-            openai_api_key=openai_api_key,
-            news_db_path="./apple_news_db"
-        )
-    
-    # Create full-width container for streaming display
-    st.markdown("---")
-    st.header("🌊 Live News Stream")
-    
-    # Create containers for different sections
-    status_container = st.container()
-    progress_container = st.container()
-    stream_container = st.container()
-    
-    with status_container:
-        col1, col2, col3, col4 = st.columns(4)
-        
-        # Initialize metrics
-        total_processed = st.empty()
-        high_relevance_count = st.empty()
-        research_triggered_count = st.empty()
-        processing_rate = st.empty()
-        
-        with col1:
-            total_processed.metric("📊 Processed", "0")
-        with col2:
-            high_relevance_count.metric("🔥 High Relevance", "0")
-        with col3:
-            research_triggered_count.metric("🔬 Research Triggered", "0")
-        with col4:
-            processing_rate.metric("⚡ Articles/min", "0")
-    
-    with progress_container:
-        progress_bar = st.progress(0)
-        status_text = st.empty()
-    
-    # Start streaming process
-    start_time = datetime.now()
-    processed_count = 0
-    high_relevance_articles = 0
-    research_triggered_articles = 0
-    
-    try:
-        # Get the streaming generator
-        article_stream = get_streaming_articles(st.session_state.news_pipeline, max_articles)
-        
-        # Process articles one by one
-        for article_data in article_stream:
-            processed_count += 1
-            
-            # Update progress
-            progress = min(processed_count / max_articles, 1.0)
-            progress_bar.progress(progress)
-            status_text.text(f"Processing article {processed_count}/{max_articles}: {article_data['title'][:50]}...")
-            
-            # Process the article
-            try:
-                # Process through news pipeline
-                processed_article = st.session_state.news_pipeline.processor.process_article(article_data)
-                
-                # Add to database
-                stored_successfully = st.session_state.news_pipeline.database.add_article(processed_article)
-                
-                # Create embedding if missing
-                if not processed_article.embedding:
-                    embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
-                    processed_article.embedding = embeddings.embed_query(processed_article.cleaned_content)
-                
-                # Get graph entities
-                matcher = EntityMatcher(openai_api_key)
-                graph_entities = matcher.extract_graph_entities(G)
-                
-                # Process through relevance workflow
-                relevance_match = st.session_state.relevance_monitor.workflow.process_article(
-                    processed_article, graph_entities
-                )
-                
-                # Update relevance monitor
-                if relevance_match.relevance_score >= min_relevance:
-                    st.session_state.relevance_monitor.relevance_matches.append(relevance_match)
-                    high_relevance_articles += 1
-                
-                if relevance_match.processed_by_agent:
-                    research_triggered_articles += 1
-                
-                # Display article in stream
-                display_streaming_article(stream_container, processed_article, relevance_match, 
-                                        processed_count, show_low_relevance, stored_successfully)
-                
-            except Exception as e:
-                # Display error in stream
-                display_streaming_error(stream_container, article_data, processed_count, str(e))
-            
-            # Update metrics
-            elapsed_time = (datetime.now() - start_time).total_seconds()
-            rate = (processed_count / elapsed_time) * 60 if elapsed_time > 0 else 0
-            
-            total_processed.metric("📊 Processed", str(processed_count))
-            high_relevance_count.metric("🔥 High Relevance", str(high_relevance_articles))
-            research_triggered_count.metric("🔬 Research Triggered", str(research_triggered_articles))
-            processing_rate.metric("⚡ Articles/min", f"{rate:.1f}")
-            
-            # Auto-scroll to bottom if enabled
-            if auto_scroll:
-                st.markdown('<div id="bottom"></div>', unsafe_allow_html=True)
-                st.markdown('<script>document.getElementById("bottom").scrollIntoView();</script>', 
-                           unsafe_allow_html=True)
-            
-            # Add delay between articles
-            time.sleep(stream_delay)
-            
-            # Check if user wants to stop (this is a limitation of Streamlit)
-            if processed_count >= max_articles:
-                break
-    
-    except Exception as e:
-        st.error(f"Streaming pipeline error: {e}")
-    
-    finally:
-        # Save relevance matches
-        st.session_state.relevance_monitor._save_relevance_matches()
-        
-        # Final status
-        progress_bar.progress(1.0)
-        status_text.text(f"✅ Streaming complete! Processed {processed_count} articles")
-        
-        # Update session state
-        st.session_state.last_news_update = datetime.now()
-        
-        st.success(f"🎉 Streaming pipeline completed! Processed {processed_count} articles with {high_relevance_articles} high-relevance matches.")
-
+# Enhanced streaming functions
 def get_streaming_articles(pipeline, max_articles: int) -> Generator[Dict[str, Any], None, None]:
     """Generator that yields articles one by one for streaming processing"""
     
@@ -1035,18 +691,35 @@ def get_streaming_articles(pipeline, max_articles: int) -> Generator[Dict[str, A
     # Yield articles one by one
     for article in unique_articles[:max_articles]:
         yield article
-        
-def display_streaming_article(container, article, relevance_match, count: int, 
-                            show_low_relevance: bool, stored_successfully: bool):
-    """Display a single article in the streaming interface"""
+
+def display_streaming_article_with_research(
+    container, 
+    article, 
+    relevance_match, 
+    research_result,
+    count: int, 
+    show_low_relevance: bool, 
+    stored_successfully: bool
+):
+    """Enhanced article display with research results"""
     
     # Skip low relevance articles if not showing them
     if not show_low_relevance and relevance_match.relevance_score < 2.0:
         return
     
     with container:
-        # Determine styling based on relevance
-        if relevance_match.relevance_category == "HIGH":
+        # Determine styling based on research and relevance
+        if research_result:
+            if research_result.urgency_level == "Critical":
+                border_color = "#ff0000"
+                icon = "🚨"
+            elif research_result.urgency_level == "High":
+                border_color = "#ff4444"
+                icon = "🔥"
+            else:
+                border_color = "#ff8800"
+                icon = "🔬"
+        elif relevance_match.relevance_category == "HIGH":
             border_color = "#ff4444"
             icon = "🔥"
         elif relevance_match.relevance_category == "MEDIUM":
@@ -1056,11 +729,17 @@ def display_streaming_article(container, article, relevance_match, count: int,
             border_color = "#888888"
             icon = "⚪"
         
-        # Create expandable article display
-        with st.expander(f"{icon} Article #{count}: {article.title[:80]}... (Score: {relevance_match.relevance_score:.2f})", 
-                        expanded=(relevance_match.relevance_category == "HIGH")):
+        # Create expandable article display with research
+        title_suffix = f" - RESEARCH COMPLETE ({research_result.urgency_level})" if research_result else ""
+        expanded = research_result is not None or relevance_match.relevance_category == "HIGH"
+        
+        with st.expander(
+            f"{icon} Article #{count}: {article.title[:60]}...{title_suffix} (Score: {relevance_match.relevance_score:.2f})", 
+            expanded=expanded
+        ):
             
-            col1, col2 = st.columns([3, 1])
+            # Main article info
+            col1, col2 = st.columns([2, 1])
             
             with col1:
                 st.write(f"**Title:** {article.title}")
@@ -1081,8 +760,11 @@ def display_streaming_article(container, article, relevance_match, count: int,
                 st.metric("Category", relevance_match.relevance_category)
                 st.metric("Entities Found", len(relevance_match.graph_entities))
                 
-                if relevance_match.processed_by_agent:
-                    st.success("🔬 Research Triggered")
+                if research_result:
+                    st.success("🔬 Research Complete")
+                    st.metric("Research Time", f"{research_result.research_duration_seconds:.1f}s")
+                elif relevance_match.processed_by_agent:
+                    st.info("🔬 Research Triggered")
                 
                 if stored_successfully:
                     st.success("💾 Stored in DB")
@@ -1093,8 +775,77 @@ def display_streaming_article(container, article, relevance_match, count: int,
                 if hasattr(article, 'sentiment_score') and article.sentiment_score:
                     sentiment_emoji = "😊" if article.sentiment_score > 0.1 else "😐" if article.sentiment_score > -0.1 else "😟"
                     st.write(f"**Sentiment:** {sentiment_emoji} {article.sentiment_score:.2f}")
+            
+            # Research Results Section
+            if research_result:
+                st.markdown("---")
+                st.subheader("🔬 Research Analysis Results")
+                
+                # Executive Summary
+                st.write("**Executive Summary:**")
+                st.info(research_result.executive_summary)
+                
+                # Impact Analysis in columns
+                impact_col1, impact_col2, impact_col3 = st.columns(3)
+                
+                with impact_col1:
+                    st.write("**💰 Financial Impact**")
+                    fin_impact = research_result.financial_impact
+                    if fin_impact:
+                        st.write(f"• Likelihood: {fin_impact.get('likelihood', 'Unknown')}")
+                        st.write(f"• Severity: {fin_impact.get('severity', 'Unknown')}")
+                        st.write(f"• Timeline: {fin_impact.get('timeline', 'Unknown')}")
+                        if fin_impact.get('details'):
+                            st.write(f"• Details: {fin_impact['details'][:100]}...")
+                
+                with impact_col2:
+                    st.write("**⚙️ Operational Impact**")
+                    op_impact = research_result.operational_impact
+                    if op_impact:
+                        st.write(f"• Likelihood: {op_impact.get('likelihood', 'Unknown')}")
+                        st.write(f"• Severity: {op_impact.get('severity', 'Unknown')}")
+                        st.write(f"• Timeline: {op_impact.get('timeline', 'Unknown')}")
+                        if op_impact.get('details'):
+                            st.write(f"• Details: {op_impact['details'][:100]}...")
+                
+                with impact_col3:
+                    st.write("**🎭 Reputational Impact**")
+                    rep_impact = research_result.reputational_impact
+                    if rep_impact:
+                        st.write(f"• Likelihood: {rep_impact.get('likelihood', 'Unknown')}")
+                        st.write(f"• Severity: {rep_impact.get('severity', 'Unknown')}")
+                        st.write(f"• Timeline: {rep_impact.get('timeline', 'Unknown')}")
+                        if rep_impact.get('details'):
+                            st.write(f"• Details: {rep_impact['details'][:100]}...")
+                
+                # Key Takeaways and Actions
+                if research_result.key_takeaways or research_result.recommended_actions:
+                    action_col1, action_col2 = st.columns(2)
+                    
+                    with action_col1:
+                        if research_result.key_takeaways:
+                            st.write("**📋 Key Takeaways:**")
+                            for takeaway in research_result.key_takeaways[:3]:
+                                st.write(f"• {takeaway}")
+                    
+                    with action_col2:
+                        if research_result.recommended_actions:
+                            st.write("**🎯 Recommended Actions:**")
+                            for action in research_result.recommended_actions[:3]:
+                                st.write(f"• {action}")
+                
+                # Stock Context (if available)
+                if research_result.stock_price_context and research_result.stock_price_context.get('current_price'):
+                    stock_data = research_result.stock_price_context
+                    st.write("**📈 Stock Context:**")
+                    change_color = "green" if stock_data.get('change', 0) >= 0 else "red"
+                    st.markdown(
+                        f"AAPL: ${stock_data.get('current_price', 'N/A')} "
+                        f"<span style='color: {change_color}'>({stock_data.get('change_percent', 0):.2f}%)</span>",
+                        unsafe_allow_html=True
+                    )
         
-        # Add a subtle separator
+        # Add separator
         st.markdown("---")
 
 def display_streaming_error(container, article_data, count: int, error_message: str):
@@ -1108,8 +859,211 @@ def display_streaming_error(container, article_data, count: int, error_message: 
             st.write(f"**URL:** {article_data.get('url', 'Unknown')}")
         
         st.markdown("---")
-        
 
+def run_enhanced_streaming_pipeline(
+    G, 
+    max_articles: int, 
+    days_back: int, 
+    min_relevance: float, 
+    openai_api_key: str, 
+    show_low_relevance: bool, 
+    auto_scroll: bool, 
+    stream_delay: float,
+    enable_research: bool = True,
+    alpha_vantage_key: str = None
+):
+    """Enhanced streaming pipeline with real-time research"""
+    
+    # Initialize systems if needed
+    if not st.session_state.news_pipeline:
+        st.session_state.news_pipeline = NewsPipeline(
+            openai_api_key=openai_api_key,
+            db_path="./apple_news_db"
+        )
+    
+    if not st.session_state.relevance_monitor:
+        st.session_state.relevance_monitor = RelevanceMonitor(
+            openai_api_key=openai_api_key,
+            news_db_path="./apple_news_db"
+        )
+    
+    # Initialize research agent
+    if enable_research and not st.session_state.research_agent:
+        st.session_state.research_agent = ResearchAgent(
+            openai_api_key=openai_api_key,
+            alpha_vantage_key=alpha_vantage_key
+        )
+        st.session_state.research_database = ResearchDatabase("./research_results.json")
+    
+    # Create containers
+    st.markdown("---")
+    st.header("🌊 Enhanced Live News Stream with AI Research")
+    
+    status_container = st.container()
+    progress_container = st.container()
+    stream_container = st.container()
+    
+    with status_container:
+        col1, col2, col3, col4, col5 = st.columns(5)
+        
+        # Initialize metrics
+        total_processed = st.empty()
+        high_relevance_count = st.empty()
+        research_triggered_count = st.empty()
+        research_completed_count = st.empty()
+        processing_rate = st.empty()
+        
+        with col1:
+            total_processed.metric("📊 Processed", "0")
+        with col2:
+            high_relevance_count.metric("🔥 High Relevance", "0")
+        with col3:
+            research_triggered_count.metric("🔬 Research Triggered", "0")
+        with col4:
+            research_completed_count.metric("✅ Research Complete", "0")
+        with col5:
+            processing_rate.metric("⚡ Articles/min", "0")
+    
+    with progress_container:
+        progress_bar = st.progress(0)
+        status_text = st.empty()
+    
+    # Start streaming process
+    start_time = datetime.now()
+    processed_count = 0
+    high_relevance_articles = 0
+    research_triggered_articles = 0
+    research_completed_articles = 0
+    
+    try:
+        # Get the streaming generator
+        article_stream = get_streaming_articles(st.session_state.news_pipeline, max_articles)
+        
+        # Process articles one by one
+        for article_data in article_stream:
+            processed_count += 1
+            
+            # Update progress
+            progress = min(processed_count / max_articles, 1.0)
+            progress_bar.progress(progress)
+            status_text.text(f"Processing article {processed_count}/{max_articles}: {article_data['title'][:50]}...")
+            
+            research_result = None
+            
+            try:
+                # Process the article
+                processed_article = st.session_state.news_pipeline.processor.process_article(article_data)
+                stored_successfully = st.session_state.news_pipeline.database.add_article(processed_article)
+                
+                # Create embedding if missing
+                if not processed_article.embedding:
+                    embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
+                    processed_article.embedding = embeddings.embed_query(processed_article.cleaned_content)
+                
+                # Get graph entities
+                matcher = EntityMatcher(openai_api_key)
+                graph_entities = matcher.extract_graph_entities(G)
+                
+                # Process through relevance workflow
+                relevance_match = st.session_state.relevance_monitor.workflow.process_article(
+                    processed_article, graph_entities
+                )
+                
+                # Update relevance monitor
+                if relevance_match.relevance_score >= min_relevance:
+                    st.session_state.relevance_monitor.relevance_matches.append(relevance_match)
+                    high_relevance_articles += 1
+                
+                # Trigger research if enabled and conditions met
+                if (enable_research and 
+                    st.session_state.research_agent and 
+                    relevance_match.processed_by_agent and
+                    relevance_match.relevance_score >= 4.0):
+                    
+                    research_triggered_articles += 1
+                    
+                    # Update status to show research in progress
+                    status_text.text(f"🔬 RESEARCHING: {processed_article.title[:50]}...")
+                    
+                    # Perform research immediately
+                    research_result = st.session_state.research_agent.research_article(
+                        processed_article, relevance_match
+                    )
+                    
+                    # Save research result
+                    st.session_state.research_database.save_result(research_result)
+                    st.session_state.research_results.append(research_result)
+                    research_completed_articles += 1
+                    
+                    # Update the relevance match with research info
+                    relevance_match.agent_analysis = research_result.executive_summary
+                
+                # Display article in stream (with research results if available)
+                display_streaming_article_with_research(
+                    stream_container, 
+                    processed_article, 
+                    relevance_match, 
+                    research_result,
+                    processed_count, 
+                    show_low_relevance, 
+                    stored_successfully
+                )
+                
+            except Exception as e:
+                # Display error in stream
+                display_streaming_error(stream_container, article_data, processed_count, str(e))
+            
+            # Update metrics
+            elapsed_time = (datetime.now() - start_time).total_seconds()
+            rate = (processed_count / elapsed_time) * 60 if elapsed_time > 0 else 0
+            
+            total_processed.metric("📊 Processed", str(processed_count))
+            high_relevance_count.metric("🔥 High Relevance", str(high_relevance_articles))
+            research_triggered_count.metric("🔬 Research Triggered", str(research_triggered_articles))
+            research_completed_count.metric("✅ Research Complete", str(research_completed_articles))
+            processing_rate.metric("⚡ Articles/min", f"{rate:.1f}")
+            
+            # Auto-scroll to bottom if enabled
+            if auto_scroll:
+                st.markdown('<div id="bottom"></div>', unsafe_allow_html=True)
+                st.markdown('<script>document.getElementById("bottom").scrollIntoView();</script>', 
+                           unsafe_allow_html=True)
+            
+            # Add delay between articles
+            time.sleep(stream_delay)
+            
+            # Check if user wants to stop
+            if processed_count >= max_articles:
+                break
+    
+    except Exception as e:
+        st.error(f"Streaming pipeline error: {e}")
+    
+    finally:
+        # Save all data
+        st.session_state.relevance_monitor._save_relevance_matches()
+        
+        # Final status
+        progress_bar.progress(1.0)
+        status_text.text(f"✅ Streaming complete! Processed {processed_count} articles")
+        
+        # Update session state
+        st.session_state.last_news_update = datetime.now()
+        
+        # Success message with research stats
+        if research_completed_articles > 0:
+            st.success(
+                f"🎉 Enhanced streaming pipeline completed! "
+                f"Processed {processed_count} articles with {high_relevance_articles} high-relevance matches "
+                f"and completed {research_completed_articles} research analyses."
+            )
+        else:
+            st.success(
+                f"🎉 Streaming pipeline completed! "
+                f"Processed {processed_count} articles with {high_relevance_articles} high-relevance matches."
+            )
+
+# News pipeline functions
 def run_news_pipeline(max_articles: int, openai_api_key: str):
     """Run the news pipeline"""
     with st.spinner(f"Fetching and processing up to {max_articles} articles..."):
@@ -1186,8 +1140,165 @@ def analyze_relevance(G, days_back: int, min_relevance: float, openai_api_key: s
         except Exception as e:
             st.error(f"Error analyzing relevance: {e}")
 
+def display_news_overview():
+    """Display news system overview and status"""
+    st.subheader("📊 System Overview")
+    
+    # System status
+    col1, col2, col3, col4 = st.columns(4)
+    
+    # Get database stats
+    try:
+        if st.session_state.news_pipeline:
+            total_articles = st.session_state.news_pipeline.database.get_article_count()
+        else:
+            # Try to get count directly
+            if NEWS_MODULES_AVAILABLE:
+                db = NewsDatabase("./apple_news_db")
+                total_articles = db.get_article_count()
+            else:
+                total_articles = 0
+    except:
+        total_articles = 0
+    
+    try:
+        if st.session_state.relevance_monitor:
+            total_matches = len(st.session_state.relevance_monitor.relevance_matches)
+            high_relevance = len(st.session_state.relevance_monitor.get_matches_by_category("HIGH"))
+        else:
+            total_matches = 0
+            high_relevance = 0
+    except:
+        total_matches = 0
+        high_relevance = 0
+    
+    with col1:
+        st.metric("📰 Total Articles", total_articles)
+    
+    with col2:
+        st.metric("🎯 Relevance Matches", total_matches)
+    
+    with col3:
+        st.metric("🔥 High Priority", high_relevance)
+    
+    with col4:
+        last_update = st.session_state.get('last_news_update', 'Never')
+        if isinstance(last_update, datetime):
+            last_update = last_update.strftime("%H:%M")
+        elif isinstance(last_update, str) and last_update != 'Never':
+            try:
+                dt = datetime.fromisoformat(last_update.replace('Z', '+00:00'))
+                last_update = dt.strftime("%H:%M")
+            except:
+                last_update = "Recent"
+        st.metric("🕐 Last Update", last_update)
+    
+    # Recent activity
+    st.subheader("🕐 Recent Activity")
+    
+    if st.session_state.relevance_monitor:
+        try:
+            recent_matches = sorted(
+                st.session_state.relevance_monitor.relevance_matches,
+                key=lambda x: x.created_at if isinstance(x.created_at, datetime) else datetime.fromisoformat(x.created_at),
+                reverse=True
+            )[:5]
+            
+            if recent_matches:
+                for match in recent_matches:
+                    with st.expander(f"🎯 {match.news_title[:80]}... ({match.relevance_category})"):
+                        col1, col2 = st.columns([3, 1])
+                        
+                        with col1:
+                            st.write(f"**Score:** {match.relevance_score:.2f}")
+                            st.write(f"**Entities:** {', '.join(match.graph_entities[:3])}")
+                            st.write(f"**Preview:** {match.news_content_preview}")
+                            
+                        with col2:
+                            st.write(f"**Category:** {match.relevance_category}")
+                            
+                            try:
+                                if isinstance(match.created_at, datetime):
+                                    time_str = match.created_at.strftime('%H:%M')
+                                elif isinstance(match.created_at, str):
+                                    dt = datetime.fromisoformat(match.created_at.replace('Z', '+00:00'))
+                                    time_str = dt.strftime('%H:%M')
+                                else:
+                                    time_str = "Unknown"
+                            except:
+                                time_str = "Unknown"
+                            
+                            st.write(f"**Time:** {time_str}")
+                            
+                            if st.button("🔗 View Article", key=f"view_{match.news_article_id}"):
+                                st.markdown(f"[Open Article]({match.news_url})")
+            else:
+                st.info("No recent activity. Run the news pipeline to see updates here.")
+        except Exception as e:
+            st.error(f"Error loading recent activity: {e}")
+            st.info("This might be due to data format issues. Try reinitializing the news system.")
+    else:
+        st.info("Initialize the news system to see recent activity.")
+
+def display_enhanced_pipeline_control(G, openai_api_key: str):
+    """Enhanced pipeline control with research options"""
+    st.subheader("🔄 Enhanced News Pipeline Control")
+    
+    # API Key configuration
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.write("**Pipeline Settings**")
+        max_articles = st.slider("Max articles to process:", 10, 200, 50)
+        min_relevance = st.slider("Minimum relevance score:", 0.0, 10.0, 2.0, 0.5)
+        days_back = st.selectbox("Look back (days):", [1, 3, 7, 14], index=2)
+    
+    with col2:
+        st.write("**Research Settings**")
+        enable_research = st.checkbox("Enable AI Research Agent", value=True, help="Automatically research high-priority articles")
+        alpha_vantage_key = st.text_input("Alpha Vantage API Key (optional):", type="password", help="For real financial data")
+        research_threshold = st.slider("Research trigger score:", 3.0, 10.0, 4.0, 0.5)
+    
+    # Streaming options
+    st.write("**Streaming Options**")
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        show_low_relevance = st.checkbox("Show low relevance", value=True)
+    with col2:
+        auto_scroll = st.checkbox("Auto-scroll", value=True)
+    with col3:
+        stream_delay = st.slider("Delay (s):", 0.1, 3.0, 1.0, 0.1)
+    with col4:
+        show_research_details = st.checkbox("Expand research", value=True)
+    
+    # Pipeline actions
+    st.write("**Actions**")
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        if st.button("🔄 Run News Pipeline", type="primary"):
+            run_news_pipeline(max_articles, openai_api_key)
+    
+    with col2:
+        if st.button("🎯 Analyze Relevance"):
+            if G is not None:
+                analyze_relevance(G, days_back, min_relevance, openai_api_key)
+            else:
+                st.error("Knowledge graph not available")
+    
+    with col3:
+        if st.button("🌊🔬 Run Enhanced Stream", type="primary"):
+            if G is not None:
+                run_enhanced_streaming_pipeline(
+                    G, max_articles, days_back, min_relevance, openai_api_key, 
+                    show_low_relevance, auto_scroll, stream_delay, enable_research, alpha_vantage_key
+                )
+            else:
+                st.error("Knowledge graph must be initialized")
+
 def display_relevance_matches(G):
-    """Display relevance matches interface - FIXED datetime handling"""
+    """Display relevance matches interface"""
     st.subheader("🎯 Relevance Matches")
     
     if not st.session_state.relevance_monitor:
@@ -1306,9 +1417,119 @@ def display_relevance_matches(G):
         st.error(f"Error displaying matches: {e}")
         st.info("Try reinitializing the news system if this error persists.")
 
+def display_research_dashboard():
+    """Display research results dashboard"""
+    st.subheader("🔬 Research Results Dashboard")
+    
+    if not st.session_state.research_database:
+        st.info("No research results available. Run the enhanced streaming pipeline to generate research.")
+        return
+    
+    # Get recent research results
+    recent_results = st.session_state.research_database.get_recent_results(20)
+    
+    if not recent_results:
+        st.info("No research results found. Try running the enhanced streaming pipeline with research enabled.")
+        return
+    
+    # Summary metrics
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        st.metric("Total Research", len(recent_results))
+    
+    with col2:
+        critical_count = sum(1 for r in recent_results if r.urgency_level == "Critical")
+        st.metric("Critical Issues", critical_count)
+    
+    with col3:
+        high_count = sum(1 for r in recent_results if r.urgency_level == "High")
+        st.metric("High Priority", high_count)
+    
+    with col4:
+        avg_time = np.mean([r.research_duration_seconds for r in recent_results if r.research_duration_seconds])
+        st.metric("Avg Research Time", f"{avg_time:.1f}s")
+    
+    # Filter and sort options
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        urgency_filter = st.selectbox("Filter by urgency:", ["All", "Critical", "High", "Medium", "Low"])
+    
+    with col2:
+        sort_by = st.selectbox("Sort by:", ["Date", "Urgency", "Research Time"])
+    
+    # Filter results
+    filtered_results = recent_results
+    if urgency_filter != "All":
+        filtered_results = [r for r in filtered_results if r.urgency_level == urgency_filter]
+    
+    # Sort results
+    if sort_by == "Date":
+        filtered_results.sort(key=lambda x: x.research_triggered_at, reverse=True)
+    elif sort_by == "Urgency":
+        urgency_order = {"Critical": 4, "High": 3, "Medium": 2, "Low": 1}
+        filtered_results.sort(key=lambda x: urgency_order.get(x.urgency_level, 0), reverse=True)
+    elif sort_by == "Research Time":
+        filtered_results.sort(key=lambda x: x.research_duration_seconds or 0, reverse=True)
+    
+    # Display results
+    st.write(f"**Research Results ({len(filtered_results)} shown)**")
+    
+    for i, result in enumerate(filtered_results[:10]):  # Show first 10
+        urgency_emoji = {
+            "Critical": "🚨",
+            "High": "🔥", 
+            "Medium": "🟡",
+            "Low": "🟢"
+        }.get(result.urgency_level, "⚪")
+        
+        with st.expander(f"{urgency_emoji} {result.article_title[:80]}... ({result.urgency_level})"):
+            col1, col2 = st.columns([2, 1])
+            
+            with col1:
+                st.write("**Executive Summary:**")
+                st.info(result.executive_summary[:300] + "..." if len(result.executive_summary) > 300 else result.executive_summary)
+                
+                if result.key_takeaways:
+                    st.write("**Key Takeaways:**")
+                    for takeaway in result.key_takeaways[:3]:
+                        st.write(f"• {takeaway}")
+                
+                if result.recommended_actions:
+                    st.write("**Recommended Actions:**")
+                    for action in result.recommended_actions[:3]:
+                        st.write(f"• {action}")
+            
+            with col2:
+                st.metric("Urgency Level", result.urgency_level)
+                
+                if result.research_duration_seconds:
+                    st.metric("Research Time", f"{result.research_duration_seconds:.1f}s")
+                
+                if isinstance(result.research_triggered_at, datetime):
+                    time_str = result.research_triggered_at.strftime('%Y-%m-%d %H:%M')
+                else:
+                    time_str = "Unknown"
+                st.write(f"**Time:** {time_str}")
+                
+                if st.button("🔗 View Article", key=f"research_view_{result.article_id}"):
+                    st.markdown(f"[Open Article]({result.article_url})")
+                
+                # Impact indicators
+                impacts = []
+                if result.financial_impact and result.financial_impact.get('severity') in ['Major', 'Moderate']:
+                    impacts.append("💰 Financial")
+                if result.operational_impact and result.operational_impact.get('severity') in ['Major', 'Moderate']:
+                    impacts.append("⚙️ Operational")
+                if result.reputational_impact and result.reputational_impact.get('severity') in ['Major', 'Moderate']:
+                    impacts.append("🎭 Reputational")
+                
+                if impacts:
+                    st.write(f"**Impacts:** {', '.join(impacts)}")
 
 def display_news_analytics():
-    """Display news analytics and insights - FIXED datetime handling"""
+    """Display news analytics and insights"""
     st.subheader("📈 News Analytics")
     
     if not st.session_state.relevance_monitor:
@@ -1419,8 +1640,81 @@ def display_news_analytics():
         st.error(f"Error generating analytics: {e}")
         st.info("Try reinitializing the news system if this error persists.")
 
+def display_enhanced_news_dashboard(G, openai_api_key: str):
+    """Enhanced news dashboard with research integration"""
+    st.header("📰 Enhanced News Monitoring Dashboard with AI Research")
+    
+    if not NEWS_MODULES_AVAILABLE:
+        st.error("News pipeline modules are not available. Please install the required dependencies.")
+        return
+    
+    # API Key configuration
+    col1, col2 = st.columns([2, 1])
+    
+    with col1:
+        newsapi_key = st.text_input(
+            "NewsAPI Key (optional):",
+            type="password",
+            help="Optional: Provides access to more news sources"
+        )
+    
+    with col2:
+        st.markdown("### 🔧 Enhanced Setup")
+        if st.button("Initialize Enhanced System"):
+            with st.spinner("Initializing enhanced news system..."):
+                try:
+                    # Initialize pipeline
+                    st.session_state.news_pipeline = NewsPipeline(
+                        openai_api_key=openai_api_key,
+                        newsapi_key=newsapi_key if newsapi_key else None,
+                        db_path="./apple_news_db"
+                    )
+                    
+                    # Initialize relevance monitor
+                    st.session_state.relevance_monitor = RelevanceMonitor(
+                        openai_api_key=openai_api_key,
+                        news_db_path="./apple_news_db"
+                    )
+                    
+                    # Initialize research agent
+                    st.session_state.research_agent = ResearchAgent(
+                        openai_api_key=openai_api_key
+                    )
+                    
+                    # Initialize research database
+                    st.session_state.research_database = ResearchDatabase("./research_results.json")
+                    
+                    st.success("✅ Enhanced news system with AI research initialized!")
+                    
+                except Exception as e:
+                    st.error(f"Error initializing enhanced system: {e}")
+    
+    # Enhanced dashboard tabs
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+        "📊 Overview", 
+        "🌊🔬 Enhanced Pipeline", 
+        "🎯 Relevance Matches", 
+        "🔬 Research Results",
+        "📈 Analytics"
+    ])
+    
+    with tab1:
+        display_news_overview()
+    
+    with tab2:
+        display_enhanced_pipeline_control(G, openai_api_key)
+    
+    with tab3:
+        display_relevance_matches(G)
+    
+    with tab4:
+        display_research_dashboard()
+    
+    with tab5:
+        display_news_analytics()
+
 def main():
-    """Main Streamlit application"""
+    """Enhanced main Streamlit application with research integration"""
     
     # Initialize graph manager
     graph_manager = GraphManager()
@@ -1434,8 +1728,6 @@ def main():
 
     # Process hierarchy with validation
     try:
-        from knowledge_graph import validate_and_fix_graph, ensure_hierarchy, validate_hierarchy_structure
-        
         with st.spinner("Building solar system hierarchy..."):
             G = validate_and_fix_graph(G)  # Fix any missing attributes
             G = ensure_hierarchy(G)  # Create solar system structure
@@ -1454,7 +1746,7 @@ def main():
         
     # Main title
     st.title("🍎 Apple Knowledge Graph System")
-    st.markdown("**Solar System View with AI-Powered News Monitoring - Complete Company Impact Analysis**")
+    st.markdown("**Solar System View with AI-Powered News Monitoring & Research - Complete Company Impact Analysis**")
     
     # Sidebar controls
     st.sidebar.header("🎛️ Controls")
@@ -1513,10 +1805,10 @@ def main():
     search_term = st.sidebar.text_input("Search nodes:")
     highlight_recent = st.sidebar.checkbox("Highlight recent additions", value=True)
     
-    # Display mode
+    # Display mode with enhanced options
     display_mode = st.sidebar.selectbox(
         "Display Mode:",
-        ["Solar System View", "Editor", "Analytics", "Hierarchy Debug", "📰 News Monitoring"]
+        ["Solar System View", "Editor", "Analytics", "Hierarchy Debug", "📰🔬 Enhanced News Monitoring"]
     )
     
     # Main content area
@@ -1659,15 +1951,15 @@ def main():
         else:
             st.success("✅ No orphaned nodes found")
     
-    elif display_mode == "📰 News Monitoring":
+    elif display_mode == "📰🔬 Enhanced News Monitoring":
         # Get OpenAI API key
         openai_api_key = os.environ.get("OPENAI_API_KEY")
         if not openai_api_key:
-            st.error("Please set OPENAI_API_KEY environment variable to use news monitoring.")
+            st.error("Please set OPENAI_API_KEY environment variable to use enhanced news monitoring.")
         else:
-            display_news_dashboard(G, openai_api_key)
+            display_enhanced_news_dashboard(G, openai_api_key)
     
-    # Footer with next steps
+    # Enhanced footer with milestone 6 completion
     st.sidebar.markdown("---")
     st.sidebar.subheader("🚀 System Status")
     st.sidebar.markdown("""
@@ -1680,11 +1972,14 @@ def main():
     - 📰 News pipeline integration
     - 🎯 Relevance detection & LangGraph
     - 📊 Analytics dashboard
+    - 🔬 **AI Research Agent (Milestone 6)**
+    - 🌊 **Real-time streaming with research**
+    - 📋 **Executive impact summaries**
     
-    **🚧 Ready to add:**
-    - 🔬 Research agent integration (Milestone 6)
-    - 📋 Impact reports & summaries
-    - 🔔 Real-time alerts & notifications
+    **🎉 Project Complete!**
+    - All 6 milestones implemented
+    - Full AI-augmented company impact analysis
+    - Real-time news monitoring with research
     """)
 
 if __name__ == "__main__":
