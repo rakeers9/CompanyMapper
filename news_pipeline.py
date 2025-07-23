@@ -1,11 +1,4 @@
 # news_pipeline.py
-"""
-Milestone 4: News Feed Pipeline - Apple-focused version
-- Fetch Apple-specific news from multiple sources
-- Clean, deduplicate, and process text
-- Extract entities, sentiment, and create embeddings
-- Store in vector database
-"""
 
 import os
 import json
