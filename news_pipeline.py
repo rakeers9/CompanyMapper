@@ -1,4 +1,4 @@
-# news_pipeline.py - Apple-focused version with NewsAPI
+# news_pipeline.py
 """
 Milestone 4: News Feed Pipeline - Apple-focused version
 - Fetch Apple-specific news from multiple sources
@@ -275,7 +275,7 @@ class NewsProcessor:
         try:
             result = chain.invoke({"text": text[:3000]}).content  # Limit text length
             
-            # Clean up the result - sometimes LLM adds extra text
+            # Clean up the result
             result = result.strip()
             if result.startswith("```json"):
                 result = result[7:]
@@ -657,7 +657,7 @@ class NewsPipeline:
                 
                 article = self.processor.process_article(raw_article)
                 
-                # Only add if processing was successful (has meaningful content)
+                # Only add if processing was successful
                 if article.cleaned_content and len(article.cleaned_content) > 10:
                     processed_articles.append(article)
                     

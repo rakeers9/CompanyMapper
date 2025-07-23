@@ -3,3 +3,4 @@ __pycache__/
 venv/
 .env
 apple_news_db/
+streamlit_new.py

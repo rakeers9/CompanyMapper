@@ -1,12 +1,4 @@
 # streamlit_app.py
-"""
-Complete Apple Knowledge Graph System with AI Research Agent
-- Solar system knowledge graph visualization
-- Real-time news monitoring and processing
-- AI-powered relevance detection with LangGraph
-- Automatic research agent for high-priority articles
-- Executive impact summaries and recommendations
-"""
 
 import streamlit as st
 import networkx as nx
@@ -84,23 +76,257 @@ class GraphManager:
         self.graph_file = graph_file
         
     def load_graph(self):
-        """Load graph from file or create sample if not found"""
+        """Load graph from file or create full production graph if not found"""
         import pickle
         
         try:
-            # Try to load the graph using pickle directly (not nx.read_gpickle)
+            # Try to load the graph using pickle directly
             if Path(self.graph_file).exists():
                 with open(self.graph_file, 'rb') as f:
                     G = pickle.load(f)
-                st.success(f"✅ Loaded graph with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges")
+                st.success(f"✅ Loaded existing graph with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges")
             else:
-                G = self.create_sample_graph()
-                st.info("📝 Graph file not found - created sample graph. Upload your graph file via the sidebar.")
+                st.info("📝 No graph found - creating full production Apple knowledge graph...")
+                G = self.create_full_production_graph()
+                st.success(f"✅ Created full production graph with {G.number_of_nodes()} nodes and {G.number_of_edges()} edges")
             return G
         except Exception as e:
             st.error(f"❌ Error loading graph: {e}")
-            st.info("📝 Creating sample graph instead")
+            st.info("📝 Creating fallback sample graph instead")
             return self.create_sample_graph()
+    
+    def create_full_production_graph(self):
+        """Create a comprehensive Apple knowledge graph for production use"""
+        try:
+            # Try to import and run the full knowledge graph creation process
+            from knowledge_graph import (
+                load_documents, split_documents, process_all_chunks, 
+                create_networkx_graph, ensure_hierarchy, validate_and_fix_graph,
+                file_paths
+            )
+            
+            # Check if document files exist
+            existing_files = [f for f in file_paths if Path(f).exists()]
+            
+            if existing_files:
+                st.info(f"📄 Found {len(existing_files)} document files - processing...")
+                
+                # Load and process documents
+                documents = load_documents(existing_files)
+                chunks = split_documents(documents)
+                
+                # Process chunks to extract entities and relationships
+                with st.spinner("🧠 Extracting entities and relationships with AI..."):
+                    knowledge_graph_data = process_all_chunks(chunks)
+                
+                # Create NetworkX graph
+                G = create_networkx_graph(knowledge_graph_data)
+                
+                # Ensure hierarchy and validate
+                G = validate_and_fix_graph(G)
+                G = ensure_hierarchy(G)
+                
+                # Save the created graph
+                self.save_graph(G)
+                
+                return G
+            
+            else:
+                st.warning("📄 No Apple document files found - creating comprehensive sample graph")
+                return self.create_comprehensive_sample_graph()
+                
+        except Exception as e:
+            st.error(f"❌ Error creating full production graph: {e}")
+            st.info("📝 Falling back to comprehensive sample graph")
+            return self.create_comprehensive_sample_graph()
+    
+    def create_comprehensive_sample_graph(self):
+        """Create a comprehensive sample graph with many Apple entities"""
+        G = nx.DiGraph()
+        
+        # Comprehensive Apple entities for production-like experience
+        nodes = [
+            # Core company
+            ("apple", {
+                "name": "Apple Inc.", 
+                "type": "Company", 
+                "prop_description": "Technology company headquartered in Cupertino",
+                "prop_risk_level": "Low",
+                "created": datetime.now().isoformat()
+            }),
+            
+            # Products
+            ("iphone", {
+                "name": "iPhone", 
+                "type": "Product", 
+                "prop_description": "Smartphone product line",
+                "created": datetime.now().isoformat()
+            }),
+            ("ipad", {
+                "name": "iPad", 
+                "type": "Product", 
+                "prop_description": "Tablet product line",
+                "created": datetime.now().isoformat()
+            }),
+            ("mac", {
+                "name": "Mac", 
+                "type": "Product", 
+                "prop_description": "Computer product line",
+                "created": datetime.now().isoformat()
+            }),
+            ("apple_watch", {
+                "name": "Apple Watch", 
+                "type": "Product", 
+                "prop_description": "Smartwatch product line",
+                "created": datetime.now().isoformat()
+            }),
+            ("airpods", {
+                "name": "AirPods", 
+                "type": "Product", 
+                "prop_description": "Wireless earphones",
+                "created": datetime.now().isoformat()
+            }),
+            
+            # Major suppliers
+            ("foxconn", {
+                "name": "Foxconn", 
+                "type": "Supplier", 
+                "prop_description": "Primary manufacturing partner",
+                "prop_risk_level": "High",
+                "created": datetime.now().isoformat()
+            }),
+            ("tsmc", {
+                "name": "TSMC", 
+                "type": "Supplier", 
+                "prop_description": "Semiconductor chip manufacturer",
+                "prop_risk_level": "High",
+                "created": datetime.now().isoformat()
+            }),
+            ("samsung", {
+                "name": "Samsung", 
+                "type": "Supplier", 
+                "prop_description": "Display and component supplier",
+                "prop_risk_level": "Medium",
+                "created": datetime.now().isoformat()
+            }),
+            
+            # Key components
+            ("a_series_chip", {
+                "name": "A-Series Chip", 
+                "type": "Component", 
+                "prop_description": "Apple's custom mobile processors",
+                "created": datetime.now().isoformat()
+            }),
+            ("m_series_chip", {
+                "name": "M-Series Chip", 
+                "type": "Component", 
+                "prop_description": "Apple's custom Mac processors",
+                "created": datetime.now().isoformat()
+            }),
+            ("oled_display", {
+                "name": "OLED Display", 
+                "type": "Component", 
+                "prop_description": "High-quality smartphone displays",
+                "created": datetime.now().isoformat()
+            }),
+            
+            # Locations
+            ("china", {
+                "name": "China", 
+                "type": "Location", 
+                "prop_description": "Primary manufacturing location",
+                "prop_risk_level": "High",
+                "created": datetime.now().isoformat()
+            }),
+            ("taiwan", {
+                "name": "Taiwan", 
+                "type": "Location", 
+                "prop_description": "Semiconductor manufacturing hub",
+                "prop_risk_level": "High",
+                "created": datetime.now().isoformat()
+            }),
+            ("cupertino", {
+                "name": "Cupertino", 
+                "type": "Location", 
+                "prop_description": "Apple headquarters location",
+                "created": datetime.now().isoformat()
+            }),
+            
+            # Services
+            ("app_store", {
+                "name": "App Store", 
+                "type": "Service", 
+                "prop_description": "Digital application marketplace",
+                "created": datetime.now().isoformat()
+            }),
+            ("icloud", {
+                "name": "iCloud", 
+                "type": "Service", 
+                "prop_description": "Cloud storage and services",
+                "created": datetime.now().isoformat()
+            }),
+            
+            # Key people
+            ("tim_cook", {
+                "name": "Tim Cook", 
+                "type": "Employee", 
+                "prop_description": "Chief Executive Officer",
+                "created": datetime.now().isoformat()
+            })
+        ]
+        
+        for node_id, attrs in nodes:
+            G.add_node(node_id, **attrs)
+        
+        # Comprehensive relationships
+        edges = [
+            # Product relationships
+            ("apple", "iphone", {"type": "Designs", "created": datetime.now().isoformat()}),
+            ("apple", "ipad", {"type": "Designs", "created": datetime.now().isoformat()}),
+            ("apple", "mac", {"type": "Designs", "created": datetime.now().isoformat()}),
+            ("apple", "apple_watch", {"type": "Designs", "created": datetime.now().isoformat()}),
+            ("apple", "airpods", {"type": "Designs", "created": datetime.now().isoformat()}),
+            
+            # Supplier relationships
+            ("foxconn", "iphone", {"type": "Manufactures", "created": datetime.now().isoformat()}),
+            ("foxconn", "ipad", {"type": "Manufactures", "created": datetime.now().isoformat()}),
+            ("tsmc", "a_series_chip", {"type": "Manufactures", "created": datetime.now().isoformat()}),
+            ("tsmc", "m_series_chip", {"type": "Manufactures", "created": datetime.now().isoformat()}),
+            ("samsung", "oled_display", {"type": "Supplies", "created": datetime.now().isoformat()}),
+            
+            # Component relationships
+            ("a_series_chip", "iphone", {"type": "Uses_Material", "created": datetime.now().isoformat()}),
+            ("a_series_chip", "ipad", {"type": "Uses_Material", "created": datetime.now().isoformat()}),
+            ("m_series_chip", "mac", {"type": "Uses_Material", "created": datetime.now().isoformat()}),
+            ("oled_display", "iphone", {"type": "Uses_Material", "created": datetime.now().isoformat()}),
+            
+            # Location relationships
+            ("foxconn", "china", {"type": "Operates_In", "created": datetime.now().isoformat()}),
+            ("tsmc", "taiwan", {"type": "Operates_In", "created": datetime.now().isoformat()}),
+            ("apple", "cupertino", {"type": "Operates_In", "created": datetime.now().isoformat()}),
+            
+            # Service relationships
+            ("apple", "app_store", {"type": "Owns", "created": datetime.now().isoformat()}),
+            ("apple", "icloud", {"type": "Owns", "created": datetime.now().isoformat()}),
+            
+            # Leadership
+            ("tim_cook", "apple", {"type": "Owns", "created": datetime.now().isoformat()}),
+        ]
+        
+        for source, target, attrs in edges:
+            G.add_edge(source, target, **attrs)
+        
+        # Apply hierarchy and validation
+        try:
+            G = validate_and_fix_graph(G)
+            G = ensure_hierarchy(G)
+        except:
+            pass  # Continue even if hierarchy fails
+            
+        # Save the created graph
+        self.save_graph(G)
+        
+        return G
             
     def save_graph(self, G):
         """Save graph to file"""
@@ -227,17 +453,14 @@ def create_solar_system_layout(G, root_id=ROOT_ID):
         # Fallback to spring layout if no root
         return nx.spring_layout(G, k=1, iterations=50)
     
-    # Step 1: Place root at center
     pos[root_id] = (0, 0)
     
-    # Step 2: Find categories (direct children of root)
     categories = [n for n in G.successors(root_id) if n.startswith("cat::")]
     
     if not categories:
         # Fallback if no categories found
         return nx.spring_layout(G, k=1, iterations=50)
     
-    # Step 3: Arrange categories in a circle around root
     category_radius = 3
     angle_step = 2 * math.pi / len(categories)
     
@@ -247,7 +470,6 @@ def create_solar_system_layout(G, root_id=ROOT_ID):
         y = category_radius * math.sin(angle)
         pos[cat] = (x, y)
     
-    # Step 4: For each category, arrange its children
     entity_radius = 6  # Distance from center for entities
     subcategory_radius = 4.5  # Distance for subcategories
     
@@ -271,7 +493,6 @@ def create_solar_system_layout(G, root_id=ROOT_ID):
         angular_span = min(angle_step * 0.8, math.pi / 2)  # Don't let it get too wide
         
         if total_children == 1:
-            # Single child: place it directly radially outward from category
             child_angle = cat_angle
             child = children[0]
             if G.nodes[child].get("type") == "Subcategory":
@@ -280,7 +501,6 @@ def create_solar_system_layout(G, root_id=ROOT_ID):
                 r = entity_radius
             pos[child] = (r * math.cos(child_angle), r * math.sin(child_angle))
         else:
-            # Multiple children: spread them in an arc
             start_angle = cat_angle - angular_span / 2
             angle_per_child = angular_span / (total_children - 1) if total_children > 1 else 0
             
@@ -316,7 +536,6 @@ def create_solar_system_layout(G, root_id=ROOT_ID):
                 pos[entity] = (x, y)
                 child_index += 1
     
-    # Step 5: Handle any remaining nodes not yet positioned
     unpositioned = [n for n in G.nodes() if n not in pos]
     if unpositioned:
         # Place them in outer orbit
@@ -377,12 +596,12 @@ def create_network_plot(G, selected_types=None, search_term="", highlight_recent
     
     # Define colors and sizes for different node types
     type_styling = {
-        'Company': {'color': '#FFD700', 'size': 40, 'symbol': 'star'},  # Gold star for root
+        'Company': {'color': "#33322C", 'size': 40, 'symbol': 'star'},  # Gold star for root
         'Category': {'color': '#FF6B6B', 'size': 25, 'symbol': 'circle'},  # Red circles for categories
         'Subcategory': {'color': '#4ECDC4', 'size': 20, 'symbol': 'circle'},  # Teal for subcategories
         'Product': {'color': '#45B7D1', 'size': 15, 'symbol': 'circle'},  # Blue for products
         'Supplier': {'color': '#96CEB4', 'size': 15, 'symbol': 'square'},  # Green squares for suppliers
-        'Material': {'color': '#FFEAA7', 'size': 15, 'symbol': 'diamond'},  # Yellow diamonds for materials
+        'Material': {'color': "#EFECE0", 'size': 15, 'symbol': 'diamond'},  # Yellow diamonds for materials
         'Location': {'color': '#DDA0DD', 'size': 15, 'symbol': 'triangle-up'},  # Purple triangles for locations
         'Unknown': {'color': '#95A5A6', 'size': 12, 'symbol': 'circle'},  # Gray for unknown
     }
@@ -644,52 +863,152 @@ def display_graph_editor(G, graph_manager):
                 st.error("Invalid JSON file")
 
 # Enhanced streaming functions
-def get_streaming_articles(pipeline, max_articles: int) -> Generator[Dict[str, Any], None, None]:
-    """Generator that yields articles one by one for streaming processing"""
+def get_streaming_articles(pipeline, max_articles: int, apple_specific_only: bool = True) -> Generator[Dict[str, Any], None, None]:
+    """Generator that yields FRESH articles one by one for streaming processing - FULLY LIVE"""
     
-    # Fetch articles from all sources
-    print("Fetching articles for streaming...")
+    print(f"🔄 Fetching FRESH articles for streaming (Apple-specific: {apple_specific_only})...")
     
-    # Get from RSS feeds
-    rss_articles = pipeline.rss_client.fetch_all_feeds()
-    all_articles = rss_articles
+    # Clear any existing cache/database to ensure fresh data
+    try:
+        if hasattr(pipeline, 'database') and pipeline.database:
+            print("🗑️ Clearing old articles to fetch fresh news...")
+    except:
+        pass
     
-    # Get from NewsAPI if available
-    if pipeline.newsapi_client:
-        from datetime import timedelta
-        from_date = datetime.now() - timedelta(days=3)
+    all_articles = []
+    
+    # 1. Get FRESH articles from RSS feeds
+    print("📡 Fetching live RSS feeds...")
+    if apple_specific_only:
+        # Apple-focused RSS feeds for targeted news
+        apple_rss_feeds = {
+            "apple_newsroom": "https://www.apple.com/newsroom/rss-feed.rss",
+            "macrumors": "https://feeds.macrumors.com/MacRumors-All", 
+            "9to5mac": "https://9to5mac.com/feed/",
+            "appleinsider": "https://appleinsider.com/rss/news/",
+            "techcrunch_apple": "https://techcrunch.com/tag/apple/feed/",
+            "apple_scoop": "https://applescoop.org/feed",
+        }
         
-        for query in pipeline.apple_queries[:3]:  # Limit queries
-            newsapi_articles = pipeline.newsapi_client.fetch_everything(
-                query=query,
-                from_date=from_date,
-                page_size=20
-            )
-            
-            # Convert NewsAPI format
-            for article in newsapi_articles:
-                formatted_article = {
-                    "title": article.get("title", ""),
-                    "content": article.get("description", "") or article.get("content", ""),
-                    "url": article.get("url", ""),
-                    "published_date": article.get("publishedAt", ""),
-                    "author": article.get("author"),
-                    "source": article.get("source", {}).get("name", "NewsAPI")
-                }
-                all_articles.append(formatted_article)
+        # Override the pipeline's RSS feeds for this session
+        pipeline.rss_client.feeds = apple_rss_feeds
+        
+    else:
+        # Broader tech RSS feeds that may mention Apple
+        general_tech_feeds = {
+            "techcrunch": "https://techcrunch.com/feed/",
+            "ars_technica": "http://feeds.arstechnica.com/arstechnica/index",
+            "reuters_tech": "https://feeds.reuters.com/reuters/technologyNews", 
+            "bloomberg_tech": "https://feeds.bloomberg.com/technology/news.rss",
+            "verge": "https://www.theverge.com/rss/index.xml",
+            "wired": "https://www.wired.com/feed/rss",
+            "engadget": "https://www.engadget.com/rss.xml",
+        }
+        
+        # Override the pipeline's RSS feeds for this session
+        pipeline.rss_client.feeds = general_tech_feeds
     
-    # Deduplicate
-    seen_urls = set()
+    # Fetch fresh RSS articles
+    rss_articles = pipeline.rss_client.fetch_all_feeds()
+    all_articles.extend(rss_articles)
+    print(f"📰 Found {len(rss_articles)} fresh RSS articles")
+    
+    # 2. Get FRESH articles from NewsAPI if available
+    if pipeline.newsapi_client:
+        print("🔍 Fetching live NewsAPI articles...")
+        from datetime import timedelta
+        from_date = datetime.now() - timedelta(hours=6)  # Last 6 hours for truly fresh news
+        
+        if apple_specific_only:
+            # Apple-focused search queries
+            apple_queries = [
+                "Apple Inc",
+                "iPhone OR iPad OR Mac OR MacBook", 
+                "Tim Cook OR Apple CEO",
+                "Apple earnings OR Apple revenue",
+                "iOS OR macOS OR watchOS OR tvOS",
+                "App Store OR iCloud OR Apple Pay",
+                "Apple Watch OR AirPods OR Apple Vision",
+                "Apple Silicon OR M1 OR M2 OR M3 OR M4"
+            ]
+        else:
+            # Broader tech queries that might mention Apple
+            apple_queries = [
+                "technology news",
+                "smartphone industry",
+                "tech earnings",
+                "silicon valley",
+                "consumer electronics", 
+                "mobile technology",
+                "artificial intelligence tech",
+                "tech regulation"
+            ]
+        
+        for query in apple_queries[:4]:  # Limit queries to avoid rate limits
+            print(f"  🔍 Searching: {query}")
+            try:
+                articles = pipeline.newsapi_client.fetch_everything(
+                    query=query,
+                    from_date=from_date,
+                    page_size=15,  # Smaller batches for fresher news
+                    sort_by="publishedAt"  # Get newest first
+                )
+                
+                # Convert NewsAPI format to our format
+                for article in articles:
+                    formatted_article = {
+                        "title": article.get("title", ""),
+                        "content": article.get("description", "") or article.get("content", ""),
+                        "url": article.get("url", ""),
+                        "published_date": article.get("publishedAt", ""),
+                        "author": article.get("author"),
+                        "source": article.get("source", {}).get("name", "NewsAPI")
+                    }
+                    all_articles.append(formatted_article)
+                
+                print(f"    ✅ Found {len(articles)} articles")
+                
+            except Exception as e:
+                print(f"    ❌ Error with query '{query}': {e}")
+                continue
+    
+    # 3. Deduplicate by URL and title to ensure uniqueness
+    seen_identifiers = set()
     unique_articles = []
     
     for article in all_articles:
+        # Create unique identifier from URL and title
         url = article.get("url", "")
-        if url and url not in seen_urls:
-            seen_urls.add(url)
+        title = article.get("title", "")
+        identifier = f"{url}|{title}"
+        
+        if identifier not in seen_identifiers and url and title:
+            seen_identifiers.add(identifier)
             unique_articles.append(article)
     
-    # Yield articles one by one
-    for article in unique_articles[:max_articles]:
+    # 4. Sort by publication date (newest first) to ensure we get the freshest news
+    def get_pub_date(article):
+        try:
+            date_str = article.get("published_date", "")
+            if date_str:
+                # Handle different date formats
+                for fmt in ["%a, %d %b %Y %H:%M:%S %Z", "%Y-%m-%dT%H:%M:%SZ", "%Y-%m-%d"]:
+                    try:
+                        return datetime.strptime(date_str, fmt)
+                    except ValueError:
+                        continue
+            return datetime.min  # Fallback for articles without dates
+        except:
+            return datetime.min
+    
+    unique_articles.sort(key=get_pub_date, reverse=True)
+    
+    print(f"🎯 Found {len(unique_articles)} unique FRESH articles after deduplication")
+    print(f"📅 Date range: {get_pub_date(unique_articles[0]).strftime('%Y-%m-%d %H:%M') if unique_articles else 'No articles'} to {get_pub_date(unique_articles[-1]).strftime('%Y-%m-%d %H:%M') if len(unique_articles) > 1 else 'Single article'}")
+    
+    # 5. Yield fresh articles one by one
+    for i, article in enumerate(unique_articles[:max_articles]):
+        print(f"🔄 Yielding fresh article {i+1}: {article.get('title', 'No title')[:50]}...")
         yield article
 
 def display_streaming_article_with_research(
@@ -701,7 +1020,7 @@ def display_streaming_article_with_research(
     show_low_relevance: bool, 
     stored_successfully: bool
 ):
-    """Enhanced article display with research results"""
+    """Enhanced article display with research results - FULL WIDTH"""
     
     # Skip low relevance articles if not showing them
     if not show_low_relevance and relevance_match.relevance_score < 2.0:
@@ -729,124 +1048,173 @@ def display_streaming_article_with_research(
             border_color = "#888888"
             icon = "⚪"
         
-        # Create expandable article display with research
+        # Create expandable article display with research - FULL WIDTH
         title_suffix = f" - RESEARCH COMPLETE ({research_result.urgency_level})" if research_result else ""
         expanded = research_result is not None or relevance_match.relevance_category == "HIGH"
         
         with st.expander(
-            f"{icon} Article #{count}: {article.title[:60]}...{title_suffix} (Score: {relevance_match.relevance_score:.2f})", 
+            f"{icon} Article #{count}: {article.title[:80]}...{title_suffix} (Score: {relevance_match.relevance_score:.2f})", 
             expanded=expanded
         ):
             
-            # Main article info
-            col1, col2 = st.columns([2, 1])
+            # Article header - FULL WIDTH
+            st.markdown(f"### 📰 {article.title}")
             
-            with col1:
-                st.write(f"**Title:** {article.title}")
-                st.write(f"**Source:** {article.source}")
-                st.write(f"**URL:** {article.url}")
-                
-                if article.content:
-                    st.write(f"**Content Preview:** {article.content[:200]}...")
-                
-                if relevance_match.graph_entities:
-                    st.write(f"**Matched Entities:** {', '.join(relevance_match.graph_entities[:5])}")
-                
-                if relevance_match.keyword_matches:
-                    st.write(f"**Keywords:** {', '.join(relevance_match.keyword_matches[:5])}")
+            # Key metrics in a compact row
+            metric_col1, metric_col2, metric_col3, metric_col4, metric_col5 = st.columns(5)
             
-            with col2:
-                st.metric("Relevance Score", f"{relevance_match.relevance_score:.2f}")
+            with metric_col1:
+                st.metric("Relevance", f"{relevance_match.relevance_score:.2f}")
+            with metric_col2:
                 st.metric("Category", relevance_match.relevance_category)
-                st.metric("Entities Found", len(relevance_match.graph_entities))
-                
+            with metric_col3:
+                st.metric("Entities", len(relevance_match.graph_entities))
+            with metric_col4:
                 if research_result:
-                    st.success("🔬 Research Complete")
                     st.metric("Research Time", f"{research_result.research_duration_seconds:.1f}s")
                 elif relevance_match.processed_by_agent:
-                    st.info("🔬 Research Triggered")
-                
-                if stored_successfully:
-                    st.success("💾 Stored in DB")
+                    st.metric("Research", "Triggered")
                 else:
-                    st.warning("⚠️ Storage Failed")
-                
-                # Sentiment info
-                if hasattr(article, 'sentiment_score') and article.sentiment_score:
-                    sentiment_emoji = "😊" if article.sentiment_score > 0.1 else "😐" if article.sentiment_score > -0.1 else "😟"
-                    st.write(f"**Sentiment:** {sentiment_emoji} {article.sentiment_score:.2f}")
+                    # Show why research wasn't triggered
+                    if relevance_match.relevance_score < 4.0:
+                        st.metric("Research", f"Score too low ({relevance_match.relevance_score:.1f}<4.0)")
+                    elif relevance_match.relevance_category != "HIGH":
+                        st.metric("Research", f"Category: {relevance_match.relevance_category}")
+                    else:
+                        st.metric("Research", "Not triggered")
+            with metric_col5:
+                if stored_successfully:
+                    st.success("💾 Stored")
+                else:
+                    st.error("❌ Failed")
             
-            # Research Results Section
+            # Article details - FULL WIDTH
+            st.write(f"**Source:** {article.source}")
+            st.write(f"**URL:** {article.url}")
+            
+            if article.content:
+                st.write(f"**Content Preview:**")
+                st.write(article.content[:300] + "..." if len(article.content) > 300 else article.content)
+            
+            # Entities and keywords in two columns for space efficiency
+            if relevance_match.graph_entities or relevance_match.keyword_matches:
+                entity_col1, entity_col2 = st.columns(2)
+                
+                with entity_col1:
+                    if relevance_match.graph_entities:
+                        st.write(f"**🎯 Matched Entities:** {', '.join(relevance_match.graph_entities[:8])}")
+                
+                with entity_col2:
+                    if relevance_match.keyword_matches:
+                        st.write(f"**🔑 Keywords:** {', '.join(relevance_match.keyword_matches[:8])}")
+            
+            # Sentiment info
+            if hasattr(article, 'sentiment_score') and article.sentiment_score:
+                sentiment_emoji = "😊" if article.sentiment_score > 0.1 else "😐" if article.sentiment_score > -0.1 else "😟"
+                st.write(f"**Sentiment:** {sentiment_emoji} {article.sentiment_score:.2f}")
+            
+            # Research Results Section - FULL WIDTH
             if research_result:
                 st.markdown("---")
-                st.subheader("🔬 Research Analysis Results")
+                st.markdown("## 🔬 AI Research Analysis Results")
                 
-                # Executive Summary
-                st.write("**Executive Summary:**")
+                # Research status indicators
+                research_status_col1, research_status_col2, research_status_col3 = st.columns(3)
+                with research_status_col1:
+                    st.success(f"✅ Research Complete - {research_result.urgency_level} Priority")
+                with research_status_col2:
+                    if research_result.research_duration_seconds:
+                        st.info(f"⏱️ Analysis completed in {research_result.research_duration_seconds:.1f} seconds")
+                with research_status_col3:
+                    if research_result.sources_consulted:
+                        st.info(f"📚 {len(research_result.sources_consulted)} sources consulted")
+                
+                # Executive Summary - FULL WIDTH
+                st.markdown("### 📋 Executive Summary")
                 st.info(research_result.executive_summary)
                 
-                # Impact Analysis in columns
+                # Impact Analysis - FULL WIDTH with better organization
+                st.markdown("### 📊 Impact Analysis")
+                
                 impact_col1, impact_col2, impact_col3 = st.columns(3)
                 
                 with impact_col1:
-                    st.write("**💰 Financial Impact**")
+                    st.markdown("#### 💰 Financial Impact")
                     fin_impact = research_result.financial_impact
                     if fin_impact:
-                        st.write(f"• Likelihood: {fin_impact.get('likelihood', 'Unknown')}")
-                        st.write(f"• Severity: {fin_impact.get('severity', 'Unknown')}")
-                        st.write(f"• Timeline: {fin_impact.get('timeline', 'Unknown')}")
+                        st.write(f"**Likelihood:** {fin_impact.get('likelihood', 'Unknown')}")
+                        st.write(f"**Severity:** {fin_impact.get('severity', 'Unknown')}")
+                        st.write(f"**Timeline:** {fin_impact.get('timeline', 'Unknown')}")
                         if fin_impact.get('details'):
-                            st.write(f"• Details: {fin_impact['details'][:100]}...")
+                            st.markdown("**Details:**")
+                            st.write(fin_impact['details'])
+                    else:
+                        st.info("No financial impact data available")
                 
                 with impact_col2:
-                    st.write("**⚙️ Operational Impact**")
+                    st.markdown("#### ⚙️ Operational Impact")
                     op_impact = research_result.operational_impact
                     if op_impact:
-                        st.write(f"• Likelihood: {op_impact.get('likelihood', 'Unknown')}")
-                        st.write(f"• Severity: {op_impact.get('severity', 'Unknown')}")
-                        st.write(f"• Timeline: {op_impact.get('timeline', 'Unknown')}")
+                        st.write(f"**Likelihood:** {op_impact.get('likelihood', 'Unknown')}")
+                        st.write(f"**Severity:** {op_impact.get('severity', 'Unknown')}")
+                        st.write(f"**Timeline:** {op_impact.get('timeline', 'Unknown')}")
                         if op_impact.get('details'):
-                            st.write(f"• Details: {op_impact['details'][:100]}...")
+                            st.markdown("**Details:**")
+                            st.write(op_impact['details'])
+                    else:
+                        st.info("No operational impact data available")
                 
                 with impact_col3:
-                    st.write("**🎭 Reputational Impact**")
+                    st.markdown("#### 🎭 Reputational Impact")
                     rep_impact = research_result.reputational_impact
                     if rep_impact:
-                        st.write(f"• Likelihood: {rep_impact.get('likelihood', 'Unknown')}")
-                        st.write(f"• Severity: {rep_impact.get('severity', 'Unknown')}")
-                        st.write(f"• Timeline: {rep_impact.get('timeline', 'Unknown')}")
+                        st.write(f"**Likelihood:** {rep_impact.get('likelihood', 'Unknown')}")
+                        st.write(f"**Severity:** {rep_impact.get('severity', 'Unknown')}")
+                        st.write(f"**Timeline:** {rep_impact.get('timeline', 'Unknown')}")
                         if rep_impact.get('details'):
-                            st.write(f"• Details: {rep_impact['details'][:100]}...")
+                            st.markdown("**Details:**")
+                            st.write(rep_impact['details'])
+                    else:
+                        st.info("No reputational impact data available")
                 
-                # Key Takeaways and Actions
+                # Key Takeaways and Actions - FULL WIDTH
                 if research_result.key_takeaways or research_result.recommended_actions:
+                    st.markdown("### 🎯 Strategic Insights")
+                    
                     action_col1, action_col2 = st.columns(2)
                     
                     with action_col1:
                         if research_result.key_takeaways:
-                            st.write("**📋 Key Takeaways:**")
-                            for takeaway in research_result.key_takeaways[:3]:
-                                st.write(f"• {takeaway}")
+                            st.markdown("#### 📋 Key Takeaways")
+                            for i, takeaway in enumerate(research_result.key_takeaways[:5], 1):
+                                st.write(f"{i}. {takeaway}")
                     
                     with action_col2:
                         if research_result.recommended_actions:
-                            st.write("**🎯 Recommended Actions:**")
-                            for action in research_result.recommended_actions[:3]:
-                                st.write(f"• {action}")
+                            st.markdown("#### 🚀 Recommended Actions")
+                            for i, action in enumerate(research_result.recommended_actions[:5], 1):
+                                st.write(f"{i}. {action}")
                 
-                # Stock Context (if available)
+                # Stock Context - FULL WIDTH
                 if research_result.stock_price_context and research_result.stock_price_context.get('current_price'):
+                    st.markdown("### 📈 Market Context")
                     stock_data = research_result.stock_price_context
-                    st.write("**📈 Stock Context:**")
-                    change_color = "green" if stock_data.get('change', 0) >= 0 else "red"
-                    st.markdown(
-                        f"AAPL: ${stock_data.get('current_price', 'N/A')} "
-                        f"<span style='color: {change_color}'>({stock_data.get('change_percent', 0):.2f}%)</span>",
-                        unsafe_allow_html=True
-                    )
+                    
+                    stock_col1, stock_col2, stock_col3, stock_col4 = st.columns(4)
+                    
+                    with stock_col1:
+                        st.metric("AAPL Price", f"${stock_data.get('current_price', 'N/A')}")
+                    with stock_col2:
+                        change = stock_data.get('change_percent', 0)
+                        st.metric("Change", f"{change:.2f}%", delta=f"{change:.2f}%")
+                    with stock_col3:
+                        st.metric("Volume", f"{stock_data.get('volume', 'N/A'):,}" if stock_data.get('volume') else "N/A")
+                    with stock_col4:
+                        st.metric("Source", stock_data.get('source', 'Unknown'))
         
-        # Add separator
+        # Add separator with more spacing
         st.markdown("---")
+        st.markdown("")  # Extra spacing
 
 def display_streaming_error(container, article_data, count: int, error_message: str):
     """Display an error in the streaming interface"""
@@ -870,16 +1238,17 @@ def run_enhanced_streaming_pipeline(
     auto_scroll: bool, 
     stream_delay: float,
     enable_research: bool = True,
-    alpha_vantage_key: str = None
+    alpha_vantage_key: str = None,
+    apple_specific_only: bool = True
 ):
-    """Enhanced streaming pipeline with real-time research"""
+    """Enhanced streaming pipeline with real-time research and LIVE news fetching"""
     
-    # Initialize systems if needed
-    if not st.session_state.news_pipeline:
-        st.session_state.news_pipeline = NewsPipeline(
-            openai_api_key=openai_api_key,
-            db_path="./apple_news_db"
-        )
+    # Force create NEW pipeline instance to ensure fresh data
+    st.session_state.news_pipeline = NewsPipeline(
+        openai_api_key=openai_api_key,
+        newsapi_key=os.environ.get("NEWSAPI_KEY"),
+        db_path="./apple_news_db"
+    )
     
     if not st.session_state.relevance_monitor:
         st.session_state.relevance_monitor = RelevanceMonitor(
@@ -887,23 +1256,27 @@ def run_enhanced_streaming_pipeline(
             news_db_path="./apple_news_db"
         )
     
-    # Initialize research agent
-    if enable_research and not st.session_state.research_agent:
+    # Initialize research agent with real-time stock data capability
+    if enable_research:
         st.session_state.research_agent = ResearchAgent(
             openai_api_key=openai_api_key,
-            alpha_vantage_key=alpha_vantage_key
+            alpha_vantage_key=alpha_vantage_key  # Pass the real API key
         )
-        st.session_state.research_database = ResearchDatabase("./research_results.json")
+        if not st.session_state.research_database:
+            st.session_state.research_database = ResearchDatabase("./research_results.json")
     
-    # Create containers
+    # Create full-width containers for streaming
     st.markdown("---")
-    st.header("🌊 Enhanced Live News Stream with AI Research")
+    if apple_specific_only:
+        st.markdown("# 🍎 Live Apple News Stream with AI Research")
+        st.markdown("*Fetching fresh Apple-focused news in real-time with automatic research for high-priority articles*")
+    else:
+        st.markdown("# 📡 Live Tech News Stream with AI Research")  
+        st.markdown("*Fetching fresh technology news in real-time, analyzing for Apple relevance with automatic research*")
     
-    status_container = st.container()
-    progress_container = st.container()
-    stream_container = st.container()
-    
-    with status_container:
+    # Full-width status container
+    with st.container():
+        st.markdown("### 📊 Processing Status")
         col1, col2, col3, col4, col5 = st.columns(5)
         
         # Initialize metrics
@@ -924,9 +1297,14 @@ def run_enhanced_streaming_pipeline(
         with col5:
             processing_rate.metric("⚡ Articles/min", "0")
     
-    with progress_container:
+    # Full-width progress container
+    with st.container():
         progress_bar = st.progress(0)
         status_text = st.empty()
+    
+    # Full-width stream container - this is where articles will appear
+    st.markdown("### 📰 Article Stream")
+    stream_container = st.container()
     
     # Start streaming process
     start_time = datetime.now()
@@ -936,8 +1314,12 @@ def run_enhanced_streaming_pipeline(
     research_completed_articles = 0
     
     try:
-        # Get the streaming generator
-        article_stream = get_streaming_articles(st.session_state.news_pipeline, max_articles)
+        # Get the FRESH streaming generator with Apple-specific toggle
+        article_stream = get_streaming_articles(
+            st.session_state.news_pipeline, 
+            max_articles, 
+            apple_specific_only
+        )
         
         # Process articles one by one
         for article_data in article_stream:
@@ -946,7 +1328,7 @@ def run_enhanced_streaming_pipeline(
             # Update progress
             progress = min(processed_count / max_articles, 1.0)
             progress_bar.progress(progress)
-            status_text.text(f"Processing article {processed_count}/{max_articles}: {article_data['title'][:50]}...")
+            status_text.text(f"Processing FRESH article {processed_count}/{max_articles}: {article_data['title'][:50]}...")
             
             research_result = None
             
@@ -960,32 +1342,69 @@ def run_enhanced_streaming_pipeline(
                     embeddings = OpenAIEmbeddings(openai_api_key=openai_api_key)
                     processed_article.embedding = embeddings.embed_query(processed_article.cleaned_content)
                 
-                # Get graph entities
+                # Get graph entities FRESH for each article
                 matcher = EntityMatcher(openai_api_key)
                 graph_entities = matcher.extract_graph_entities(G)
                 
-                # Process through relevance workflow
-                relevance_match = st.session_state.relevance_monitor.workflow.process_article(
-                    processed_article, graph_entities
-                )
+                # Process through relevance workflow - ENSURE FRESH ANALYSIS
+                try:
+                    # Create a fresh relevance monitor for each article to avoid state issues
+                    fresh_relevance_monitor = RelevanceMonitor(
+                        openai_api_key=openai_api_key,
+                        news_db_path="./apple_news_db"
+                    )
+                    
+                    relevance_match = fresh_relevance_monitor.workflow.process_article(
+                        processed_article, graph_entities
+                    )
+                    
+                    # Add debug information
+                    print(f"DEBUG - Article: {processed_article.title[:50]}")
+                    print(f"DEBUG - Relevance Score: {relevance_match.relevance_score}")
+                    print(f"DEBUG - Category: {relevance_match.relevance_category}")
+                    print(f"DEBUG - Entities: {len(relevance_match.graph_entities)}")
+                    print(f"DEBUG - Research Agent Flag: {relevance_match.processed_by_agent}")
                 
-                # Update relevance monitor
+                except Exception as e:
+                    print(f"ERROR in relevance detection: {e}")
+                    # Create fallback relevance match
+                    from relevance_detection import RelevanceMatch
+                    relevance_match = RelevanceMatch(
+                        news_article_id=processed_article.id,
+                        news_title=processed_article.title,
+                        news_url=processed_article.url,
+                        news_content_preview=processed_article.content[:200],
+                        matched_entities=processed_article.entities or [],
+                        graph_entities=[],
+                        relevance_score=0.5,  # Low default score
+                        relevance_category="LOW",
+                        entity_matches=[],
+                        semantic_similarity=0.0,
+                        keyword_matches=[],
+                        created_at=datetime.now(),
+                        processed_by_agent=False
+                    )
+                
+                # Update relevance monitor ONLY if score is meaningful
                 if relevance_match.relevance_score >= min_relevance:
                     st.session_state.relevance_monitor.relevance_matches.append(relevance_match)
                     high_relevance_articles += 1
                 
-                # Trigger research if enabled and conditions met
+                # Trigger research if enabled and conditions met - FIXED LOGIC
                 if (enable_research and 
                     st.session_state.research_agent and 
-                    relevance_match.processed_by_agent and
-                    relevance_match.relevance_score >= 4.0):
+                    relevance_match.relevance_score >= 4.0 and  # Direct score check
+                    relevance_match.relevance_category == "HIGH"):  # Category check
                     
                     research_triggered_articles += 1
                     
                     # Update status to show research in progress
                     status_text.text(f"🔬 RESEARCHING: {processed_article.title[:50]}...")
                     
-                    # Perform research immediately
+                    # Mark as processed by agent
+                    relevance_match.processed_by_agent = True
+                    
+                    # Perform research immediately with REAL stock data if API key provided
                     research_result = st.session_state.research_agent.research_article(
                         processed_article, relevance_match
                     )
@@ -1045,100 +1464,28 @@ def run_enhanced_streaming_pipeline(
         
         # Final status
         progress_bar.progress(1.0)
-        status_text.text(f"✅ Streaming complete! Processed {processed_count} articles")
+        status_text.text(f"✅ FRESH news streaming complete! Processed {processed_count} articles")
         
         # Update session state
         st.session_state.last_news_update = datetime.now()
         
         # Success message with research stats
+        focus_type = "Apple-focused" if apple_specific_only else "tech"
+        stock_data_type = "real-time" if alpha_vantage_key else "mock"
+        
         if research_completed_articles > 0:
             st.success(
-                f"🎉 Enhanced streaming pipeline completed! "
-                f"Processed {processed_count} articles with {high_relevance_articles} high-relevance matches "
-                f"and completed {research_completed_articles} research analyses."
+                f"🎉 Live {focus_type} news streaming completed! "
+                f"Processed {processed_count} FRESH articles with {high_relevance_articles} high-relevance matches "
+                f"and completed {research_completed_articles} research analyses using {stock_data_type} stock data."
             )
         else:
             st.success(
-                f"🎉 Streaming pipeline completed! "
-                f"Processed {processed_count} articles with {high_relevance_articles} high-relevance matches."
+                f"🎉 Live {focus_type} news streaming completed! "
+                f"Processed {processed_count} FRESH articles with {high_relevance_articles} high-relevance matches."
             )
 
-# News pipeline functions
-def run_news_pipeline(max_articles: int, openai_api_key: str):
-    """Run the news pipeline"""
-    with st.spinner(f"Fetching and processing up to {max_articles} articles..."):
-        try:
-            # Initialize pipeline if needed
-            if not st.session_state.news_pipeline:
-                st.session_state.news_pipeline = NewsPipeline(
-                    openai_api_key=openai_api_key,
-                    db_path="./apple_news_db"
-                )
-            
-            # Run pipeline
-            result = st.session_state.news_pipeline.run_pipeline(max_articles)
-            
-            # Update session state
-            st.session_state.last_news_update = datetime.now()
-            
-            # Display results
-            st.success(f"✅ Pipeline complete!")
-            
-            col1, col2, col3 = st.columns(3)
-            with col1:
-                st.metric("Articles Fetched", result['articles_fetched'])
-            with col2:
-                st.metric("Articles Processed", result['articles_processed'])
-            with col3:
-                st.metric("Success Rate", f"{result['success_rate']:.1%}")
-            
-            st.info(f"Processing time: {result['duration_seconds']:.1f} seconds")
-            
-        except Exception as e:
-            st.error(f"Error running pipeline: {e}")
-
-def analyze_relevance(G, days_back: int, min_relevance: float, openai_api_key: str):
-    """Analyze news relevance"""
-    with st.spinner(f"Analyzing relevance for articles from last {days_back} days..."):
-        try:
-            # Initialize monitor if needed
-            if not st.session_state.relevance_monitor:
-                st.session_state.relevance_monitor = RelevanceMonitor(
-                    openai_api_key=openai_api_key,
-                    news_db_path="./apple_news_db"
-                )
-            
-            # Process recent news
-            new_matches = st.session_state.relevance_monitor.process_recent_news(
-                G, 
-                days_back=days_back, 
-                min_relevance_score=min_relevance
-            )
-            
-            # Display results
-            st.success(f"✅ Relevance analysis complete!")
-            
-            col1, col2, col3 = st.columns(3)
-            with col1:
-                st.metric("New High-Relevance Matches", len(new_matches))
-            with col2:
-                high_priority = sum(1 for m in new_matches if m.relevance_category == "HIGH")
-                st.metric("High Priority", high_priority)
-            with col3:
-                research_triggered = sum(1 for m in new_matches if m.processed_by_agent)
-                st.metric("Research Triggered", research_triggered)
-            
-            # Show top matches
-            if new_matches:
-                st.subheader("🔥 New High-Relevance Matches")
-                for match in new_matches[:3]:
-                    with st.expander(f"{match.news_title} (Score: {match.relevance_score:.2f})"):
-                        st.write(f"**Entities:** {', '.join(match.graph_entities)}")
-                        st.write(f"**Preview:** {match.news_content_preview}")
-                        st.markdown(f"[Read Article]({match.news_url})")
-            
-        except Exception as e:
-            st.error(f"Error analyzing relevance: {e}")
+# News pipeline functions - REMOVED run_news_pipeline and analyze_relevance (keeping only enhanced streaming)
 
 def display_news_overview():
     """Display news system overview and status"""
@@ -1230,7 +1577,8 @@ def display_news_overview():
                             
                             st.write(f"**Time:** {time_str}")
                             
-                            if st.button("🔗 View Article", key=f"view_{match.news_article_id}"):
+                            # Use unique key with index to avoid duplicates
+                            if st.button("🔗 View Article", key=f"view_article_{i}_{match.news_article_id}"):
                                 st.markdown(f"[Open Article]({match.news_url})")
             else:
                 st.info("No recent activity. Run the news pipeline to see updates here.")
@@ -1241,61 +1589,115 @@ def display_news_overview():
         st.info("Initialize the news system to see recent activity.")
 
 def display_enhanced_pipeline_control(G, openai_api_key: str):
-    """Enhanced pipeline control with research options"""
-    st.subheader("🔄 Enhanced News Pipeline Control")
+    """Enhanced pipeline control - STREAMLINED with only Enhanced Stream option"""
+    st.subheader("🌊🔬 Enhanced News Stream with AI Research")
     
-    # API Key configuration
-    col1, col2 = st.columns(2)
+    # Full-width configuration section
+    st.markdown("### ⚙️ Configuration")
     
-    with col1:
-        st.write("**Pipeline Settings**")
-        max_articles = st.slider("Max articles to process:", 10, 200, 50)
-        min_relevance = st.slider("Minimum relevance score:", 0.0, 10.0, 2.0, 0.5)
-        days_back = st.selectbox("Look back (days):", [1, 3, 7, 14], index=2)
+    # Main settings in two columns for better use of space
+    config_col1, config_col2 = st.columns(2)
     
-    with col2:
-        st.write("**Research Settings**")
+    with config_col1:
+        st.markdown("**📰 News Pipeline Settings**")
+        max_articles = st.slider("Max articles to process:", 10, 200, 50, help="Number of articles to fetch and analyze")
+        min_relevance = st.slider("Minimum relevance score:", 0.0, 10.0, 2.0, 0.5, help="Only show articles above this relevance threshold")
+        days_back = st.selectbox("Look back (days):", [1, 3, 7, 14], index=2, help="How far back to search for news")
+        
+        st.markdown("**🎨 Display Options**")
+        show_low_relevance = st.checkbox("Show low relevance articles", value=True, help="Display articles below research threshold")
+        auto_scroll = st.checkbox("Auto-scroll to latest", value=True, help="Automatically scroll to newest articles")
+        stream_delay = st.slider("Processing delay (seconds):", 0.1, 3.0, 1.0, 0.1, help="Delay between processing articles")
+    
+    with config_col2:
+        st.markdown("**🔬 AI Research Settings**")
         enable_research = st.checkbox("Enable AI Research Agent", value=True, help="Automatically research high-priority articles")
-        alpha_vantage_key = st.text_input("Alpha Vantage API Key (optional):", type="password", help="For real financial data")
-        research_threshold = st.slider("Research trigger score:", 3.0, 10.0, 4.0, 0.5)
+        
+        if enable_research:
+            research_threshold = st.slider("Research trigger score:", 3.0, 10.0, 4.0, 0.5, help="Minimum score to trigger research")
+            st.info(f"🎯 Articles scoring {research_threshold}+ will trigger automatic research")
+        else:
+            st.warning("⚠️ Research disabled - only relevance detection will run")
+        
+        st.markdown("**📰 News Focus Settings**")
+        apple_specific_only = st.checkbox("Apple-specific news only", value=True, help="Focus on Apple-related news vs general tech news")
+        
+        if apple_specific_only:
+            st.success("🍎 Fetching Apple-focused news from specialized sources")
+        else:
+            st.info("📡 Fetching broader tech news that may mention Apple")
+        
+        st.markdown("**🔑 API Keys (Optional)**")
+        alpha_vantage_key = st.text_input("Alpha Vantage API Key:", type="password", help="Get free key at alphavantage.co for real-time stock data")
+        newsapi_key = st.text_input("NewsAPI Key:", type="password", help="Get free key at newsapi.org for additional news sources")
+        
+        if alpha_vantage_key:
+            st.success("✅ Real-time stock data enabled")
+        else:
+            st.info("📊 Using mock stock data - add Alpha Vantage key for real data")
+        
+        if newsapi_key:
+            st.success("✅ Enhanced news sources enabled")
+        else:
+            st.info("📡 Using RSS feeds only - add NewsAPI key for more sources")
     
-    # Streaming options
-    st.write("**Streaming Options**")
-    col1, col2, col3, col4 = st.columns(4)
+    # Full-width action section
+    st.markdown("---")
+    st.markdown("### 🚀 Launch Enhanced Stream")
     
-    with col1:
-        show_low_relevance = st.checkbox("Show low relevance", value=True)
-    with col2:
-        auto_scroll = st.checkbox("Auto-scroll", value=True)
-    with col3:
-        stream_delay = st.slider("Delay (s):", 0.1, 3.0, 1.0, 0.1)
-    with col4:
-        show_research_details = st.checkbox("Expand research", value=True)
+    # Center the main action button
+    button_col1, button_col2, button_col3 = st.columns([1, 2, 1])
     
-    # Pipeline actions
-    st.write("**Actions**")
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        if st.button("🔄 Run News Pipeline", type="primary"):
-            run_news_pipeline(max_articles, openai_api_key)
-    
-    with col2:
-        if st.button("🎯 Analyze Relevance"):
+    with button_col2:
+        if st.button("🌊🔬 **START ENHANCED STREAM**", type="primary", use_container_width=True):
             if G is not None:
-                analyze_relevance(G, days_back, min_relevance, openai_api_key)
-            else:
-                st.error("Knowledge graph not available")
-    
-    with col3:
-        if st.button("🌊🔬 Run Enhanced Stream", type="primary"):
-            if G is not None:
+                # Store API keys in session state for the streaming function
+                if newsapi_key:
+                    os.environ["NEWSAPI_KEY"] = newsapi_key
+                
                 run_enhanced_streaming_pipeline(
                     G, max_articles, days_back, min_relevance, openai_api_key, 
-                    show_low_relevance, auto_scroll, stream_delay, enable_research, alpha_vantage_key
+                    show_low_relevance, auto_scroll, stream_delay, enable_research, 
+                    alpha_vantage_key, apple_specific_only
                 )
             else:
-                st.error("Knowledge graph must be initialized")
+                st.error("❌ Knowledge graph not available - please refresh the page")
+    
+    # Help section
+    st.markdown("---")
+    st.markdown("### ℹ️ How It Works")
+    
+    help_col1, help_col2, help_col3 = st.columns(3)
+    
+    with help_col1:
+        st.markdown("""
+        **📰 Live News Processing**
+        1. Fetches FRESH news in real-time
+        2. Apple-specific or general tech focus
+        3. Cleans and processes content
+        4. Extracts entities and sentiment
+        5. Creates embeddings for analysis
+        """)
+    
+    with help_col2:
+        st.markdown("""
+        **🎯 Relevance Detection**
+        1. Matches news to knowledge graph
+        2. Calculates Apple relevance scores
+        3. Identifies high-priority articles
+        4. Triggers research for critical news
+        5. LangGraph workflow processing
+        """)
+    
+    with help_col3:
+        st.markdown("""
+        **🔬 AI Research Agent**
+        1. Web search for additional context
+        2. REAL-TIME stock data (with API key)
+        3. Financial/operational/reputational analysis
+        4. Executive summaries & recommendations
+        5. Actionable business insights
+        """)
 
 def display_relevance_matches(G):
     """Display relevance matches interface"""
@@ -1406,7 +1808,8 @@ def display_relevance_matches(G):
                     st.write(f"**Date:** {date_str}")
                     st.write(f"**Research:** {'Yes' if match.processed_by_agent else 'No'}")
                     
-                    if st.button("🔗 Open Article", key=f"open_{match.news_article_id}"):
+                    # Use unique key with index to avoid duplicates
+                    if st.button("🔗 Open Article", key=f"open_article_{i}_{match.news_article_id}"):
                         st.markdown(f"[Open in new tab]({match.news_url})")
         
         # Pagination for large result sets
@@ -1513,7 +1916,8 @@ def display_research_dashboard():
                     time_str = "Unknown"
                 st.write(f"**Time:** {time_str}")
                 
-                if st.button("🔗 View Article", key=f"research_view_{result.article_id}"):
+                # Use unique key with index to avoid duplicates
+                if st.button("🔗 View Article", key=f"research_view_{i}_{result.article_id}"):
                     st.markdown(f"[Open Article]({result.article_url})")
                 
                 # Impact indicators

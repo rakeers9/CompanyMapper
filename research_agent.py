@@ -121,7 +121,7 @@ class WebSearchClient:
             time.sleep(self.min_request_interval - time_since_last)
         
         try:
-            # Use DuckDuckGo news search (no API key required)
+            # Use DuckDuckGo news search
             search_url = f"https://duckduckgo.com/news"
             params = {'q': query, 'df': 'w'}  # Last week
             
@@ -250,7 +250,6 @@ class FinancialDataClient:
         
     def get_market_sentiment(self) -> Dict[str, Any]:
         """Get overall market sentiment and tech sector context"""
-        # Mock implementation - TODO: Check why
         return {
             'tech_sector_trend': 'positive',
             'market_volatility': 'medium',

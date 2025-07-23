@@ -392,7 +392,7 @@ def save_networkx_graph(G: nx.DiGraph, output_file: str):
     import os
     import pickle
     
-    # Save as pickle (for Streamlit app) - using pickle directly
+    # Save as pickle for Streamlit compatibility
     with open(f"{output_file}.gpickle", 'wb') as f:
         pickle.dump(G, f)
     
@@ -597,7 +597,6 @@ def ensure_hierarchy(G: nx.DiGraph) -> nx.DiGraph:
         if cat_id not in G:
             G.add_node(cat_id, type="Category", name=label)
     
-    # STEP 1: Remove ALL edges from root node (we'll rebuild them properly)
     edges_to_remove = []
     for successor in list(G.successors(ROOT_ID)):
         edges_to_remove.append((ROOT_ID, successor))
@@ -610,12 +609,10 @@ def ensure_hierarchy(G: nx.DiGraph) -> nx.DiGraph:
     
     print(f"Removed {len(edges_to_remove)} edges from root node")
     
-    # STEP 2: Connect root ONLY to category nodes
     for cat_id in MACRO_CATEGORIES.keys():
         if not G.has_edge(ROOT_ID, cat_id):
             G.add_edge(ROOT_ID, cat_id, type=CAT_REL)
     
-    # STEP 3: Organize all non-category, non-root nodes into buckets
     buckets = defaultdict(list)
     direct_category_assignments = defaultdict(list)
     
@@ -659,8 +656,7 @@ def ensure_hierarchy(G: nx.DiGraph) -> nx.DiGraph:
             # Direct assignment to category
             direct_category_assignments[cat_id].append(n)
     
-    # STEP 4: Remove any existing edges between entities and root/categories
-    # (clean slate for proper hierarchy)
+
     entities_to_clean = []
     for bucket_list in buckets.values():
         entities_to_clean.extend(bucket_list)
@@ -669,7 +665,6 @@ def ensure_hierarchy(G: nx.DiGraph) -> nx.DiGraph:
     
     edges_cleaned = 0
     for entity in entities_to_clean:
-        # Remove any edges TO categories or root (except the ones we'll create)
         for cat_id in list(MACRO_CATEGORIES.keys()) + [ROOT_ID]:
             if G.has_edge(entity, cat_id):
                 G.remove_edge(entity, cat_id)
@@ -680,13 +675,11 @@ def ensure_hierarchy(G: nx.DiGraph) -> nx.DiGraph:
     
     print(f"Cleaned {edges_cleaned} inappropriate category/root connections")
     
-    # STEP 5: Connect entities directly to categories
     for cat_id, entities in direct_category_assignments.items():
         for entity in entities:
             if not G.has_edge(cat_id, entity):
                 G.add_edge(cat_id, entity, type=CAT_REL)
     
-    # STEP 6: Create subcategories for grouped items
     subcategories_created = 0
     for (cat_id, group), members in buckets.items():
         if len(members) == 1:
@@ -711,7 +704,6 @@ def ensure_hierarchy(G: nx.DiGraph) -> nx.DiGraph:
     
     print(f"Created {subcategories_created} subcategories")
     
-    # STEP 7: Validation - ensure root is only connected to categories
     root_connections = list(G.successors(ROOT_ID))
     non_category_connections = [
         conn for conn in root_connections 
@@ -789,26 +781,19 @@ def validate_hierarchy_structure(G: nx.DiGraph) -> bool:
 if __name__ == "__main__":
     print("Starting Apple Knowledge Graph creation...")
     
-    # Step 1: Load documents
     documents = load_documents(file_paths)
     print(f"Loaded {len(documents)} documents.")
     
-    # Step 2: Split into chunks
     chunks = split_documents(documents)
     print(f"Split into {len(chunks)} chunks.")
     
-    # Step 3: Extract entities and relationships
     knowledge_graph = process_all_chunks(chunks)
     
-    # Step 4: Create NetworkX graph
     G = create_networkx_graph(knowledge_graph)
 
-    # Ensure hierarchy
     G = ensure_hierarchy(G)
     
-    # Step 5: Validate the graph
     validate_graph_relationships(G)
     
-    # Step 6: Save the graph
     save_networkx_graph(G, "apple_knowledge_graph")
     

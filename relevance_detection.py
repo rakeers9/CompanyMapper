@@ -1,11 +1,6 @@
 
-# relevance_detection.py - FINAL FIXED VERSION
-"""
-Milestone 5: Relevance Detection & LangGraph Integration - FIXED
-- Compare news embeddings to company graph entities
-- Route events through processing steps using LangGraph
-- Trigger research agent for high-relevance matches
-"""
+# relevance_detection.py
+
 
 import os
 import json
@@ -139,17 +134,17 @@ class EntityMatcher:
         matches = []
         news_lower = news_text.lower()
         
-        # Check entity name (exact match)
+        # Check entity name
         if entity_name.lower() in news_lower:
             matches.append(entity_name)
         
-        # Check words in entity name (individual words, only if meaningful)
+        # Check words in entity name
         entity_words = entity_name.lower().split()
         for word in entity_words:
             if len(word) > 4 and word in news_lower:  # Increased minimum length
                 matches.append(word)
         
-        # Check description keywords (only significant words)
+        # Check description keywords
         if entity_description:
             desc_words = entity_description.lower().split()
             for word in desc_words:
@@ -241,7 +236,7 @@ class EntityMatcher:
             
             final_score = combined_score + entity_mention_bonus
             
-            # More strict threshold - only include meaningful matches
+            # More strict threshold
             if final_score >= similarity_threshold or len(keyword_matches) >= 2:  # Need 2+ keywords
                 matches.append({
                     "entity_id": entity_id,
@@ -271,12 +266,12 @@ class RelevanceScorer:
     def __init__(self):
         # More conservative scoring weights
         self.weights = {
-            "high_impact_entities": 2.0,    # Reduced from 4.0
-            "medium_impact_entities": 1.5,  # Reduced from 2.5
-            "low_impact_entities": 1.0,     # Reduced from 1.5
-            "sentiment_multiplier": 1.3,    # Reduced from 1.8
-            "recency_multiplier": 1.2,      # Reduced from 1.4
-            "source_credibility": 1.2       # Reduced from 1.5
+            "high_impact_entities": 2.0,   
+            "medium_impact_entities": 1.5,  
+            "low_impact_entities": 1.0,  
+            "sentiment_multiplier": 1.3,   
+            "recency_multiplier": 1.2,    
+            "source_credibility": 1.2      
         }
         
         # High-impact entity types
@@ -308,7 +303,7 @@ class RelevanceScorer:
             else:
                 multiplier = self.weights["low_impact_entities"]
             
-            # Risk level bonus (more conservative)
+            # Risk level bonus
             risk_level = match.get("risk_level", "").lower()
             risk_multiplier = 1.3 if risk_level == "high" else 1.1 if risk_level == "medium" else 1.0
             
