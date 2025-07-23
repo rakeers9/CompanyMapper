@@ -11,8 +11,8 @@ It combines document parsing, knowledge graph construction, interactive visualiz
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/rakeers9/CompanyMapper.git
+cd CompanyMapper
 ```
 
 ### 2. Set Up Your Environment
