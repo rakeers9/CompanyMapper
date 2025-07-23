@@ -1,3 +1,5 @@
 documents/
 __pycache__/
 venv/
+.env
+apple_news_db/
