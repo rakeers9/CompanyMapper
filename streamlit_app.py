@@ -701,7 +701,7 @@ def display_streaming_article_with_research(
     show_low_relevance: bool, 
     stored_successfully: bool
 ):
-    """Enhanced article display with research results"""
+    """Enhanced article display with research results - FULL WIDTH"""
     
     # Skip low relevance articles if not showing them
     if not show_low_relevance and relevance_match.relevance_score < 2.0:
@@ -729,124 +729,159 @@ def display_streaming_article_with_research(
             border_color = "#888888"
             icon = "⚪"
         
-        # Create expandable article display with research
+        # Create expandable article display with research - FULL WIDTH
         title_suffix = f" - RESEARCH COMPLETE ({research_result.urgency_level})" if research_result else ""
         expanded = research_result is not None or relevance_match.relevance_category == "HIGH"
         
         with st.expander(
-            f"{icon} Article #{count}: {article.title[:60]}...{title_suffix} (Score: {relevance_match.relevance_score:.2f})", 
+            f"{icon} Article #{count}: {article.title[:80]}...{title_suffix} (Score: {relevance_match.relevance_score:.2f})", 
             expanded=expanded
         ):
             
-            # Main article info
-            col1, col2 = st.columns([2, 1])
+            # Article header - FULL WIDTH
+            st.markdown(f"### 📰 {article.title}")
             
-            with col1:
-                st.write(f"**Title:** {article.title}")
-                st.write(f"**Source:** {article.source}")
-                st.write(f"**URL:** {article.url}")
-                
-                if article.content:
-                    st.write(f"**Content Preview:** {article.content[:200]}...")
-                
-                if relevance_match.graph_entities:
-                    st.write(f"**Matched Entities:** {', '.join(relevance_match.graph_entities[:5])}")
-                
-                if relevance_match.keyword_matches:
-                    st.write(f"**Keywords:** {', '.join(relevance_match.keyword_matches[:5])}")
+            # Key metrics in a compact row
+            metric_col1, metric_col2, metric_col3, metric_col4, metric_col5 = st.columns(5)
             
-            with col2:
-                st.metric("Relevance Score", f"{relevance_match.relevance_score:.2f}")
+            with metric_col1:
+                st.metric("Relevance", f"{relevance_match.relevance_score:.2f}")
+            with metric_col2:
                 st.metric("Category", relevance_match.relevance_category)
-                st.metric("Entities Found", len(relevance_match.graph_entities))
-                
+            with metric_col3:
+                st.metric("Entities", len(relevance_match.graph_entities))
+            with metric_col4:
                 if research_result:
-                    st.success("🔬 Research Complete")
                     st.metric("Research Time", f"{research_result.research_duration_seconds:.1f}s")
-                elif relevance_match.processed_by_agent:
-                    st.info("🔬 Research Triggered")
-                
-                if stored_successfully:
-                    st.success("💾 Stored in DB")
                 else:
-                    st.warning("⚠️ Storage Failed")
-                
-                # Sentiment info
-                if hasattr(article, 'sentiment_score') and article.sentiment_score:
-                    sentiment_emoji = "😊" if article.sentiment_score > 0.1 else "😐" if article.sentiment_score > -0.1 else "😟"
-                    st.write(f"**Sentiment:** {sentiment_emoji} {article.sentiment_score:.2f}")
+                    st.metric("Research", "None")
+            with metric_col5:
+                if stored_successfully:
+                    st.success("💾 Stored")
+                else:
+                    st.error("❌ Failed")
             
-            # Research Results Section
+            # Article details - FULL WIDTH
+            st.write(f"**Source:** {article.source}")
+            st.write(f"**URL:** {article.url}")
+            
+            if article.content:
+                st.write(f"**Content Preview:**")
+                st.write(article.content[:300] + "..." if len(article.content) > 300 else article.content)
+            
+            # Entities and keywords in two columns for space efficiency
+            if relevance_match.graph_entities or relevance_match.keyword_matches:
+                entity_col1, entity_col2 = st.columns(2)
+                
+                with entity_col1:
+                    if relevance_match.graph_entities:
+                        st.write(f"**🎯 Matched Entities:** {', '.join(relevance_match.graph_entities[:8])}")
+                
+                with entity_col2:
+                    if relevance_match.keyword_matches:
+                        st.write(f"**🔑 Keywords:** {', '.join(relevance_match.keyword_matches[:8])}")
+            
+            # Sentiment info
+            if hasattr(article, 'sentiment_score') and article.sentiment_score:
+                sentiment_emoji = "😊" if article.sentiment_score > 0.1 else "😐" if article.sentiment_score > -0.1 else "😟"
+                st.write(f"**Sentiment:** {sentiment_emoji} {article.sentiment_score:.2f}")
+            
+            # Research Results Section - FULL WIDTH
             if research_result:
                 st.markdown("---")
-                st.subheader("🔬 Research Analysis Results")
+                st.markdown("## 🔬 AI Research Analysis Results")
                 
-                # Executive Summary
-                st.write("**Executive Summary:**")
+                # Research status indicators
+                research_status_col1, research_status_col2, research_status_col3 = st.columns(3)
+                with research_status_col1:
+                    st.success(f"✅ Research Complete - {research_result.urgency_level} Priority")
+                with research_status_col2:
+                    if research_result.research_duration_seconds:
+                        st.info(f"⏱️ Analysis completed in {research_result.research_duration_seconds:.1f} seconds")
+                with research_status_col3:
+                    if research_result.sources_consulted:
+                        st.info(f"📚 {len(research_result.sources_consulted)} sources consulted")
+                
+                # Executive Summary - FULL WIDTH
+                st.markdown("### 📋 Executive Summary")
                 st.info(research_result.executive_summary)
                 
-                # Impact Analysis in columns
+                # Impact Analysis - FULL WIDTH with better organization
+                st.markdown("### 📊 Impact Analysis")
+                
                 impact_col1, impact_col2, impact_col3 = st.columns(3)
                 
                 with impact_col1:
-                    st.write("**💰 Financial Impact**")
+                    st.markdown("#### 💰 Financial Impact")
                     fin_impact = research_result.financial_impact
                     if fin_impact:
-                        st.write(f"• Likelihood: {fin_impact.get('likelihood', 'Unknown')}")
-                        st.write(f"• Severity: {fin_impact.get('severity', 'Unknown')}")
-                        st.write(f"• Timeline: {fin_impact.get('timeline', 'Unknown')}")
+                        st.write(f"**Likelihood:** {fin_impact.get('likelihood', 'Unknown')}")
+                        st.write(f"**Severity:** {fin_impact.get('severity', 'Unknown')}")
+                        st.write(f"**Timeline:** {fin_impact.get('timeline', 'Unknown')}")
                         if fin_impact.get('details'):
-                            st.write(f"• Details: {fin_impact['details'][:100]}...")
+                            with st.expander("💰 Details"):
+                                st.write(fin_impact['details'])
                 
                 with impact_col2:
-                    st.write("**⚙️ Operational Impact**")
+                    st.markdown("#### ⚙️ Operational Impact")
                     op_impact = research_result.operational_impact
                     if op_impact:
-                        st.write(f"• Likelihood: {op_impact.get('likelihood', 'Unknown')}")
-                        st.write(f"• Severity: {op_impact.get('severity', 'Unknown')}")
-                        st.write(f"• Timeline: {op_impact.get('timeline', 'Unknown')}")
+                        st.write(f"**Likelihood:** {op_impact.get('likelihood', 'Unknown')}")
+                        st.write(f"**Severity:** {op_impact.get('severity', 'Unknown')}")
+                        st.write(f"**Timeline:** {op_impact.get('timeline', 'Unknown')}")
                         if op_impact.get('details'):
-                            st.write(f"• Details: {op_impact['details'][:100]}...")
+                            with st.expander("⚙️ Details"):
+                                st.write(op_impact['details'])
                 
                 with impact_col3:
-                    st.write("**🎭 Reputational Impact**")
+                    st.markdown("#### 🎭 Reputational Impact")
                     rep_impact = research_result.reputational_impact
                     if rep_impact:
-                        st.write(f"• Likelihood: {rep_impact.get('likelihood', 'Unknown')}")
-                        st.write(f"• Severity: {rep_impact.get('severity', 'Unknown')}")
-                        st.write(f"• Timeline: {rep_impact.get('timeline', 'Unknown')}")
+                        st.write(f"**Likelihood:** {rep_impact.get('likelihood', 'Unknown')}")
+                        st.write(f"**Severity:** {rep_impact.get('severity', 'Unknown')}")
+                        st.write(f"**Timeline:** {rep_impact.get('timeline', 'Unknown')}")
                         if rep_impact.get('details'):
-                            st.write(f"• Details: {rep_impact['details'][:100]}...")
+                            with st.expander("🎭 Details"):
+                                st.write(rep_impact['details'])
                 
-                # Key Takeaways and Actions
+                # Key Takeaways and Actions - FULL WIDTH
                 if research_result.key_takeaways or research_result.recommended_actions:
+                    st.markdown("### 🎯 Strategic Insights")
+                    
                     action_col1, action_col2 = st.columns(2)
                     
                     with action_col1:
                         if research_result.key_takeaways:
-                            st.write("**📋 Key Takeaways:**")
-                            for takeaway in research_result.key_takeaways[:3]:
-                                st.write(f"• {takeaway}")
+                            st.markdown("#### 📋 Key Takeaways")
+                            for i, takeaway in enumerate(research_result.key_takeaways[:5], 1):
+                                st.write(f"{i}. {takeaway}")
                     
                     with action_col2:
                         if research_result.recommended_actions:
-                            st.write("**🎯 Recommended Actions:**")
-                            for action in research_result.recommended_actions[:3]:
-                                st.write(f"• {action}")
+                            st.markdown("#### 🚀 Recommended Actions")
+                            for i, action in enumerate(research_result.recommended_actions[:5], 1):
+                                st.write(f"{i}. {action}")
                 
-                # Stock Context (if available)
+                # Stock Context - FULL WIDTH
                 if research_result.stock_price_context and research_result.stock_price_context.get('current_price'):
+                    st.markdown("### 📈 Market Context")
                     stock_data = research_result.stock_price_context
-                    st.write("**📈 Stock Context:**")
-                    change_color = "green" if stock_data.get('change', 0) >= 0 else "red"
-                    st.markdown(
-                        f"AAPL: ${stock_data.get('current_price', 'N/A')} "
-                        f"<span style='color: {change_color}'>({stock_data.get('change_percent', 0):.2f}%)</span>",
-                        unsafe_allow_html=True
-                    )
+                    
+                    stock_col1, stock_col2, stock_col3, stock_col4 = st.columns(4)
+                    
+                    with stock_col1:
+                        st.metric("AAPL Price", f"${stock_data.get('current_price', 'N/A')}")
+                    with stock_col2:
+                        change = stock_data.get('change_percent', 0)
+                        st.metric("Change", f"{change:.2f}%", delta=f"{change:.2f}%")
+                    with stock_col3:
+                        st.metric("Volume", f"{stock_data.get('volume', 'N/A'):,}" if stock_data.get('volume') else "N/A")
+                    with stock_col4:
+                        st.metric("Source", stock_data.get('source', 'Unknown'))
         
-        # Add separator
+        # Add separator with more spacing
         st.markdown("---")
+        st.markdown("")  # Extra spacing
 
 def display_streaming_error(container, article_data, count: int, error_message: str):
     """Display an error in the streaming interface"""
